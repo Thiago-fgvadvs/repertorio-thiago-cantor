@@ -13,12 +13,16 @@
 <meta name="apple-mobile-web-app-title" content="Cantor" />
 <link rel="stylesheet" href="vendor/tailwind.css?v=4" />
 <style>
-  html,body,#root{height:100%}
-  body{margin:0;background:#0c1622;color:#eef5ff;font-family:system-ui,sans-serif}
-  .boot{height:100%;display:flex;align-items:center;justify-content:center;color:#9db4d4}
-  .sticky.top-0{padding-top:calc(1rem + env(safe-area-inset-top)) !important}
-  .fixed.inset-0{padding-top:env(safe-area-inset-top)}
-  .fixed.bottom-0{padding-bottom:env(safe-area-inset-bottom)}
+html,body,#root{height:100%}
+body{margin:0;background:#0c1622;color:#eef5ff;font-family:system-ui,sans-serif}
+.boot{height:100%;display:flex;align-items:center;justify-content:center;color:#9db4d4}
+.sticky.top-0{padding-top:calc(1rem + env(safe-area-inset-top)) !important}
+.fixed.inset-0{padding-top:env(safe-area-inset-top)}
+.fixed.bottom-0{padding-bottom:env(safe-area-inset-bottom)}
+  /* ===== ACESSIBILIDADE: LETRAS PRETO FORTE ===== */
+  [style*="pre-wrap"]{background:#ffffff !important;color:#000000 !important;font-weight:800 !important;font-size:clamp(1.6rem,5vw,2.4rem) !important;line-height:2 !important;padding:1.5rem !important;border-radius:8px !important}
+  [style*="pre-wrap"] div{color:#000000 !important;font-weight:800 !important;opacity:1 !important;-webkit-text-fill-color:#000000 !important}
+  [style*="pre-wrap"] *{color:#000000 !important;font-weight:800 !important;opacity:1 !important;-webkit-text-fill-color:#000000 !important}
 </style>
 </head>
 <body>
