@@ -1,4 +1,4 @@
-var ce=Object.defineProperty,pe=Object.defineProperties;var ye=Object.getOwnPropertyDescriptors;var Z=Object.getOwnPropertySymbols;var ge=Object.prototype.hasOwnProperty,be=Object.prototype.propertyIsEnumerable;var _=(e,a,o)=>a in e?ce(e,a,{enumerable:!0,configurable:!0,writable:!0,value:o}):e[a]=o,I=(e,a)=>{for(var o in a||(a={}))ge.call(a,o)&&_(e,o,a[o]);if(Z)for(var o of Z(a))be.call(a,o)&&_(e,o,a[o]);return e},T=(e,a)=>pe(e,ye(a));const{useState,useEffect,useMemo,useRef,useCallback}=React,_ic=e=>a=>(a=a||{},React.createElement("svg",{width:a.size||22,height:a.size||22,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round",className:a.className,style:a.style,"aria-hidden":"true",dangerouslySetInnerHTML:{__html:e}})),Music=_ic('<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'),Search=_ic('<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>'),ListMusic=_ic('<path d="M21 15V6"/><path d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/><path d="M12 12H3"/><path d="M16 6H3"/><path d="M12 18H3"/>'),Settings=_ic('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>'),Play=_ic('<polygon points="6 3 20 12 6 21 6 3"/>'),Plus=_ic('<path d="M5 12h14"/><path d="M12 5v14"/>'),Trash2=_ic('<path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>'),Pencil=_ic('<path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/>'),ChevronLeft=_ic('<path d="m15 18-6-6 6-6"/>'),ChevronRight=_ic('<path d="m9 18 6-6-6-6"/>'),Save=_ic('<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>'),X=_ic('<path d="M18 6 6 18"/><path d="m6 6 12 12"/>'),ExternalLink=_ic('<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>'),Minus=_ic('<path d="M5 12h14"/>'),Type=_ic('<polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/>'),Pause=_ic('<rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/>'),ArrowUp=_ic('<path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>'),ArrowDown=_ic('<path d="M12 5v14"/><path d="m19 12-7 7-7-7"/>'),Check=_ic('<path d="M20 6 9 17l-5-5"/>'),FileText=_ic('<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>'),Upload=_ic('<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>'),Lock=_ic('<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'),Unlock=_ic('<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>'),Spotify=_ic('<circle cx="12" cy="12" r="10"/><path d="M7.5 14.5c2.5-1 6-0.8 8.5 0.7"/><path d="M7 11.3c3-1.1 7-0.9 10 1"/><path d="M7.2 8.2c3.4-1.1 7.6-0.8 10.3 1.1"/>'),Tag=_ic('<path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.8 8.8a2 2 0 0 0 2.8 0l6.4-6.4a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/>'),Calendar=_ic('<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>'),MapPin=_ic('<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>'),SB=window.supabase.createClient(window.SUPA_URL,window.SUPA_KEY),C={bg:"#0c1622",card:"#13243a",card2:"#1b3350",line:"#2b4a66",txt:"#eef5ff",mut:"#9db4d4",gold:"#ffd24d",rose:"#ff8aa6",violet:"#9b8cff",green:"#1ed760",danger:"#ff6b8a",blue:"#5fb0ff"},SEED={songs:[{id:"imagine",t:"Imagine",artist:"John Lennon",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/1jYx1g0BXEqvr9bpZoDMS7",sps:"https://open.spotify.com/search/Imagine%20John%20Lennon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/imagine.pdf",letra:`Imagine there's no heaven
+var ce=Object.defineProperty,pe=Object.defineProperties;var Ee=Object.getOwnPropertyDescriptors;var Z=Object.getOwnPropertySymbols;var ye=Object.prototype.hasOwnProperty,Ae=Object.prototype.propertyIsEnumerable;var _=(e,n,o)=>n in e?ce(e,n,{enumerable:!0,configurable:!0,writable:!0,value:o}):e[n]=o,T=(e,n)=>{for(var o in n||(n={}))ye.call(n,o)&&_(e,o,n[o]);if(Z)for(var o of Z(n))Ae.call(n,o)&&_(e,o,n[o]);return e},R=(e,n)=>pe(e,Ee(n));const{useState,useEffect,useMemo,useRef,useCallback}=React,_ic=e=>n=>(n=n||{},React.createElement("svg",{width:n.size||22,height:n.size||22,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round",className:n.className,style:n.style,"aria-hidden":"true",dangerouslySetInnerHTML:{__html:e}})),Music=_ic('<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'),Search=_ic('<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>'),ListMusic=_ic('<path d="M21 15V6"/><path d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/><path d="M12 12H3"/><path d="M16 6H3"/><path d="M12 18H3"/>'),Settings=_ic('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>'),Play=_ic('<polygon points="6 3 20 12 6 21 6 3"/>'),Plus=_ic('<path d="M5 12h14"/><path d="M12 5v14"/>'),Trash2=_ic('<path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>'),Pencil=_ic('<path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/>'),ChevronLeft=_ic('<path d="m15 18-6-6 6-6"/>'),ChevronRight=_ic('<path d="m9 18 6-6-6-6"/>'),Save=_ic('<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>'),X=_ic('<path d="M18 6 6 18"/><path d="m6 6 12 12"/>'),ExternalLink=_ic('<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>'),Minus=_ic('<path d="M5 12h14"/>'),Type=_ic('<polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/>'),Pause=_ic('<rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/>'),ArrowUp=_ic('<path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>'),ArrowDown=_ic('<path d="M12 5v14"/><path d="m19 12-7 7-7-7"/>'),Check=_ic('<path d="M20 6 9 17l-5-5"/>'),FileText=_ic('<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>'),Upload=_ic('<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>'),Lock=_ic('<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'),Unlock=_ic('<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>'),Spotify=_ic('<circle cx="12" cy="12" r="10"/><path d="M7.5 14.5c2.5-1 6-0.8 8.5 0.7"/><path d="M7 11.3c3-1.1 7-0.9 10 1"/><path d="M7.2 8.2c3.4-1.1 7.6-0.8 10.3 1.1"/>'),Tag=_ic('<path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.8 8.8a2 2 0 0 0 2.8 0l6.4-6.4a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/>'),Calendar=_ic('<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>'),MapPin=_ic('<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>'),SB=window.supabase.createClient(window.SUPA_URL,window.SUPA_KEY),C={bg:"#0c1622",card:"#13243a",card2:"#1b3350",line:"#2b4a66",txt:"#eef5ff",mut:"#9db4d4",gold:"#ffd24d",rose:"#ff8aa6",violet:"#9b8cff",green:"#1ed760",danger:"#ff6b8a",blue:"#5fb0ff"},SEED={songs:[{id:"imagine",t:"Imagine",artist:"John Lennon",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/1jYx1g0BXEqvr9bpZoDMS7",sps:"https://open.spotify.com/search/Imagine%20John%20Lennon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/imagine.pdf",letra:`Imagine there's no heaven
 It's easy if you try
 No hell below us
 Above us only sky
@@ -9437,7 +9437,3186 @@ Espera que j\xE1 tenho a solu\xE7\xE3o
 J\xE1 passei gilette meu rosto ta lisinho
 Agora t\xF4 de boa pra ganhar beijinho
 T\xE1 lisinho ta lisinho
-Pra ganhar beijinho`}],setlists:[{id:"set-70-light",name:"70 light",src:"70 light.txt",songs:["night-fever","celebration","give-it-up","i-say-a-little-prayer-2"]},{id:"set-ain-t-no-mountain-high-enough",name:"Ain't No Mountain High Enough",src:"Ain't No Mountain High Enough .txt",songs:["you-ll-be-in-my-heart","what-a-wonderful-world","iris","con-te-partiro","pai-nosso"]},{id:"set-anos-50",name:"Anos 50",src:"Anos 50 .txt",songs:["let-s-twist-again","tutti-frutti","rock-around-the-clock","blue-suede-shoes","jailhouse-rock"]},{id:"set-anos-50-60",name:"Anos 50 _60",src:"Anos 50 _60.txt",songs:["let-s-twist-again","tutti-frutti","rock-around-the-clock","blue-suede-shoes","jailhouse-rock","biquini-de-bolinha-amarelinha"]},{id:"set-anos-80-nacional",name:"Anos 80 nacional",src:"Anos 80 nacional.txt",songs:["meu-erro","oculos","descobridor-dos-sete-mares","nao-quero-dinheiro-so-quero-amar","musica-urbana"]},{id:"set-anos-90",name:"anos 90",src:"anos 90.txt",songs:["a-little-respect","the-rhythm-of-the-night","mr-vain","what-is-love","run-to-you-verificar"]},{id:"set-rocks",name:"ROCKS",src:"ROCKS.txt",songs:["listen-to-the-music","have-you-ever-seen-the-rain","rock-and-roll-all-nite","i-can-t-get-no-satisfaction","born-to-be-wild","suddenly-i-see","kiss-me"]},{id:"set-boleros",name:"Boleros",src:"Boleros.txt",songs:["la-puerta","historia-de-un-amor","el-dia-que-me-quieras","la-barca","el-reloj"]},{id:"set-latinas",name:"Latinas",src:"Latinas.txt",songs:["sway","can-t-take-my-eyes-off-you","la-vida-es-un-carnaval","la-camisa-negra","corazon-espinado"]},{id:"set-forro",name:"Forro",src:"Forro.txt",songs:["medo-de-chuva","esperando-na-janela","nosso-xote","voce-nao-vale-nada"]},{id:"set-standards",name:"Standards",src:"Standards.txt",songs:["i-ve-got-you-under-my-skin","cheek-to-cheek","fly-me-to-the-moon","new-york-new-york"]},{id:"set-samba",name:"samba",src:"samba.txt",songs:["verdade-chinesa","agamamou","flor-de-lis","fato-consumado","ive-brussel","eu-fui","danca-do-bole-bole"]},{id:"set-samba-enredo",name:"samba enredo",src:"samba enredo.txt",songs:["peguei-um-ita-no-norte-salgueiro","gavioes-fiel","atras-da-verde-e-rosa-so-nao-vai-quem-ja-morreu-","o-que-e-o-que-e"]},{id:"set-samaba-enrredo-navio",name:"Samaba enrredo Navio",src:"Samaba enrredo Navio.txt",songs:["samba-enredo-1986-mangueira","bum-bum-paticumbum-prugurundum-verificar","peguei-um-ita-no-norte-salgueiro"]},{id:"set-sertanejo",name:"Sertanejo",src:"Sertanejo.txt",songs:["man-i-feel-like-a-woman","meteoro","o-jeito-e-da-uma-fugidinha","ciumenta","chora-me-liga","amo-noite-e-dia","paga-pau","leilao","que-pescar-que-nada","bebo-pra-carai","o-bicho-vai-pegar-o-chao-vai-tremer","pode-chorar","bala-de-prata","mala-pronta","vendaval","vou-fazer-pirraca","have-you-ever-seen-the-rain","borboletas","fada","como-um-anjo"]},{id:"set-bahia",name:"Bahia",src:"Bahia.txt",songs:["my-girl","let-s-stay-together","sexbomb","crazy-little-thing-called-love","i-was-born-to-love-you"]},{id:"set-dance",name:"Dance",src:"Dance.txt",songs:["i-gotta-feeling","stereo-love","rise-up","bad-romance-poker-face-medley-lady-gaga","loca","club-can-t-handle-me","crazy-in-love","love-is-gone","love-generation","let-me-think-about-it","i-don-t-know-why","set-me-free"]},{id:"set-show-michael",name:"Show Michael",src:"Show Michael.txt",songs:["thriller","ben","i-ll-be-there","i-want-you-back","abc","billie-jean","bad","beat-it","ain-t-no-sunshine","the-girl-is-mine","you-are-not-alone","they-don-t-care-about-us","human-nature","black-or-white","heal-the-world","smooth-criminal"]},{id:"set-lentas-dancantes",name:"Lentas dan\xE7antes",src:"Lentas dan\xE7antes.txt",songs:["do-you-wanna-dance","stand-by-me","rock-and-roll-lullaby","put-your-records-on","how-deep-is-your-love","cruisin","i-ll-be-over-you","fallen","everything"]},{id:"set-lentas-e-baladas",name:"Lentas e Baladas",src:"Lentas e Baladas .txt",songs:["easy","dona","eu-te-devoro","final-feliz","don-t-know-why","how-deep-is-your-love","my-girl","new-york-new-york","besame-mucho","i-ve-had-the-time-of-my-life","corazon-espinado"]},{id:"set-fox-lento",name:"Fox Lento",src:"Fox Lento.txt",songs:["unforgettable","the-way-you-look-tonight","close-to-you","can-t-smile-without-you"]},{id:"set-fox-linha",name:"Fox linha",src:"Fox linha.txt",songs:["i-left-my-heart-in-san-francisco","new-york-new-york","i-ve-got-you-under-my-skin","hello-detroit","just-a-gigolo","cheek-to-cheek","fly-me-to-the-moon"]},{id:"set-rmaonticas-linha",name:"Rmaonticas Linha",src:"Rmaonticas Linha.txt",songs:["easy","beauty-and-the-beast","endless-love","hero","after-the-love-has-gone","i-just-wanna-stop"]},{id:"set-standards-new-times",name:"Standards NEW TIMES",src:"Standards NEW TIMES.txt",songs:["emocoes","new-york-new-york","they-can-t-take-that-away-from-me","for-once-in-my-life","fly-me-to-the-moon","i-ve-got-you-under-my-skin","beyond-the-sea","hello-detroit","all-of-me","cheek-to-cheek"]},{id:"set-apos-jantar-new-times",name:"ap\xF3s jantar NEW TIMES",src:"ap\xF3s jantar NEW TIMES.txt",songs:["have-you-ever-seen-the-rain","proud-mary","i-can-t-get-no-satisfaction","twist-and-shout","a-hard-day-s-night","i-wanna-hold-your-hand","stayin-alive","summer-nights","you-re-the-one-that-i-want","johnny-b-goode","blue-suede-shoes","pode-vir-quente-que-eu-estou-fervendo","menina-linda","festa-de-arromba","o-bom","rua-augusta","listen-to-the-music","rock-and-roll-all-nite","born-to-be-wild","suddenly-i-see","kiss-me"]},{id:"set-show-du-rio-a-pari",name:"Show Du rio a Pari",src:"Show Du rio a Pari.txt",songs:["on-the-floor","chorando-se-foi-llorando-se-fue-lambada","c-est-une-bossa-nova","for-me-formidable","la-vie-en-rose","non-je-ne-regrette-rien","padam-padam","et-si-tu-n-existais-pas","besame-mucho-versao-francesa","bye-bye"]},{id:"set-sunset-2012",name:"sunset 2012",src:"sunset 2012.txt",songs:["new-york-new-york","hello-detroit","just-a-gigolo","can-t-take-my-eyes-off-you"]},{id:"set-dance-1-atmosfera",name:"Dance 1 Atmosfera",src:"Dance 1 Atmosfera.txt",songs:["hello","sexy-and-i-know-it","party-rock-anthem","take-over-control","getting-over-you","where-them-girls-at","the-time-dirty-bit"]},{id:"set-dance-2-atmosfera",name:"Dance 2 Atmosfera",src:"Dance 2 Atmosfera.txt",songs:["loca","dynamite","last-friday-night-t-g-i-f","only-girl-in-the-world","moves-like-jagger","give-me-everything","i-wanna-go","till-the-world-ends","rabiosa"]},{id:"set-grease-megamix",name:"Grease Megamix",src:"Grease Megamix.txt",songs:["greased-lightnin-you-re-the-one-that-i-want","summer-nights"]},{id:"set-marchinhas-de-carnaval-1",name:"Marchinhas de carnaval 1",src:"Marchinhas de carnaval 1.txt",songs:["o-teu-cabelo-nao-nega","a-cabeleira-do-zeze","me-da-um-dinheiro-ai","colombina-ie-ie-ie","maria-sapatao","bota-camisinha","tai-pra-voce-gostar-de-mim","mulata-ie-ie-ie","me-da-um-gelinho","coracao-corinthiano","saca-rolha"]},{id:"set-bela-e-a-fera-e-over-the-rainbow",name:"bela e a fera e over the rainbow",src:"bela e a fera e over the rainbow.txt",songs:["beauty-and-the-beast","somewhere-over-the-rainbow-what-a-wonderful-worl"]},{id:"set-casa-sao-roque",name:"Casa Sao roque",src:"Casa Sao roque.txt",songs:["em-nome-do-nosso-amor","ceu-de-santo-amaro-verificar","she"]},{id:"set-pai-nosso-e-conte",name:"pai nosso e conte",src:"pai nosso e conte.txt",songs:["con-te-partiro","pai-nosso","como-e-grande-o-meu-amor-por-voce"]},{id:"set-medley-bon-voyage-2012",name:"Medley Bon Voyage 2012",src:"Medley Bon Voyage 2012 .txt",songs:["je-t-aime-moi-non-plus","c-est-si-bon","l-amerique","i-love-america"]},{id:"set-medley-boney-m-bon-voyage",name:"Medley Boney M (Bon Voyage)",src:"Medley Boney M (Bon Voyage).txt",songs:["rivers-of-babylon","daddy-cool","sunny","ma-baker"]},{id:"set-medley-rock-and-roll-french",name:"Medley Rock And Roll French",src:"Medley Rock And Roll French.txt",songs:["rock-and-roll-mops","t-as-l-bonjour-d-alfred","ca-rock-ca-va-verificar"]},{id:"set-cerimonia",name:"Cerimonia",src:"Cerimonia.txt",songs:["one","the-prayer","can-you-feel-the-love-tonight","can-t-help-falling-in-love","perhaps-love","she","somewhere-over-the-rainbow","tudo-que-se-quer","all-i-ask-of-you","you-ll-be-in-my-heart","what-a-wonderful-world","iris","con-te-partiro","pai-nosso"]},{id:"set-axe-mid",name:"axe mid",src:"axe mid.txt",songs:["we-are-the-world-of-carnaval","beijar-na-boca","erva-venenosa","empurra-empurra","bomba","eva","o-neguinha-vixe-mainha","amor-perfeito","100-voce","o-araketu-e-bom-demais","abalou","praieiro","extravasa","sorte-grande-poeira","rebolation","pancadao","ela-e-toda-boa","brincadeira-da-tomada","danca-da-maozinha","caranguejo","agua-mineral","joga-agua","beber-cair-e-levantar","xo-satanas","minha-mulher-nao-deixa-nao","saia-e-bicicletinha","piriri-pom-pom","na-base-do-beijo","ceu-da-boca","a-galera","berimbau-metalizado","coracao","bola-de-sabao","lirirrixa","flor-do-reggae","quero-chiclete","simbora","pais-tropical-arere-taj-mahal","bota-pra-ferver","lobo-mau","tchubirabiron","explosao","olha-a-onda","danca-do-vampiro","danca-da-manivela","tchau-i-have-to-go-now","festa","canibal","bate-lata","safado-cachorro-sem-vergonha","carro-velho","milla","pipoca","a-fila-andou","doce-desejo","meu-cabelo-duro-e-assim","vou-voar","paz-carnaval-futebol","vamo-pula","famo-a-billionaire","acelera-ae-noite-do-bem","ta-lisinho"]}],estilos:["Ax\xE9","Rock","Dance","Balada","Sertanejo","Pop","Francesa","Casamento","Samba","Marchinha","Jazz/Standard","Diversos","Baile","Latina","Bolero","Anos 50","Anos 80","Anos 90","Anos 70","Forr\xF3","Internacional","Anos 50/60","Trilha","Soul"]},SEED_SONGS=SEED.songs||[],SEED_SETLISTS=SEED.setlists||[],ESTILOS=SEED.estilos||[],ALL_TAGS=(()=>{const e={};return SEED_SONGS.forEach(a=>(a.tags||[]).forEach(o=>e[o]=(e[o]||0)+1)),Object.keys(e).sort((a,o)=>e[o]-e[a])})(),ESTILO_COR={};(()=>{const e=[C.green,C.gold,C.rose,C.violet,C.blue,"#ff9d5c","#6ee7b7","#f0abfc"];ESTILOS.forEach((a,o)=>ESTILO_COR[a]=e[o%e.length])})();const SEED_VERSION=1,APP_VERSION="12",S={async get(e){try{const{data:a}=await SB.from("cantor_kv").select("value").eq("key",e).maybeSingle();return a?a.value:null}catch(a){return console.error(a),null}},async set(e,a){try{return await SB.from("cantor_kv").upsert({key:e,value:a,updated_at:new Date().toISOString()}),!0}catch(o){return console.error(o),!1}}},uid=e=>(e||"u")+Date.now().toString(36)+Math.random().toString(36).slice(2,6),norm=e=>(e||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""),nt=e=>norm(e).replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim(),driveEmbed=e=>{const a=(e||"").match(/\/d\/([A-Za-z0-9_-]+)/);return a?`https://drive.google.com/file/d/${a[1]}/preview`:e},SH=["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"],ENH={Db:"C#",Eb:"D#",Gb:"F#",Ab:"G#",Bb:"A#",Cb:"B",Fb:"E","E#":"F","B#":"C"};function shiftRoot(e,a){let o=ENH[e]||e,l=SH.indexOf(o);return l<0?e:SH[((l+a)%12+12)%12]}const CH_RE=/^([A-G](?:#|b)?)((?:maj|min|sus|add|dim|aug|m|M|°|º|\+|\d|\(|\)|b|#|\.)*)(?:\/([A-G](?:#|b)?))?$/;function isChordToken(e){return e?!!e.match(CH_RE):!1}function transposeToken(e,a){const o=e.match(CH_RE);if(!o)return e;let l=shiftRoot(o[1],a)+(o[2]||"");return o[3]&&(l+="/"+shiftRoot(o[3],a)),l}function isChordLine(e){const a=e.trim().split(/\s+/).filter(Boolean);return a.length?a.filter(isChordToken).length/a.length>=.6:!1}function transposeText(e,a){return!a||!e?e:e.split(`
-`).map(o=>isChordLine(o)?o.replace(/\S+/g,l=>isChordToken(l)?transposeToken(l,a):l):o).join(`
-`)}function App(){const[e,a]=useState(!0),[o,l]=useState("musicas"),[y,n]=useState({}),[b,v]=useState([]),[i,d]=useState([]),[r,u]=useState({font:19}),[t,g]=useState(null),[f,m]=useState(null),[x,c]=useState(null),[h,p]=useState(null),[w,q]=useState(null),[A,N]=useState(null),[z,D]=useState(()=>{try{return localStorage.getItem("ct_editor")==="1"}catch(s){return!1}}),[$,M]=useState(!1),[L,W]=useState([]),[ee,H]=useState([]),[F,V]=useState([]),R=useRef({}),P=useCallback(async()=>{const[s,k,E,ie,ue,le,he,de,me]=await Promise.all([S.get("ct_over"),S.get("ct_added"),S.get("ct_setlists"),S.get("ct_settings"),S.get("ct_seedV"),S.get("ct_pin"),S.get("ct_favs"),S.get("ct_gigs"),S.get("ct_bands")]);ue!==SEED_VERSION&&await S.set("ct_seedV",SEED_VERSION),n(s||{}),v(k||[]),W(he||[]),H(de||[]),V(me||[]),d(E&&E.length?E:SEED_SETLISTS),E&&E.length||S.set("ct_setlists",SEED_SETLISTS),u(I({font:19},ie||{})),N(le||null),a(!1)},[]);useEffect(()=>{P();const s=SB.channel("cantor_kv_rt").on("postgres_changes",{event:"*",schema:"public",table:"cantor_kv"},()=>P()).subscribe();return()=>{try{SB.removeChannel(s)}catch(k){}}},[P]);const j=(s,k,E)=>{E(k),R.current[s]&&clearTimeout(R.current[s]),R.current[s]=setTimeout(()=>S.set(s,k),600)},ae=s=>j("ct_over",s,n),G=s=>j("ct_added",s,v),U=s=>j("ct_setlists",s,d),Y=s=>j("ct_settings",s,u),oe=s=>j("ct_favs",s,W),ne=s=>{oe(L.includes(s)?L.filter(k=>k!==s):[...L,s])},te=s=>j("ct_gigs",s,H),se=s=>j("ct_bands",s,V),O=useMemo(()=>SEED_SONGS.filter(k=>!(y[k.id]&&y[k.id].hidden)).map(k=>I(I({},k),y[k.id]||{})).concat(b),[y,b]),B=useMemo(()=>{const s={};return O.forEach(k=>s[k.id]=k),s},[O]),J=(s,k)=>{s.startsWith("u")?G(b.map(E=>E.id===s?I(I({},E),k):E)):ae(T(I({},y),{[s]:I(I({},y[s]||{}),k)}))},Q=s=>{const k=I({id:uid("u")},s);return G([...b,k]),k.id},re=s=>{const k=(s||"").trim();if(!A){if(k.length<4)return"Defina uma senha com ao menos 4 d\xEDgitos.";S.set("ct_pin",k),N(k),D(!0);try{localStorage.setItem("ct_editor","1")}catch(E){}return""}if(k===A){D(!0);try{localStorage.setItem("ct_editor","1")}catch(E){}return""}return"Senha incorreta."},K=()=>{D(!1);try{localStorage.removeItem("ct_editor")}catch(s){}};if(e)return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"min-h-screen flex items-center justify-center p-6"},React.createElement("div",{className:"text-center"},React.createElement("img",{src:"img/splash.jpg",alt:"Thiago D'Angelo",style:{maxWidth:380,width:"84vw",borderRadius:16,marginBottom:16,boxShadow:"0 12px 44px rgba(0,0,0,0.55)"}}),React.createElement("p",{style:{color:C.mut},className:"flex items-center justify-center gap-2"},React.createElement(Music,{size:18,style:{color:C.gold},className:"animate-pulse"})," Carregando\u2026")));const ve=s=>i.find(k=>k.id===s);return React.createElement("div",{style:{background:C.bg,color:C.txt,minHeight:"100vh",fontFamily:"system-ui, sans-serif"}},React.createElement("div",{style:{background:`linear-gradient(135deg, ${C.card2}, ${C.card})`,borderBottom:`1px solid ${C.line}`},className:"px-4 pt-4 pb-3 sticky top-0 z-20"},React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{style:{width:34,height:34,borderRadius:10,background:`linear-gradient(135deg, ${C.violet}, ${C.green})`},className:"flex items-center justify-center shrink-0"},React.createElement(Music,{size:18,style:{color:"#0c1622"}})),React.createElement("div",{className:"leading-tight"},React.createElement("h1",{className:"font-bold",style:{fontSize:17,letterSpacing:.3}},"Thiago D'Angelo"),React.createElement("p",{style:{color:C.gold,letterSpacing:2,textTransform:"uppercase",fontSize:9.5}},"Repert\xF3rio \xB7 ",O.length," m\xFAsicas")),React.createElement("button",{onClick:()=>z?K():M(!0),title:z?"Sair do modo edi\xE7\xE3o":"Entrar no modo edi\xE7\xE3o",style:{background:C.card2,color:z?C.gold:C.mut,marginLeft:"auto"},className:"px-2.5 py-2 rounded-lg flex items-center gap-1 text-xs shrink-0"},z?React.createElement(Unlock,{size:15}):React.createElement(Lock,{size:15}),z?React.createElement("span",null,"edi\xE7\xE3o"):null))),React.createElement("div",{className:"p-3 pb-24 max-w-2xl mx-auto"},o==="musicas"&&React.createElement(Repertorio,{songs:O,onPlay:s=>g(s),onAdd:Q,onEdit:s=>c(s),editor:z,favs:L,onFav:ne}),o==="setlists"&&React.createElement(Setlists,{setlists:i,songById:B,onOpen:s=>p(s),saveSetlists:U,editor:z,onOpenLock:()=>M(!0)}),o==="agenda"&&React.createElement(Agenda,{gigs:ee,saveGigs:te,bands:F,setlists:i,songs:O,songById:B,editor:z,onOpenLock:()=>M(!0),onOpenShow:s=>q(s),onPlay:s=>g(s)}),o==="ajustes"&&React.createElement(Ajustes,{settings:r,saveSettings:Y,songs:O,setlists:i,bands:F,saveBands:se,editor:z,hasPin:!!A,pin:A,onLock:K,onOpenLock:()=>M(!0),savePin:s=>{S.set("ct_pin",s),N(s)}})),React.createElement("nav",{style:{background:C.card,borderTop:`1px solid ${C.line}`},className:"fixed bottom-0 left-0 right-0 z-20"},React.createElement("div",{className:"max-w-2xl mx-auto grid grid-cols-4"},[{k:"musicas",ic:Music,lb:"M\xFAsicas"},{k:"setlists",ic:ListMusic,lb:"Estilos"},{k:"agenda",ic:Calendar,lb:"Agenda"},{k:"ajustes",ic:Settings,lb:"Ajustes"}].map(({k:s,ic:k,lb:E})=>React.createElement("button",{key:s,onClick:()=>l(s),className:"py-2.5 flex flex-col items-center gap-0.5",style:{color:o===s?C.gold:C.mut}},React.createElement(k,{size:20}),React.createElement("span",{style:{fontSize:10.5}},E))))),t&&React.createElement(Player,{song:B[t],settings:r,saveSettings:Y,updateSong:J,editor:z,onEdit:s=>{g(null),c(s)},openViewer:(s,k)=>m({url:s,title:k}),onClose:()=>g(null)}),f&&React.createElement(PdfViewer,{url:f.url,title:f.title,onClose:()=>m(null)}),x&&React.createElement(AddSong,{initial:x,estilos:ESTILOS,onClose:()=>c(null),onSave:s=>{x.id?J(x.id,s):Q(s),c(null)}}),$&&React.createElement(LockModal,{hasPin:!!A,onClose:()=>M(!1),onSubmit:s=>re(s)}),h&&React.createElement(SetlistEditor,{sid:h,setlists:i,saveSetlists:U,songs:O,songById:B,editor:z,onPlay:s=>g(s),onShow:s=>{p(null),q(s)},onClose:()=>p(null)}),w&&React.createElement(ShowView,{setlist:typeof w=="string"?i.find(s=>s.id===w):w,songById:B,settings:r,saveSettings:Y,onClose:()=>q(null)}))}function Repertorio({songs:e,onPlay:a,onAdd:o,onEdit:l,editor:y,favs:n,onFav:b}){const[v,i]=useState(""),[d,r]=useState("Todos"),[u,t]=useState("Todas"),[g,f]=useState(!1),[m,x]=useState(!1),c=n||[],h=useMemo(()=>{const p=nt(v),w=p.split(" ").filter(Boolean);let q=e.filter(A=>{if(g&&!c.includes(A.id)||d!=="Todos"&&A.pri!==d||u!=="Todas"&&!(A.tags||[]).includes(u))return!1;if(!w.length)return!0;const N=nt((A.t||"")+" "+(A.artist||""));return w.every(z=>N.includes(z))});if(w.length){const A=N=>{const z=nt(N.t);return z===p?0:z.startsWith(p)?1:w[0]&&z.startsWith(w[0])?2:z.includes(p)?3:4};q=q.slice().sort((N,z)=>A(N)-A(z)||N.t.localeCompare(z.t,"pt"))}else q=q.slice().sort((A,N)=>A.t.localeCompare(N.t,"pt"));return q.slice(0,400)},[e,v,d,u,g,n]);return React.createElement("div",null,React.createElement("div",{style:{position:"relative",height:152,borderRadius:16,overflow:"hidden",marginBottom:12}},React.createElement("img",{src:"img/header.jpg",alt:"",style:{width:"100%",height:"100%",objectFit:"cover",objectPosition:"72% 28%"}}),React.createElement("div",{style:{position:"absolute",inset:0,background:`linear-gradient(90deg, ${C.bg} 2%, ${C.bg}aa 34%, transparent 72%)`}}),React.createElement("div",{style:{position:"absolute",left:16,bottom:14}},React.createElement("p",{style:{fontSize:22,fontWeight:800,lineHeight:1.05}},"Thiago D'Angelo"),React.createElement("p",{style:{color:C.gold,fontSize:10,letterSpacing:3,textTransform:"uppercase",marginTop:4}},"Repert\xF3rio"))),React.createElement("div",{className:"relative mb-2"},React.createElement(Search,{size:16,style:{color:C.mut},className:"absolute left-3 top-1/2 -translate-y-1/2"}),React.createElement("input",{value:v,onChange:p=>i(p.target.value),placeholder:"Buscar por t\xEDtulo ou artista\u2026",style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"w-full pl-9 pr-3 py-2.5 rounded-xl outline-none"})),React.createElement("div",{className:"flex gap-2 overflow-x-auto pb-2"},React.createElement(Sel,{value:d,onChange:r,options:["Todos",...ESTILOS]}),React.createElement(Sel,{value:u,onChange:t,options:["Todas",...ALL_TAGS]}),React.createElement("button",{onClick:()=>f(p=>!p),style:{background:g?C.gold:C.card,color:g?"#2b2100":C.mut,border:`1px solid ${C.line}`},className:"px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap shrink-0"},"\u2605 Favoritas"),y&&React.createElement("button",{onClick:()=>x(!0),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap flex items-center gap-1"},React.createElement(Plus,{size:14})," Nova")),React.createElement("p",{className:"text-xs mb-2",style:{color:C.mut}},h.length," m\xFAsica(s)"),React.createElement("div",{className:"space-y-2"},h.map(p=>React.createElement(SongRow,{key:p.id,s:p,onPlay:a,onEdit:l,editor:y,fav:c.includes(p.id),onFav:b}))),m&&React.createElement(AddSong,{estilos:ESTILOS,onClose:()=>x(!1),onSave:p=>{o(p),x(!1)}}))}function spLink(e){return e&&(e.sp||e.sps)||""}function SongRow({s:e,onPlay:a,onEdit:o,editor:l,fav:y,onFav:n}){return React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full p-3 rounded-xl flex items-center gap-2"},React.createElement("button",{onClick:()=>a(e.id),className:"flex items-center gap-3 min-w-0 flex-1 text-left active:opacity-70"},React.createElement("div",{style:{background:C.card2,color:ESTILO_COR[e.pri]||C.gold,minWidth:40},className:"px-2 py-2 rounded-lg flex items-center justify-center"},React.createElement(Music,{size:16})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},e.t),React.createElement("div",{className:"flex items-center gap-2 text-xs mt-0.5",style:{color:C.mut}},e.artist?React.createElement("span",{className:"truncate"},e.artist):null,React.createElement("span",{style:{color:ESTILO_COR[e.pri]||C.mut}},"\xB7 ",e.pri)))),n?React.createElement("button",{onClick:()=>n(e.id),title:y?"Remover dos favoritos":"Favoritar",style:{color:y?C.gold:C.mut,fontSize:19,lineHeight:1},className:"px-1 shrink-0"},y?"\u2605":"\u2606"):null,spLink(e)?React.createElement("a",{href:spLink(e),target:"_blank",rel:"noreferrer",title:"Ouvir no Spotify",style:{background:C.card2,color:C.green},className:"p-2 rounded-lg shrink-0"},React.createElement(Spotify,{size:18})):null,l?React.createElement("button",{onClick:()=>o(e),title:"Editar",style:{background:C.card2,color:C.gold},className:"p-2 rounded-lg shrink-0"},React.createElement(Pencil,{size:16})):null,React.createElement("button",{onClick:()=>a(e.id),title:"Abrir letra",style:{color:C.gold},className:"p-1.5 shrink-0"},React.createElement(Play,{size:18})))}function Sel({value:e,onChange:a,options:o}){return React.createElement("select",{value:e,onChange:l=>a(l.target.value),style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"px-3 py-1.5 rounded-full text-xs outline-none max-w-[46%]"},o.map(l=>React.createElement("option",{key:l,value:l},l)))}function Player({song:e,settings:a,saveSettings:o,updateSong:l,editor:y,onEdit:n,openViewer:b,onClose:v}){const[i,d]=useState(0),[r,u]=useState(!1),[t,g]=useState(0),f=useRef(null),m=a.font||19;if(useEffect(()=>{d(0),u(!1),g(0)},[e&&e.id]),useEffect(()=>{if(!i||!f.current)return;const w=f.current,q=setInterval(()=>{w.scrollTop+=i},60);return()=>clearInterval(q)},[i]),!e)return null;const x=spLink(e),c=r&&e.cifra?transposeText(e.cifra,t):e.letra||"",h=c.split(`
-`),p=r&&e.cifra;return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-[80] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:v,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-bold truncate"},e.t),React.createElement("p",{className:"text-xs truncate",style:{color:C.mut}},e.artist?e.artist+" \xB7 ":"",e.pri)),y?React.createElement("button",{onClick:()=>n(e),title:"Editar",style:{background:C.card2,color:C.gold},className:"p-2 rounded-lg"},React.createElement(Pencil,{size:16})):null),React.createElement("div",{style:{background:C.card2,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 flex-wrap text-xs"},React.createElement("div",{className:"flex items-center gap-1"},React.createElement(Type,{size:13,style:{color:C.mut}}),React.createElement("button",{onClick:()=>o(T(I({},a),{font:Math.max(13,m-1)})),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{minWidth:22},className:"text-center"},m),React.createElement("button",{onClick:()=>o(T(I({},a),{font:Math.min(34,m+1)})),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14}))),React.createElement("div",{className:"flex items-center gap-1"},React.createElement("button",{onClick:()=>d(w=>w>0?0:1),style:{background:i?C.gold:C.card,color:i?"#2b2100":C.txt},className:"p-1.5 rounded-lg flex items-center gap-1"},i?React.createElement(Pause,{size:14}):React.createElement(Play,{size:14}),React.createElement("span",null,"rolar")),i>0&&React.createElement("input",{type:"range",min:"1",max:"5",value:i,onChange:w=>d(Number(w.target.value)),className:"w-16"})),p?React.createElement("div",{className:"flex items-center gap-1"},React.createElement("span",{style:{color:C.mut}},"Tom"),React.createElement("button",{onClick:()=>g(w=>w-1),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{color:C.gold,minWidth:26},className:"text-center font-bold"},t>0?"+"+t:t),React.createElement("button",{onClick:()=>g(w=>w+1),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14}))):null,e.cifra?React.createElement("button",{onClick:()=>u(w=>!w),style:{background:r?C.gold:C.card,color:r?"#2b2100":C.txt},className:"px-2.5 py-1.5 rounded-lg font-semibold"},r?"Ver letra":"Ver cifra"):null,e.u?React.createElement("button",{onClick:()=>b(e.u,e.t),style:{background:C.blue,color:"#04203f"},className:"px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1"},React.createElement(FileText,{size:13})," PDF"):null,x?React.createElement("a",{href:x,target:"_blank",rel:"noreferrer",style:{background:C.green,color:"#04261b"},className:"ml-auto px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1"},React.createElement(Spotify,{size:14})," Spotify"):null),React.createElement("div",{ref:f,className:"flex-1 px-4 py-4",style:{overflow:"auto",scrollBehavior:"smooth",WebkitOverflowScrolling:"touch"}},c.trim()?p?React.createElement("pre",{style:{fontFamily:"ui-monospace, Menlo, monospace",fontSize:m,lineHeight:1.5,whiteSpace:"pre",display:"inline-block",minWidth:"100%"}},h.map((w,q)=>isChordLine(w)?React.createElement("div",{key:q,style:{color:C.gold,fontWeight:700}},w||"\xA0"):React.createElement("div",{key:q},w||"\xA0"))):React.createElement("div",{style:{fontSize:m,lineHeight:1.65,whiteSpace:"pre-wrap",wordBreak:"break-word",maxWidth:680,margin:"0 auto"}},c):React.createElement("div",{className:"text-center py-10",style:{color:C.mut}},React.createElement(Music,{size:40,className:"mx-auto mb-3"}),React.createElement("p",null,"Sem letra cadastrada ainda."))))}const MES=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];function Agenda({gigs:e,saveGigs:a,bands:o,setlists:l,songs:y,songById:n,editor:b,onOpenLock:v,onOpenShow:i}){const[d,r]=useState(null),u=new Date().toISOString().slice(0,10),t=(e||[]).slice().sort((h,p)=>((h.date||"")+(h.time||"")).localeCompare((p.date||"")+(p.time||""))),g=t.filter(h=>(h.date||"")>=u),f=t.filter(h=>(h.date||"")<u).reverse(),m=h=>{const p=l.find(w=>w.id===h);return p?(p.songs||[]).length:0},x=h=>({name:h.local||"Evento",songs:[...h.setlist?(l.find(p=>p.id===h.setlist)||{}).songs||[]:[],...h.extra||[]]}),c=h=>{const p=(h.date||"--").split("-"),w=(h.setlist?m(h.setlist):0)+(h.extra&&h.extra.length||0);return React.createElement("button",{key:h.id,onClick:()=>r(h),style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full text-left p-3 rounded-xl flex items-center gap-3 active:opacity-70"},React.createElement("div",{style:{background:C.card2,minWidth:50},className:"px-1 py-1.5 rounded-lg text-center"},React.createElement("p",{className:"font-bold",style:{color:C.gold,fontSize:16,lineHeight:1}},p[2]||"--"),React.createElement("p",{style:{color:C.mut,fontSize:10}},MES[Number(p[1])-1]||"")),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},h.local||"Show"),React.createElement("p",{className:"text-xs truncate",style:{color:C.mut}},h.time?h.time+" \xB7 ":"",h.band?h.band:"sem banda",w?" \xB7 "+w+" m\xFAsicas":""),h.requests?React.createElement("p",{className:"text-xs truncate",style:{color:C.gold}},"\u2605 pedidos especiais"):null),React.createElement(ChevronRight,{size:18,style:{color:C.mut}}))};return React.createElement("div",null,React.createElement("div",{className:"flex items-center justify-between mb-3"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},"Minha agenda"),b?React.createElement("button",{onClick:()=>r("new"),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1"},React.createElement(Plus,{size:14})," Novo show"):React.createElement("button",{onClick:v,style:{background:C.card2,color:C.mut},className:"px-3 py-1.5 rounded-full text-xs flex items-center gap-1"},React.createElement(Lock,{size:13})," editar")),t.length===0&&React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Nenhum show marcado. ",b?'Toque em "Novo show".':"Entre no modo edi\xE7\xE3o para adicionar."),g.length>0&&React.createElement("p",{className:"text-xs mb-2 mt-1",style:{color:C.mut}},"Pr\xF3ximos"),React.createElement("div",{className:"space-y-2"},g.map(c)),f.length>0&&React.createElement("p",{className:"text-xs mb-2 mt-4",style:{color:C.mut}},"Anteriores"),React.createElement("div",{className:"space-y-2",style:{opacity:.72}},f.map(c)),d&&React.createElement(GigEditor,{gig:d==="new"?null:d,bands:o,setlists:l,songs:y,songById:n,onShow:i,onClose:()=>r(null),onSave:h=>{a(d==="new"?[...e,I({id:uid("gig")},h)]:e.map(p=>p.id===d.id?I(I({},p),h):p)),r(null)},onDelete:()=>{a(e.filter(h=>h.id!==d.id)),r(null)}}))}function GigEditor({gig:e,bands:a,setlists:o,songs:l,songById:y,onShow:n,onPlay:b,onClose:v,onSave:i,onDelete:d}){const[r,u]=useState(e?{date:e.date||"",time:e.time||"",local:e.local||"",band:e.band||"",setlist:e.setlist||"",extra:e.extra||[],requests:e.requests||"",endereco:e.endereco||"",note:e.note||""}:{date:"",time:"",local:"",band:"",setlist:"",extra:[],requests:"",endereco:"",note:""}),[t,g]=useState(!1),f=(m,x)=>u(c=>T(I({},c),{[m]:x}));return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[65] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[90vh] overflow-y-auto p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},e?"Editar show":"Novo show"),React.createElement("button",{onClick:v},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("div",{className:"flex gap-2"},React.createElement(Field,{label:"Data *"},React.createElement("input",{type:"date",value:r.date,onChange:m=>f("date",m.target.value),style:inp})),React.createElement(Field,{label:"Hora"},React.createElement("input",{type:"time",value:r.time,onChange:m=>f("time",m.target.value),style:inp}))),React.createElement(Field,{label:"Local / evento"},React.createElement("input",{value:r.local,onChange:m=>f("local",m.target.value),placeholder:"Ex.: Casamento Ana & Jo\xE3o \u2014 Espa\xE7o Villa",style:inp})),React.createElement(Field,{label:"Banda"},React.createElement("select",{value:r.band,onChange:m=>f("band",m.target.value),style:inp},React.createElement("option",{value:""},"\u2014 escolher \u2014"),(a||[]).map(m=>React.createElement("option",{key:m},m)),r.band&&!(a||[]).includes(r.band)?React.createElement("option",null,r.band):null)),React.createElement(Field,{label:"Show / estilo (opcional)"},React.createElement("select",{value:r.setlist,onChange:m=>f("setlist",m.target.value),style:inp},React.createElement("option",{value:""},"\u2014 nenhum \u2014"),(o||[]).map(m=>React.createElement("option",{key:m.id,value:m.id},m.name)))),React.createElement("div",null,React.createElement("div",{className:"flex items-center justify-between mb-1"},React.createElement("span",{className:"text-xs",style:{color:C.mut}},"M\xFAsicas especiais deste evento (do repert\xF3rio)"),React.createElement("button",{onClick:()=>g(!0),style:{background:C.gold,color:"#2b2100"},className:"px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1"},React.createElement(Plus,{size:13})," Adicionar")),React.createElement("div",{className:"space-y-1"},(r.extra||[]).map((m,x)=>{const c=y&&y[m];return c?React.createElement("div",{key:m+x,style:{background:C.bg,border:`1px solid ${C.line}`},className:"p-2 rounded-lg flex items-center gap-2"},React.createElement("span",{className:"text-xs",style:{color:C.gold,minWidth:14}},x+1),React.createElement("button",{onClick:()=>b&&b(m),className:"min-w-0 flex-1 truncate text-sm text-left active:opacity-70"},c.t,React.createElement("span",{style:{color:C.mut}}," \xB7 ",c.artist)),React.createElement("button",{onClick:()=>b&&b(m),title:"Ver letra",style:{color:C.gold},className:"shrink-0"},React.createElement(Play,{size:15})),React.createElement("button",{onClick:()=>f("extra",r.extra.filter((h,p)=>p!==x)),title:"Remover",style:{color:C.danger},className:"shrink-0"},React.createElement(X,{size:14}))):null})),r.extra&&r.extra.length||r.setlist?React.createElement("button",{onClick:()=>n({name:r.local||"Evento",songs:[...r.setlist?(o.find(m=>m.id===r.setlist)||{}).songs||[]:[],...r.extra||[]]}),style:{background:C.green,color:"#04261b"},className:"w-full mt-2 py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-1"},React.createElement(Play,{size:15})," Ver letras do evento (Modo Show)"):null),React.createElement(Field,{label:"Outros pedidos / n\xE3o cadastradas (texto livre)"},React.createElement("textarea",{value:r.requests,onChange:m=>f("requests",m.target.value),rows:4,placeholder:"Ex.: m\xFAsica nova que ainda n\xE3o est\xE1 no app; ordem especial\u2026",style:T(I({},inp),{whiteSpace:"pre-wrap"})})),React.createElement(Field,{label:"Endere\xE7o do evento (para o Waze)"},React.createElement("input",{value:r.endereco,onChange:m=>f("endereco",m.target.value),placeholder:"Rua, n\xFAmero, bairro, cidade\u2026",style:inp})),r.endereco.trim()?React.createElement("a",{href:"https://waze.com/ul?q="+encodeURIComponent(r.endereco.trim())+"&navigate=yes",target:"_blank",rel:"noreferrer",style:{background:C.blue,color:"#04203f"},className:"w-full py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-1"},React.createElement(MapPin,{size:15})," Abrir no Waze"):null,React.createElement(Field,{label:"Observa\xE7\xF5es (cach\xEA, contato, hor\xE1rio de passagem\u2026)"},React.createElement("textarea",{value:r.note,onChange:m=>f("note",m.target.value),rows:2,style:inp})),React.createElement("div",{className:"flex gap-2"},React.createElement("button",{onClick:()=>{r.date&&i(r)},style:{background:C.green,color:"#04261b"},className:"flex-1 py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Check,{size:16})," Salvar"),e?React.createElement("button",{onClick:d,style:{background:C.card2,color:C.danger},className:"px-4 rounded-xl"},React.createElement(Trash2,{size:16})):null),t&&React.createElement(SongPicker,{songs:l,onClose:()=>g(!1),onPick:m=>f("extra",[...r.extra||[],m])})))}function ShowView({setlist:e,songById:a,settings:o,saveSettings:l,onClose:y}){const[n,b]=useState(0),v=useRef(null),i=o&&o.font||19,d=(e&&e.songs||[]).map(u=>a[u]).filter(Boolean);useEffect(()=>{if(!n||!v.current)return;const u=v.current,t=setInterval(()=>{u.scrollTop+=n},60);return()=>clearInterval(t)},[n]),useEffect(()=>{let u=null;const t=async()=>{try{navigator.wakeLock&&(u=await navigator.wakeLock.request("screen"))}catch(f){}};t();const g=()=>{document.visibilityState==="visible"&&t()};return document.addEventListener("visibilitychange",g),()=>{document.removeEventListener("visibilitychange",g);try{u&&u.release()}catch(f){}}},[]);const r=u=>{const t=document.getElementById("showsong-"+u);t&&v.current&&v.current.scrollTo({top:t.offsetTop-6,behavior:"smooth"})};return e?React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-[68] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:y,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-bold truncate"},e.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Modo show \xB7 ",d.length," m\xFAsica(s)")),React.createElement(Type,{size:13,style:{color:C.mut}}),React.createElement("button",{onClick:()=>l(T(I({},o),{font:Math.max(13,i-1)})),style:{background:C.card2},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{minWidth:20},className:"text-center text-xs"},i),React.createElement("button",{onClick:()=>l(T(I({},o),{font:Math.min(40,i+1)})),style:{background:C.card2},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14})),React.createElement("button",{onClick:()=>b(u=>u>0?0:1),style:{background:n?C.gold:C.card2,color:n?"#2b2100":C.txt},className:"p-1.5 rounded-lg ml-1 flex items-center gap-1"},n?React.createElement(Pause,{size:14}):React.createElement(Play,{size:14})),n>0&&React.createElement("input",{type:"range",min:"1",max:"6",value:n,onChange:u=>b(Number(u.target.value)),className:"w-14"})),React.createElement("div",{style:{background:C.card2,borderBottom:`1px solid ${C.line}`},className:"px-3 py-1.5 flex gap-1 overflow-x-auto"},d.map((u,t)=>React.createElement("button",{key:t,onClick:()=>r(t),style:{background:C.card,color:C.mut},className:"px-2 py-1 rounded-lg text-xs whitespace-nowrap shrink-0"},t+1,". ",u.t))),React.createElement("div",{ref:v,className:"flex-1 px-4 py-4",style:{overflow:"auto",scrollBehavior:"smooth",WebkitOverflowScrolling:"touch"}},d.length===0?React.createElement("p",{className:"text-center py-10",style:{color:C.mut}},"Show vazio. Adicione m\xFAsicas a este setlist."):d.map((u,t)=>React.createElement("div",{key:u.id+t,id:"showsong-"+t,style:{maxWidth:680,margin:"0 auto",marginTop:t>0?64:0,paddingTop:t>0?28:0,borderTop:t>0?`2px solid ${C.line}`:"none"}},React.createElement("div",{className:"flex items-baseline gap-2 mb-3"},React.createElement("span",{style:{color:C.gold,fontSize:i},className:"font-bold"},t+1,"."),React.createElement("span",{className:"font-bold",style:{fontSize:i+4,color:C.gold}},u.t),u.artist?React.createElement("span",{className:"text-xs",style:{color:C.mut}},u.artist):null,u.sp||u.sps?React.createElement("a",{href:u.sp||u.sps,target:"_blank",rel:"noreferrer",style:{color:C.green,marginLeft:"auto"},className:"shrink-0"},React.createElement(Spotify,{size:16})):null),React.createElement("div",{style:{fontSize:i,lineHeight:1.6,whiteSpace:"pre-wrap",wordBreak:"break-word"}},u.letra||"(sem letra)"))),React.createElement("div",{style:{height:90}}))):null}function Setlists({setlists:e,songById:a,onOpen:o,saveSetlists:l,editor:y,onOpenLock:n}){const[b,v]=useState(""),i=useMemo(()=>{const r=nt(b);return e.filter(u=>!r||nt(u.name).includes(r)).slice().sort((u,t)=>u.name.localeCompare(t.name,"pt"))},[e,b]),d=()=>{const r=(prompt("Nome (ex.: Rock, Samba, Casamento...):")||"").trim();r&&l([...e,{id:uid("set"),name:r,style:"",songs:[]}])};return React.createElement("div",null,React.createElement("div",{className:"flex items-center gap-2 mb-3"},React.createElement("div",{className:"relative flex-1"},React.createElement(Search,{size:16,style:{color:C.mut},className:"absolute left-3 top-1/2 -translate-y-1/2"}),React.createElement("input",{value:b,onChange:r=>v(r.target.value),placeholder:"Buscar estilo/lista\u2026",style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"w-full pl-9 pr-3 py-2.5 rounded-xl outline-none"})),y?React.createElement("button",{onClick:d,style:{background:C.gold,color:"#2b2100"},className:"px-3 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-1 shrink-0"},React.createElement(Plus,{size:15})," Novo"):React.createElement("button",{onClick:n,style:{background:C.card2,color:C.mut},className:"px-3 py-2.5 rounded-xl text-sm flex items-center gap-1 shrink-0"},React.createElement(Lock,{size:14}))),React.createElement("p",{className:"text-xs mb-2",style:{color:C.mut}},i.length," estilo(s)/lista(s) \u2014 abra para ver as letras em sequ\xEAncia"),React.createElement("div",{className:"space-y-2"},i.map(r=>React.createElement("div",{key:r.id,style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full p-3 rounded-xl flex items-center gap-3"},React.createElement("button",{onClick:()=>o(r.id),className:"flex items-center gap-3 min-w-0 flex-1 text-left active:opacity-70"},React.createElement("div",{style:{background:C.card2,color:C.violet,minWidth:40},className:"p-2 rounded-lg flex items-center justify-center"},React.createElement(ListMusic,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},r.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},(r.songs||[]).length," m\xFAsica(s)"))),y?React.createElement("button",{onClick:()=>l([...e,T(I({},r),{id:uid("set"),name:r.name+" (c\xF3pia)"})]),title:"Duplicar show",style:{background:C.card2,color:C.mut},className:"p-2 rounded-lg shrink-0"},React.createElement(Plus,{size:15})):null,React.createElement("button",{onClick:()=>o(r.id),className:"shrink-0"},React.createElement(ChevronRight,{size:18,style:{color:C.mut}}))))))}function SetlistEditor({sid:e,setlists:a,saveSetlists:o,songs:l,songById:y,editor:n,onPlay:b,onShow:v,onClose:i}){const d=a.find(c=>c.id===e)||{name:"",songs:[]},[r,u]=useState(!1),t=c=>o(a.map(h=>h.id===e?I(I({},h),c):h)),g=(d.songs||[]).map(c=>y[c]).filter(Boolean),f=(c,h)=>{const p=[...d.songs],w=c+h;w<0||w>=p.length||([p[c],p[w]]=[p[w],p[c]],t({songs:p}))},m=c=>t({songs:d.songs.filter((h,p)=>p!==c)}),x=()=>{confirm("Excluir este setlist? (as m\xFAsicas continuam no repert\xF3rio)")&&(o(a.filter(c=>c.id!==e)),i())};return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-40 flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:i,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},n?React.createElement("input",{value:d.name,onChange:c=>t({name:c.target.value}),style:{background:"transparent",color:C.txt},className:"font-bold w-full outline-none"}):React.createElement("p",{className:"font-bold truncate"},d.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},g.length," m\xFAsica(s)")),n?React.createElement("button",{onClick:x,style:{color:C.danger},className:"p-2"},React.createElement(Trash2,{size:18})):null),React.createElement("div",{className:"overflow-y-auto flex-1 p-3 space-y-3"},g.length>0&&React.createElement("button",{onClick:()=>v(e),style:{background:C.green,color:"#04261b"},className:"w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 active:opacity-80"},React.createElement(Play,{size:18})," Abrir em sequ\xEAncia (Modo Show)"),n&&React.createElement("button",{onClick:()=>u(!0),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1"},React.createElement(Plus,{size:14})," Adicionar m\xFAsica"),g.length===0&&React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Setlist vazio."),React.createElement("div",{className:"space-y-2"},g.map((c,h)=>React.createElement("div",{key:c.id+h,style:{background:C.card,border:`1px solid ${C.line}`},className:"p-2.5 rounded-xl flex items-center gap-2"},React.createElement("span",{style:{color:C.mut,minWidth:20},className:"text-xs text-center"},h+1),n?React.createElement("div",{className:"flex flex-col"},React.createElement("button",{onClick:()=>f(h,-1),style:{color:C.mut},className:"p-0.5"},React.createElement(ArrowUp,{size:14})),React.createElement("button",{onClick:()=>f(h,1),style:{color:C.mut},className:"p-0.5"},React.createElement(ArrowDown,{size:14}))):null,React.createElement("button",{onClick:()=>b(c.id),className:"min-w-0 flex-1 text-left"},React.createElement("p",{className:"font-medium truncate text-sm"},c.t),React.createElement("p",{className:"text-xs",style:{color:C.mut}},c.artist?c.artist+" \xB7 ":"",React.createElement("span",{style:{color:ESTILO_COR[c.pri]}},c.pri))),spLink(c)?React.createElement("a",{href:spLink(c),target:"_blank",rel:"noreferrer",style:{color:C.green},className:"p-1.5"},React.createElement(Spotify,{size:16})):null,n?React.createElement("button",{onClick:()=>m(h),style:{color:C.danger},className:"p-1.5"},React.createElement(Trash2,{size:15})):null)))),r&&React.createElement(SongPicker,{songs:l,onClose:()=>u(!1),onPick:c=>t({songs:[...d.songs||[],c]})}))}function SongPicker({songs:e,onClose:a,onPick:o}){const[l,y]=useState(""),[n,b]=useState("Todos"),v=useMemo(()=>{const d=nt(l).split(" ").filter(Boolean);return e.filter(u=>{if(n!=="Todos"&&u.pri!==n)return!1;if(!d.length)return!0;const t=nt((u.t||"")+" "+(u.artist||""));return d.every(g=>t.includes(g))}).slice().sort((u,t)=>u.t.localeCompare(t.t,"pt")).slice(0,300)},[e,l,n]);return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[90] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[85vh] flex flex-col"},React.createElement("div",{className:"p-3 border-b",style:{borderColor:C.line}},React.createElement("div",{className:"flex items-center justify-between mb-2"},React.createElement("p",{className:"font-semibold"},"Adicionar m\xFAsica"),React.createElement("button",{onClick:a},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("input",{value:l,onChange:i=>y(i.target.value),placeholder:"Buscar\u2026",style:inp,autoFocus:!0}),React.createElement("div",{className:"mt-2"},React.createElement(Sel,{value:n,onChange:b,options:["Todos",...ESTILOS]}))),React.createElement("div",{className:"overflow-y-auto p-2 space-y-1"},v.map(i=>React.createElement("button",{key:i.id,onClick:()=>{o(i.id),a()},style:{background:C.card2},className:"w-full text-left p-2.5 rounded-lg flex items-center gap-2 active:opacity-70"},React.createElement("span",{className:"min-w-0 flex-1 truncate text-sm"},i.t,React.createElement("span",{style:{color:C.mut}}," \xB7 ",i.artist)),React.createElement("span",{className:"text-xs shrink-0",style:{color:ESTILO_COR[i.pri]}},i.pri))))))}function Ajustes({settings:e,saveSettings:a,songs:o,setlists:l,bands:y,saveBands:n,editor:b,hasPin:v,pin:i,onLock:d,onOpenLock:r,savePin:u}){const t=o.filter(f=>(f.letra||"").length>10).length,g=o.filter(f=>f.sp).length;return React.createElement("div",{className:"space-y-4"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4 space-y-2"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},"Senha de edi\xE7\xE3o"),b?React.createElement(React.Fragment,null,React.createElement("p",{className:"text-sm",style:{color:C.green}},"\u2713 Modo edi\xE7\xE3o ativo neste aparelho."),React.createElement(PinChange,{hasPin:v,pin:i,savePin:u}),React.createElement("button",{onClick:d,style:{background:C.card2,color:C.txt},className:"px-3 py-2 rounded-lg text-sm flex items-center gap-1"},React.createElement(Lock,{size:14})," Sair do modo edi\xE7\xE3o")):React.createElement(React.Fragment,null,React.createElement("p",{className:"text-sm",style:{color:C.mut}},v?"S\xF3 quem tem a senha edita m\xFAsicas e setlists.":"Defina uma senha para liberar a edi\xE7\xE3o."),React.createElement("button",{onClick:r,style:{background:C.gold,color:"#2b2100"},className:"px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1"},React.createElement(Unlock,{size:14})," ",v?"Entrar no modo edi\xE7\xE3o":"Criar senha de edi\xE7\xE3o"))),React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4 space-y-2"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},"Bandas / projetos"),React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Use na Agenda para marcar com qual banda \xE9 cada show."),b?React.createElement(BandManage,{bands:y,saveBands:n}):React.createElement("p",{className:"text-sm",style:{color:C.mut}},y&&y.length?y.join(" \xB7 "):"Nenhuma banda ainda.")),React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4"},React.createElement("p",{className:"font-semibold mb-1",style:{color:C.gold}},"Sobre o repert\xF3rio"),React.createElement("p",{className:"text-sm",style:{color:C.mut}},o.length," m\xFAsicas \xB7 ",l.length," setlists \xB7 ",t," com letra \xB7 ",g," com link exato do Spotify."),React.createElement("p",{className:"text-xs mt-2",style:{color:C.mut}},"Filtre por estilo ou marcador na aba M\xFAsicas. Toque numa m\xFAsica para abrir a letra (fonte ajust\xE1vel e rolagem autom\xE1tica) e o Spotify.")),React.createElement(Field,{label:`Tamanho padr\xE3o da letra: ${e.font||19}px`},React.createElement("input",{type:"range",min:"13",max:"34",value:e.font||19,onChange:f=>a(T(I({},e),{font:Number(f.target.value)})),className:"w-full"})),React.createElement("p",{className:"text-xs text-center",style:{color:C.mut}},"Tudo o que voc\xEA edita \xE9 compartilhado em tempo real."),React.createElement("p",{className:"text-xs text-center",style:{color:C.mut}},"Vers\xE3o ",APP_VERSION))}function PinChange({hasPin:e,pin:a,savePin:o}){const[l,y]=useState(!1),[n,b]=useState(""),[v,i]=useState(""),[d,r]=useState("");if(!l)return React.createElement("button",{onClick:()=>y(!0),style:{color:C.blue},className:"text-sm underline block"},"Alterar senha");const u=()=>{if(e&&n.trim()!==a){r("Senha atual incorreta.");return}if(v.trim().length<4){r("M\xEDnimo 4 d\xEDgitos.");return}o(v.trim()),r("Senha atualizada \u2713"),b(""),i(""),setTimeout(()=>y(!1),1e3)};return React.createElement("div",{className:"space-y-2"},e?React.createElement("input",{value:n,onChange:t=>b(t.target.value),type:"password",inputMode:"numeric",placeholder:"Senha atual",style:inp}):null,React.createElement("input",{value:v,onChange:t=>i(t.target.value),type:"password",inputMode:"numeric",placeholder:"Nova senha (m\xEDn. 4 d\xEDgitos)",style:inp}),d?React.createElement("p",{className:"text-xs",style:{color:d.indexOf("\u2713")>=0?C.green:C.danger}},d):null,React.createElement("div",{className:"flex gap-2"},React.createElement("button",{onClick:u,style:{background:C.green,color:"#04261b"},className:"px-3 py-1.5 rounded-lg text-sm font-semibold"},"Salvar senha"),React.createElement("button",{onClick:()=>{y(!1),r("")},style:{background:C.card2,color:C.mut},className:"px-3 py-1.5 rounded-lg text-sm"},"Cancelar")))}function BandManage({bands:e,saveBands:a}){const[o,l]=useState(""),y=()=>{const n=o.trim();if(!n||(e||[]).includes(n)){l("");return}a([...e||[],n]),l("")};return React.createElement("div",{className:"space-y-2"},React.createElement("div",{className:"flex gap-2"},React.createElement("input",{value:o,onChange:n=>l(n.target.value),onKeyDown:n=>n.key==="Enter"&&y(),placeholder:"Nome da banda",style:inp}),React.createElement("button",{onClick:y,style:{background:C.gold,color:"#2b2100"},className:"px-4 rounded-xl font-semibold"},"Add")),React.createElement("div",{className:"flex flex-wrap gap-2"},(e||[]).map(n=>React.createElement("span",{key:n,style:{background:C.card2,border:`1px solid ${C.line}`},className:"px-2.5 py-1 rounded-full text-sm flex items-center gap-1"},n,React.createElement("button",{onClick:()=>a(e.filter(b=>b!==n)),style:{color:C.danger},className:"ml-1"},React.createElement(X,{size:13}))))))}const inp={background:C.bg,border:`1px solid ${C.line}`,color:C.txt,borderRadius:12,padding:"10px 12px",outline:"none",width:"100%"};function Field({label:e,children:a}){return React.createElement("label",{className:"block"},React.createElement("span",{className:"text-xs block mb-1",style:{color:C.mut}},e),a)}function AddSong({onClose:e,onSave:a,initial:o,estilos:l}){const y=!!(o&&o.id),[n,b]=useState(o?{t:o.t||"",artist:o.artist||"",pri:o.pri||"Diversos",tags:(o.tags||[]).join(", "),sp:o.sp||"",letra:o.letra||"",cifra:o.cifra||"",u:o.u||""}:{t:"",artist:"",pri:l&&l[0]||"Diversos",tags:"",sp:"",letra:"",cifra:"",u:""}),[v,i]=useState(""),d=(t,g)=>b(f=>T(I({},f),{[t]:g})),r=async t=>{const g=t.target.files&&t.target.files[0];if(g){if(g.type&&g.type.indexOf("pdf")<0){i("Selecione um PDF.");return}i("Enviando\u2026");try{const f=(g.name||"letra.pdf").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^A-Za-z0-9._-]+/g,"_"),m="up-"+Date.now().toString(36)+"-"+f,{error:x}=await SB.storage.from("letras").upload(m,g,{upsert:!0,contentType:"application/pdf"});if(x){i("Falha: "+x.message);return}const{data:c}=SB.storage.from("letras").getPublicUrl(m);d("u",c.publicUrl),i("PDF enviado \u2713")}catch(f){i("Falha no upload.")}}},u=()=>{if(!n.t.trim())return;const t={t:n.t.trim(),artist:n.artist.trim(),pri:n.pri,tags:n.tags.split(",").map(g=>g.trim()).filter(Boolean),sp:n.sp.trim(),letra:n.letra,cifra:n.cifra,u:n.u.trim()};a(t)};return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[65] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[90vh] overflow-y-auto p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},y?"Editar m\xFAsica":"Nova m\xFAsica"),React.createElement("button",{onClick:e},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement(Field,{label:"T\xEDtulo *"},React.createElement("input",{value:n.t,onChange:t=>d("t",t.target.value),style:inp,autoFocus:!0})),React.createElement(Field,{label:"Artista"},React.createElement("input",{value:n.artist,onChange:t=>d("artist",t.target.value),style:inp})),React.createElement("div",{className:"flex gap-2"},React.createElement(Field,{label:"Estilo principal"},React.createElement("select",{value:n.pri,onChange:t=>d("pri",t.target.value),style:inp},(l||[]).concat(l&&l.indexOf(n.pri)<0?[n.pri]:[]).map(t=>React.createElement("option",{key:t},t)))),React.createElement(Field,{label:"Marcadores (v\xEDrgula)"},React.createElement("input",{value:n.tags,onChange:t=>d("tags",t.target.value),placeholder:"Anos 80, Pop",style:inp}))),React.createElement(Field,{label:"Link do Spotify"},React.createElement("input",{value:n.sp,onChange:t=>d("sp",t.target.value),placeholder:"https://open.spotify.com/track/\u2026",style:inp})),React.createElement(Field,{label:"Letra"},React.createElement("textarea",{value:n.letra,onChange:t=>d("letra",t.target.value),rows:7,style:T(I({},inp),{whiteSpace:"pre-wrap"})})),React.createElement("div",null,React.createElement("label",{style:{background:C.card2,color:C.txt,border:"1px dashed "+C.line},className:"flex items-center justify-center gap-2 py-2.5 rounded-xl cursor-pointer text-sm font-medium"},React.createElement(Upload,{size:16})," Enviar PDF da letra",React.createElement("input",{type:"file",accept:"application/pdf",onChange:r,className:"hidden"})),v?React.createElement("p",{className:"text-xs mt-1",style:{color:v.indexOf("\u2713")>=0?C.green:v.indexOf("Enviando")>=0?C.mut:C.danger}},v):null),React.createElement(Field,{label:"Cifra em texto (opcional \u2014 habilita transpor)"},React.createElement("textarea",{value:n.cifra,onChange:t=>d("cifra",t.target.value),rows:4,wrap:"off",style:T(I({},inp),{fontFamily:"ui-monospace, monospace",whiteSpace:"pre",overflowX:"auto"})})),React.createElement("button",{onClick:u,style:{background:C.green,color:"#04261b"},className:"w-full py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Check,{size:16})," ",y?"Salvar altera\xE7\xF5es":"Salvar m\xFAsica")))}function PdfViewer({url:e,title:a,onClose:o}){const l=driveEmbed(e);return React.createElement("div",{style:{background:"rgba(0,0,0,0.92)"},className:"fixed inset-0 z-[88] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:"1px solid "+C.line},className:"px-3 py-2 flex items-center gap-2"},React.createElement("button",{onClick:o,style:{background:C.card2,color:C.txt},className:"px-3 py-2 rounded-lg flex items-center gap-1 font-semibold shrink-0"},React.createElement(ChevronLeft,{size:18})," Voltar"),React.createElement("p",{className:"font-semibold truncate flex-1"},a),React.createElement("a",{href:e,target:"_blank",rel:"noreferrer",style:{color:C.blue},className:"text-xs flex items-center gap-1 shrink-0"},React.createElement(ExternalLink,{size:13})," nova aba")),React.createElement("iframe",{title:a,src:l,className:"flex-1 w-full",style:{border:0,background:"#fff"}}))}function LockModal({hasPin:e,onClose:a,onSubmit:o}){const[l,y]=useState(""),[n,b]=useState(""),v=()=>{const i=o(l);i?b(i):a()};return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[75] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:"1px solid "+C.line},className:"w-full max-w-sm rounded-t-2xl sm:rounded-2xl p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},e?"Modo edi\xE7\xE3o":"Criar senha de edi\xE7\xE3o"),React.createElement("button",{onClick:a},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("p",{className:"text-xs",style:{color:C.mut}},e?"Digite a senha para editar neste aparelho.":"Defina uma senha (m\xEDn. 4 d\xEDgitos)."),React.createElement("input",{value:l,onChange:i=>{y(i.target.value),b("")},onKeyDown:i=>i.key==="Enter"&&v(),type:"password",inputMode:"numeric",placeholder:e?"Senha":"Nova senha",style:inp,autoFocus:!0}),n?React.createElement("p",{className:"text-xs",style:{color:C.danger}},n):null,React.createElement("button",{onClick:v,style:{background:C.gold,color:"#2b2100"},className:"w-full py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Unlock,{size:16})," ",e?"Entrar":"Criar e entrar")))}const _root=ReactDOM.createRoot(document.getElementById("root"));_root.render(React.createElement(App,null));try{window.__booted=!0}catch(e){}
+Pra ganhar beijinho`},{id:"no-me-platiques-mas",t:"No Me Platiques M\xE1s",artist:"Vicente Garrido",pri:"Bolero",tags:["Bolero","Latina","Trilha Sonora"],letra:`NO ME PLATIQUES M\xC1S LO QUE DEBI\xD3 PASAR
+ANTES DE CONOCERNOS
+S\xC9 QUE HAS TENIDO,
+HORAS FELICES AUN SIN ESTAR CONMIGO
+
+NO QUIERO YA SABER QUE PUDO SUCEDER
+EN TODOS ESTOS A\xD1OS QUE T\xDA HAS VIVIDO
+CON OTRAS GENTES
+LEJOS DE MI CARI\xD1O
+
+TE QUIERO TANTO QUE ME ENCELO
+HASTA DE LO QUE PUDO SER
+Y ME FIGURO QUE POR ESO
+ES QUE YO VIVO, TAN INTRANQUILO
+
+NO ME PLATIQUES YA
+D\xC9JAME IMAGINAR
+QUE NO EXISTE EL PASSADO Y QUE NACIMOS,
+EL MISMO INSTANTE
+EN QUE NOS CONOCIMOS
+
+TE QUIERO TANTO QUE ME ENCELO
+HASTA DE LO QUE PUDO SER
+Y ME FIGURO QUE POR ESO
+ES QUE YO VIVO, TAN INTRANQUILO OOOHHH
+
+NO ME PLATIQUES YA
+D\xC9JAME IMAGINAR
+QUE NO EXISTE EL PASADO Y QUE NACIMOS,
+EL MISMO INSTANTE
+EN QUE NOS CONOCIMOS`,sp:"",sps:"https://open.spotify.com/search/No%20Me%20Platiques%20M%C3%A1s%20Vicente%20Garrido",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/no-me-platiques-mas.pdf"},{id:"mucho-corazon",t:"Mucho Coraz\xF3n",artist:"",pri:"Bolero",tags:["Bolero","Latina","Trilha Sonora"],letra:`DI SI ENCONTRASTE EN MI PASADO
+UNA RAZ\xD3N PARA QUERERME O PARA OLVIDARME
+
+PIDES CARI\xD1O, PIDES OLVIDO SI TE CONVIENE
+NO LLAMES CORAZ\xD3N LO QUE T\xDA TIENES
+
+DE MI PASADO PREGUNTAS TODO
+QUE C\xD3MO FUE
+SI ANTES DE AMAR
+DEBE TENERSE FE
+DAR POR UN QUERER LA VIDA MISMA SIN MORIR
+ESO ES CARI\xD1O NO LO QUE HAY EN TI
+
+YO PARA QUERER NO NECESITO UNA RAZ\xD3N
+ME SOBRA MUCHO
+PERO MUCHO CORAZ\xD3N
+
+DE MI PASADO PREGUNTAS TODO
+QUE C\xD3MO FUE
+SI ANTES DE AMAR
+DEBE TENERSE FE
+DAR POR UN QUERER LA VIDA MISMA SIN MORIR
+ESO ES CARI\xD1O NO LO QUE HAY EN TI
+
+YO PARA QUERER NO NECESITO UNA RAZ\xD3N
+ME SOBRA MUCHO PERO MUCHO CORAZ\xD3N`,sp:"",sps:"https://open.spotify.com/search/Mucho%20Coraz%C3%B3n",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/mucho-corazon.pdf"},{id:"inolvidable",t:"Inolvidable",artist:"Julio Guti\xE9rrez",pri:"Bolero",tags:["Bolero","Latina","Trilha Sonora"],letra:`EN LA VIDA HAY AMORES QUE NUNCA PUEDEN OLVIDARSE
+IMBORRABLES MOMENTOS QUE SIEMPRE
+GUARDA EL CORAZ\xD3N
+PERO AQUELLO QUE UN D\xCDA NOS HIZO TEMBLAR DE ALEGR\xCDA
+ES MENTIRA QUE HOY PUEDA OLVIDARSE
+CON UN NUEVO AMOR
+
+HE BESADO OTRAS BOCAS BUSCANDO
+NUEVAS ANSIEDADES
+Y OTROS BRAZOS EXTRA\xD1OS ME ESTRECHAN
+LLENOS DE EMOCI\xD3N
+PERO SOLO CONSIGUEN HACERME RECORDAR LOS TUYOS
+QUE INOLVIDABLEMENTE VIVIR\xC1N EN M\xCD
+-----------------------//-------------------back solo-------------------
+PERO AQUELLO QUE UN D\xCDA NOS HIZO TEMBLAR DE ALEGR\xCDA
+ES MENTIRA QUE HOY PUEDA OLVIDARSE CON UN NUEVO AMOR ehhhhh
+HE BESADO OTRAS BOCAS BUSCANDO NUEVAS ANSIEDADES
+Y OTROS BRAZOS EXTRA\xD1OS ME ESTRECHAN
+LLENOS DE EMOCI\xD3N
+PERO SOLO CONSIGUEN HACERME RECORDAR LOS TUYOS
+QUE INOLVIDABLEMENTE VIVIR\xC1N EN M\xCD
+QUE INOLVIDABLEMENTE VIVIR\xC1N EN M\xCD`,sp:"",sps:"https://open.spotify.com/search/Inolvidable%20Julio%20Guti%C3%A9rrez",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/inolvidable.pdf"},{id:"atrasadinha",t:"Atrasadinha",artist:"",pri:"Bolero",tags:["Bolero","Latina","Trilha Sonora"],letra:`BOTEI A MELHOR ROUPA PRA ESCONDER OS MEUS DEFEITOS
+EXAGEREI NO PERFUME PRA TE IMPRESSIONAR
+CHEGUEI MAIS CEDO PRA TE VER CHEGAR
+
+E VOC\xCA CHEGOU ATRASADINHA MAS TAVA LINDA
+MINHA BOCA CALOU MAS MEU CORA\xC7\xC3O GRITOU POR CIMA
+VAI NA F\xC9, APOSTA NELA QUE ELA \xC9 UMA BOA MENINA
+
+E VAMOS PULAR A PARTE QUE EU PE\xC7O AQUELE VINHO DO BOM
+A TA\xC7A N\xC3O MERECE TIRAR SEU BATOM
+DEIXA COMIGO QUE PRA ISSO EU TENHO DOM
+
+VAMOS PULAR A PARTE QUE EU PE\xC7O AQUELE VINHO DO BOM
+A TA\xC7A N\xC3O MERECE TIRAR SEU BATOM
+DEIXA COMIGO QUE PRA ISSO EU TENHO DOM
+E DA\xCD QUE \xC9 NOSSO PRIMEIRO ENCONTRO?
+HOJE EU TE BEIJO E PRONTO
+
+BOTEI A MELHOR ROUPA PRA ESCONDER OS MEUS DEFEITOS
+EXAGEREI NO PERFUME PRA TE IMPRESSIONAR
+CHEGUEI MAIS CEDO PRA TE VER CHEGAR
+E VOC\xCA CHEGOU ATRASADINHA
+MAS TAVA LINDA
+MINHA BOCA CALOU
+MAS MEU CORA\xC7\xC3O GRITOU POR CIMA
+E VAI NA F\xC9, APOSTA NELA QUE ELA \xC9 UMA BOA MENINA
+E VAMOS PULAR A PARTE QUE EU PE\xC7O AQUELE VINHO DO BOM
+A TA\xC7A N\xC3O MERECE TIRAR SEU BATOM
+DEIXA COMIGO QUE PRA ISSO EU TENHO O DOM
+VAMOS PULAR A PARTE QUE EU PE\xC7O AQUELE VINHO DO BOM
+A TA\xC7A N\xC3O MERECE TIRAR SEU BATOM
+DEIXA COMIGO QUE PRA ISSO EU TENHO O DOM
+VAMOS PULAR A PARTE QUE EU PE\xC7O AQUELE VINHO DO BOM
+A TA\xC7A N\xC3O MERECE TIRAR SEU BATOM
+DEIXA COMIGO QUE PRA ISSO EU TENHO O DOM
+VAMOS PULAR A PARTE QUE EU PE\xC7O AQUELE VINHO DO BOM
+A TA\xC7A N\xC3O MERECE TIRAR SEU BATOM
+DEIXA COMIGO QUE PRA ISSO EU TENHO O DOM
+E DA\xCD QUE \xC9 NOSSO PRIMEIRO ENCONTRO?
+HOJE EU TE BEIJO E PRONTO
+E DA\xCD QUE \xC9 NOSSO PRIMEIRO ENCONTRO?
+HOJE EU TE BEIJO E PRONTO
+TE BEIJO E PRONTO`,sp:"",sps:"https://open.spotify.com/search/Atrasadinha",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/atrasadinha.pdf"},{id:"brown-sugar",t:"Brown Sugar",artist:"The Rolling Stones",pri:"Rock",tags:["Os Caravelhos","Rock"],letra:`Gold Coast slave ship bound for cotton fields
+Sold in the market down in New Orleans
+Scarred old slaver knows he's doin' all right
+Hear him whip the women just around midnight
+Brown Sugar, how come you taste so good
+Brown Sugar, just like a young girl should
+Drums beatin' cold, English blood runs hot
+Lady of the house wonderin' when it's gonna stop
+House boy knows that he's doin' all right
+You should have heard him just around midnight
+Brown Sugar, how come you taste so good
+Brown Sugar, just like a young girl should
+Brown Sugar, how come you dance so good
+Brown Sugar, just like a black girl should
+I bet your mama was a Cajun Queen,
+And all her boyfriends were sweet sixteen
+I'm no school boy but I know what I like
+You should have heard them just around midnight
+Brown Sugar, how come you taste so good
+Brown Sugar, just like a black girl should
+I said, yeah, yeah, yeah, wooo
+How come you, how come you dance so good
+Yeah, yeah, yeah, wooo
+Just like a, just like a black girl should
+Yeah, yeah, yeah, wooo`,sp:"",sps:"https://open.spotify.com/search/Brown%20Sugar%20The%20Rolling%20Stones",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/brown-sugar.pdf"},{id:"sunshine-of-your-love",t:"Sunshine of Your Love",artist:"Cream",pri:"Rock",tags:["Os Caravelhos","Rock"],letra:`It's getting near dawn,
+When lights close their tired eyes
+I'll soon be with you my love,
+To give you my dawn surprise
+I'll be with you darling soon,
+I'll be with you when the stars start falling
+I've been waiting so long
+To be where I'm going
+In the sunshine of your love
+I'm with you my love,
+The light's shining through on you
+Yes, I'm with you my love,
+It's the morning and just we two
+I'll stay with you darling now,
+I'll stay with you till my seas are dried up
+I've been waiting so long
+To be where I'm going
+In the sunshine of your love
+I'm with you my love,
+The light's shining through on you.
+Yes, I'm with you my love,
+It's the morning and just we two.
+I'll stay with you darling now,
+I'll stay with you till my seas are dried up
+I've been waiting so long
+I've been waiting so long
+I've been waiting so long
+To be where I'm going
+In the sunshine of your love`,sp:"",sps:"https://open.spotify.com/search/Sunshine%20of%20Your%20Love%20Cream",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/sunshine-of-your-love.pdf"},{id:"something-happened-on-the-way-to-heaven",t:"Something Happened on the Way to Heaven",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`We had a life, we had a love
+But you don't know what you've got 'til you lose it
+I got dow
+Well that was then and this is now
+And I want you back
+Now How many times gonna do I have to say I'm sorry, yes I'm sorry
+
+How can something so good go or so bad
+How can something so right go so wrong
+I don't know, I don't have all the answers
+But I want you back
+How many times can I say I'm sorry
+
+And You know, you can run, and you can hide
+But I'm now leaving 'less you come with me
+We've had our problems but I'm on your side
+You're all I need, please believe in me, oh yeah
+
+I only wanted someone to love
+But something happened on the way to heaven
+It got a hold
+me and wouldn't let go
+And I want you back
+How many times do I have to say I'm sorry, yes, I'm sorry
+
+You know, you can run, and you can hide
+But I'm not leaving less you come with me
+We've had our problems but I'm on your side
+You're all I need, please believe me
+You know
+you can run, and you can hide
+But I'm not leaving till it's all over
+We've had our problems but I'm on your side
+You're all I need, let me show you
+
+They say you can't take it with you when you go
+And I believe it
+And taking what I've got or being here with you
+You know I, I'd rather leave it
+
+We had a life, we had a love
+But you don't know what you've got 'til you lose it
+Well that was then and this is now
+And I want you back
+How many times do I have to say I'm sorry, yes I'm sorry
+
+And You know you can run, and you can hide
+But I'm not leaving less you come with me
+We've had our problems but I'm on your side
+You're all I need, please believe in me
+You can run, and you can hide
+But I'm not leaving until it's all over
+We've had our problems but I'm on your side
+You're all I need, please believe in me
+Ohohhhh ohhh yehhhh`,sp:"",sps:"https://open.spotify.com/search/Something%20Happened%20on%20the%20Way%20to%20Heaven%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/something-happened-on-the-way-to-heaven.pdf"},{id:"against-all-odds-take-a-look-at-me-now",t:"Against All Odds (Take a Look at Me Now)",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`How can I just let you walk away
+Just let you leave without a trace?
+When I stand here taking every breath with you, ooh ooh
+You're the only one who really knew me at all
+
+How can you just walk away from me
+When all I can do is watch you leave?
+'Cause we've shared the laughter and the pain
+And even shared the tears
+You're the only one who really knew me at all
+So take a look at me now
+Well there's just an empty space
+And there's nothing left here to remind me
+Just the memory of your face
+
+OohTake a look at me now
+Well there's just an empty space
+And you coming back to me,
+is against the odds
+And that's what I've got to face ohh
+
+I wish I could just make you turn around
+Turn around and see me cry
+There's so much I need to say to you
+So many reasons why
+You're the only one who really knew me at all
+
+So take a look at me now
+Well there's just an empty space
+And there's nothing left here to remind me
+Just the memory of your face
+
+Now Take a look at me now
+'Cause that's just an empty space
+But to wait for you is Thats all I can do
+And that's what I've got to face
+
+Take a good look at me now
+'Cause I'll still be standing here
+And you coming back to me is against all odds
+It's the chance I've got to take oh ohhhh
+Take a look at me now`,sp:"",sps:"https://open.spotify.com/search/Against%20All%20Odds%20%28Take%20a%20Look%20at%20Me%20Now%29%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/against-all-odds-take-a-look-at-me-now.pdf"},{id:"don-t-lose-my-number",t:"Don't Lose My Number",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`They came at night leaving fear behind
+Shadows were on the ground
+And Nobody knew where to find him
+No evidence was found
+
+I'm never coming back
+heard him cry.
+And I believe him
+Cause he never meant to do anything wrong
+It's gonna get worse
+if he waits too long
+
+Billy, billy don't you lose my number
+Cos you're not anywhere,
+That I can find you Ohh
+
+Oh billy, billybaby don't you lose my number
+Cos you're not anywhere that I can find you, oh no
+
+SearchingI
+through the day and into the night
+They wouldn't stop till they found him
+They didn't know him and they didn't understand
+Nobody They never asked him why
+Get out of my way
+TheyA heard him shout.
+Then a blinding light
+Ooh all I could see was him running down the street
+Out of the shadows and into the night
+
+Now billy, billy don't you lose my number
+Cos you're not anywhere
+That I can find you, oh
+
+Now billy, billy don't you lose my number
+Cos you're not anywhere that I can find you, oh
+Don't give up
+Keep running, keep hiding
+Don't give up
+Ohhh
+Billy, if you know you're right
+Don't give up
+Cause You know that I am on your side
+Don't give up
+Oh billy,
+you better, you better,
+you better run for your life
+
+Now billy, babybilly don't you lose my number
+Cos you're not anywhere
+That I can find you, oh
+
+Now billy, billybaby don't you lose my number
+Cos you're not anywhere
+that I can find you, oh
+They came at night leaving fear behind
+Shadows were on the ground
+Nobody knew where to find him
+No evidence was found
+I'm never coming back
+A heard him cry.
+And I believe him
+He never meant to do anything wrong
+It's gonna get worse if he waits too long
+Now billy, Baby don't you lose my number
+Cos you're not anywhere
+That I can find you, oh
+
+Now billy, baby don't you lose my number
+Cos you're not anywhere that I can find you, oh
+
+Now billy, Baby don't you lose my number
+Cos you're not anywhere
+That I can find you, oh
+
+Now billy, baby don't you lose my number
+Cos you're not anywhere that I can find you, oh`,sp:"",sps:"https://open.spotify.com/search/Don%27t%20Lose%20My%20Number%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/don-t-lose-my-number.pdf"},{id:"one-more-night",t:"One More Night",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`One more night
+One more night
+
+I've been trying ooh so long to let you know
+Let you know how I feel
+So if I stumble if I fall, just help me back
+So I can make you see
+Please give me one more night
+Give me one more night
+Oh One more night 'cause I can't wait forever
+Just Give me one more night, just give one more night
+Oh one more night 'cause I can't wait forever
+I've been sitting here so long
+Wasting time, just staring at the phone
+And I was wondering should I call you
+Then I thought
+maybe you're not alone
+
+Please give me one more night,
+Just give me there i one more night
+Oh one more night, 'cause I can't wait forever
+
+Please give me one more night, oh just one more night
+Oh just one more night, 'cause I can't wait forever
+
+Give me one more night, give me just one more night
+Oh one more night, 'cause I can't wait forever
+Like a river to the sea
+I will always be with you
+And if you sail away
+I will follow you
+
+Give me one more night, give me just one more night
+Oh one more night, 'cause I can't wait forever
+
+I know there'll never be a time you'll ever feel the same
+And I know it's only words
+But if you change your mind you know that I'll be here
+And maybe we both can learn
+
+I Give me just one more night,
+give me just one more night
+Oh one more night, 'cause I can't wait forever
+Give me ther a one more night,
+give me just one more night
+Oh one more night, 'cause I can't wait forever
+Oh, oh, oh`,sp:"",sps:"https://open.spotify.com/search/One%20More%20Night%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/one-more-night.pdf"},{id:"do-you-remember",t:"Do You Remember?",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`We never talked about it
+But I hear the blame was mine
+I'd call you up to say I'm sorry
+But I wouldn't want to waste your time
+
+'Cause I love you,
+but I can't take any more
+There's a look I can't describe in your eyes
+If we could try,
+like we tried before
+Would you keep on telling me those lies?
+Do you remember?
+There seemed no way to make up
+'Cause it seemed your mind was set
+And the way you looked it told me
+It's a look I know I'll never forget
+
+You could've come over to my side
+You could've let me know
+You could've tried to see the distance between us
+But it seemed too far for you to go.
+
+Do you remember?
+Through all of my life
+spite of all the pain
+You know people are funny sometimes
+'Cause they just can't wait
+To get hurt again
+Tell me, do you remember?
+There are things we won't recall
+And feelings we'll never find
+It's taken so long to see it
+'Cause we never seemed to have the time
+There was always something more important to do
+More important to say
+But "I love you" wasn't one of those things
+And now it's too late`,sp:"",sps:"https://open.spotify.com/search/Do%20You%20Remember%3F%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/do-you-remember.pdf"},{id:"follow-you-follow-me",t:"Follow You Follow Me",artist:"Genesis",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`Stay with me,
+My love I hope you'll always be
+Right here
+by my side
+if ever I need you
+Oh my love
+In your arms,
+I feel so safe and so secure
+Everyday oh such a perfect day to spend
+Alone with you
+I will follow you will you follow me
+All the
+days and nights that we know will be
+I will stay with you will you stay with me
+Just one single tear in each passing year
+With the dark,
+Oh I see so very clearly now
+All my fears are drifting by me so slowly now
+Fading away
+
+Ther I can say
+The night is long but you are here
+So Close at hand, you now
+I'm better for smile you give
+oh while I live
+I will follow you will you follow me
+All the days and nights that we know will be
+I will stay with you will you stay with me
+Just one single tear in each passing year there will
+
+I will follow you will you follow me
+All the days and nights that we know will be
+I will stay with you will you stay with me
+Just one single tear in each passing year
+
+Lala lala lala lala`,sp:"",sps:"https://open.spotify.com/search/Follow%20You%20Follow%20Me%20Genesis",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/follow-you-follow-me.pdf"},{id:"no-son-of-mine",t:"No Son of Mine",artist:"Genesis",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`Well, the key to my survival
+Was never in much doubt
+The question was how I could keep sane
+Trying to find the way out
+Things were never easy for me
+Peace of mind was hard to find
+And I needed a place where I could hide
+Somewhere I could call mine
+
+I didn't think much about it
+Till it started happening all the time
+Soon I was living with the fear everyday
+Of what might happen at night
+
+I couldn't stand to hear the Crying
+of my mother And I remember when I swore that,
+that would be the
+Last they'd see of me
+And I never went home again
+
+They say time is a healer
+And now my wounds are not the same
+I rang the bell with my heart in my mouth
+I had to hear what he'd say
+
+He sat me down to talk to me
+He looked me straight in the eyes
+He said:
+
+"You're no son, you're no son of mine
+You're no son, you're no son of mine
+
+You walked out, you left us behind
+And you're no son, you're no son of mine"
+Oh his words how they hurt me
+I'll never forget it
+
+And as the time, it went by
+I lived to regret it
+
+You're no son, you're no son of mine
+But where should I go
+Please tell me what should I do
+
+You're no son, you're no son of mine
+But I came here for help
+Oh I was looking for you
+
+Well the years they passed so slowly
+I thought about him everyday
+What would I do, if we passed on the street
+Would I keep running away
+
+In and out of hiding places Soon I'd have to face the facts
+We'd have to sit down and talk it over
+And that would mean going back
+
+They say time is a healer
+And now my wounds are not the same
+I rang the bell with my heart in my mouth
+I had to hear what he'd say
+
+He sat me down to talk to me
+He looked me straight in the eyes
+He said:
+
+"You're no son, you're no son of mine
+You're no son, you're no son of mine
+
+You walked out, you left us behind
+And you're no son, you're no son of mine"
+Oh his words how they hurt me
+I'll never forget it
+
+And as the time, it went by I lived to regret it
+
+You're no son, you're no son of mine
+But where should I go
+Please tell me what should I do
+You're no son, you're no son of mine
+But I came here for help
+Oh I was looking for you
+You're no son, you're no son of mine
+You're no son
+Aehh
+aehh aehh Ahh eee
+You're no son You're no son
+Ohhh ohhh`,sp:"",sps:"https://open.spotify.com/search/No%20Son%20of%20Mine%20Genesis",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/no-son-of-mine.pdf"},{id:"in-the-air-tonight",t:"In the Air Tonight",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`I can feel it coming in the air all night, oh Lord
+And I've been waiting for this moment for all my life, oh Lord
+Can you feel it coming in the air tonight, oh Lord, oh Lord
+
+Well if you told me you were drowning,
+I would not lend a hand
+I've seen your face before my friend, but I don't know if you know who I am
+Well I was there and I saw what you did, I saw it with my own two eyes
+So you can wipe off that grin, I know where you've been
+It's all been a pack of lies
+And I can feel it coming in the air tonight, oh Lord
+Well I've been waiting for this moment for all my life, oh Lord
+I can feel it coming in the air tonight, oh Lord
+Well I've been waiting for this moment for all my life, oh Lord,
+oh Lord
+
+Well I remember, I remember, don't worry, how could I ever forget
+It's the first time, the last time we ever met
+But I know the reason why you keep your silence up,
+oh no you don't no fool me
+Well the hurt doesn't show, but the pain still grows
+It's no stranger to you and me
+I can feel it coming in the air all night, oh Lord
+Well been waiting for this moment for all my life, oh Lord
+I can feel it coming
+in the airr tonight all night, oh Lord, oh Lord
+
+Well I've been waiting for this moment for all my life,
+oh Lord oh lord
+I can feel it coming in the air all night, oh Lord
+And I've been waiting for this moment for all my life, oh Lord, oh lord
+I can feel it in the air tonight
+I can feel it in the air
+, oh Lord, oh Lord, oh Lord
+Well I've been waiting for this moment for all my life, me lifeeeeee oh Lord, oh Lord
+
+I can feel it in the air
+I can feel it in the air
+I've been waiting for this moment
+all my life, ah ah ah ah ah ah AHHHHHHH
+
+I can feel it in the air tonight, oh Lord, oh Lord, oh Lord, oh LordWell I've been waiting for this moment for all my life,
+my lifeeeeoh Lord, oh Lord, oh Lord`,sp:"",sps:"https://open.spotify.com/search/In%20the%20Air%20Tonight%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/in-the-air-tonight.pdf"},{id:"i-cannot-believe-it-s-true",t:"I Cannot Believe It's True",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`I cannot believe it's true
+
+When I opened your letter yesterday
+I could not believe my eyes
+'Cause I've already given all I have to give
+And I think it must have slipped your mind
+
+Cuz I remember not so long ago
+I gave it all, it's gone
+And I gave it all to you
+Now I'm living on borrowed time, but it's mine
+Oh, d'you hear me?
+I cannot believe it's true
+Are you really doing the things you do allll
+No, I cannot believe it's you, really you
+Oh, these people I'm talking to don't understand
+Don't seem to realize
+They're listening
+but they're not hearing me
+They're being too cruel to be kind
+
+Any kind of feeling that I had is gone
+'Cause I gave it all, it's gone
+And I gave it all to you
+Now I'm living on borrowed time, but it's mine
+Oh, d'you hear me?
+I cannot believe it's true
+Are you really doing the things you do
+No I cannot believe it's you, really you
+
+Over and over
+I keep on telling myself
+Over and over I hope I'm gonna make up
+Over and over I know it's really happening
+And there's nothing that I can say
+
+'Cause nothing can change all the things that you've done to me
+Nothing can make me stay
+Ooh,
+
+'cause you know I cannot believe it's true
+Are you really doing the things you do All Do
+No I cannot believe it's you, really you
+
+I know it's a crying shame, it's all the same to you
+And all seems so well laid but I cannot get through
+Never meant it to show
+It started happening, that's all you know
+Ooh,
+ohhhhh
+
+I gave it all to you.
+Now I'm living on borrowed time,
+but it's mine Oh, i beleave!
+
+I cannot believe it's true
+Are you really doing the things you do
+No, I cannot believe it's you, really you
+Over and over
+I keep on telling myself
+Over and over I hope I'm gonna make up
+Over and over I know it's really happening
+And there's nothing that I can say
+'Cause nothing can change all the things that you've done to me
+Nothing can make me stay
+Ooh,
+
+'Cause you know I cannot believe it's true
+Are you really doing the things you do
+No, I cannot believe it's you, really you
+
+Ohhh ohhh ohhhhhh
+
+Ahhh ahhh ahhh yehhh`,sp:"",sps:"https://open.spotify.com/search/I%20Cannot%20Believe%20It%27s%20True%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-cannot-believe-it-s-true.pdf"},{id:"that-s-all",t:"That's All",artist:"Genesis",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`Just as I thought it was going alright
+I find out I'm wrong, when I thought I was right
+It's always the same, it's just a shame, that's all
+
+I could say day, you'd say night
+Tell me it's black when I know that it's white
+It's always the same, it's just a shame, that's all
+But I could leave but I won't go
+Though my heart might tell me so
+I can't feel a thing from my head down to my toes
+
+So why does it always seem to be
+Me looking at you, you looking at me
+It's always the same, it's just a shame, that's all
+Turning me on, turning me off
+Making me feel like I want too much
+Living with you's just putting me through
+all of the time
+
+Running around, staying out all night
+Taking it all instead of taking one bite
+Living with you's just putting me through all of the time
+
+I could leave but I won't go
+It'd be easier I know
+I can't feel a thing from my head down to my toes
+
+But why does it always seem to be
+Me looking at you, you looking at me
+It's always the same, it's just a shame, that's all
+
+But I love you
+More that I wanted to
+There's no point in trying to pretend
+
+There's been no-one who
+Makes me feel like you do
+Say we'll be together till the end
+I could leave but I won't go
+It'd be easier I know
+I can't feel a thing from my head down to my toes
+
+But why does it always seem to be
+Me looking at you, you looking at me
+It's always the same, it's just a shame, that's all
+
+But I love you
+More that I wanted to
+There's no point in trying to pretend
+
+There's been no-one who
+Makes me feel like you do
+Say we'll be together till the end
+And Just as I thought it was going alright
+I find out I'm wrong, when I thought I was right
+It's always the same, it's just a shame, that's all
+
+I could say day, you'd say night
+Tell me it's black when I know that it's white
+It's always the same, it's just a shame, that's all`,sp:"",sps:"https://open.spotify.com/search/That%27s%20All%20Genesis",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/that-s-all.pdf"},{id:"another-day-in-paradise",t:"Another Day in Paradise",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`She calls out to the man on the street
+'Sir, can you help me?
+
+It's cold and
+nowhere to sleep,
+Is there somewhere you can tell me?'
+
+He walks on, he doesn't look back
+He pretends he can't hear her
+
+Starts to whistle as he crosses the street
+Seems embarrassed to be there
+
+Oh think twice,
+it's another day for you and me in Paradise
+
+Oh think twice,
+'cause it's just another day for you,
+You and me in paradise,
+just
+think about it
+Ohh lord
+just
+think about it
+
+She calls out to the man on the street
+He can see she's been crying
+
+She's got blisters on the soles of her feet
+She can't walk but she's trying
+
+Oh think twice,
+'cause it's another day for you and me in paradise
+Oh think twice,
+it's just another day for you,
+You and me in paradise, just think about it
+Ohh lord
+just
+think about it
+Oh Lord, is there nothing more anybody can do
+Oh Lord, there must be something you can say
+
+You can tell from the lines on her face
+You can see that she's been there
+
+Probably been movedon from every place
+Cause she didn't fit in there
+
+Oh uooohh
+think twice,
+'cause another day for you and me in paradise
+
+Oh think twice,
+it's just another day for you,
+You and me in paradise, just think about it,
+think about it yeh ohh
+
+It's just another day for you and me in paradise
+It's just another day for you and me in paradise
+It's just another day for you and me in paradise
+It's just another day
+It's just another day for you and me in paradise,
+It's just another day for you and me
+It's just another day for you and me
+It's just another day for you and me in Paradise
+Oh oh ohhhhh
+In Paradise ohhh
+
+It's just another day`,sp:"",sps:"https://open.spotify.com/search/Another%20Day%20in%20Paradise%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/another-day-in-paradise.pdf"},{id:"two-hearts",t:"Two Hearts",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`Well, there no reason to believe she'd always be there
+But if you don't faith in what you believe in
+It's getting
+nowhere
+
+'Cos it hurts, you never let go
+Don't look down.
+just look up
+
+A Cos she's always there to behind you,
+just to remind you
+
+Two hearts, believing in just one mind
+You know we're two hearts believing in just one mind
+
+'Cos there's no easy way to,
+to understand it
+There's so much of my life in her, and it's like I'm blinded
+
+And it teaches you to never let go
+There's so much love you'll never know
+She can reach you no matter how far
+Wherever you are
+Two hearts, believing in just one mind
+Beating together till the end of time
+You know we're two hearts believing in just one mind
+Together forever till the end of time
+
+She knows
+There'll always be a special place in my heart for her
+She knows, she knows, she knows
+
+Yeah, she knows
+No matter how
+far apart we are
+She knows,
+Shes always right there beside her
+
+Two hearts, believing in just one mind
+Beating together till the end of time
+You know we're two hearts believing in just one mind
+Together forever till the end of time`,sp:"",sps:"https://open.spotify.com/search/Two%20Hearts%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/two-hearts.pdf"},{id:"sussudio",t:"Sussudio",artist:"Phil Collins",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`There's this girl
+been on my mind
+All the time, Sussusudio oh oh
+
+she don't even know my name
+But I think she likes me just the same
+Sussusudio oh oh
+
+Ah she called me
+I' be there
+all come running to for anywhere
+She is all I need, all my life
+
+And I feel so good if I just say the world
+Sussusudio, evebody to say the word
+Oh Sussusudio
+Now I know that I'm too Young
+My love has just begun
+Sussusudio oh oh
+
+Oh give me a chance, give me a sign
+I'll show her anytime\xA0 Sussusudio oh oh
+
+Listem to me now
+, I've just got to have her, have her now
+I've got to get closer but I don't know how
+She makes me nervous and makes me scared
+But I feel so good if I just say the word
+Sussudio just say the word
+Oh Sussususudio,\xA0oh oh oh
+
+There's this girl
+as been on my mind
+All the time, Sussusudio oh oh
+
+She don't even know my name
+Sussusudio oh oh
+
+Wait a minute Wait a minute
+Ahhhhh
+
+yes she called me
+I' be there
+all come running to for anywhere
+She is all I need, all my life
+
+but I feel so good if I just say the world
+Sussusudio, evebody to say the word
+Oh Sussusudio
+Just say the word
+Oh Sussusudio
+
+Come on evebody to say the word
+Oh Sussusudio
+Just say the word
+Oh Sussusudio
+
+Evebody to jus say the word
+Oh Sussusudio`,sp:"",sps:"https://open.spotify.com/search/Sussudio%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/sussudio.pdf"},{id:"easy-lover",t:"Easy Lover",artist:"Philip Bailey & Phil Collins",pri:"Pop",tags:["Anos 80","Banda KF","Phil Collins","Pop"],letra:`Easy lover
+She'll get a hold on you believe it
+She Like no other
+Before you know it you'll be on your knees
+She's an easy lover
+She'll take your heart but you won't feel it
+She's like no other\xA0 And I'm just trying to make you see
+
+She's the kind of girl you dream of
+Dream of keeping hold of\xA0 You'd better forget it
+You'll never get it
+She will play around and leave you
+Leave you and deceive you
+Better forget it
+Oh you'll regret it
+No try to change her, Just leave it, Just leave it
+Get out quick 'cause seeing is believing
+It's the only way\xA0 You'll ever know
+Shes na Easy lover\xA0 She'll get a hold on you believe it
+Shes Like no other
+Before you know it you'll be on your knees
+She's an easy lover
+She'll take your heart but you won't feel it
+She's like no other
+And I'm just trying to make you see
+
+You're the one that wants hold her
+Hold her and control her\xA0 You'd better forget it
+You'll never get it
+For she'll say there's no other\xA0 Till she finds another
+Better forget it
+Oh you'll regret it
+
+Don't try to change her, just leave it, leave it
+You're not the only one, ooh seeing is believing
+It's the only way
+You'll ever know, oh and ahhhh
+
+solo
+
+Don't try to change her, just leave it, leave it
+You're not the only one, ooh seeing is believing
+It's the only way\xA0 You'll ever know, oh
+She's an easy lover She'll get a hold on you believe it
+
+(She's) Like no other
+Before you know it you'll be on your knees
+
+She's an easy lover
+She'll take your heart but you won't feel it
+She's like no other\xA0 And I'm just trying to make you see
+Trying to make you see`,sp:"",sps:"https://open.spotify.com/search/Easy%20Lover%20Philip%20Bailey%20%26%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/easy-lover.pdf"},{id:"invisible-touch",t:"Invisible Touch",artist:"Genesis",pri:"Pop",tags:["Anos 80","Phil Collins","Pop"],letra:`Well I've been waiting, waiting here so long
+But thinking nothing, nothing could go wrong,
+but now I know
+
+She has a built in ability
+To touch everything she sees
+And now it seems I'm falling, falling for her.
+She seems to have an invisible touch yeah
+She reaches in, grabs right hold of your heart
+She seems to have an invisible touch yeah
+It takes control and slowly tears you apart.
+I don't really know her, I only know her name
+But she crawls under your skin,
+you're never quite the same, and now I know
+
+She's got something you just can't trust
+It's something mysterious
+And now it seems I'm falling, falling for her.
+She seems to have an invisible touch yeah
+She reaches in, grabs right hold of your heart
+She seems to have an invisible touch yeah
+It takes control and slowly tears you apart.
+bridge
+She seems to have an invisible touch yeah
+She reaches in, grabs right hold of your heart
+She seems to have an invisible touch yeah
+It takes control and slowly tears you apart.
+
+She don't like losing, to her it's still a game
+Though she'll mess up your life,
+you'll want her just the same, now I know
+She has a built in ability To touch everything she sees
+And now it seems I've fallen, fallen for her.
+
+She seems to have an invisible touch yeah
+She reaches in, in grabs right hold of your heart
+She seems to have an invisible touch yeah
+It takes control and slowly tears you apart
+
+She seems to have an invisible touch
+She seems to have an invisible touch
+She seems to have an invisible touch
+She seems to have an invisible touch
+
+She seems to have an invisible touch
+YEHHH
+YEHHH
+She seems to have an invisible touch
+YEHHH
+YEHHH
+She seems to have an invisible touch
+YEHHH
+YEHHH
+
+She seems to have an invisible touch
+YEHHH
+YEHHH
+She seems to have an invisible touch
+YEHHH
+YEHHH
+She seems to have an invisible touch
+YEHHH
+YEHHH
+
+She seems to have an invisible touch
+(4X)
+She seems to have na
+She seems to have na
+She seems to have na
+She seems to have na
+She seems to have na
+She seems to have na
+She seems to have na
+She seems to have na
+She seems to have an invisible touch
+She seems to have na in alll and she wacht
+Its Herrr
+anything she wants ...`,sp:"",sps:"https://open.spotify.com/search/Invisible%20Touch%20Genesis",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/invisible-touch.pdf"},{id:"shallow",t:"Shallow",artist:"Lady Gaga & Bradley Cooper",pri:"Pop",tags:["90 Graus","Pop"],letra:`TELL ME SOMETHIN', GIRL / ARE YOU HAPPY IN THIS MODERN WORLD?
+OR DO YOU NEED MORE? IS THERE SOMETHIN' ELSE YOU'RE SEARCHIN' FOR?
+I'M FALLIN' / IN ALL THE GOOD TIMES I FIND MYSELF LONGIN' FOR CHANGE
+/. AND IN THE BAD TIMES, I FEAR MYSELF
+
+TELL ME SOMETHING, BOY AREN'T YOU TIRED TRYIN' TO FILL THAT VOID?
+OR DO YOU NEED MORE? AIN'T IT HARD KEEPIN' IT SO HARDCORE?
+I'M FALLING IN ALL THE GOOD TIMES I FIND MYSELF LONGING FOR CHANGE / AND IN THE BAD TIMES, I FEAR MYSELF
+
+I'M OFF THE DEEP END, WATCH AS I DIVE IN I'LL NEVER MEET THE GROUND
+CRASH THROUGH THE SURFACE, WHERE THEY CAN'T HURT US
+WE'RE FAR FROM THE SHALLOW NOW
+IN THE SHA-HA-SHA-HA-LLOW / IN THE SHA-HA-SHA-LA-LA-LA-LLOW
+IN THE SHA-HA-SHA-HA-LLOW / WE'RE FAR FROM THE SHALLOW NOW
+
+OH, HA-AH-AH AH, HA-AH-AH, OH, AH HA-AH-AH-AH
+I'M OFF THE DEEP END, WATCH AS I DIVE IN
+I'LL NEVER MEET THE GROUND
+CRASH THROUGH THE SURFACE, WHERE THEY CAN'T HURT US
+WE'RE FAR FROM THE SHALLOW NOW / IN THE SHA-HA-SHA-HA-LLOW
+IN THE SHA-HA-SHA-LA-LA-LA-LLOW / IN THE SHA-HA-SHA-HA-LLOW
+WE'RE FAR FROM THE SHALLOW NOW`,sp:"",sps:"https://open.spotify.com/search/Shallow%20Lady%20Gaga%20%26%20Bradley%20Cooper",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/shallow.pdf"},{id:"hotel-california",t:"Hotel California",artist:"Eagles",pri:"Pop",tags:["90 Graus","Pop"],letra:`ON A DARK DESERT HIGHWAY, COOL WIND IN MY HAIR
+WARM SMELL OF COLITAS, RISING UP THROUGH THE AIR
+UP AHEAD IN THE DISTANCE, I SAW A SHIMMERING LIGHT
+MY HEAD GREW HEAVY AND MY SIGHT GREW DIM
+I HAD TO STOP FOR THE NIGHT
+
+THERE SHE STOOD IN THE DOORWAY; I HEARD THE MISSION BELL
+AND I WAS THINKING TO MYSELF, "THIS COULD BE HEAVEN OR THIS COULD BE HELL"
+THEN SHE LIT UP A CANDLE / AND SHE SHOWED ME THE WAY
+THERE WERE VOICES DOWN THE CORRIDOR,
+I THOUGHT I HEARD THEM SAY...
+
+WELCOME TO THE HOTEL CALIFORNIA
+SUCH A LOVELY PLACE
+SUCH A LOVELY FACE
+PLENTY OF ROOM AT THE HOTEL CALIFORNIA
+ANY TIME OF YEAR (ANY TIME OF YEAR) YOU CAN FIND IT HERE
+
+HER MIND IS TIFFANY-TWISTED, SHE GOT THE MERCEDES BENDS
+SHE GOT A LOT OF PRETTY, PRETTY BOYS SHE CALLS FRIENDS
+HOW THEY DANCE IN THE COURTYARD, SWEET SUMMER SWEAT.
+SOME DANCE TO REMEMBER, SOME DANCE TO FORGET
+
+SO I CALLED UP THE CAPTAIN, "PLEASE BRING ME MY WINE"
+HE SAID, "WE HAVEN'T HAD THAT SPIRIT HERE SINCE NINETEEN SIXTY NINE" / AND STILL THOSE VOICES ARE CALLING FROM FAR AWAY,
+WAKE YOU UP IN THE MIDDLE OF THE NIGHT
+JUST TO HEAR THEM SAY...
+WELCOME TO THE HOTEL CALIFORNIA
+SUCH A LOVELY PLACE
+SUCH A LOVELY FACE
+THEY LIVIN' IT UP AT THE HOTEL CALIFORNIA
+WHAT A NICE SURPRISE
+BRING YOUR ALIBIS
+
+MIRRORS ON THE CEILING, THE PINK CHAMPAGNE ON ICE
+AND SHE SAID "WE ARE ALL JUST PRISONERS HERE, OF OUR OWN DEVICE"
+
+AND IN THE MASTER'S CHAMBERS,
+THEY GATHERED FOR THE FEAST
+THEY STAB IT WITH THEIR STEELY KNIVES, BUT THEY JUST CAN'T KILL
+THE BEAST
+
+LAST THING I REMEMBER, I WAS
+RUNNING FOR THE DOOR
+I HAD TO FIND THE PASSAGE BACK
+TO THE PLACE I WAS BEFORE
+"RELAX, " SAID THE NIGHT MAN, "WE ARE PROGRAMMED TO RECEIVE.
+YOU CAN CHECK-OUT ANY TIME YOU LIKE,
+BUT YOU CAN NEVER LEAVE! "`,sp:"",sps:"https://open.spotify.com/search/Hotel%20California%20Eagles",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/hotel-california.pdf"},{id:"is-this-love",t:"Is This Love",artist:"Whitesnake",pri:"Pop",tags:["90 Graus","Pop"],letra:`I SHOULD HAVE KNOWN BETTER
+THAN TO LET YOU GO ALONE
+IT'S TIMES LIKE THESE
+I CAN'T MAKE IT ON MY OWN
+WASTED DAYS, AND SLEEPLESS NIGHTS
+AN' I CAN'T WAIT TO SEE YOU AGAIN
+
+I FIND I SPEND MY TIME
+WAITING ON YOUR CALL
+HOW CAN I TELL YOU, BABE
+MY BACK'S AGAINST THE WALL
+I NEED YOU BY MY SIDE
+TO TELL ME IT'S ALRIGHT
+'CAUSE I DON'T THINK I CAN TAKE ANYMORE
+
+IS THIS LOVE THAT I'M FEELING
+IS THIS THE LOVE THAT I'VE BEEN SEARCHING FOR
+IS THIS LOVE OR AM I DREAMING
+THIS MUST BE LOVE
+/ 'CAUSE IT'S REALLY GOT A HOLD ON ME
+A HOLD ON ME
+
+CAN'T STOP THE FEELING
+I'VE BEEN THIS WAY BEFORE
+BUT, WITH YOU I'VE FOUND THE KEY
+TO OPEN ANY DOOR
+I CAN FEEL MY LOVE FOR YOU GROWING STRONGER DAY BY DAY
+AN' I CAN'T WAIT TOO SEE YOU AGAIN
+SO I CAN HOLD YOU IN MY ARMS
+
+IS THIS LOVE THAT I'M FEELING
+IS THIS THE LOVE THAT I'VE BEEN SEARCHING FOR
+IS THIS LOVE OR AM I DREAMING
+THIS MUST BE LOVE
+/ 'CAUSE IT'S REALLY GOT A HOLD ON ME
+A HOLD ON ME
+
+IS THIS LOVE THAT I'M FEELING
+IS THIS THE LOVE THAT I'VE BEEN SEARCHING FOR
+IS THIS LOVE OR AM I DREAMING
+IS THIS THE LOVE THAT I'VE BEEN SEARCHING FOR
+IS THIS LOVE OR AM I DREAMING
+IS THIS THE LOVE THAT I'VE BEEN SEARCHING FOR
+IS THIS LOVE OR AM I DREAMING
+IS THIS THE LOVE THAT I'VE BEEN SEARCHING FOR
+IS THIS LOVE OR AM I DREAMING
+IS THIS THE LOVE THAT I'VE BEEN SEARCHING FOR
+IS THIS LOVE OR AM I DREAMING
+IS THIS THE LOVE THAT I'VE BEEN SEARCHING FOR`,sp:"",sps:"https://open.spotify.com/search/Is%20This%20Love%20Whitesnake",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/is-this-love.pdf"},{id:"rolling-in-the-deep",t:"Rolling in the Deep",artist:"Adele",pri:"Pop",tags:["90 Graus","Pop"],letra:`There's a fire starting in my heart
+Reaching a fever pitch and it's bringing me out the dark
+Finally, I can see you crystal clear
+Go ahead and sell me out and I'll lay your ship bare
+See how I'll leave with every piece of you
+Don't underestimate the things that I will do
+There's a fire starting in my heart
+Reaching a fever pitch and it's bring me out the dark
+The scars of your love remind me of us
+They keep me thinking that we almost had it all
+The scars of your love, they leave me breathless
+I can't help feeling
+We could have had it all
+(You're gonna wish you never had met me)
+Rolling in the deep
+(Tears are gonna fall, rolling in the deep)
+You had my heart inside of your hands
+(You're gonna wish you never had met me)
+And you played it to the beat
+(Tears are gonna fall, rolling in the deep)
+Baby, I have no story to be told
+But I've heard one on you and I'm gonna make your head burn
+Think of me in the depths of your despair
+Make a home down there as mine sure won't be shared
+The scars of your love remind me of us
+(Tears are gonna fall, rolling in the deep)
+They keep me thinking that we almost had it all
+(You're gonna wish you never had met me)
+The scars of your love, they leave me breathless
+(Tears are gonna fall, rolling in the deep)
+I can't help feeling
+We could have had it all
+(You're gonna wish you never had met me)
+Rolling in the deep
+(Tears are gonna fall, rolling in the deep)
+You had my heart inside of your hands
+(You're gonna wish you never had met me)
+And you played it to the beat
+(Tears are gonna fall, rolling in the deep)
+Could have had it all
+Rolling in the deep
+You had my heart inside of your hands
+But you played it with a beating
+Throw your soul through every open door
+Count your blessings to find what you look for
+Turn my sorrow into treasured gold
+You'll pay me back in kind and reap just what you've sown
+We could have had it all
+(Tears are gonna fall, rolling in the deep)
+We could have had it all
+(You're gonna wish you never had met me)
+It all, it all, it all
+(Tears are gonna fall, rolling in the deep)
+We could have had it all
+(You're gonna wish you never had met me)
+Rolling in the deep
+(Tears are gonna fall, rolling in the deep)
+You had my heart inside of your hands
+(You're gonna wish you never had met me)
+And you played it to the beat
+(Tears are gonna fall, rolling in the deep)
+We could have had it all
+(You're gonna wish you never had met me)
+Rolling in the deep
+(Tears are gonna fall, rolling in the deep)
+You had my heart inside of your hands
+(You're gonna wish you never had met me)
+But you played it
+You played it
+You played it
+You played it to the beat`,sp:"",sps:"https://open.spotify.com/search/Rolling%20in%20the%20Deep%20Adele",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rolling-in-the-deep.pdf"},{id:"i-m-not-the-only-one",t:"I'm Not the Only One",artist:"Sam Smith",pri:"Pop",tags:["90 Graus","Pop"],letra:`YOU AND ME WE MADE A VOW
+FOR BETTER OR FOR WORSE
+I CAN'T BELIEVE YOU LET ME DOWN
+BUT THE PROOF IS IN THE WAY IT HURTS
+
+FOR MONTHS ON END I'VE HAD MY DOUBTS
+DENYING EVERY TEAR
+I WISH THIS WOULD BE OVER NOW
+BUT I KNOW THAT I STILL NEED YOU HERE
+
+YOU SAY I'M CRAZY
+'CAUSE YOU DON'T THINK I KNOW WHAT YOU'VE DONE
+BUT WHEN YOU CALL ME BABY
+I KNOW I'M NOT THE ONLY ONE
+
+YOU'VE BEEN SO UNAVAILABLE
+NOW SADLY I KNOW WHY
+YOUR HEART IS UNOBTAINABLE
+EVEN THOUGH LORD KNOWS YOU KEPT MINE
+
+YOU SAY I'M CRAZY
+'CAUSE YOU DON'T THINK I KNOW WHAT YOU'VE DONE
+BUT WHEN YOU CALL ME BABY
+I KNOW I'M NOT THE ONLY ONE
+
+I HAVE LOVED YOU FOR MANY YEARS
+MAYBE I AM JUST NOT ENOUGH
+YOU'VE MADE ME REALIZE MY DEEPEST FEAR
+BY LYING AND TEARING US UP
+
+YOU SAY I'M CRAZY
+'CAUSE YOU DON'T THINK I KNOW WHAT YOU'VE DONE
+BUT WHEN YOU CALL ME BABY I KNOW I'M NOT THE ONLY ONE
+
+YOU SAY I'M CRAZY
+'CAUSE YOU DON'T THINK I KNOW WHAT YOU'VE DONE
+BUT WHEN YOU CALL ME BABY I KNOW I'M NOT THE ONLY ONE
+I KNOW I'M NOT THE ONLY ONE
+I KNOW I'M NOT THE ONLY ONE
+AND I KNOW, AND I KNOW, AND I KNOW
+AND I KNOW, AND I KNOW, AND I KNOW, KNOW
+I KNOW I'M NOT THE ONLY ONE`,sp:"",sps:"https://open.spotify.com/search/I%27m%20Not%20the%20Only%20One%20Sam%20Smith",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-m-not-the-only-one.pdf"},{id:"o-sol",t:"O Sol",artist:"Vitor Kley",pri:"Pop",tags:["90 Graus","Pop"],letra:`\xD4, SOL V\xCA SE N\xC3O ESQUECE E ME ILUMINA
+PRECISO DE VOC\xCA AQUI
+\xD4, SOL V\xCA SE ENRIQUECE A MINHA MELANINA
+S\xD3 VOC\xCA ME FAZ SORRIR
+
+E QUANDO VOC\xCA VEM
+TUDO FICA BEM MAIS TRANQUILO
+\xD4, TRANQUILO
+QUE ASSIM SEJA, AM\xC9M
+O SEU BRILHO \xC9 O MEU ABRIGO
+MEU ABRIGO
+
+E TODA VEZ QUE VOC\xCA SAI O MUNDO SE DISTRAI
+QUEM FICAR, FICOU QUEM FOI, VAI, VAI
+TODA VEZ QUE VOC\xCA SAI O
+MUNDO SE DISTRAI
+QUEM FICAR, FICOU
+QUEM FOI, VAI, VAI, VAI
+QUEM FOI, VAI, VAI, VAI
+QUEM FOI...
+( REPETE )
+
+\xD4, SOL
+VEM, AQUECE A MINHA ALMA
+E MANT\xC9M A MINHA CALMA
+N\xC3O ESQUECE QUE EU EXISTO
+E ME FAZ FICAR TRANQUILO
+
+VEM, AQUECE A MINHA ALMA
+E MANT\xC9M A MINHA CALMA
+N\xC3O ESQUECE QUE EU EXISTO
+E ME FAZ FICAR TRANQUILO
+E TODA VEZ QUE VOC\xCA SAI
+O MUNDO SE DISTRAI
+QUEM FICAR, FICOU QUEM FOI, VAI, VAI
+TODA VEZ QUE VOC\xCA SAI
+O MUNDO SE DISTRAI QUEM FICAR, FICOU QUEM FOI, VAI, VAI, VAI`,sp:"",sps:"https://open.spotify.com/search/O%20Sol%20Vitor%20Kley",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/o-sol.pdf"},{id:"brisa",t:"Brisa",artist:"Jorge & Mateus",pri:"Pop",tags:["90 Graus","Pop"],letra:`Sente a vibra\xE7\xE3o que o som chegou
+Bota o p\xE9 na areia e deixa a onda entrar
+'T\xE1 geral na pilha, ent\xE3o, demorou
+Vem que \xE9 da boa e tu vai gostar
+Eu 'to na brisa
+E nada me abala, que del\xEDcia
+E hoje eu 'to de boa, 'to na brisa
+E nada me abala, que del\xEDcia E assim eu canto
+
+Yeah, yeah, yeah, yeah
+Se joga nessa brisa at\xE9 o dia amanhecer
+Yeah, yeah, yeah, yeah
+Se joga nessa brisa at\xE9 o dia amanhecer
+
+Ent\xE3o passa l\xE1 em casa 'to fazendo v\xE1rios nadas
+Traz o isopor porque hoje a tarde vai dar praia
+Presta aten\xE7\xE3o que hoje a miss\xE3o
+\xC9 ficar suave, numa boa, tranquil\xE3o
+Eu 'to na brisa
+E nada me abala, que del\xEDcia
+E hoje eu 'to de boa, 'to na brisa E nada me abala, que del\xEDcia
+E assim eu canto
+Yeah, yeah, yeah, yeah. Se joga nessa brisa at\xE9 o dia amanhecer
+Yeah, yeah, yeah, yeah
+Se joga nessa brisa at\xE9 o dia amanhecer
+
+Eu 'to na brisa E nada me abala, que del\xEDcia
+E hoje eu 'to de boa, 'to na brisa
+E nada me abala, que del\xEDcia
+E assim eu canto
+Yeah, yeah, yeah, yeah
+Se joga nessa brisa at\xE9 o dia amanhecer
+Yeah, yeah, yeah, yeah
+Se joga nessa brisa at\xE9 o dia amanhecer
+Yeah, yeah, yeah, yeah
+Se joga nessa brisa at\xE9 o dia amanhecer
+Yeah, yeah, yeah, yeah
+Se joga nessa brisa at\xE9 o dia amanhecer`,sp:"",sps:"https://open.spotify.com/search/Brisa%20Jorge%20%26%20Mateus",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/brisa.pdf"},{id:"it-s-my-life",t:"It's My Life",artist:"Bon Jovi",pri:"Pop",tags:["90 Graus","Pop"],letra:`THIS AIN'T A SONG FOR THE BROKEN-HEARTED
+NO SILENT PRAYER FOR FAITH-DEPARTED
+AND I AIN'T GONNA BE JUST A FACE IN THE CROWD
+YOU'RE GONNA HEAR MY VOICE WHEN I SHOUT IT OUT LOUD
+
+IT'S MY LIFE
+IT'S NOW OR NEVER. BUT I AIN'T GONNA LIVE FOREVER
+I JUST WANT TO LIVE WHILE I'M ALIVE
+(IT'S MY LIFE)
+MY HEART IS LIKE AN OPEN HIGHWAY
+LIKE FRANKIE SAID, "I DID IT MY WAY"
+I JUST WANT TO LIVE WHILE I'M ALIVE
+IT'S MY LIFE
+
+YEAH, THIS IS FOR THE ONES WHO STOOD THEIR GROUND
+FOR TOMMY AND GINA, WHO NEVER BACKED DOWN
+TOMORROW'S GETTING HARDER, MAKE NO MISTAKE
+LUCK AIN'T EVEN LUCKY, GOT TO MAKE YOUR OWN BREAKS
+
+IT'S MY LIFE
+IT'S NOW OR NEVER. BUT I AIN'T GONNA LIVE FOREVER
+I JUST WANT TO LIVE WHILE I'M ALIVE
+(IT'S MY LIFE)
+MY HEART IS LIKE AN OPEN HIGHWAY
+LIKE FRANKIE SAID, "I DID IT MY WAY"
+I JUST WANT TO LIVE WHILE I'M ALIVE
+IT'S MY LIFE
+
+BETTER STAND TALL WHEN THEY'RE CALLING YOU OUT
+DON'T BEND, DON'T BREAK, BABY, DON'T BACK DOWN
+
+IT'S MY LIFE
+AND IT'S NOW OR NEVER
+'CAUSE I AIN'T GONNA LIVE FOREVER
+I JUST WANT TO LIVE WHILE I'M ALIVE
+(IT'S MY LIFE)
+MY HEART IS LIKE AN OPEN HIGHWAY
+LIKE FRANKIE SAID, "I DID IT MY WAY"
+I JUST WANT TO LIVE WHILE I'M ALIVE
+AND IT'S NOW OR NEVER
+I AIN'T GONNA LIVE FOREVER
+I JUST WANT TO LIVE WHILE I'M ALIVE
+(IT'S MY LIFE)
+MY HEART IS LIKE AN OPEN HIGHWAY
+LIKE FRANKIE SAID, "I DID IT MY WAY"
+I JUST WANT TO LIVE WHILE I'M ALIVE
+'CAUSE IT'S MY LIFE`,sp:"",sps:"https://open.spotify.com/search/It%27s%20My%20Life%20Bon%20Jovi",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/it-s-my-life.pdf"},{id:"titanium",t:"Titanium",artist:"David Guetta",pri:"Pop",tags:["90 Graus","Pop"],letra:`You shout it out, but
+I can't hear a word you say
+I'm talking loud, not saying much
+You shout it out, but I can't hear a word you say
+I'm talking loud, not saying much
+I'm criticized, but all your bullets ricochet
+Shoot me down, but I get up
+I'm bulletproof, nothing to lose
+Fire away, fire away
+Ricochet, you take your aim
+Fire away, fire away
+You shoot me down, but I won't fall. I am titanium
+You shoot me down, but I won't fall
+I am titanium
+
+Cut me down, but it's you
+Who'll have further to fall
+Ghost town and haunted love
+Raise your voice, sticks and
+Stones may break my bones
+I'm talking loud, not saying much
+I'm bulletproof, nothing to lose
+Fire away, fire away
+Ricochet, you take your aim
+Fire away, fire away
+You shoot me down, but I won't fall
+I am titanium
+You shoot me down, but I won't fall
+I am titanium`,sp:"",sps:"https://open.spotify.com/search/Titanium%20David%20Guetta",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/titanium.pdf"},{id:"can-t-stop-the-feeling",t:"Can't Stop the Feeling!",artist:"Justin Timberlake",pri:"Pop",tags:["90 Graus","Pop"],letra:`I GOT THIS FEELING INSIDE MY BONES
+IT GOES ELECTRIC, WAVEY WHEN I TURN IT ON
+AND IF YOU WANT IT, INSIDE YOUR SOUL
+JUST OPEN UP YOUR HEART, LET MUSIC TAKE CONTROL
+
+I GOT THAT SUNSHINE IN MY POCKET
+GOT THAT GOOD SOUL IN MY FEET
+I FEEL THAT HOT BLOOD IN MY BODY WHEN IT DROPS, OOH
+I CAN'T TAKE MY EYES UP OFF IT, MOVING SO PHENOMENALLY
+THE ROOM ON LOCK THE WAY WE ROCK IT, SO DON'T STOP
+
+UNDER THE LIGHTS WHEN EVERYTHING GOES
+NOWHERE TO HIDE WHEN I'M GETTING YOU CLOSE
+WHEN WE MOVE, WELL, YOU ALREADY KNOW
+SO JUST IMAGINE, JUST IMAGINE, JUST IMAGINE
+
+NOTHING I CAN SEE BUT YOU WHEN YOU DANCE, DANCE, DANCE
+A FEELING GOOD, GOOD, CREEPING UP ON YOU
+SO JUST DANCE, DANCE, DANCE, COME ON
+ALL THOSE THINGS I SHOULDN'T DO BUT YOU DANCE, DANCE, DANCE
+AND AIN'T NOBODY LEAVING SOON, SO KEEP DANCING
+
+I CAN'T STOP THE FEELING
+SO JUST DANCE, DANCE, DANCE
+I CAN'T STOP THE FEELING
+SO JUST DANCE, DANCE, DANCE, COME ON
+
+OOH, IT'S SOMETHING MAGICAL
+IT'S IN THE AIR, IT'S IN MY BLOOD, IT'S RUSHING ON
+I DON'T NEED NO REASON, DON'T NEED CONTROL
+I FLY SO HIGH, NO CEILING, WHEN I'M IN MY ZONE
+
+'CAUSE I GOT THAT SUNSHINE IN MY POCKET
+GOT THAT GOOD SOUL IN MY FEET
+FEEL THAT HOT BLOOD IN MY BODY WHEN IT DROPS, OOH
+I CAN'T TAKE MY EYES UP OFF IT, MOVING SO PHENOMENALLY
+THE ROOM ON LOCK THE WAY WE ROCK IT, SO DON'T STOP
+
+UNDER THE LIGHTS WHEN EVERYTHING GOES
+NOWHERE TO HIDE WHEN I'M GETTING YOU CLOSE
+WHEN WE MOVE, WELL, YOU ALREADY KNOW
+SO JUST IMAGINE, JUST IMAGINE, JUST IMAGINE
+
+NOTHING I CAN SEE BUT YOU WHEN YOU DANCE, DANCE, DANCE
+FEELING GOOD, GOOD, CREEPING UP ON YOU
+SO JUST DANCE, DANCE, DANCE, COME ON
+
+ALL THOSE THINGS I SHOULDN'T DO
+BUT YOU DANCE, DANCE, DANCE
+AND AIN'T NOBODY LEAVING SOON, SO KEEP DANCING
+
+I CAN'T STOP THE FEELING
+SO JUST DANCE, DANCE, DANCE
+I CAN'T STOP THE FEELING SO JUST DANCE, DANCE, DANCE
+I CAN'T STOP THE FEELING
+SO JUST DANCE, DANCE, DANCE
+I CAN'T STOP THE FEELING SO KEEP DANCING, COME ON
+I CAN'T STOP THE, I CAN'T STOP THE
+I CAN'T STOP THE, I CAN'T STOP THE
+I CAN'T STOP THE FEELING
+NOTHING I CAN SEE BUT YOU WHEN YOU DANCE, DANCE, DANCE
+(I CAN'T STOP THE FEELING)
+FEELING GOOD, GOOD, CREEPING UP ON YOU
+SO JUST DANCE, DANCE, DANCE, COME ON
+(I CAN'T STOP THE FEELING)
+ALL THOSE THINGS I SHOULDN'T DO
+BUT YOU DANCE, DANCE, DANCE
+(I CAN'T STOP THE FEELING)
+AND AIN'T NOBODY LEAVING SOON, SO KEEP DANCING
+EVERYBODY SING (I CAN'T STOP THE FEELING)
+GOT THIS FEELING IN MY BODY
+(I CAN'T STOP THE FEELING)
+GOT THIS FEELING IN MY BODY
+(I CAN'T STOP THE FEELING)
+WANNA SEE YOU MOVE YOUR BODY
+(I CAN'T STOP THE FEELING)
+GOT THIS FEELING IN MY BODY
+BREAK IT DOWN
+GOT THIS FEELING IN MY BODY
+CAN'T STOP THE FEELING
+GOT THIS FEELING IN MY BODY, COME ON`,sp:"",sps:"https://open.spotify.com/search/Can%27t%20Stop%20the%20Feeling%21%20Justin%20Timberlake",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/can-t-stop-the-feeling.pdf"},{id:"don-t-start-now",t:"Don't Start Now",artist:"Dua Lipa",pri:"Pop",tags:["90 Graus","Pop"],letra:`If you don't wanna see me
+Did a full 180, crazy
+Thinking 'bout the way I was
+Did the heartbreak change me? Maybe
+But look at where I ended up
+I'm all good already
+So moved on, it's scary
+I'm not where you left me at all, so
+
+If you don't wanna see me dancing with somebody
+If you wanna believe that anything could stop me
+
+Don't show up, don't come out
+Don't start caring about me now
+Walk away, you know how
+Don't start caring about me now
+
+Aren't you the guy who tried to Hurt me with the word "goodbye"?
+Though it took some time to survive you
+I'm better on the other side
+I'm all good already So moved on, it's scary
+I'm not where you left me at all, so
+
+If you don't wanna see me dancing with somebody
+If you wanna believe that anything could stop me
+Don't show up, don't come out
+Don't start caring about me now
+Walk away, you know how. Don't start caring about me now ('bout me now, 'bout me).
+Oh, oh.
+Don't come out, out, out. Don't show up, up, up
+Don't start now (oh). Oh, oh.
+Don't come out, out
+I'm not where you left me at all, so
+If you don't wanna see me dancing with somebody
+If you wanna believe that anything could stop me
+Don't show up (don't show up), don't come out (don't come out)
+Don't start caring about me now ('bout me now)
+Walk away (walk away), you know how (you know how)
+Don't start caring about me now (so)
+Oh, oh
+Don't come out, out, out
+Don't show up, up, up
+Walk away, walk away (so)
+Oh, oh
+Don't come out, out, out
+Don't show up, up, up
+Walk away, walk away, oh`,sp:"",sps:"https://open.spotify.com/search/Don%27t%20Start%20Now%20Dua%20Lipa",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/don-t-start-now.pdf"},{id:"this-girl",t:"This Girl",artist:"Kungs vs Cookin' on 3 Burners",pri:"Pop",tags:["90 Graus","Pop"],letra:`Morning rains from the sky above
+But keep the change 'cause I've got enough
+A little time and some tenderness
+You'll never buy my love!
+No other thing that's as precious to
+No other!
+There's no other!
+Than a heart that's real and a heart that's true
+Somethin' that you've got to love this girl
+These presents don't really come for free
+Your paychecks don't mean that much to me
+Just take my hand and hold me tight
+You'll never buy my love
+You buy me this and you buy me that
+To win over, win me over
+You got me wrong and that's a fact
+Somethin' that you've got to love this
+Will you realise when I'm gone
+That I dance to a different song?
+Will you realise when I'm gone
+That I dance to a different song?
+It's a shame but I've got to go`,sp:"",sps:"https://open.spotify.com/search/This%20Girl%20Kungs%20vs%20Cookin%27%20on%203%20Burners",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/this-girl.pdf"},{id:"just-a-gigolo-i-ain-t-got-nobody",t:"Just a Gigolo / I Ain't Got Nobody",artist:"David Lee Roth",pri:"Pop",tags:["90 Graus","Pop"],letra:`I'M JUST A GIGOLO AND EVERYWHERE I GO
+PEOPLE KNOW THE PART I'M PLAYING
+PAID FOR EVERY DANCE, SELLING EACH ROMANCE
+OOH, WHAT THEY'RE SAYIN'
+THERE WILL COME A DAY WHEN YOUTH WILL PASS AWAY
+WHAT WILL THEY SAY ABOUT ME?
+WHEN THE END COMES, I KNOW
+THEY WERE JUST THE GIGOLOS
+LIFE GOES ON WITHOUT ME
+
+I'M JUST A GIGOLO AND EVERYWHERE I GO
+PEOPLE KNOW THE PART DAVE'S PLAYING
+PAID FOR EVERY DANCE, SELLING EACH ROMANCE
+OOH, WHAT THEY'RE SAYIN'
+BUT THERE WILL COME A DAY WHEN YOUTH WILL PASS AWAY
+WHAT WILL THEY SAY ABOUT ME?
+WHEN THE END COMES, I KNOW
+IT WAS JUST A GIGOLO
+LIFE GOES ON WITHOUT ME, 'CAUSE
+
+I AIN'T GOT NOBODY
+NOBODY CARES FOR ME, NOBODY
+NOBODY CARES FOR ME
+I'M SO SAD AND LONELY
+SAD AND LONELY, SAD AND LONELY
+WON'T SOME SWEET MAMA COME AND TAKE A CHANCE WITH ME?
+'CAUSE I AIN'T SO BAD
+
+BETTER LOVE ME, BABE
+SAD AND LONESOME, ALL OF THE TIME
+EVEN ON THE BEAT, ON THE, ON THE, ON THE BEAT
+BOP, BOZE-DE-BOZE-DE-BOP, SE-DE-BOP
+I AIN'T GOT NOBODY
+NOBODY CARES FOR ME, NOBODY
+NOBODY, HEY, SAY
+SINGIN' BOUT THAT SOUL
+
+HUMALA BEBUHLA ZEEBUHLA BOOBUHLA
+HUMALA BEBUHLA ZEEBUHLA BOP
+
+I AIN'T GOT NOBODY NOBODY, NOBODY CARES FOR ME, NOBODY, NOBODY
+I'M SO SAD AND LONELY
+SAD AND LONELY, SAD AND LONELY
+WON'T SOME SWEET MAMA COME AND TAKE A CHANCE WITH ME?
+'CAUSE I AIN'T SO BAD
+
+BEEN A LONELY SOUL
+BEEN LONESOME ALL OF THE TIME
+EVEN ON THE BEAT
+JOHNNY, JOHNNY ON THE BEAT
+NEED A LONG TALL DARLING, MAMA
+DAVID SAID HE GOT NOBODY I LOVES
+AIN'T GOT NOBODY (NOBODY), NOBODY (NOBODY)
+NOBODY CARES FOR ME`,sp:"",sps:"https://open.spotify.com/search/Just%20a%20Gigolo%20/%20I%20Ain%27t%20Got%20Nobody%20David%20Lee%20Roth",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/just-a-gigolo-i-ain-t-got-nobody.pdf"},{id:"smooth",t:"Smooth",artist:"Santana",pri:"Pop",tags:["90 Graus","Pop"],letra:`MAN, IT'S A HOT ONE
+LIKE SEVEN INCHES FROM THE MIDDAY SUN
+WELL, I HEAR YOU WHISPER AND THE WORDS MELT EVERYONE
+BUT YOU STAY SO COOL
+
+MY MU\xD1EQUITA, MY SPANISH HARLEM MONA LISA
+YOU'RE MY REASON FOR REASON
+THE STEP IN MY GROOVE
+
+AND IF YOU SAID THIS LIFE AIN'T GOOD ENOUGH
+I WOULD GIVE MY WORLD TO LIFT YOU UP
+I COULD CHANGE MY LIFE TO BETTER SUIT YOUR MOOD
+BECAUSE YOU'RE SO SMOOTH
+
+AND IT'S JUST LIKE THE OCEAN UNDER THE MOON
+OH, IT'S THE SAME AS THE EMOTION THAT I GET FROM YOU
+YOU GOT THE KIND OF LOVIN' THAT CAN BE SO SMOOTH, YEAH
+GIVE ME YOUR HEART, MAKE IT REAL, OR ELSE FORGET ABOUT IT
+
+BUT I'LL TELL YOU ONE THING IF YOU WOULD LEAVE IT'D BE A CRYING SHAME
+IN EVERY BREATH AND EVERY WORD
+I HEAR YOUR NAME CALLING ME OUT
+OUT FROM THE BARRIO
+YOU HEAR MY RHYTHM ON YOUR RADIO
+YOU FEEL THE TURNING OF THE WORLD, SO SOFT AND SLOW
+IT'S TURNING YOU ROUND AND ROUND
+
+AND IF YOU SAID THIS LIFE AIN'T GOOD ENOUGH
+I WOULD GIVE MY WORLD TO LIFT YOU UP
+I COULD CHANGE MY LIFE TO BETTER SUIT YOUR MOOD
+BECAUSE YOU'RE SO SMOOTH
+WELL, AND IT'S JUST LIKE THE OCEAN UNDER THE MOON
+WELL, IT'S THE SAME AS THE EMOTION THAT I GET FROM YOU
+YOU GOT THE KIND OF LOVIN' THAT CAN BE SO SMOOTH, YEAH
+GIVE ME YOUR HEART, MAKE IT REAL, OR ELSE FORGET ABOUT IT
+WELL, AND IT'S JUST LIKE THE OCEAN UNDER THE MOON
+OH, IT'S THE SAME AS THE EMOTION THAT I GET FROM YOU
+YOU GOT THE KIND OF LOVIN' THAT CAN BE SO SMOOTH, YEAH
+GIVE ME YOUR HEART, MAKE IT REAL, OR ELSE FORGET ABOUT IT
+OR ELSE FORGET ABOUT IT
+OR ELSE FORGET ABOUT IT
+OH, LET'S DON'T FORGET ABOUT IT
+GIVE ME YOUR HEART, MAKE IT REAL
+LET'S DON'T FORGET ABOUT IT (HEY)
+LET'S DON'T FORGET ABOUT IT (NOW, OH, NOW, OH)
+LET'S DON'T FORGET ABOUT IT (NOW, NOW, NOW, OH)
+LET'S DON'T FORGET ABOUT IT (HEY, NOW, NOW, OH)
+LET'S DON'T FORGET ABOUT IT (HEY, HEY, HEY)`,sp:"",sps:"https://open.spotify.com/search/Smooth%20Santana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/smooth.pdf"},{id:"s-de-saudade",t:"S de Saudade",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`\xC9, olha eu aqui Na vida de solteiro que eu sempre quis
+\xC9, eu consegui A liberdade de poder chegar e sair
+Mas c\xEA deve ter jogado praga e mim
+Eu n\xE3o quero beber, eu n\xE3o quero sair
+A vida de solteiro que eu sonhava n\xE3o era assim
+
+Sextou com S de saudade
+Cheio de balada na cidade
+Mas nenhuma delas tem o show que c\xEA dava na cama
+Nenhum DJ toca sua voz falando que me ama
+
+Sextou com S de saudade Cheio de balada na cidade
+Mas nenhuma delas tem o show que c\xEA dava na cama
+Nenhum DJ toca sua voz falando que me ama
+Sextou com S de saudade
+
+Mas c\xEA deve ter jogado praga em mim
+Eu n\xE3o quero beber, eu n\xE3o quero sair
+A vida de solteiro que eu sonhava n\xE3o era assim
+
+Sextou com S de saudade Cheio de balada na cidade
+Mas nenhuma delas tem o show que c\xEA dava na cama
+Nenhum DJ toca sua voz falando que me ama
+Sextou com S de saudade Cheio de balada na cidade
+Mas nenhuma delas tem o show que c\xEA dava na cama
+Nenhum DJ toca sua voz falando que me ama
+Sextou com S de saudade
+Cheio de balada na cidade (Oh!)
+Mas nenhuma delas tem o show que c\xEA dava na cama
+Nenhum DJ toca sua voz falando que me ama`,sp:"",sps:"https://open.spotify.com/search/S%20de%20Saudade",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/s-de-saudade.pdf"},{id:"investe-em-mim",t:"Investe em Mim",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`SEI QUE VOC\xCA N\xC3O AMA MAIS NINGU\xC9M
+E NEM QUER AMAR 'T\xC1 BOM DO JEITO QUE 'T\xC1
+
+SEU CORA\xC7\xC3O 'T\xC1 MACHUCADO DEMAIS
+N\xC3O ACREDITA NO AMOR
+EU S\xD3 TE PE\xC7O TENTA MAIS UMA VEZ AMOR ME FA\xC7A ESSE FAVOR
+
+INVESTE EM MIM APOSTA TUDO EM MIM
+EU PROMETO TE FAZER FELIZ
+EU PROMETO TE FAZER FELIZ
+INVESTE EM MIM APOSTA TUDO EM MIM
+EU PROMETO TE FAZER FELIZ
+EU PROMETO TE FAZER FELIZ
+
+SEU CORA\xC7\xC3O 'T\xC1 MACHUCADO DEMAIS.
+N\xC3O ACREDITA NO AMOR
+EU S\xD3 TE PE\xC7O TENTA MAIS UMA VEZ
+AMOR ME FA\xC7A ESSE FAVOR
+
+INVESTE EM MIM APOSTA TUDO EM MIM
+EU PROMETO TE FAZER FELIZ
+EU PROMETO TE FAZER FELIZ
+INVESTE EM MIM APOSTA TUDO EM MIM
+EU PROMETO TE FAZER FELIZ
+EU PROMETO TE FAZER FELIZ
+
+DE TANTO APANHAR SEU CORA\xC7\xC3O PEDROU N\xC3O AMA MAIS NINGU\xC9M
+AMOLECE ESSE PEITO MEU BEM E D\xC1 UMA CHANCE PRA MIM
+
+INVESTE EM MIM APOSTA TUDO EM MIM
+EU PROMETO TE FAZER FELIZ
+EU PROMETO TE FAZER FELIZ
+INVESTE EM MIM APOSTA TUDO EM MIM
+EU PROMETO TE FAZER FELIZ
+EU PROMETO TE FAZER FELIZ`,sp:"",sps:"https://open.spotify.com/search/Investe%20em%20Mim",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/investe-em-mim.pdf"},{id:"ta-rocheda",t:"T\xE1 Rocheda",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`ENTREI NA RUA DELA COM MEU CARRO REBAIXADO
+NO MEU PORTA-MALAS, ESCUTANDO FORR\xD3 PESADO
+EU LOGO PERCEBI QUANDO ELA OLHOU PRA MIM
+DEI A VOLTA POR CIMA E CHAMEI ELA PRA SAIR
+ELA ACEITOU O CONVITE, A GENTE FOI CAIR NA FARRA
+DUAS GARRAFAS DE VINHO, FICOU MAL INTENCIONADA
+FOI NO BANHEIRO, DO NADA ELA SUMIU
+QUANDO FUI PROCURAR, COM OUTRO CARA ELA SUMIU
+
+T\xC1 ROCHEDA, T\xD4 NEM VENDO
+PODE CRER, VOC\xCA MERECE UM PR\xCAMIO
+T\xC1 ROCHEDA, T\xD4 NEM VENDO
+PODE CRER, VOC\xCA MERECE UM PR\xCAMIO
+DE MULHER MAIS BANDIDA DO MUNDO
+O CORA\xC7\xC3O QUE \xC9 VAGABUNDO, VAGABUNDO oooohhh ooohhhh
+DE MULHER MAIS BANDIDA DO MUNDO
+O CORA\xC7\xC3O QUE \xC9 VAGABUNDO, VAGABUNDO oooohhh ooohhhh
+
+ENTREI NA RUA DELA COM MEU CARRO REBAIXADO
+NO MEU PORTA-MALAS, ESCUTANDO FORR\xD3 PESADO
+EU LOGO PERCEBI QUANDO ELA OLHOU PRA MIM
+DEI A VOLTA POR CIMA E CHAMEI ELA PRA SAIR
+ELA ACEITOU O CONVITE, A GENTE FOI CAIR NA FARRA
+DUAS GARRAFAS DE VINHO, FICOU MAL INTENCIONADA
+FOI NO BANHEIRO, DO NADA ELA SUMIU
+QUANDO FUI PROCURAR, COM OUTRO CARA ELA SUMIU
+T\xC1 ROCHEDA, T\xD4 NEM VENDO`,sp:"",sps:"https://open.spotify.com/search/T%C3%A1%20Rocheda",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ta-rocheda.pdf"},{id:"basta-voce-me-ligar",t:"Basta Voc\xEA Me Ligar",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`FALOU QUE EU 'TO COM NOJO DA TUA CARA
+E N\xC3O QUERO TE VER NEM DE GRA\xC7A
+DIGO QUE EU N\xC3O VOLTO NEM A PAU
+E QUE TU N\xC3O VALE UM REAL
+
+MAS \xC9 S\xD3 TU LIGAR PRA MIM
+QUE EU N\xC3O RESISTO
+EU QUERIA DIZER N\xC3O MAS N\xC3O CONSIGO
+\xC9 S\xD3 ME LIGAR QUE A PERNA FICA BAMBA
+BATEU SAUDADE EU VOU PARAR NA SUA CAMA
+
+S\xD3 BASTA VOC\xCA ME LIGAR
+QUE EU VOU CORRENDO TE ENCONTRAR
+S\xD3 BASTA VOC\xCA ME LIGAR
+QUE EU VOU CORRENDO TE ENCONTRAR
+S\xD3 BASTA VOC\xCA ME LIGAR QUE EU VOU CORRENDO TE ENCONTRAR
+S\xD3 BASTA VOC\xCA ME LIGAR QUE EU VOU CORRENDO TE ENCONTRAR
+
+FALOU QUE EU 'TO COM NOJO DA TUA CARA
+E N\xC3O QUERO TE VER NEM DE GRA\xC7A
+DIGO QUE EU N\xC3O VOLTO NEM A PAU
+E QUE TU N\xC3O VALE UM REAL
+MAS \xC9 S\xD3 TU LIGAR PRA MIM
+QUE EU N\xC3O RESISTO
+EU QUERIA DIZER N\xC3O MAS N\xC3O CONSIGO
+\xC9 S\xD3 ME LIGAR QUE A PERNA FICA BAMBA
+BATEU SAUDADE EU VOU PARAR NA SUA CAMA
+
+S\xD3 BASTA VOC\xCA ME LIGAR
+QUE EU VOU CORRENDO TE ENCONTRAR
+S\xD3 BASTA VOC\xCA ME LIGAR
+QUE EU VOU CORRENDO TE ENCONTRAR
+S\xD3 BASTA VOC\xCA ME LIGAR QUE EU VOU CORRENDO TE ENCONTRAR
+S\xD3 BASTA VOC\xCA ME LIGAR QUE EU VOU CORRENDO TE ENCONTRAR`,sp:"",sps:"https://open.spotify.com/search/Basta%20Voc%C3%AA%20Me%20Ligar",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/basta-voce-me-ligar.pdf"},{id:"ele-e-ele-eu-sou-eu",t:"Ele \xC9 Ele, Eu Sou Eu",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`N\xC3O \xC9 BEM COMO VOC\xCA PENSA
+ESSE SENTIMENTO PODE SER VERDADE
+MAS ESSA SUA INSEGURAN\xC7A
+T\xC1 CRIANDO ENTRE A GENTE UMA BLINDAGEM
+N\xC3O QUER SE ENTREGAR DE NOVO
+TEM MEDO DE QUEBRAR A CARA
+ENTENDO, ELE TE FEZ SOFRER
+MAS, POR FAVOR, N\xC3O ME COMPARA
+
+T\xC1 COM TRAUMA DE SE ENTREGAR
+PORQUE SOFREU
+ELE \xC9 ELE, EU SOU EU.
+ELE \xC9 ELE, EU SOU EU
+E SE DEIXAR EU TE AMAR
+N\xC3O VOU DIZER ADEUS
+ELE \xC9 ELE, EU SOU EU
+ELE \xC9 ELE, EU SOU EU
+
+N\xC3O \xC9 BEM COMO VOC\xCA PENSA
+ESSE SENTIMENTO PODE SER VERDADE
+MAS ESSA SUA INSEGURAN\xC7A
+T\xC1 CRIANDO ENTRE A GENTE UMA BLINDAGEM
+N\xC3O QUER SE ENGANAR DE NOVO
+TEM MEDO DE QUEBRAR A CARA
+ENTENDO, ELE TE FEZ SOFRER
+MAS, POR FAVOR, N\xC3O ME COMPARA
+T\xC1 COM TRAUMA DE SE ENTREGAR
+PORQUE SOFREU
+ELE \xC9 ELE, EU SOU EU
+ELE \xC9 ELE, EU SOU EU
+SE DEIXAR EU TE AMAR
+N\xC3O VOU DIZER ADEUS`,sp:"",sps:"https://open.spotify.com/search/Ele%20%C3%89%20Ele%2C%20Eu%20Sou%20Eu",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ele-e-ele-eu-sou-eu.pdf"},{id:"esquema-preferido",t:"Esquema Preferido",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`T\xC1 VENDO A\xCD, ELA J\xC1 T\xC1 FALANDO
+QUE T\xC1 COM SAUDADE E T\xC1 ME PROCURANDO
+DAQUI A POUCO ELA T\xC1 ENCOSTANDO
+SABE QUE SOU LOUCO E SEM CORA\xC7\xC3O
+QUANDO ELA LIGA, EU DOU ATEN\xC7\xC3O
+E EU MANDO LOGO A LOCALIZA\xC7\xC3O
+HOJE VAI TER FESTA NO COLCH\xC3O
+
+E ELA RODA A CIDADE INTEIRA PRA FICAR COMIGO
+PORQUE EU SOU SEU ESQUEMA PREFERIDO
+(PORQUE) EU SOU SEU ESQUEMA PREFERIDO
+E ELA DISPENSA A BALADA, AS AMIGA, PRA FICAR COMIGO
+PORQUE EU SOU SEU ESQUEMA PREFERIDO
+(PORQUE) EU SOU SEU ESQUEMA PREFERIDO
+
+T\xC1 VENDO A\xCD, ELA J\xC1 T\xC1 FALANDO
+QUE T\xC1 COM SAUDADE E T\xC1 ME PROCURANDO
+DAQUI A POUCO ELA T\xC1 ENCOSTANDO
+SABE QUE SOU LOUCO E SEM CORA\xC7\xC3O
+QUANDO ELA LIGA EU DOU ATEN\xC7\xC3O
+EU MANDO LOGO A LOCALIZA\xC7\xC3O
+HOJE VAI TER FESTA NO COLCH\xC3O
+E ELA RODA A CIDADE INTEIRA PRA FICAR COMIGO
+PORQUE EU SOU SEU ESQUEMA PREFERIDO
+(PORQUE) EU SOU SEU ESQUEMA PREFERIDO
+E ELA DISPENSA A BALADA, AS AMIGA, PRA FICAR COMIGO
+PORQUE EU SOU SEU ESQUEMA PREFERIDO
+(PORQUE) EU SOU SEU ESQUEMA PREFERIDO`,sp:"",sps:"https://open.spotify.com/search/Esquema%20Preferido",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/esquema-preferido.pdf"},{id:"leticia",t:"Let\xEDcia",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`POR QUE VOC\xCA FOI ME ILUDIR
+FALANDO QUE IA VOLTAR?
+TU ME DEIXOU AQUI SOZINHO
+COMPREI DUAS SLOVAS PRA GENTE TOMAR
+T\xD4 TE ESPERANDO AQUI NO BAR MARCOU SETE HORAS, J\xC1 S\xC3O MAIS DE 11H
+PENSA QUE EU N\xC3O VI VOC\xCA PASSAR?
+NA POP VERMELHA, A TATUAGEM EU CONHECI DE LONGE
+
+LET\xCDCIA, LET\xCDCIA! PRA ONDE VOC\xCA VAI COM AQUELE MOTOTAXISTA?
+LET\xCDCIA, LET\xCDCIA! EU S\xD3 SAIO DO BAR COM VOC\xCA OU COM A POL\xCDCIA
+LET\xCDCIA, LET\xCDCIA! PRA ONDE VOC\xCA VAI COM AQUELE MOTOTAXISTA?
+LET\xCDCIA, LET\xCDCIA! S\xD3 SAIO DO BAR COM VOC\xCA OU COM A POL\xCDCIA
+U\xD4H-U\xD4H U\xD4H
+
+OLHA, POR QUE VOC\xCA FOI ME ILUDIR
+FALANDO QUE IA VOLTAR?
+TU ME DEIXOU AQUI SOZINHO COMPREI DUAS SLOVAS PRA GENTE TOMAR
+EU T\xD4 TE ESPERANDO AQUI NO BAR MARCOU SETE HORAS, J\xC1 S\xC3O MAIS DE 11H
+PENSA QUE EU N\xC3O VI VOC\xCA PASSAR?
+NA POP VERMELHA, A TATUAGEM EU CONHECI DE LONGE
+
+LET\xCDCIA, LET\xCDCIA! PRA ONDE VOC\xCA VAI COM AQUELE MOTOTAXISTA?
+LET\xCDCIA, LET\xCDCIA! EU S\xD3 SAIO DO BAR COM VOC\xCA OU COM A POL\xCDCIA
+LET\xCDCIA, LET\xCDCIA! PRA ONDE VOC\xCA VAI COM AQUELE MOTOTAXISTA?
+LET\xCDCIA, LET\xCDCIA! S\xD3 SAIO DO BAR COM VOC\xCA OU COM A POL\xCDCIA
+UO\xD4H`,sp:"",sps:"https://open.spotify.com/search/Let%C3%ADcia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/leticia.pdf"},{id:"rita",t:"Rita",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`SUA AUS\xCANCIA T\xC1 FAZENDO MAIS ESTRAGO
+QUE A SUA TRAI\xC7\xC3O (QUERO OUVIR), L\xCA-L\xCA-L\xCA-L\xCA
+MINHA CAMA DOBROU DE TAMANHO
+SEM VOC\xCA NO MEU COLCH\xC3O
+SEU PERFUME T\xC1 IMPREGNADO NESSE QUARTO ESCURO
+QUE SAUDADE DESSE CHEIRO DE CIGARRO E DESSE \xC1LCOOL PURO
+RITA, EU DESCULPO TUDO
+
+\xD4H, RITA, VOLTA, DESGRAMADA
+VOLTA, RITA, QUE EU PERDOO A FACADA
+\xD4H, RITA, N\xC3O ME DEIXA
+VOLTA, RITA, QUE EU RETIRO A QUEIXA
+\xD4H, RITA, VOLTA, DESGRAMADA
+VOLTA, RITA, QUE EU PERDOO A FACADA
+\xD4H, RITA, N\xC3O ME DEIXA
+VOLTA, RITA, QUE EU RETIRO A QUEIXA
+
+SUA AUS\xCANCIA T\xC1 FAZENDO MAIS ESTRAGO
+QUE A SUA TRAI\xC7\xC3O, B\xCA, L\xCA-L\xCA-L\xCA-L\xCA
+MINHA CAMA DOBROU DE TAMANHO
+SEM VOC\xCA NO MEU COLCH\xC3O
+SEU PERFUME T\xC1 IMPREGNADO NESSE QUARTO ESCURO
+QUE SAUDADE DESSE CHEIRO DE CIGARRO E DESSE \xC1LCOOL PURO
+RITA, EU DESCULPO TUDO
+\xD4H, RITA, VOLTA, DESGRAMADA
+VOLTA, RITA, QUE EU PERDOO A FACADA
+\xD4H, RITA, N\xC3O ME DEIXA
+VOLTA, RITA, QUE EU RETIRO A QUEIXA`,sp:"",sps:"https://open.spotify.com/search/Rita",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rita.pdf"},{id:"batom-de-cereja",t:"Batom de Cereja",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`PAREI, PENSEI, QUASE TRAVEI
+SER\xC1, QUE AGORA EU VOU PASSAR A VEZ
+SER\xC1 QUE EU VOU FICAR DE BOA, PEGANDO OUTRA E VENDO VOC\xCA FICAR COM OUTRA PESSOA
+N\xC3O VOU N\xC3O, J\xC1 DISPENSEI A GATA QUE EU TAVA
+EU VIM AQUI FOI PRA BEBER E PASSAR RAIVA
+'TO SOLTEIRO NA NIGHT, 'C\xCA 'T\xC1 BATENDO MUITO MAIS QUE O GRAVE
+
+ENQUANTO O SOM DO PARED\xC3O TOCA
+'C\xCA GASTA O SEU BATOM DE CEREJA
+EU BEBO, 'C\xCA BEIJA, EU BEBO, 'C\xCA BEIJA
+ENQUANTO O SOM DO PARED\xC3O TOCA
+'C\xCA GASTA O SEU BATOM DE CEREJA
+EU BEBO, 'C\xCA BEIJA, EU BEBO, 'C\xCA BEIJA
+
+N\xC3O VOU N\xC3O, J\xC1 DISPENSEI A GATA QUE EU TAVA
+EU VIM AQUI FOI PRA BEBER E PASSAR RAIVA
+'TO SOLTEIRO NA NIGHT, 'C\xCA 'T\xC1 BATENDO MUITO MAIS QUE O GRAVE
+ENQUANTO O SOM DO PARED\xC3O TOCA
+'C\xCA GASTA O SEU BATOM DE CEREJA
+EU BEBO, 'C\xCA BEIJA, EU BEBO, 'C\xCA BEIJA
+ENQUANTO O SOM DO PARED\xC3O TOCA
+'C\xCA GASTA O SEU BATOM DE CEREJA
+EU BEBO, 'C\xCA BEIJA, EU BEBO, 'C\xCA BEIJA
+ENQUANTO O SOM DO PARED\xC3O TOCA
+'C\xCA GASTA O SEU BATOM DE CEREJA
+EU BEBO, 'C\xCA BEIJA, EU BEBO, 'C\xCA BEIJA
+ENQUANTO O SOM DO PARED\xC3O TOCA
+'C\xCA GASTA O SEU BATOM DE CEREJA
+BABY ME ATENDE`,sp:"",sps:"https://open.spotify.com/search/Batom%20de%20Cereja",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/batom-de-cereja.pdf"},{id:"baby-me-atende",t:"Baby Me Atende",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`ABANDONADO DENTRO DE UM APARTAMENTO
+ANSIEDADE, CORA\xC7\xC3O DESESPERADO.
+\xC9 S\xD3 BEBIDA QUENTE.
+POR CAUSA DE UM CORA\xC7\xC3O GELADO
+AMOR E RAIVA ANDAM LADO A LADO
+PORTA RETRATOS E QUADROS TUDO QUEBRADO
+\xC9 O QUE 'T\xC1 TENDO.
+PEDA\xC7O DE EX AMOR PRA TODO LADO
+'T\xC1 DOENDO, 'TO SOFRENDO
+E ELA N\xC3O 'T\xC1 ME ATENDENDO
+
+OH BABY, ME ATENDE
+AI QUE VONTADE DE TACAR MEU CELULAR NA PAREDE
+OH BABY, ME ATENDE
+AI QUE VONTADE DE TACAR MEU CELULAR NA PAREDE. \xCA \xCA \xCA
+
+AP\xD3S O SINAL DEIXE SEU RECADO
+AP\xD3S O SINAL DEIXE SEU RECADO
+\xC9 O QUE EU ESCUTO QUANDO LIGO PRA ELA
+AP\xD3S O SINAL DEIXE SEU RECADO
+AP\xD3S O SINAL DEIXE SEU RECADO
+\xC9 O QUE EU ESCUTO QUANDO LIGO PRA ELA
+
+ABANDONADO DENTRO DE UM APARTAMENTO
+ANSIEDADE, CORA\xC7\xC3O DESESPERADO
+\xC9 S\xD3 BEBIDA QUENTE
+POR CAUSA DE UM CORA\xC7\xC3O GELADO
+AMOR E RAIVA ANDAM LADO A LADO
+PORTA RETRATOS E QUADROS TUDO QUEBRADO
+\xC9 O QUE 'T\xC1 TENDO
+PEDA\xC7O DE EX AMOR PRA TODO LADO
+'T\xC1 DOENDO, 'TO SOFRENDO
+E ELA N\xC3O 'T\xC1 ME ATENDENDO
+OH BABY, ME ATENDE
+AI QUE VONTADE DE TACAR MEU CELULAR NA PAREDE
+AI QUE VONTADE
+OH BABY, ME ATENDE
+AI QUE VONTADE DE JOGAR MEU CELULAR NA PAREDE
+OH OH OH
+AP\xD3S O SINAL DEIXE SEU RECADO
+AP\xD3S O SINAL DEIXE SEU RECADO
+\xC9 O QUE EU ESCUTO QUANDO LIGO PRA ELA
+AP\xD3S O SINAL DEIXE SEU RECADO
+AP\xD3S O SINAL DEIXE SEU RECADO
+\xC9 O QUE EU ESCUTO QUANDO LIGO PRA ELA`,sp:"",sps:"https://open.spotify.com/search/Baby%20Me%20Atende",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/baby-me-atende.pdf"},{id:"take-on-me",t:"Take on Me",artist:"a-ha",pri:"Pop",tags:["90 Graus","Pop"],letra:`TALKING AWAY. I DON'T KNOW WHAT I'M TO SAY
+I'LL SAY IT ANYWAY
+TODAY IS ANOTHER DAY TO FIND YOU
+SHYING AWAY
+I'LL BE COMING FOR YOUR LOVE, OKAY?
+
+TAKE ON ME (TAKE ON ME).
+TAKE ME ON (TAKE ON ME)
+I'LL BE GONE
+IN A DAY OR TWO
+
+SO NEEDLESS TO SAY I'M ODDS AND ENDS BUT I'LL BE
+STUMBLING AWAY
+SLOWLY LEARNING THAT LIFE IS OKAY
+SAY AFTER ME
+IT'S NO BETTER TO BE SAFE THAN SORRY
+
+TAKE ON ME (TAKE ON ME)
+TAKE ME ON (TAKE ON ME)
+I'LL BE GONE.
+IN A DAY OR TWO
+
+OH, THINGS THAT YOU SAY
+YEAH, IS IT A LIFE OR
+JUST TO PLAY
+MY WORRIES AWAY
+YOU'RE ALL THE THINGS I'VE GOT TO REMEMBER
+YOU'RE SHYING AWAY.
+I'LL BE COMING FOR YOU ANYWAY
+
+TAKE ON ME (TAKE ON ME). TAKE ME ON (TAKE ON ME)
+I'LL BE GONE
+IN A DAY
+TAKE ON ME (TAKE ON ME)
+TAKE ME ON (TAKE ON ME)
+I'LL BE GONE (TAKE ON ME)
+IN A DAY (TAKE ME ON)
+(TAKE ON ME)
+TAKE ON ME (TAKE ON ME)
+TAKE ME ON (TAKE ON ME)
+TAKE ON ME`,sp:"",sps:"https://open.spotify.com/search/Take%20on%20Me%20a-ha",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/take-on-me.pdf"},{id:"the-heat-is-on",t:"The Heat Is On",artist:"Glenn Frey",pri:"Pop",tags:["90 Graus","Pop"],letra:`THE HEAT IS ON, ON THE STREET
+INSIDE YOUR HEAD, ON EVERY BEAT
+AND THE BEAT'S SO LOUD, DEEP INSIDE
+THE PRESSURE'S HIGH, JUST TO STAY ALIVE
+'CAUSE THE HEAT IS ON.
+
+OH-WO-HO, OH-WO-HO
+CAUGHT UP IN THE ACTION I'VE BEEN LOOKING OUT FOR YOU
+OH-WO-HO, OH-WO-HO
+(TELL ME CAN YOU FEEL IT) (TELL ME CAN YOU FEEL IT)
+(TELL ME CAN YOU FEEL IT)
+THE HEAT IS ON, THE HEAT IS ON, THE HEAT IS ON
+OH IT'S ON THE STREET, THE HEAT IS ON
+
+OH-WO-HO, OH-WO-HO
+CAUGHT UP IN THE ACTION I'VE BEEN LOOKING OUT FOR YOU
+OH-WO-HO, OH-WO-HO
+(TELL ME CAN YOU FEEL IT)
+(TELL ME CAN YOU FEEL IT)
+(TELL ME CAN YOU FEEL IT)
+THE HEAT IS ON (YEAH) THE HEAT IS ON, THE HEAT IS ON
+(BURNING, BURNING, BURNING)
+IT'S ON THE STREET, THE HEAT IS ON
+THE SHADOWS HIGH ON THE DARKER SIDE
+BEHIND THE DOORS, IT'S A WILDER RIDE
+YOU CAN MAKE A BREAK, YOU CAN WIN OR LOSE
+THAT'S A CHANCE YOU TAKE, WHEN THE HEAT'S ON YOU
+WHEN THE HEAT IS ON
+OH-WO-HO, OH-WO-HO
+CAUGHT UP IN THE ACTION I'VE BEEN LOOKING OUT FOR YOU
+OH-WO-HO, OH-WO-HO
+(TELL ME CAN YOU FEEL IT)
+(TELL ME CAN YOU FEEL IT)
+(TELL ME CAN YOU FEEL IT)
+THE HEAT IS ON (YEAH) THE HEAT IS ON, THE HEAT IS ON
+IT'S ON THE STREET, THE HEAT IS ON (I CAN FEEL THE FIRE)
+THE HEAT IS ON (FLAMES ARE BURNING HIGHER)
+THE HEAT IS ON (BABY CAN'T YOU FEEL IT)
+YEAH, IT'S ON THE STREET
+THE HEAT IS ON (I CAN FEEL IT THE FIRE)
+THE HEAT IS ON (FLAMES ARE BURNING HIGHER)`,sp:"",sps:"https://open.spotify.com/search/The%20Heat%20Is%20On%20Glenn%20Frey",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/the-heat-is-on.pdf"},{id:"footloose",t:"Footloose",artist:"Kenny Loggins",pri:"Pop",tags:["90 Graus","Pop"],letra:`BEEN WORKING SO HARD
+I'M PUNCHING MY CARD
+EIGHT HOURS, FOR WHAT?
+OH, TELL ME WHAT I GOT
+I GOTTEN THIS FEELING
+THAT TIME'S JUST HOLDING ME DOWN
+
+I'LL HIT THE CEILING
+OR ELSE I'LL TEAR UP THIS TOWN
+
+TONIGHT I GOTTA CUT LOOSE, FOOTLOOSE
+KICK OFF YOUR SUNDAY SHOES
+PLEASE, LOUISE PULL ME UP OFF MY KNEES
+JACK, GET BACK
+C'MON, BEFORE WE CRACK
+LOSE YOUR BLUES
+EVERYBODY CUT FOOTLOOSE
+
+YOU'RE PLAYING SO COOL
+OBEYING EVERY RULE
+DIG WAY DOWN IN YOUR HEART
+YOU'RE BURNING, YEARNING FOR SOME
+SOMEBODY TO TELL YOU
+THAT LIFE AIN'T PASSING YOU BY
+I'M TRYING TO TELL YOU.
+IT WILL IF YOU DON'T EVEN TRY
+
+YOU CAN FLY IF YOU'D ONLY CUT LOOSE, FOOTLOOSE
+KICK OFF YOUR SUNDAY SHOES
+OOH-WEE, MARIE. SHAKE IT, SHAKE IT FOR ME
+WHOA, MILO C'MON, C'MON LET'S GO
+LOSE YOUR BLUES
+EVERYBODY CUT FOOTLOOSE
+CUT FOOTLOOSE
+(OH-OH-OH-OH) CUT FOOTLOOSE
+(OH-OH-OH-OH) CUT FOOTLOOSE
+FIRST, WE GOT TO TURN YOU AROUND
+SECOND, YOU PUT YOUR FEET ON THE GROUND
+THIRD, NOW TAKE A HOLD OF YOUR SOUL
+I'M TURNING IT LOOSE, FOOTLOOSE
+KICK OFF YOUR SUNDAY SHOES
+PLEASE, LOUISE.
+PULL ME UP OFF MY KNEES
+JACK, GET BACK
+C'MON, BEFORE WE CRACK
+LOSE YOUR BLUES EVERYBODY CUT FOOTLOOSE
+FOOTLOOSE, (FOOTLOOSE), FOOTLOOSE
+KICK OFF YOUR SUNDAY SHOES
+PLEASE, LOUISE
+PULL ME UP OFF MY KNEES
+JACK, GET BACK
+C'MON, BEFORE WE CRACK
+LOSE YOUR BLUES
+EVERYBODY CUT, EVERYBODY CUT
+EVERYBODY CUT, EVERYBODY CUT
+EVERYBODY CUT, EVERYBODY CUT
+(EVERYBODY) EVERYBODY CUT FOOTLOOSE`,sp:"",sps:"https://open.spotify.com/search/Footloose%20Kenny%20Loggins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/footloose.pdf"},{id:"cerveja-de-garrafa",t:"Cerveja de Garrafa",artist:"",pri:"Pop",tags:["90 Graus","Pop"],letra:`BACANA, COMO T\xC1 LEGAL AQUI
+VOC\xCA \xC9 SEMPRE UM BOM MOTIVO PRA EU QUERER SER FELIZ
+ME D\xC1 UM GOLE DESSA SUA PAZ
+HOJE EU TE VI TROCANDO A ROUPA E T\xC1 BONITO DEMAIS
+\xC9 DOCE, C\xCA TEM UM JEITO DOCE
+O SEU OLHAR \xC9 DOCE, \xC9 DOCE
+
+A\xCD ME LEVA PRA QUALQUER LUGAR
+PORQUE SE FOR IDEIA SUA ACHO QUE EU DEVO GOSTAR
+INDEPENDENTE DO QUE ACONTECER
+O TEU SORRISO VOLTA E MEIA VAI PERMANECER
+\xC9 DOCE, C\xCA TEM UM JEITO DOCE
+O SEU OLHAR \xC9 DOCE, \xC9 DOCE
+
+MAS GOSTA DE BUTECO E DE CERVEJA DE GARRAFA
+E NUNCA LIGOU PRA TODA FUMA\xC7A QUE EU FA\xC7O
+TODA VEZ QUE EU RELAXO
+EU IMAGINO UM MUNDO BELO ASSIM, COM VOC\xCA DO LADO
+GOSTA DE BUTECO E DE CERVEJA DE GARRAFA
+E NUNCA LIGOU.
+PRA TODA FUMA\xC7A QUE EU FA\xC7O
+E TODA VEZ QUE EU RELAXO
+EU IMAGINO UM MUNDO BELO ASSIM, COM VOC\xCA DO LADO
+
+COMO T\xC1 LEGAL AQUI
+VOC\xCA \xC9 SEMPRE UM BOM MOTIVO PRA EU QUERER SER FELIZ
+ME D\xC1 UM GOLE DESSA SUA PAZ
+HOJE EU TE VI TROCANDO A ROUPA E T\xC1 BONITO DEMAIS
+\xC9 DOCE, C\xCA TEM UM JEITO DOCE O SEU OLHAR \xC9 DOCE, \xC9 DOCE
+
+E A\xCD ME LEVA PRA QUALQUER LUGAR
+PORQUE SE FOR IDEIA SUA ACHO QUE EU DEVO GOSTAR
+INDEPENDENTE DO QUE ACONTECER
+O TEU SORRISO VOLTA E MEIA VAI PERMANECER
+\xC9 DOCE, C\xCA TEM UM JEITO DOCE
+O SEU OLHAR \xC9 DOCE, \xC9 DOCE
+QUEM SABE CANTA AGORA, ENT\xC3O!
+MAS GOSTA DE BUTECO E DE CERVEJA DE GARRAFA
+E NUNCA LIGOU PRA TODA FUMA\xC7A QUE EU FA\xC7O
+E TODA VEZ QUE EU RELAXO
+EU IMAGINO UM MUNDO BELO ASSIM, COM VOC\xCA DO LADO
+GOSTA DE BUTECO E DE CERVEJA DE GARRAFA
+E NUNCA LIGOU PRA TODA FUMA\xC7A QUE EU FA\xC7O
+TODA VEZ QUE EU RELAXO
+JOGA NO CH\xC3O, JOGA NO CH\xC3O ASSIM
+GOSTA DE BUTECO E DE CERVEJA DE GARRAFA
+E NUNCA LIGOU PRA TODA FUMA\xC7A QUE EU FA\xC7O
+E TODA VEZ QUE EU RELAXO
+EU IMAGINO UM MUNDO BELO ASSIM, COM VOC\xCA DO LADO
+GOSTA DE BUTECO E DE CERVEJA DE GARRAFA
+E NUNCA LIGOU PRA TODA FUMA\xC7A QUE EU FA\xC7O
+TODA VEZ QUE EU RELAXO
+EU IMAGINO UM MUNDO BELO ASSIM, COM VOC\xCA DO LADO
+GOSTA DE BUTECO E DE CERVEJA DE GARRAFA
+E NUNCA LIGOU PRA TODA FUMA\xC7A QUE EU FA\xC7O
+TODA VEZ QUE EU RELAXO
+EU IMAGINO UM MUNDO BELO ASSIM, COM VOC\xCA DO LADO
+DOCE, C\xCA TEM UM JEITO DOCE
+O SEU OLHAR \xC9 DOCE, \xC9 DOCE`,sp:"",sps:"https://open.spotify.com/search/Cerveja%20de%20Garrafa",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/cerveja-de-garrafa.pdf"},{id:"cheia-de-manias",t:"Cheia de Manias",artist:"Ra\xE7a Negra",pri:"Pop",tags:["90 Graus","Pop"],letra:`CHEIA DE MANIAS. TODA DENGOSA
+MENINA BONITA
+SABE QUE \xC9 GOSTOSA
+COM ESSE SEU JEITO FAZ O QUE QUER DE MIM
+DOMINA O MEU CORA\xC7\xC3O
+EU FICO SEM SABER O QUE FAZER
+QUERO TE DEIXAR
+VOC\xCA N\xC3O QUER, N\xC3O QUER
+
+ENT\xC3O ME AJUDE A SEGURAR
+ESSA BARRA QUE \xC9 GOSTAR DE VOC\xCA
+ENT\xC3O ME AJUDE A SEGURAR
+ESSA BARRA QUE \xC9 GOSTAR DE VOC\xCA, Y\xCAH
+DIDIDIDI\xCA.
+DIDIDIDI\xCA \xCA \xCA.
+DIDIDIDI\xCA
+
+ESTOU NA SUA CASA QUERO IR PRO CINEMA
+VOC\xCA N\xC3O GOSTA
+UM MOTELZINHO VOC\xCA FECHA A PORTA
+
+ENT\xC3O ME AJUDE A SEGURAR
+ESSA BARRA QUE \xC9 GOSTAR DE VOC\xCA
+ENT\xC3O ME AJUDE A SEGURAR
+ESSA BARRA QUE \xC9 GOSTAR DE VOC\xCA, Y\xCAH
+DIDIDIDI\xCA
+DIDIDIDI\xCA \xCA \xCA
+DIDIDIDI\xCA
+CHEIA DE MANIAS
+TODA DENGOSA
+MENINA BONITA
+SABE QUE \xC9 GOSTOSA
+COM ESSE SEU JEITO FAZ O QUE QUER DE MIM
+DOMINA O MEU CORA\xC7\xC3O
+EU FICO SEM SABER O QUE FAZER
+QUERO TE DEIXAR
+VOC\xCA N\xC3O QUER, N\xC3O QUER
+ENT\xC3O ME AJUDE A SEGURAR
+ESSA BARRA QUE \xC9 GOSTAR DE VOC\xCA
+ENT\xC3O ME AJUDE A SEGURAR
+ESSA BARRA QUE \xC9 GOSTAR DE VOC\xCA, Y\xCAH
+DIDIDIDI\xCA
+DIDIDIDI\xCA \xCA \xCA
+DIDIDIDI\xCA
+ESTOU NA SUA CASA QUERO IR PRO CINEMA
+VOC\xCA N\xC3O GOSTA
+UM MOTELZINHO VOC\xCA FECHA A PORTA
+ENT\xC3O ME AJUDE A SEGURAR
+ESSA BARRA QUE \xC9 GOSTAR DE VOC\xCA
+ENT\xC3O ME AJUDE A SEGURAR
+ESSA BARRA QUE \xC9 GOSTAR DE VOC\xCA, Y\xCAH
+DIDIDIDI\xCA
+DIDIDIDI\xCA \xCA \xCA
+DIDIDIDI\xCA
+DIDIDIDI\xCA \xCA \xCA
+DIDIDIDI\xCA
+DIDIDIDI\xCA \xCA \xCA
+DIDIDIDI\xCA`,sp:"",sps:"https://open.spotify.com/search/Cheia%20de%20Manias%20Ra%C3%A7a%20Negra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/cheia-de-manias.pdf"},{id:"ordinary-world",t:"Ordinary World",artist:"Duran Duran",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`CAME IN FROM A RAINY THURSDAY ON THE AVENUE
+THOUGHT I HEARD YOU TALKING SOFTLY
+I TURNED ON THE LIGHTS, THE TV, AND THE RADIO
+STILL I CAN'T ESCAPE THE GHOST OF YOU
+WHAT HAS HAPPENED TO IT ALL?
+CRAZY, SOME'D SAY
+WHERE IS THE LIFE THAT I RECOGNIZE?
+GONE AWAY
+
+BUT I WON'T CRY FOR YESTERDAY
+THERE'S AN ORDINARY WORLD
+SOMEHOW I HAVE TO FIND
+AND AS I TRY TO MAKE MY WAY
+TO THE ORDINARY WORLD
+I WILL LEARN TO SURVIVE
+
+PASSION OR COINCIDENCE
+ONCE PROMPTED YOU TO SAY
+"PRIDE WILL TEAR US BOTH APART"
+WELL NOW PRIDE'S GONE OUT THE WINDOW
+CROSS THE ROOFTOPS,
+RUN AWAY
+LEFT ME IN THE VACUUM OF MY HEART
+
+WHAT IS HAPPENING TO ME?
+CRAZY, SOME'D SAY
+WHERE IS MY FRIEND WHEN I NEED YOU MOST?
+GONE AWAY
+
+BUT I WON'T CRY FOR YESTERDAY
+THERE'S AN ORDINARY WORLD SOMEHOW I HAVE TO FIND
+AND AS I TRY TO MAKE MY WAY
+TO THE ORDINARY WORLD
+I WILL LEARN TO SURVIVE
+
+Hummm hummm ahhhh ahhhh
+
+PAPERS IN THE ROADSIDE
+TELL OF SUFFERING AND GREED
+FEAR TODAY, FORGOT TOMORROW
+OOH, HERE BESIDES THE NEWS OF HOLY WAR AND HOLY NEED
+OURS IS JUST A LITTLE SORROWED TALK
+SOLO
+AND I DON'T CRY FOR YESTERDAY
+THERE'S AN ORDINARY WORLD
+SOMEHOW I HAVE TO FIND
+AND AS I TRY TO MAKE MY WAY
+TO THE ORDINARY WORLD
+I WILL LEARN TO SURVIVE
+
+EVERY ONE
+IS MY WORLD, (I WILL LEARN TO SURVIVE)
+ANY ONE
+IS MY WORLD, (I WILL LEARN TO SURVIVE)
+ANY ONE
+IS MY WORLD
+EVERY ONE
+IS MY WORLD`,sp:"",sps:"https://open.spotify.com/search/Ordinary%20World%20Duran%20Duran",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ordinary-world.pdf"},{id:"eye-in-the-sky",t:"Eye in the Sky",artist:"The Alan Parsons Project",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`DON'T THINK SORRY'S EASILY SAID
+DON'T TRY TURNING TABLES INSTEAD
+YOU'VE TAKEN LOTS OF CHANCES BEFORE
+BUT I AIN'T GONNA GIVE ANYMORE DON'T ASK ME
+THAT'S HOW IT GOES
+'CAUSE PART OF ME KNOWS WHAT YOU'RE THINKIN'
+
+DON'T SAY WORDS YOU'RE GONNA REGRET
+DON'T LET THE FIRE RUSH TO YOUR HEAD
+I'VE HEARD THE ACCUSATION BEFORE
+AND I AIN'T GONNA TAKE ANY MORE BELIEVE ME
+THE SUN IN YOUR EYES
+MADE SOME OF THE LIES WORTH BELIEVING
+
+I AM THE EYE IN THE SKY, LOOKING AT YOU
+I CAN READ YOUR MIND
+I AM THE MAKER OF RULES, DEALING WITH FOOLS
+I CAN CHEAT YOU BLIND
+AND I DON'T NEED TO SEE ANY MORE
+TO KNOW THAT
+
+I CAN READ YOUR MIND
+(LOOKING AT YOU)
+I CAN READ YOUR MIND
+(LOOKING AT YOU)
+I CAN READ YOUR MIND (LOOKING AT YOU)
+DON'T LEAVE FALSE ILLUSION BEHIND
+DON'T CRY, I AIN'T CHANGING MY MIND
+SO FIND ANOTHER FOOL LIKE BEFORE
+'CAUSE I AIN'T GONNA LIVE ANYMORE BELIEVING
+SOME OF THE LIES WHILE ALL OF THE SIGNS ARE DECEIVING
+
+I AM THE EYE IN THE SKY, LOOKING AT YOU
+I CAN READ YOUR MIND
+I AM THE MAKER OF RULES, DEALING WITH FOOLS
+I CAN CHEAT YOU BLIND
+AND I DON'T NEED TO SEE ANY MORE
+TO KNOW THAT
+
+I CAN READ YOUR MIND (LOOKING AT YOU)
+I CAN READ YOUR MIND (LOOKING AT YOU)
+I CAN READ YOUR MIND (LOOKING AT YOU)
+I CAN READ YOUR MIND
+
+I AM THE EYE IN THE SKY, LOOKING AT YOU
+I CAN READ YOUR MIND
+I AM THE MAKER OF RULES, DEALING WITH FOOLS
+I CAN CHEAT YOU BLIND
+AND I DON'T NEED TO SEE ANY MORE TO KNOW THAT
+I CAN READ YOUR MIND
+(LOOKING AT YOU)
+I CAN READ YOUR MIND (LOOKING AT YOU) (4x)`,sp:"",sps:"https://open.spotify.com/search/Eye%20in%20the%20Sky%20The%20Alan%20Parsons%20Project",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/eye-in-the-sky.pdf"},{id:"everybody-wants-to-rule-the-world",t:"Everybody Wants to Rule the World",artist:"Tears for Fears",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`WELCOME TO YOUR LIFE
+THERE'S NO TURNING BACK
+EVEN WHILE WE SLEEP
+WE WILL FIND YOU ACTING ON YOUR BEST BEHAVIOR
+TURN YOUR BACK ON MOTHER NATURE
+EVERYBODY WANTS TO RULE THE WORLD
+
+IT'S MY OWN DESIRE
+IT'S MY OWN REMORSE
+HELP ME TO DECIDE
+HELP ME MAKE THE MOST OF FREEDOM AND OF PLEASURE
+NOTHING EVER LASTS FOREVER
+EVERYBODY WANTS TO RULE THE WORLD
+
+THERE'S A ROOM WHERE THE LIGHT WON'T FIND YOU
+HOLDING HANDS WHILE THE WALLS COME TUMBLING DOWN
+WHEN THEY DO, I'LL BE RIGHT BEHIND YOU
+SO GLAD WE'VE ALMOST MADE IT
+SO SAD THEY HAD TO FADE IT
+EVERYBODY WANTS TO RULE THE WORLD
+SOLO
+SOLO
+I CAN'T STAND THIS INDECISION
+MARRIED WITH A LACK OF VISION
+EVERYBODY WANTS TO RULE THE WORLD
+SAY THAT YOU'LL NEVER, NEVER, NEVER, NEED IT
+ONE HEADLINE, WHY BELIEVE IT?
+EVERYBODY WANTS TO RULE THE WORLD
+
+ALL FOR FREEDOM AND FOR PLEASURE
+NOTHING EVER LASTS FOREVER
+EVERYBODY WANTS TO RULE THE WORLD`,sp:"",sps:"https://open.spotify.com/search/Everybody%20Wants%20to%20Rule%20the%20World%20Tears%20for%20Fears",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/everybody-wants-to-rule-the-world.pdf"},{id:"overkill",t:"Overkill",artist:"Men at Work",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`I CAN'T GET TO SLEEP
+/
+I THINK ABOUT THE IMPLICATIONS
+OF DIVING IN TOO DEEP
+/
+AND POSSIBLY THE COMPLICATIONS
+ESPECIALLY AT NIGHT
+/
+I WORRY OVER SITUATIONS
+I KNOW WILL BE ALRIGHT
+/
+PERHAPS IT'S JUST IMAGINATION
+
+DAY AFTER DAY IT REAPPEARS
+NIGHT AFTER NIGHT MY HEARTBEAT SHOWS THE FEAR
+GHOSTS APPEAR AND FADE AWAY
+
+ALONE BETWEEN THE SHEETS
+/ ONLY BRINGS EXASPERATION
+IT'S TIME TO WALK THE STREETS
+/
+SMELL THE DESPERATION
+AT LEAST THERE'S PRETTY LIGHTS
+/
+AND THOUGH THERE'S LITTLE VARIATION
+IT NULLIFIES THE NIGHT
+/
+FROM OVERKILL
+
+DAY AFTER DAY IT REAPPEARS
+NIGHT AFTER NIGHT MY HEARTBEAT SHOWS THE FEAR
+GHOSTS APPEAR AND FADE AWAY
+COME BACK ANOTHER DAY
+SOLO
+SOLO
+FINAL DO SOLO COM SAX
+I CAN'T GET TO SLEEP
+/
+I THINK ABOUT THE IMPLICATIONS
+OF DIVING IN TOO DEEP
+/
+AND POSSIBLY THE COMPLICATIONS
+ESPECIALLY AT NIGHT
+/
+I WORRY OVER SITUATIONS THAT
+I KNOW WILL BE ALRIGHT
+/
+IT'S JUST OVERKILL
+
+DAY AFTER DAY IT REAPPEARS
+NIGHT AFTER NIGHT MY HEARTBEAT SHOWS THE FEAR
+GHOSTS APPEAR AND FADE AWAY
+GHOSTS APPEAR AND FADE AWAY
+GHOSTS APPEAR AND FADE AWAY`,sp:"",sps:"https://open.spotify.com/search/Overkill%20Men%20at%20Work",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/overkill.pdf"},{id:"every-little-thing-she-does-is-magic",t:"Every Little Thing She Does Is Magic",artist:"The Police",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`THOUGH I'VE TRIED BEFORE TO TELL HER
+OF THE FEELINGS I HAVE FOR HER,
+IN MY HEART
+EVERY TIME THAT I COME NEAR HER
+I JUST LOSE MY NERVE
+AS I'VE DONE FROM THE START
+
+EVERY LITTLE THING SHE DOES IS MAGIC
+EVERYTHING SHE DO JUST TURNS ME ON
+EVEN THOUGH MY LIFE BEFORE WAS TRAGIC
+NOW I KNOW MY LOVE FOR HER GOES ON
+
+DO I HAVE TO TELL THE STORY
+OF A THOUSAND RAINY DAYS SINCE WE FIRST MET
+IT'S A BIG ENOUGH UMBRELLA
+BUT IT'S ALWAYS ME THAT ENDS UP GETTING WET
+
+EVERY LITTLE THING SHE DOES IS MAGIC
+EVERYTHING SHE DO JUST TURNS ME ON
+EVEN THOUGH MY LIFE BEFORE WAS TRAGIC
+NOW I KNOW MY LOVE FOR HER GOES ON
+
+I RESOLVE TO CALL HER UP A THOUSAND TIMES A DAY
+AND ASK HER IF SHE'LL MARRY ME
+IN SOME OLD FASHIONED WAY
+/ BUT MY SILENT FEARS HAVE GRIPPED ME
+LONG BEFORE I REACH THE PHONE
+LONG BEFORE MY TONGUE HAS TRIPPED ME
+MUST I ALWAYS BE ALONE?
+
+EVERY LITTLE THING SHE DOES IS MAGIC
+EVERYTHING SHE DO JUST TURNS ME ON
+EVEN THOUGH MY LIFE BEFORE WAS TRAGIC
+NOW I KNOW MY LOVE FOR HER GOES ON
+[EVERY LITTLE THING SHE DOES IS MAGIC
+EVERYTHING SHE DO JUST TURNS ME ON
+EVEN THOUGH MY LIFE BEFORE WAS TRAGIC
+NOW I KNOW MY LOVE FOR HER GOES ON
+
+EVERY LITTLE THING
+/
+EVERY LITTLE THING
+EVERY LITTLE THING
+/
+EVERY LITTLE THING
+EVERY LITTLE
+/
+EVERY LITTLE
+EVERY LITTLE
+/
+EVERY LITTLE THING SHE DOES
+EVERY LITTLE THING SHE DOES / EVERY LITTLE THING SHE DOES
+EVERY LITTLE THING SHE DOES / THING SHE DOES IS MAGIC
+Iohhh
+iohhhh
+EVERY LITTLE THING /
+EVERY LITTLE THING
+EVERY LITTLE THING SHE DOES IS MAGIC MAGIC MAGIC
+MAGIC MAGIC MAGIC
+ehhhoooohhh ehhhoooo`,sp:"",sps:"https://open.spotify.com/search/Every%20Little%20Thing%20She%20Does%20Is%20Magic%20The%20Police",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/every-little-thing-she-does-is-magic.pdf"},{id:"sledgehammer",t:"Sledgehammer",artist:"Peter Gabriel",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`HEY, HEY, YOU
+/
+TELL ME HOW HAVE YOU BEEN?
+YOU COULD HAVE A STEAM TRAIN
+// IF YOU'D JUST LAY DOWN YOUR TRACKS
+YOU COULD HAVE AN AEROPLANE FLYING
+IF YOU BRING YOUR BLUE SKY BACK
+ALL YOU DO IS CALL ME
+/
+I'LL BE ANYTHING YOU NEED
+
+YOU COULD HAVE A BIG DIPPER
+GOING UP AND DOWN, ALL AROUND THE BENDS
+YOU COULD HAVE A BUMPER CAR,
+BUMPING
+THIS AMUSEMENT NEVER ENDS
+
+I WANT TO BE YOUR SLEDGEHAMMER
+WHY DON'T YOU CALL MY NAME
+OH LET ME BE YOUR SLEDGEHAMMER
+THIS WILL BE MY TESTIMONY
+Ehh
+Ehhh
+
+SHOW ME ROUND YOUR FRUIT CAKES
+'CAUSE I WILL BE YOUR HONEY BEE
+OPEN UP YOUR FRUIT CAKES
+WHERE THE FRUIT IS AS SWEET AS CAN BE
+
+I WANT TO BE YOUR SLEDGEHAMMER
+WHY DON'T YOU CALL MY NAME
+YOU'D BETTER CALL THE SLEDGEHAMMER
+PUT YOUR MIND AT REST
+I'M GOING TO BE-THE SLEDGEHAMMER
+THIS CAN BE MY TESTIMONY
+yahhhh
+I'M YOUR SLEDGEHAMMER
+LET THERE BE NO DOUBT ABOUT IT
+
+SLEDGE SLEDGE SLEDGEHAMMER
+SOLO FLAUTA
+I KICKED THE HABIT (I KICKED THE HABIT)
+SHED MY SKIN (SHED MY SKIN)
+THIS IS THE NEW STUFF (THIS IS THE NEW STUFF)
+I GO DANCING IN, (WE COULD GO DANCING IN)
+OH WON'T YOU SHOW FOR ME (SHOW FOR ME)
+I WILL SHOW FOR YOU (SHOW FOR YOU)
+SHOW FOR ME (SHOW FOR ME), I WILL SHOW FOR YOU
+YEA, YEAH, YEAH, YEAH, YEAH, YEAH, I DO MEAN YOU
+ONLY YOU, YOU'VE BEEN COMING THROUGH
+GOING TO BUILD THAT POWER
+BUILD, BUILD UP THAT POWER, HEY
+I'VE BEEN FEEDING THE RHYTHM
+I'VE BEEN FEEDING THE RHYTHM
+GOING TO FEEL THAT POWER, BUILD IN YOU
+COME ON, COME ON, HELP ME DO
+YEAH, YEAH, YEAH, YEAH, YEAH, YEAH, YEAH, YEAH, YOU
+I'VE BEEN FEEDING THE RHYTHM
+I'VE BEEN FEEDING THE RHYTHM
+IT'S WHAT WE'RE DOING, DOING
+ALL DAY AND NIGHT, COME ON AND HELP ME DO, COME ON AND HELP ME DO`,sp:"",sps:"https://open.spotify.com/search/Sledgehammer%20Peter%20Gabriel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/sledgehammer.pdf"},{id:"over-my-shoulder",t:"Over My Shoulder",artist:"Mike and the Mechanics",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`LOOKING BACK OVER MY SHOULDER
+I CAN SEE THAT LOOK IN YOUR EYE
+I NEVER DREAMED / IT COULD BE OVER
+I NEVER WANTED
+/ TO SAY GOODBYE
+
+LOOKING BACK OVER MY SHOULDER
+WITH AN ACHING DEEP IN MY HEART
+I WISH THAT WE WERE STARTING OVER
+OH INSTEAD OF DRIFTING SO FAR APART
+
+EVERYBODY TOLD ME YOU WERE LEAVING
+FUNNY I SHOULD BE THE LAST TO KNOW
+BABY PLEASE TELL ME THAT I'M DREAMING
+I JUST NEVER WANT TO LET YOU GO
+
+LOOKING BACK OVER MY SHOULDER
+I CAN SEE THAT LOOK IN YOUR EYE
+TURNING MY HEART OVER AND OVER
+I NEVER WANTED
+/ TO SAY GOODBYE
+
+I DON'T MIND EVERYBODY LAUGHING
+BUT IT'S ENOUGH TO MAKE A GROWN MAN CRY
+'CAUSE I CAN FEEL YOU SLIPPING THROUGH MY FINGERS
+I DON'T EVEN KNOW THE REASON WHY
+SOLO ASSOBIO
+EVERY DAY IT'S A LOSING BATTLE
+JUST TO SMILE AND HOLD MY HEAD UP HIGH
+COULD IT BE
+/ WE BELONG TOGETHER
+BABY WON'T YOU GIVE ME ONE MORE TRY
+ONE MORE TRY
+
+LOOKING BACK OVER MY SHOULDER
+I CAN SEE THAT LOOK IN YOUR EYE
+I NEVER DREAMED IT COULD BE OVER
+I NEVER WANTED TO SAY GOODBYE
+
+LOOKING BACK OVER MY SHOULDER
+OH WITH AN ACHING FEELING INSIDE
+CUTTING ME UP, DEEPER AND DEEPER
+FILLS ME WITH A SADNESS THAT I CAN'T HIDE`,sp:"",sps:"https://open.spotify.com/search/Over%20My%20Shoulder%20Mike%20and%20the%20Mechanics",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/over-my-shoulder.pdf"},{id:"summer-of-69",t:"Summer of '69",artist:"Bryan Adams",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`I GOT MY FIRST REAL SIX-STRING
+BOUGHT IT AT THE FIVE-AND-DIME
+PLAYED IT 'TIL MY FINGERS BLED
+WAS THE SUMMER OF SIXTY-NINE
+
+ME AND SOME GUYS FROM SCHOOL
+HAD A BAND AND WE TRIED REAL HARD
+JIMMY QUIT, JODY GOT MARRIED
+I SHOULD'VE KNOWN WE'D NEVER GET FAR
+
+OH, WHEN I LOOK BACK NOW
+THAT SUMMER SEEMED TO LAST FOREVER
+AND IF I HAD THE CHOICE
+YEAH, I'D ALWAYS WANNA BE THERE
+THOSE WERE THE BEST DAYS OF MY LIFE
+
+AIN'T NO USE IN COMPLAININ'
+WHEN YOU'VE GOT A JOB TO DO
+SPENT MY EVENINGS DOWN AT THE DRIVE-IN
+AND THAT'S WHEN I MET YOU, YEAH
+STANDIN' ON YOUR MAMA'S PORCH
+YOU TOLD ME THAT YOU'D WAIT FOREVER
+OH, AND WHEN YOU HELD MY HAND
+I KNEW THAT IT WAS NOW OR NEVER
+THOSE WERE THE BEST DAYS OF MY LIFE
+
+OH, YEAH
+BACK IN THE SUMMER OF SIXTY-NINE, OH
+
+MAN, WE WERE KILLIN' TIME, WE WERE YOUNG AND RESTLESS
+WE NEEDED TO UNWIND
+I GUESS NOTHIN' CAN LAST FOREVER, FOREVER, NO
+YEAH
+
+AND NOW THE TIMES ARE CHANGIN'
+LOOK AT EVERYTHING THAT'S COME AND GONE
+SOMETIMES WHEN I PLAY THAT OLD SIX-STRING
+I THINK ABOUT YOU, WONDER WHAT WENT WRONG
+
+STANDIN' ON YOUR MAMA'S PORCH
+YOU TOLD ME THAT IT'D LAST FOREVER
+OH, AND WHEN YOU HELD MY HAND
+I KNEW THAT IT WAS NOW OR NEVER
+THOSE WERE THE BEST DAYS OF MY LIFE
+OH, YEAH
+/
+BACK IN THE SUMMER OF SIXTY-NINE, OH
+IT WAS THE SUMMER OF SIXTY-NINE, OH, YEAH
+ME AND MY BABY IN SIXTY-NINE, OH
+IT WAS THE SUMMER, THE SUMMER, THE SUMMER OF SIXTY-NINE, YEAH`,sp:"",sps:"https://open.spotify.com/search/Summer%20of%20%2769%20Bryan%20Adams",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/summer-of-69.pdf"},{id:"money-for-nothing",t:"Money for Nothing",artist:"Dire Straits",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`NOW LOOK AT THEM YO-YO'S, THAT'S THE WAY YOU DO IT
+YOU PLAY THE GUITAR ON THE MTV
+THAT AIN'T WORKIN', THAT'S THE WAY YOU DO IT
+MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE
+
+NOW THAT AIN'T WORKIN', THAT'S THE WAY YOU DO IT
+LEMME TELL YA, THEM GUYS AIN'T DUMB
+MAYBE GET A BLISTER ON YOUR LITTLE FINGER
+// MAYBE GET A BLISTER ON YOUR THUMB
+
+WE GOTTA INSTALL MICROWAVE OVENS
+CUSTOM KITCHEN DELIVERIES
+WE GOTTA MOVE THESE IGERATORS
+WE GOTTA MOVE THESE COLOR TV'S
+
+SEE THE LITTLE FAGGOT WITH THE EARRING AND THE MAKEUP
+YEAH BUDDY THAT'S HIS OWN HAIR
+THAT LITTLE FAGGOT GOT HIS OWN JET AIRPLANE
+THAT LITTLE FAGGOT, HE'S A MILLIONAIRE
+
+WE GOTTA INSTALL MICROWAVE OVENS
+CUSTOM KITCHEN DELIVERIES
+/
+WE GOTTA MOVE THESE IGERATORS
+/
+WE GOTTA MOVE THESE COLOR TV'S
+(MOVE-A, MOVE-A... UH)
+(WE GOTTA INSTALL MICROWAVE OVENS
+CUSTOM KITCHEN DELIVERIES)
+WE GOTTA MOVE THESE IGERATORS
+(WE GOTTA MOVE THESE COLOR TV'S)
+LOOK HERE, LOOK HERE
+
+I SHOULDA LEARNED TO PLAY THE GUITAR
+I SHOULDA LEARNED TO PLAY THEM DRUMS
+LOOK AT THAT MAMA, SHE GOT IT STICKIN' IN THE CAMERA
+OH, MAN WE COULD HAVE SOME FUN
+
+AND HE'S UP THERE, WHAT'S THAT? HAWAIIAN NOISES?
+HE'S BANGIN' ON THE BONGOS LIKE A CHIMPANZEE
+OH, THAT AIN'T WORKIN', THAT'S THE WAY YOU DO IT
+GET YOUR MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE
+
+WE GOTTA INSTALL MICROWAVE OVENS
+CUSTOM KITCHEN DELIVERIES
+WE GOTTA MOVE THESE IGERATORS
+WE GOTTA MOVE THESE COLOR TV'S
+auhhhhhh
+LISTEN HERE
+NOW, THAT AIN'T WORKIN' THAT'S THE WAY YOU DO IT
+YOU PLAY THE GUITAR ON THE MTV
+THAT AIN'T WORKIN'
+/
+THAT'S THE WAY YOU DO IT
+MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE
+MONEY FOR NOTHIN', CHICKS FOR FREE
+GET YOUR MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE
+MONEY FOR NOTHIN', CHICKS FOR FREE
+MONEY FOR NOTHIN', CHICKS FOR FREE
+MONEY FOR NOTHIN', CHICKS FOR FREE
+GET YOUR MONEY FOR NOTHIN', GET YOUR CHICKS FOR FREE (OW, YEAH)
+GET YOUR MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE (WHAT'S THAT?)
+GET YOUR MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE (LOOK AT THAT, LOOK AT THAT)
+GET YOUR MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE (I WANT MY, I WANT MY, I WANT MY MTV) (BOZOS)
+MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE (I WANT MY, I WANT MY, I WANT MY MTV)
+GET YOUR MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE (I WANT MY, I WANT MY, I WANT MY MTV)
+OW, MONEY FOR NOTHIN' AND YOUR CHICKS FOR FREE (I WANT MY, I WANT MY, I WANT MY MTV)
+MONEY FOR NOTHIN', CHICKS FOR FREE
+MONEY FOR NOTHIN'`,sp:"",sps:"https://open.spotify.com/search/Money%20for%20Nothing%20Dire%20Straits",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/money-for-nothing.pdf"},{id:"bad-love",t:"Bad Love",artist:"Eric Clapton",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`OH WHAT A FEELING I GET WHEN I'M WITH YOU
+YOU TAKE MY HEART INTO EVERYTHING YOU DO
+AND IT MAKES ME SAD FOR THE LONELY PEOPLE
+I WALKED THAT ROAD FOR SO LONG
+NOW I KNOW THAT I'M ONE OF THE LUCKY PEOPLE
+YOUR LOVE IS MAKING ME STRONG
+
+I'VE HAD ENOUGH BAD LOVE
+I NEED SOMETHING I CAN BE PROUD OF
+I'VE HAD ENOUGH BAD LOVE
+/
+NO MORE BAD LOVE
+
+AND NOW I SEE THAT MY LIFE HAS BEEN SO BLUE
+WITH ALL THE HEARTACHES I HAD TILL I MET YOU
+BUT I'M GLAD TO SAY NOW THAT'S ALL BEHIND ME
+WITH YOU HERE BY MY SIDE
+AND THERE'S NO MORE MEMORIES / TO REMIND ME
+YOUR LOVE WILL KEEP ME ALIVE
+
+I'VE HAD ENOUGH BAD LOVE
+I NEED SOMETHING I CAN BE PROUD OF
+I'VE HAD ENOUGH BAD LOVE
+/
+NO MORE BAD LOVE
+
+SOLO TEMA - BREQUE VIOL\xC3O + SOLO GUITA
+I'VE HAD ENOUGH BAD LOVE
+I NEED SOMETHING I CAN BE PROUD OF
+I'VE HAD ENOUGH BAD LOVE
+//
+NO MORE BAD LOVE
+
+I'VE HAD ENOUGH BAD LOVE
+I NEED SOMETHING I CAN BE PROUD OF
+I'VE HAD ENOUGH BAD LOVE
+/
+NO MORE BAD LOVE`,sp:"",sps:"https://open.spotify.com/search/Bad%20Love%20Eric%20Clapton",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bad-love.pdf"},{id:"message-in-a-bottle",t:"Message in a Bottle",artist:"The Police",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`JUST A CASTAWAY
+/
+AN ISLAND LOST AT SEA
+ANOTHER LONELY DAY /
+NO ONE HERE BUT ME
+ohh
+MORE LONELINESS
+/ ANY MAN COULD BEAR
+RESCUE ME BEFORE I FALL INTO DESPAIR
+
+I'LL SEND AN SOS TO THE WORLD
+I'LL SEND AN SOS TO THE WORLD
+I HOPE THAT SOMEONE GETS MY
+I HOPE THAT SOMEONE GETS MY
+I HOPE THAT SOMEONE GETS MY
+
+MESSAGE IN A BOTTLE yeh / MESSAGE IN A BOTTLE yeh
+
+A YEAR HAS PASSED SINCE I WROTE MY NOTE
+I SHOULD HAVE KNOWN THIS RIGHT FROM THE START
+ONLY HOPE CAN KEEP ME TOGETHER
+
+LOVE CAN MEND YOUR LIFE
+BUT LOVE CAN BREAK YOUR HEART
+
+I'LL SEND AN SOS TO THE WORLD
+I'LL SEND AN SOS TO THE WORLD
+I HOPE THAT SOMEONE GETS MY
+I HOPE THAT SOMEONE GETS MY
+I HOPE THAT SOMEONE GETS MY
+
+MESSAGE IN A BOTTLE yeh
+/ MESSAGE IN A BOTTLE yeh
+MESSAGE IN A BOTTLE yeh
+/ MESSAGE IN A BOTTLE yeh
+
+WALKED OUT THIS MORNING
+/ DON'T BELIEVE WHAT I SAW
+A HUNDRED BILLION BOTTLES WASHED UP ON THE SHORE
+SEEMS I'M NOT ALONE AT BEING ALONE
+A HUNDRED BILLION CASATWAYS / LOOKING FOR A HOME
+
+I'LL SEND AN SOS TO THE WORLD
+I'LL SEND AN SOS TO THE WORLD
+I HOPE THAT SOMEONE GETS MY
+I HOPE THAT SOMEONE GETS MY
+I HOPE THAT SOMEONE GETS MY
+I HOPE THAT SOMEONE GETS MY
+
+MESSAGE IN A BOTTLE
+MESSAGE IN A BOTTLE
+MESSAGE IN A BOTTLE
+MESSAGE IN A BOTTLE
+yeh
+
+SENDING OUT AN SOS`,sp:"",sps:"https://open.spotify.com/search/Message%20in%20a%20Bottle%20The%20Police",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/message-in-a-bottle.pdf"},{id:"here-i-go-again",t:"Here I Go Again",artist:"Whitesnake",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`NO, I DON'T KNOW WHERE I'M GOIN'
+BUT I SURE KNOW WHERE I'VE BEEN
+HANGING ON THE PROMISES IN SONGS OF YESTERDAY
+AND I'VE MADE UP MY MIND
+I AIN'T WASTING NO MORE TIME
+/ HERE I GO AGAIN HERE I GO AGAIN
+
+THOUGH I KEEP SEARCHIN' FOR AN ANSWER
+I NEVER SEEM TO FIND WHAT I'M LOOKIN' FOR
+OH LORD, I PRAY YOU GIVE ME STRENGTH TO CARRY ON
+
+'CAUSE I KNOW WHAT IT MEANS
+TO WALK ALONG THE LONELY STREET OF DREAMS
+
+AND HERE I GO AGAIN ON MY OWN
+GOIN' DOWN THE ONLY ROAD I'VE EVER KNOWN
+LIKE A DRIFTER, I WAS BORN TO WALK ALONE
+AND I'VE MADE UP MY MIND
+I AIN'T WASTING NO MORE TIME
+
+JUST ANOTHER HEART IN NEED OF RESCUE
+WAITING ON LOVE'S SWEET CHARITY
+I'M GONNA HOLD ON FOR THE REST OF MY DAYS
+'CAUSE I KNOW WHAT IT MEANS
+TO WALK ALONG THE LONELY STREET OF DREAMS
+AND HERE I GO AGAIN ON MY OWN
+GOIN' DOWN THE ONLY ROAD I'VE EVER KNOWN
+LIKE A DRIFTER, I WAS BORN TO WALK ALONE
+AND I'VE MADE UP MY MIND
+I AIN'T WASTING NO MORE TIME
+BUT HERE I GO AGAIN
+HERE I GO AGAIN
+HERE I GO AGAIN
+SOLO
+SOLO
+SOLO
+AND I'VE MADE UP MY MIND
+AIN'T WASTING NO MORE TIME
+
+AND HERE I GO AGAIN ON MY OWN
+GOIN' DOWN THE ONLY ROAD I'VE EVER KNOWN
+LIKE A DRIFTER, I WAS BORN TO WALK ALONE
+'CAUSE I KNOW WHAT IT MEANS
+TO WALK ALONG THE LONELY STREET OF DREAMS
+
+HERE I GO AGAIN ON MY OWN
+GOIN' DOWN THE ONLY ROAD I'VE EVER KNOWN
+LIKE A DRIFTER, I WAS BORN TO WALK ALONE
+AND I'VE MADE UP MY MIND
+I AIN'T WASTING NO MORE TIME
+BUT HERE I GO AGAIN
+HERE I GO AGAIN
+HERE I GO
+HERE I GO AGAIN`,sp:"",sps:"https://open.spotify.com/search/Here%20I%20Go%20Again%20Whitesnake",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/here-i-go-again.pdf"},{id:"africa",t:"Africa",artist:"Toto",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`I HEAR THE DRUMS ECHOING TONIGHT
+BUT SHE HEARS ONLY WHISPERS OF SOME QUIET CONVERSATION
+
+SHE'S COMING IN, 12:30 FLIGHT
+THE MOONLIT WINGS REFLECT THE STARS THAT GUIDE ME TOWARDS SALVATION
+
+I STOPPED AN OLD MAN ALONG THE WAY
+HOPING TO FIND SOME OLD FORGOTTEN WORDS OR ANCIENT MELODIES
+
+HE TURNED TO ME AS IF TO SAY, "HURRY BOY, IT'S WAITING THERE FOR YOU"
+
+GONNA TAKE A LOT TO DRAG ME AWAY FROM YOU
+THERE'S NOTHING THAT A HUNDRED MEN OR MORE COULD EVER DO
+I BLESS THE RAINS DOWN IN AFRICA
+GONNA TAKE SOME TIME TO DO THE THINGS WE NEVER HAD (OOH, OOH)
+
+WILD DOGS CRY OUT IN THE NIGHT
+AS THEY GROW RESTLESS, LONGING FOR SOME SOLITARY COMPANY
+
+I KNOW THAT I MUST DO WHAT'S RIGHT
+AS SURE AS KILIMANJARO RISES LIKE OLYMPUS ABOVE THE SERENGETI
+
+I SEEK TO CURE WHAT'S DEEP INSIDE, FRIGHTENED OF THIS THING THAT I'VE BECOME
+
+IT'S GONNA TAKE A LOT TO DRAG ME AWAY FROM YOU
+THERE'S NOTHING THAT A HUNDRED MEN OR MORE COULD EVER DO
+I BLESS THE RAINS DOWN IN AFRICA
+GONNA TAKE SOME TIME TO DO THE THINGS WE NEVER HAD (OOH, OOH)
+solo moog
+
+HURRY BOY, SHE'S WAITING THERE FOR YOU
+
+IT'S GONNA TAKE A LOT TO DRAG ME AWAY FROM YOU
+THERE'S NOTHING THAT A HUNDRED MEN OR MORE COULD EVER DO
+I BLESS THE RAINS DOWN IN AFRICA
+I BLESS THE RAINS DOWN IN AFRICA
+(I BLESS THE RAIN)
+I BLESS THE RAINS DOWN IN AFRICA (I BLESS THE RAIN)
+I BLESS THE RAINS DOWN IN AFRICA
+I BLESS THE RAINS DOWN IN AFRICA (AH, GONNA TAKE THE TIME)
+GONNA TAKE SOME TIME TO DO THE THINGS WE NEVER HAD (OOH, OOH)`,sp:"",sps:"https://open.spotify.com/search/Africa%20Toto",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/africa.pdf"},{id:"rosanna",t:"Rosanna",artist:"Toto",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`ALL I WANNA DO WHEN I WAKE UP IN THE MORNING IS SEE YOUR EYES
+/
+ROSANNA, ROSANNA
+
+I NEVER THOUGHT THAT A GIRL LIKE YOU COULD EVER CARE FOR ME, /
+ROSANNA
+
+ALL I WANNA DO IN THE MIDDLE OF THE EVENING IS HOLD YOU TIGHT
+/
+ROSANNA, ROSANNA
+
+I DIDN'T KNOW YOU WERE LOOKING FOR MORE THAN I COULD EVER BE
+
+NOT QUITE A YEAR SINCE SHE WENT AWAY, ROSANNA YEAH
+/ NOW SHE'S GONE AND I HAVE TO STAY
+
+MEET YOU ALL THE WAY, MEET YOU ALL THE WAY, ROSANNA YEAH
+MEET YOU ALL THE WAY, MEET YOU ALL THE WAY, ROSANNA YEAH
+
+I CAN SEE YOUR FACE STILL SHINING THROUGH THE WINDOW ON THE OTHER SIDE
+/
+ROSANNA, ROSANNA
+
+I DIDN'T KNOW THAT A GIRL LIKE YOU COULD MAKE ME FEEL SO SAD, ROSANNA
+
+ALL I WANNA TELL YOU IS NOW YOU'LL NEVER EVER HAVE TO COMPROMISE
+/
+ROSANNA, ROSANNA
+I NEVER THOUGHT THAT LOSING YOU COULD EVER HURT SO BAD
+
+NOT QUITE A YEAR SINCE SHE WENT AWAY, ROSANNA YEAH
+NOW SHE'S GONE AND I HAVE TO STAY
+
+MEET YOU ALL THE WAY, MEET YOU ALL THE WAY, ROSANNA YEAH
+MEET YOU ALL THE WAY, MEET YOU ALL THE WAY, ROSANNA YEAH
+SOLO TECLADOS + GUITA
+NOT QUITE A YEAR SINCE SHE WENT AWAY, ROSANNA YEAH
+NOW SHE'S GONE AND I HAVE TO STAY
+
+MEET YOU ALL THE WAY, MEET YOU ALL THE WAY, ROSANNA YEAH
+MEET YOU ALL THE WAY, MEET YOU ALL THE WAY, ROSANNA YEAH
+
+MEET YOU ALL THE WAY, MEET YOU ALL THE WAY, ROSANNA YEAH
+MEET YOU ALL THE WAY, MEET YOU ALL THE WAY, ROSANNA YEAH`,sp:"",sps:"https://open.spotify.com/search/Rosanna%20Toto",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rosanna.pdf"},{id:"owner-of-a-lonely-heart",t:"Owner of a Lonely Heart",artist:"Yes",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`MOVE YOURSELF / YOU ALWAYS LIVE YOUR LIFE
+NEVER THINKING OF THE FUTURE
+
+PROVE YOURSELF / YOU ARE THE MOVE YOU MAKE
+TAKE YOUR CHANCES, WIN OR LOSER
+
+SEE YOURSELF / YOU ARE THE STEPS YOU TAKE
+YOU AND YOU, AND THAT'S THE ONLY WAY
+
+SHAKE, SHAKE YOURSELF /
+YOU'RE EVERY MOVE YOU MAKE
+SO THE STORY GOES
+
+OWNER OF A LONELY HEART
+/ OWNER OF A LONELY HEART
+(MUCH BETTER THAN A)
+OWNER OF A BROKEN HEART / OWNER OF A LONELY HEART
+
+SAY, YOU DON'T WANT TO CHANCE IT
+YOU'VE BEEN HURT SO BEFORE
+WATCH IT NOW
+/
+THE EAGLE IN THE SKY
+HOW HE DANCIN' ONE AND ONLY
+
+YOU, LOSE YOURSELF
+/
+NO NOT FOR PITY'S SAKE
+THERE'S NO REAL REASON TO BE LONELY
+BE YOURSELF
+/ GIVE YOUR FREE WILL A CHANCE
+YOU'VE GOT TO WANT TO SUCCEED
+OWNER OF A LONELY HEART
+OWNER OF A LONELY HEART
+(MUCH BETTER THAN A)
+OWNER OF A BROKEN HEART
+OWNER OF A LONELY HEART
+
+OWNER OF A LONELY HEART
+AFTER MY OWN INDECISION
+THEY CONFUSED ME SO
+OWNER OF A LONELY HEART
+MY LOVE SAID NEVER QUESTION YOUR WILL AT ALL
+IN THE END YOU'VE GOT TO GO LOOK BEFORE YOU LEAP
+OWNER OF A LONELY HEART
+
+AND DON'T YOU HESITATE AT ALL, NO NO YOW!
+OWNER OF A LONELY HEART
+OWNER OF A LONELY HEART (MUCH BETTER THAN A)
+OWNER OF A BROKEN HEART
+OWNER OF A LONELY HEART
+OWNER OF A LONELY HEART
+OWNER OF A LONELY HEART (MUCH BETTER THAN A)
+OWNER OF A BROKEN HEART
+OWNER OF A LONELY HEART
+OWNER OF A LONELY HEART
+
+SOONER OR LATER EACH CONCLUSION
+WILL DECIDE THE LONELY HEART
+OWNER OF A LONELY HEART
+IT WILL EXCITE, IT WILL DELIGHT
+IT WILL GIVE A BETTER START
+OWNER OF A LONELY HEART
+DON'T DECEIVE YOUR FREE WILL AT ALL
+DON'T DECEIVE YOUR FREE WILL AT ALL
+OWNER OF A LONELY HEART
+DON'T DECEIVE YOUR FREE WILL AT ALL
+JUST RECEIVE IT
+JUST RECEIVE IT
+(OWNER OF A LONELY HEART)`,sp:"",sps:"https://open.spotify.com/search/Owner%20of%20a%20Lonely%20Heart%20Yes",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/owner-of-a-lonely-heart.pdf"},{id:"don-t-you-forget-about-me",t:"Don't You (Forget About Me)",artist:"Simple Minds",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`HEY, HEY, HEY, HEY
+OOH WOH
+WON'T YOU COME SEE ABOUT ME?
+I'LL BE ALONE, /
+DANCING YOU KNOW IT BABY
+TELL ME YOUR TROUBLES AND DOUBTS
+GIVING ME EVERYTHING INSIDE AND OUT AND
+LOVE'S STRANGE SO REAL IN THE DARK
+THINK OF THE TENDER THINGS THAT WE WERE WORKING ON
+SLOW CHANGE MAY PULL US APART
+WHEN THE LIGHT GETS INTO YOUR HEART, BABY
+
+DON'T YOU, FORGET ABOUT ME
+DON'T, DON'T, DON'T, DON'T
+DON'T YOU, FORGET ABOUT ME
+
+WILL YOU STAND ABOVE ME?
+LOOK MY WAY, NEVER LOVE ME
+RAIN KEEPS FALLING, RAIN KEEPS FALLING DOWN, DOWN, DOWN
+
+WILL YOU RECOGNIZE ME?
+CALL MY NAME OR WALK ON BY
+RAIN KEEPS FALLING, RAIN KEEPS FALLING DOWN, DOWN,
+
+HEY, HEY, HEY, HEY
+OOH WOH
+
+DON'T YOU TRY AND PRETEND
+IT'S MY FEELING WE'LL WIN IN THE END
+I WON'T HARM YOU OR TOUCH YOUR DEFENSES
+VANITY AND SECURITY ahhh
+DON'T YOU FORGET ABOUT ME
+I'LL BE ALONE, DANCING YOU KNOW IT BABY
+GOING TO TAKE YOU APART
+I'LL PUT US BACK TOGETHER AT HEART, BABY
+
+DON'T YOU, FORGET ABOUT ME
+DON'T, DON'T, DON'T, DON'T
+DON'T YOU, FORGET ABOUT ME
+
+AS YOU WALK ON BY
+WILL YOU CALL MY NAME?
+AS YOU WALK ON BY
+WILL YOU CALL MY NAME?
+WHEN YOU WALK AWAY
+OR WILL YOU WALK AWAY?
+WILL YOU WALK ON BY?
+COME ON, CALL MY NAME
+WILL YOU CALL MY NAME?
+I SAY
+(LALA LA LA LALA LA LA)
+WILL YOU CALL MY NAME?
+AS YOU WALK ON BY`,sp:"",sps:"https://open.spotify.com/search/Don%27t%20You%20%28Forget%20About%20Me%29%20Simple%20Minds",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/don-t-you-forget-about-me.pdf"},{id:"out-of-touch",t:"Out of Touch",artist:"Hall & Oates",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`SHAKE IT UP IS ALL THAT WE KNOW
+USING THE BODIES UP AS WE GO
+I'M WAKING UP TO FANTASY
+THE SHADES ALL AROUND AREN'T THE COLORS WE USED TO SEE
+BROKEN ICE STILL MELTS IN THE SUN
+AND TIMES THAT ARE BROKEN CAN OFTEN BE ONE AGAIN
+WE'RE SOUL ALONE AND SOUL REALLY MATTERS TO ME
+
+YOU'RE OUT OF TOUCH I'M OUT OF TIME
+BUT I'M OUT OF MY HEAD WHEN YOU'RE NOT AROUND
+YOU'RE OUT OF TOUCH
+I'M OUT OF TIME (TIME)
+BUT I'M OUT OF MY HEAD WHEN YOU'RE NOT AROUND
+OH OH OH OH OH OH
+
+REACHING OUT FOR SOMETHING TO HOLD
+LOOKING FOR A LOVE WHERE THE CLIMATE IS COLD
+MANIC MOVES AND DROWSY DREAMS
+OR LIVING IN THE MIDDLE BETWEEN THE TWO EXTREMES
+SMOKING GUNS HOT TO THE TOUCH
+WOULD COOL DOWN IF WE DIDN'T USE THEM SO MUCH, YEAH
+WE'RE SOUL ALONE
+AND SOUL REALLY MATTERS TO ME
+TOO MUCH
+
+YOU'RE OUT OF TOUCH
+I'M OUT OF TIME
+BUT I'M OUT OF MY HEAD WHEN YOU'RE NOT AROUND
+
+YOU'RE OUT OF TOUCH I'M OUT OF TIME
+BUT I'M OUT OF MY HEAD WHEN YOU'RE NOT AROUND
+OH OH OH OH OH OH
+OH OH OH OH OH OH
+
+YOU'RE OUT OF TOUCH
+I'M OUT OF TIME
+BUT I'M OUT OF MY HEAD WHEN YOU'RE NOT AROUND
+
+YOU'RE OUT OF TOUCH
+I'M OUT OF TIME
+BUT I'M OUT OF MY HEAD WHEN YOU'RE NOT AROUND
+
+YOU'RE OUT OF TOUCH
+TIME
+BUT I'M OUT OF MY HEAD WHEN YOU'RE NOT AROUND
+YOU'RE OUT OF TOUCH
+I'M OUT OF TIME
+NOT AROUND
+YOU'RE OUT OF TOUCH
+I'M OUT OF TIME`,sp:"",sps:"https://open.spotify.com/search/Out%20of%20Touch%20Hall%20%26%20Oates",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/out-of-touch.pdf"},{id:"jet",t:"Jet",artist:"Paul McCartney & Wings",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`I CAN ALMOST REMEMBER THEIR FUNNY FACES
+THAT TIME YOU TOLD THEM YOU WERE GOING TO MARRYING SOON
+AND JET I THOUGHT THE ONLY LONELY PLACE WAS ON THE MOON
+
+JET JET
+
+JET WAS YOUR FATHER AS BOLD AS THE SERGEANT MAJOR
+HOW COME HE TOLD YOU THAT YOU WERE HARDLY OLD ENOUGH YET
+
+AND JET I THOUGHT THE MAJOR WAS A LADY SUFFRAGETTE
+
+JET JET JET
+
+AH MATER WANT JET TO ALWAYS LOVE ME
+AH MATER WANT JET TO ALWAYS LOVE ME
+AH MATER, MUCH LATER
+SOLO MOOG
+AND JET I THOUGHT THE MAJOR WAS A LADY SUFFRAGETTE
+(JET, JET)
+
+AH MATER WANT JET TO ALWAYS LOVE ME
+AH MATER WANT JET TO ALWAYS LOVE ME
+AH MATER, MUCH LATER
+JET WITH THE WIND IN YOUR HAIR OF A THOUSAND LACES
+CLIMB ON THE BACK AND WE'LL GO FOR A RIDE IN THE SKY
+
+AND JET I THOUGHT THAT THE MAJOR WAS A LITTLE LADY SUFFRAGETTE
+JET JET
+
+AND JET YOU KNOW I THOUGHT YOU WAS A LITTLE LADY SUFFRAGETTE
+(JET)
+A LITTLE LADY
+MY LITTLE LADY, YES`,sp:"",sps:"https://open.spotify.com/search/Jet%20Paul%20McCartney%20%26%20Wings",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/jet.pdf"},{id:"the-power-of-love",t:"The Power of Love",artist:"Huey Lewis and the News",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`THE POWER OF LOVE IS A CURIOUS THING
+MAKE A ONE MAN WEEP, MAKE ANOTHER MAN SING
+CHANGE A HEART / TO A LITTLE WHITE DOVE
+MORE THAN A FEELING, THAT'S THE POWER OF LOVE
+
+TOUGHER THAN DIAMONDS, WHIPS LIKE CREAM
+STRONGER AND HARDER THAN A BAD GIRLS DREAM
+MAKE A BAD ONE GOOD, MMM MAKE A WRONG RIGHT
+POWER OF LOVE WILL KEEP YOU HOME AT NIGHT
+
+DON'T NEED MONEY, DON'T TAKE FAME
+DON'T NEED NO CREDIT CARD TO RIDE THIS TRAIN
+IT'S STRONG AND IT'S SUDDEN AND IT'S CRUEL SOMETIMES
+BUT IT MIGHT JUST SAVE YOUR LIFE
+THAT'S THE POWER OF LOVE
+THAT'S THE POWER OF LOVE
+
+FIRST TIME YOU FEED IT MIGHT MAKE YOU SAD
+NEXT TIME YOU FEED IT MIGHT MAKE YOU MAD
+BUT YOU'LL BE GLAD BABY WHEN YOU'VE FOUND
+THAT'S THE POWER THAT MAKES THE WORLD GO ROUND
+
+DON'T NEED MONEY, DON'T TAKE FAME
+DON'T NEED NO CREDIT CARD TO RIDE THIS TRAIN
+IT'S STRONG AND IT'S SUDDEN AND IT'S CRUEL SOMETIMES
+BUT IT MIGHT JUST SAVE YOUR LIFE
+
+THEY SAY THAT ALL IN LOVE IS FAIR YEAH BUT YOU DON'T CARE
+BUT YOU KNOW WHAT TO DO
+WHEN IT GETS HOLD OF YOU
+AND WITH A LITTLE HELP FROM ABOVE
+
+YOU FEEL THE POWER OF LOVE
+YOU FEEL THE POWER OF LOVE
+CAN YOU FEEL IT?
+
+SOLO
+
+DON'T TAKE MONEY, DON'T TAKE FAME
+DON'T NEED NO CREDIT CARD TO RIDE THIS TRAIN
+TOUGHER THAN DIAMONDS AND STRONGER THAN STEEL
+YOU WON'T FEEL IT UNTIL YOU FEEL
+YOU FEEL THE POWER, FEEL THE POWER OF LOVE
+THAT'S THE POWER, THAT'S THE POWER OF LOVE
+
+YOU FEEL THE POWER OF LOVE
+YOU FEEL THE POWER OF LOVE
+YOU FEEL THE POWER OF LOVE`,sp:"",sps:"https://open.spotify.com/search/The%20Power%20of%20Love%20Huey%20Lewis%20and%20the%20News",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/the-power-of-love.pdf"},{id:"long-train-running",t:"Long Train Running",artist:"The Doobie Brothers",pri:"Rock",tags:["Anos 80","Banda KF","Rock"],letra:`DOWN AROUND THE CORNER, HALF A MILE FROM HERE
+SEE THEM LONG TRAINS RUN, AND YOU WATCH THEM DISAPPEAR
+WITHOUT LOVE, WHERE WOULD YOU BE NOW
+WITHOUT LO-O-O-OVE
+
+YOU KNOW I SAW MISS LUCY DOWN ALONG THE TRACKS
+SHE LOST HER HOME AND HER FAMILY AND SHE WON'T BE COMING BACK
+WITHOUT LOVE, WHERE WOULD YOU BE RIGHT NOW
+WITHOUT LO-O-O-OVE
+
+WELL THE ILLINOIS CENTRAL
+AND THE SOUTHERN CENTRAL FREIGHT
+GOT TO KEEP ON PUSHIN' MAMA
+YOU KNOW THEY'RE RUNNING LATE
+WITHOUT LOVE, WHERE WOULD YOU BE NOW
+WITHOUT LO-O-O-VE
+
+(SOLO GAITA)
+
+WELL THE ILLINOIS CENTRAL
+AND THE SOUTHERN CENTRAL FREIGHT
+GOT TO KEEP ON PUSHIN' MAMA
+YOU KNOW THEY'RE RUNNING LATE
+WITHOUT LOVE, WHERE WOULD YOU BE NOW
+WITHOUT LO-O-O-VE
+
+WELL THE PISTONS KEEP ON TURNING
+AND THE WHEELS GO ROUND AND ROUND
+THE STEEL RAILS ARE COLD AND HARD
+FOR THE MILES THAT THEY GO DOWN
+WITHOUT LOVE, WHERE WOULD YOU BE RIGHT NOW
+WITHOUT LO-O-O-VE OOH
+WHERE WOULD YOU BE NOW
+
+MMM, GOT TO GET YOU, BABY BABY, WON'T YOU MOVE IT DOWN?
+WON'T YOU MOVE IT DOWN?
+BABY, BABY, BABY, BABY, WON'T YOU MOVE IT DOWN?
+WHEN THE BIG TRAIN RUN
+WHEN THE TRAIN IS MOVIN' ON I GOT TO KEEP ON MOVIN'
+KEEP ON MOVIN'
+WON'T YOU KEEP ON MOVIN'?
+GONNA KEEP ON MOVIN'`,sp:"",sps:"https://open.spotify.com/search/Long%20Train%20Running%20The%20Doobie%20Brothers",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/long-train-running.pdf"}],setlists:[{id:"set-70-light",name:"70 light",src:"70 light.txt",songs:["night-fever","celebration","give-it-up","i-say-a-little-prayer-2"]},{id:"set-ain-t-no-mountain-high-enough",name:"Ain't No Mountain High Enough",src:"Ain't No Mountain High Enough .txt",songs:["you-ll-be-in-my-heart","what-a-wonderful-world","iris","con-te-partiro","pai-nosso"]},{id:"set-anos-50",name:"Anos 50",src:"Anos 50 .txt",songs:["let-s-twist-again","tutti-frutti","rock-around-the-clock","blue-suede-shoes","jailhouse-rock"]},{id:"set-anos-50-60",name:"Anos 50 _60",src:"Anos 50 _60.txt",songs:["let-s-twist-again","tutti-frutti","rock-around-the-clock","blue-suede-shoes","jailhouse-rock","biquini-de-bolinha-amarelinha"]},{id:"set-anos-80-nacional",name:"Anos 80 nacional",src:"Anos 80 nacional.txt",songs:["meu-erro","oculos","descobridor-dos-sete-mares","nao-quero-dinheiro-so-quero-amar","musica-urbana"]},{id:"set-anos-90",name:"anos 90",src:"anos 90.txt",songs:["a-little-respect","the-rhythm-of-the-night","mr-vain","what-is-love","run-to-you-verificar"]},{id:"set-rocks",name:"ROCKS",src:"ROCKS.txt",songs:["listen-to-the-music","have-you-ever-seen-the-rain","rock-and-roll-all-nite","i-can-t-get-no-satisfaction","born-to-be-wild","suddenly-i-see","kiss-me"]},{id:"set-boleros",name:"Boleros",src:"Boleros.txt",songs:["la-puerta","historia-de-un-amor","el-dia-que-me-quieras","la-barca","el-reloj"]},{id:"set-latinas",name:"Latinas",src:"Latinas.txt",songs:["sway","can-t-take-my-eyes-off-you","la-vida-es-un-carnaval","la-camisa-negra","corazon-espinado"]},{id:"set-forro",name:"Forro",src:"Forro.txt",songs:["medo-de-chuva","esperando-na-janela","nosso-xote","voce-nao-vale-nada"]},{id:"set-standards",name:"Standards",src:"Standards.txt",songs:["i-ve-got-you-under-my-skin","cheek-to-cheek","fly-me-to-the-moon","new-york-new-york"]},{id:"set-samba",name:"samba",src:"samba.txt",songs:["verdade-chinesa","agamamou","flor-de-lis","fato-consumado","ive-brussel","eu-fui","danca-do-bole-bole"]},{id:"set-samba-enredo",name:"samba enredo",src:"samba enredo.txt",songs:["peguei-um-ita-no-norte-salgueiro","gavioes-fiel","atras-da-verde-e-rosa-so-nao-vai-quem-ja-morreu-","o-que-e-o-que-e"]},{id:"set-samaba-enrredo-navio",name:"Samaba enrredo Navio",src:"Samaba enrredo Navio.txt",songs:["samba-enredo-1986-mangueira","bum-bum-paticumbum-prugurundum-verificar","peguei-um-ita-no-norte-salgueiro"]},{id:"set-sertanejo",name:"Sertanejo",src:"Sertanejo.txt",songs:["man-i-feel-like-a-woman","meteoro","o-jeito-e-da-uma-fugidinha","ciumenta","chora-me-liga","amo-noite-e-dia","paga-pau","leilao","que-pescar-que-nada","bebo-pra-carai","o-bicho-vai-pegar-o-chao-vai-tremer","pode-chorar","bala-de-prata","mala-pronta","vendaval","vou-fazer-pirraca","have-you-ever-seen-the-rain","borboletas","fada","como-um-anjo"]},{id:"set-bahia",name:"Bahia",src:"Bahia.txt",songs:["my-girl","let-s-stay-together","sexbomb","crazy-little-thing-called-love","i-was-born-to-love-you"]},{id:"set-dance",name:"Dance",src:"Dance.txt",songs:["i-gotta-feeling","stereo-love","rise-up","bad-romance-poker-face-medley-lady-gaga","loca","club-can-t-handle-me","crazy-in-love","love-is-gone","love-generation","let-me-think-about-it","i-don-t-know-why","set-me-free"]},{id:"set-show-michael",name:"Show Michael",src:"Show Michael.txt",songs:["thriller","ben","i-ll-be-there","i-want-you-back","abc","billie-jean","bad","beat-it","ain-t-no-sunshine","the-girl-is-mine","you-are-not-alone","they-don-t-care-about-us","human-nature","black-or-white","heal-the-world","smooth-criminal"]},{id:"set-lentas-dancantes",name:"Lentas dan\xE7antes",src:"Lentas dan\xE7antes.txt",songs:["do-you-wanna-dance","stand-by-me","rock-and-roll-lullaby","put-your-records-on","how-deep-is-your-love","cruisin","i-ll-be-over-you","fallen","everything"]},{id:"set-lentas-e-baladas",name:"Lentas e Baladas",src:"Lentas e Baladas .txt",songs:["easy","dona","eu-te-devoro","final-feliz","don-t-know-why","how-deep-is-your-love","my-girl","new-york-new-york","besame-mucho","i-ve-had-the-time-of-my-life","corazon-espinado"]},{id:"set-fox-lento",name:"Fox Lento",src:"Fox Lento.txt",songs:["unforgettable","the-way-you-look-tonight","close-to-you","can-t-smile-without-you"]},{id:"set-fox-linha",name:"Fox linha",src:"Fox linha.txt",songs:["i-left-my-heart-in-san-francisco","new-york-new-york","i-ve-got-you-under-my-skin","hello-detroit","just-a-gigolo","cheek-to-cheek","fly-me-to-the-moon"]},{id:"set-rmaonticas-linha",name:"Rmaonticas Linha",src:"Rmaonticas Linha.txt",songs:["easy","beauty-and-the-beast","endless-love","hero","after-the-love-has-gone","i-just-wanna-stop"]},{id:"set-standards-new-times",name:"Standards NEW TIMES",src:"Standards NEW TIMES.txt",songs:["emocoes","new-york-new-york","they-can-t-take-that-away-from-me","for-once-in-my-life","fly-me-to-the-moon","i-ve-got-you-under-my-skin","beyond-the-sea","hello-detroit","all-of-me","cheek-to-cheek"]},{id:"set-apos-jantar-new-times",name:"ap\xF3s jantar NEW TIMES",src:"ap\xF3s jantar NEW TIMES.txt",songs:["have-you-ever-seen-the-rain","proud-mary","i-can-t-get-no-satisfaction","twist-and-shout","a-hard-day-s-night","i-wanna-hold-your-hand","stayin-alive","summer-nights","you-re-the-one-that-i-want","johnny-b-goode","blue-suede-shoes","pode-vir-quente-que-eu-estou-fervendo","menina-linda","festa-de-arromba","o-bom","rua-augusta","listen-to-the-music","rock-and-roll-all-nite","born-to-be-wild","suddenly-i-see","kiss-me"]},{id:"set-show-du-rio-a-pari",name:"Show Du rio a Pari",src:"Show Du rio a Pari.txt",songs:["on-the-floor","chorando-se-foi-llorando-se-fue-lambada","c-est-une-bossa-nova","for-me-formidable","la-vie-en-rose","non-je-ne-regrette-rien","padam-padam","et-si-tu-n-existais-pas","besame-mucho-versao-francesa","bye-bye"]},{id:"set-sunset-2012",name:"sunset 2012",src:"sunset 2012.txt",songs:["new-york-new-york","hello-detroit","just-a-gigolo","can-t-take-my-eyes-off-you"]},{id:"set-dance-1-atmosfera",name:"Dance 1 Atmosfera",src:"Dance 1 Atmosfera.txt",songs:["hello","sexy-and-i-know-it","party-rock-anthem","take-over-control","getting-over-you","where-them-girls-at","the-time-dirty-bit"]},{id:"set-dance-2-atmosfera",name:"Dance 2 Atmosfera",src:"Dance 2 Atmosfera.txt",songs:["loca","dynamite","last-friday-night-t-g-i-f","only-girl-in-the-world","moves-like-jagger","give-me-everything","i-wanna-go","till-the-world-ends","rabiosa"]},{id:"set-grease-megamix",name:"Grease Megamix",src:"Grease Megamix.txt",songs:["greased-lightnin-you-re-the-one-that-i-want","summer-nights"]},{id:"set-marchinhas-de-carnaval-1",name:"Marchinhas de carnaval 1",src:"Marchinhas de carnaval 1.txt",songs:["o-teu-cabelo-nao-nega","a-cabeleira-do-zeze","me-da-um-dinheiro-ai","colombina-ie-ie-ie","maria-sapatao","bota-camisinha","tai-pra-voce-gostar-de-mim","mulata-ie-ie-ie","me-da-um-gelinho","coracao-corinthiano","saca-rolha"]},{id:"set-bela-e-a-fera-e-over-the-rainbow",name:"bela e a fera e over the rainbow",src:"bela e a fera e over the rainbow.txt",songs:["beauty-and-the-beast","somewhere-over-the-rainbow-what-a-wonderful-worl"]},{id:"set-casa-sao-roque",name:"Casa Sao roque",src:"Casa Sao roque.txt",songs:["em-nome-do-nosso-amor","ceu-de-santo-amaro-verificar","she"]},{id:"set-pai-nosso-e-conte",name:"pai nosso e conte",src:"pai nosso e conte.txt",songs:["con-te-partiro","pai-nosso","como-e-grande-o-meu-amor-por-voce"]},{id:"set-medley-bon-voyage-2012",name:"Medley Bon Voyage 2012",src:"Medley Bon Voyage 2012 .txt",songs:["je-t-aime-moi-non-plus","c-est-si-bon","l-amerique","i-love-america"]},{id:"set-medley-boney-m-bon-voyage",name:"Medley Boney M (Bon Voyage)",src:"Medley Boney M (Bon Voyage).txt",songs:["rivers-of-babylon","daddy-cool","sunny","ma-baker"]},{id:"set-medley-rock-and-roll-french",name:"Medley Rock And Roll French",src:"Medley Rock And Roll French.txt",songs:["rock-and-roll-mops","t-as-l-bonjour-d-alfred","ca-rock-ca-va-verificar"]},{id:"set-cerimonia",name:"Cerimonia",src:"Cerimonia.txt",songs:["one","the-prayer","can-you-feel-the-love-tonight","can-t-help-falling-in-love","perhaps-love","she","somewhere-over-the-rainbow","tudo-que-se-quer","all-i-ask-of-you","you-ll-be-in-my-heart","what-a-wonderful-world","iris","con-te-partiro","pai-nosso"]},{id:"set-axe-mid",name:"axe mid",src:"axe mid.txt",songs:["we-are-the-world-of-carnaval","beijar-na-boca","erva-venenosa","empurra-empurra","bomba","eva","o-neguinha-vixe-mainha","amor-perfeito","100-voce","o-araketu-e-bom-demais","abalou","praieiro","extravasa","sorte-grande-poeira","rebolation","pancadao","ela-e-toda-boa","brincadeira-da-tomada","danca-da-maozinha","caranguejo","agua-mineral","joga-agua","beber-cair-e-levantar","xo-satanas","minha-mulher-nao-deixa-nao","saia-e-bicicletinha","piriri-pom-pom","na-base-do-beijo","ceu-da-boca","a-galera","berimbau-metalizado","coracao","bola-de-sabao","lirirrixa","flor-do-reggae","quero-chiclete","simbora","pais-tropical-arere-taj-mahal","bota-pra-ferver","lobo-mau","tchubirabiron","explosao","olha-a-onda","danca-do-vampiro","danca-da-manivela","tchau-i-have-to-go-now","festa","canibal","bate-lata","safado-cachorro-sem-vergonha","carro-velho","milla","pipoca","a-fila-andou","doce-desejo","meu-cabelo-duro-e-assim","vou-voar","paz-carnaval-futebol","vamo-pula","famo-a-billionaire","acelera-ae-noite-do-bem","ta-lisinho"]}],estilos:["Ax\xE9","Rock","Dance","Balada","Sertanejo","Pop","Francesa","Casamento","Samba","Marchinha","Jazz/Standard","Diversos","Baile","Latina","Bolero","Anos 50","Anos 80","Anos 90","Anos 70","Forr\xF3","Internacional","Anos 50/60","Trilha","Soul"]},SEED_SONGS=SEED.songs||[],SEED_SETLISTS=SEED.setlists||[],ESTILOS=SEED.estilos||[],ALL_TAGS=(()=>{const e={};return SEED_SONGS.forEach(n=>(n.tags||[]).forEach(o=>e[o]=(e[o]||0)+1)),Object.keys(e).sort((n,o)=>e[o]-e[n])})(),ESTILO_COR={};(()=>{const e=[C.green,C.gold,C.rose,C.violet,C.blue,"#ff9d5c","#6ee7b7","#f0abfc"];ESTILOS.forEach((n,o)=>ESTILO_COR[n]=e[o%e.length])})();const SEED_VERSION=1,APP_VERSION="13",S={async get(e){try{const{data:n}=await SB.from("cantor_kv").select("value").eq("key",e).maybeSingle();return n?n.value:null}catch(n){return console.error(n),null}},async set(e,n){try{return await SB.from("cantor_kv").upsert({key:e,value:n,updated_at:new Date().toISOString()}),!0}catch(o){return console.error(o),!1}}},uid=e=>(e||"u")+Date.now().toString(36)+Math.random().toString(36).slice(2,6),norm=e=>(e||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""),nt=e=>norm(e).replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim(),driveEmbed=e=>{const n=(e||"").match(/\/d\/([A-Za-z0-9_-]+)/);return n?`https://drive.google.com/file/d/${n[1]}/preview`:e},SH=["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"],ENH={Db:"C#",Eb:"D#",Gb:"F#",Ab:"G#",Bb:"A#",Cb:"B",Fb:"E","E#":"F","B#":"C"};function shiftRoot(e,n){let o=ENH[e]||e,u=SH.indexOf(o);return u<0?e:SH[((u+n)%12+12)%12]}const CH_RE=/^([A-G](?:#|b)?)((?:maj|min|sus|add|dim|aug|m|M|°|º|\+|\d|\(|\)|b|#|\.)*)(?:\/([A-G](?:#|b)?))?$/;function isChordToken(e){return e?!!e.match(CH_RE):!1}function transposeToken(e,n){const o=e.match(CH_RE);if(!o)return e;let u=shiftRoot(o[1],n)+(o[2]||"");return o[3]&&(u+="/"+shiftRoot(o[3],n)),u}function isChordLine(e){const n=e.trim().split(/\s+/).filter(Boolean);return n.length?n.filter(isChordToken).length/n.length>=.6:!1}function transposeText(e,n){return!n||!e?e:e.split(`
+`).map(o=>isChordLine(o)?o.replace(/\S+/g,u=>isChordToken(u)?transposeToken(u,n):u):o).join(`
+`)}function App(){const[e,n]=useState(!0),[o,u]=useState("musicas"),[E,a]=useState({}),[A,O]=useState([]),[i,m]=useState([]),[r,l]=useState({font:19}),[t,y]=useState(null),[g,c]=useState(null),[v,h]=useState(null),[d,p]=useState(null),[I,k]=useState(null),[N,L]=useState(null),[f,x]=useState(()=>{try{return localStorage.getItem("ct_editor")==="1"}catch(s){return!1}}),[$,H]=useState(!1),[U,W]=useState([]),[ee,G]=useState([]),[P,F]=useState([]),Y=useRef({}),B=useCallback(async()=>{const[s,b,w,ie,le,ue,he,de,me]=await Promise.all([S.get("ct_over"),S.get("ct_added"),S.get("ct_setlists"),S.get("ct_settings"),S.get("ct_seedV"),S.get("ct_pin"),S.get("ct_favs"),S.get("ct_gigs"),S.get("ct_bands")]);le!==SEED_VERSION&&await S.set("ct_seedV",SEED_VERSION),a(s||{}),O(b||[]),W(he||[]),G(de||[]),F(me||[]),m(w&&w.length?w:SEED_SETLISTS),w&&w.length||S.set("ct_setlists",SEED_SETLISTS),l(T({font:19},ie||{})),L(ue||null),n(!1)},[]);useEffect(()=>{B();const s=SB.channel("cantor_kv_rt").on("postgres_changes",{event:"*",schema:"public",table:"cantor_kv"},()=>B()).subscribe();return()=>{try{SB.removeChannel(s)}catch(b){}}},[B]);const M=(s,b,w)=>{w(b),Y.current[s]&&clearTimeout(Y.current[s]),Y.current[s]=setTimeout(()=>S.set(s,b),600)},ne=s=>M("ct_over",s,a),j=s=>M("ct_added",s,O),V=s=>M("ct_setlists",s,m),q=s=>M("ct_settings",s,l),oe=s=>M("ct_favs",s,W),ae=s=>{oe(U.includes(s)?U.filter(b=>b!==s):[...U,s])},te=s=>M("ct_gigs",s,G),se=s=>M("ct_bands",s,F),D=useMemo(()=>SEED_SONGS.filter(b=>!(E[b.id]&&E[b.id].hidden)).map(b=>T(T({},b),E[b.id]||{})).concat(A),[E,A]),z=useMemo(()=>{const s={};return D.forEach(b=>s[b.id]=b),s},[D]),Q=(s,b)=>{s.startsWith("u")?j(A.map(w=>w.id===s?T(T({},w),b):w)):ne(R(T({},E),{[s]:T(T({},E[s]||{}),b)}))},K=s=>{const b=T({id:uid("u")},s);return j([...A,b]),b.id},re=s=>{const b=(s||"").trim();if(!N){if(b.length<4)return"Defina uma senha com ao menos 4 d\xEDgitos.";S.set("ct_pin",b),L(b),x(!0);try{localStorage.setItem("ct_editor","1")}catch(w){}return""}if(b===N){x(!0);try{localStorage.setItem("ct_editor","1")}catch(w){}return""}return"Senha incorreta."},J=()=>{x(!1);try{localStorage.removeItem("ct_editor")}catch(s){}};if(e)return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"min-h-screen flex items-center justify-center p-6"},React.createElement("div",{className:"text-center"},React.createElement("img",{src:"img/splash.jpg",alt:"Thiago D'Angelo",style:{maxWidth:380,width:"84vw",borderRadius:16,marginBottom:16,boxShadow:"0 12px 44px rgba(0,0,0,0.55)"}}),React.createElement("p",{style:{color:C.mut},className:"flex items-center justify-center gap-2"},React.createElement(Music,{size:18,style:{color:C.gold},className:"animate-pulse"})," Carregando\u2026")));const Oe=s=>i.find(b=>b.id===s);return React.createElement("div",{style:{background:C.bg,color:C.txt,minHeight:"100vh",fontFamily:"system-ui, sans-serif"}},React.createElement("div",{style:{background:`linear-gradient(135deg, ${C.card2}, ${C.card})`,borderBottom:`1px solid ${C.line}`},className:"px-4 pt-4 pb-3 sticky top-0 z-20"},React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{style:{width:34,height:34,borderRadius:10,background:`linear-gradient(135deg, ${C.violet}, ${C.green})`},className:"flex items-center justify-center shrink-0"},React.createElement(Music,{size:18,style:{color:"#0c1622"}})),React.createElement("div",{className:"leading-tight"},React.createElement("h1",{className:"font-bold",style:{fontSize:17,letterSpacing:.3}},"Thiago D'Angelo"),React.createElement("p",{style:{color:C.gold,letterSpacing:2,textTransform:"uppercase",fontSize:9.5}},"Repert\xF3rio \xB7 ",D.length," m\xFAsicas")),React.createElement("button",{onClick:()=>f?J():H(!0),title:f?"Sair do modo edi\xE7\xE3o":"Entrar no modo edi\xE7\xE3o",style:{background:C.card2,color:f?C.gold:C.mut,marginLeft:"auto"},className:"px-2.5 py-2 rounded-lg flex items-center gap-1 text-xs shrink-0"},f?React.createElement(Unlock,{size:15}):React.createElement(Lock,{size:15}),f?React.createElement("span",null,"edi\xE7\xE3o"):null))),React.createElement("div",{className:"p-3 pb-24 max-w-2xl mx-auto"},o==="musicas"&&React.createElement(Repertorio,{songs:D,onPlay:s=>y(s),onAdd:K,onEdit:s=>h(s),editor:f,favs:U,onFav:ae}),o==="setlists"&&React.createElement(Setlists,{setlists:i,songById:z,onOpen:s=>p(s),saveSetlists:V,editor:f,onOpenLock:()=>H(!0)}),o==="agenda"&&React.createElement(Agenda,{gigs:ee,saveGigs:te,bands:P,setlists:i,songs:D,songById:z,editor:f,onOpenLock:()=>H(!0),onOpenShow:s=>k(s),onPlay:s=>y(s)}),o==="ajustes"&&React.createElement(Ajustes,{settings:r,saveSettings:q,songs:D,setlists:i,bands:P,saveBands:se,editor:f,hasPin:!!N,pin:N,onLock:J,onOpenLock:()=>H(!0),savePin:s=>{S.set("ct_pin",s),L(s)}})),React.createElement("nav",{style:{background:C.card,borderTop:`1px solid ${C.line}`},className:"fixed bottom-0 left-0 right-0 z-20"},React.createElement("div",{className:"max-w-2xl mx-auto grid grid-cols-4"},[{k:"musicas",ic:Music,lb:"M\xFAsicas"},{k:"setlists",ic:ListMusic,lb:"Estilos"},{k:"agenda",ic:Calendar,lb:"Agenda"},{k:"ajustes",ic:Settings,lb:"Ajustes"}].map(({k:s,ic:b,lb:w})=>React.createElement("button",{key:s,onClick:()=>u(s),className:"py-2.5 flex flex-col items-center gap-0.5",style:{color:o===s?C.gold:C.mut}},React.createElement(b,{size:20}),React.createElement("span",{style:{fontSize:10.5}},w))))),t&&React.createElement(Player,{song:z[t],settings:r,saveSettings:q,updateSong:Q,editor:f,onEdit:s=>{y(null),h(s)},openViewer:(s,b)=>c({url:s,title:b}),onClose:()=>y(null)}),g&&React.createElement(PdfViewer,{url:g.url,title:g.title,onClose:()=>c(null)}),v&&React.createElement(AddSong,{initial:v,estilos:ESTILOS,onClose:()=>h(null),onSave:s=>{v.id?Q(v.id,s):K(s),h(null)}}),$&&React.createElement(LockModal,{hasPin:!!N,onClose:()=>H(!1),onSubmit:s=>re(s)}),d&&React.createElement(SetlistEditor,{sid:d,setlists:i,saveSetlists:V,songs:D,songById:z,editor:f,onPlay:s=>y(s),onShow:s=>{p(null),k(s)},onClose:()=>p(null)}),I&&React.createElement(ShowView,{setlist:typeof I=="string"?i.find(s=>s.id===I):I,songById:z,settings:r,saveSettings:q,onClose:()=>k(null)}))}function Repertorio({songs:e,onPlay:n,onAdd:o,onEdit:u,editor:E,favs:a,onFav:A}){const[O,i]=useState(""),[m,r]=useState("Todos"),[l,t]=useState("Todas"),[y,g]=useState(!1),[c,v]=useState(!1),h=a||[],d=useMemo(()=>{const p=nt(O),I=p.split(" ").filter(Boolean);let k=e.filter(N=>{if(y&&!h.includes(N.id)||m!=="Todos"&&N.pri!==m||l!=="Todas"&&!(N.tags||[]).includes(l))return!1;if(!I.length)return!0;const L=nt((N.t||"")+" "+(N.artist||""));return I.every(f=>L.includes(f))});if(I.length){const N=L=>{const f=nt(L.t);return f===p?0:f.startsWith(p)?1:I[0]&&f.startsWith(I[0])?2:f.includes(p)?3:4};k=k.slice().sort((L,f)=>N(L)-N(f)||L.t.localeCompare(f.t,"pt"))}else k=k.slice().sort((N,L)=>N.t.localeCompare(L.t,"pt"));return k.slice(0,400)},[e,O,m,l,y,a]);return React.createElement("div",null,React.createElement("div",{style:{position:"relative",height:152,borderRadius:16,overflow:"hidden",marginBottom:12}},React.createElement("img",{src:"img/header.jpg",alt:"",style:{width:"100%",height:"100%",objectFit:"cover",objectPosition:"72% 28%"}}),React.createElement("div",{style:{position:"absolute",inset:0,background:`linear-gradient(90deg, ${C.bg} 2%, ${C.bg}aa 34%, transparent 72%)`}}),React.createElement("div",{style:{position:"absolute",left:16,bottom:14}},React.createElement("p",{style:{fontSize:22,fontWeight:800,lineHeight:1.05}},"Thiago D'Angelo"),React.createElement("p",{style:{color:C.gold,fontSize:10,letterSpacing:3,textTransform:"uppercase",marginTop:4}},"Repert\xF3rio"))),React.createElement("div",{className:"relative mb-2"},React.createElement(Search,{size:16,style:{color:C.mut},className:"absolute left-3 top-1/2 -translate-y-1/2"}),React.createElement("input",{value:O,onChange:p=>i(p.target.value),placeholder:"Buscar por t\xEDtulo ou artista\u2026",style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"w-full pl-9 pr-3 py-2.5 rounded-xl outline-none"})),React.createElement("div",{className:"flex gap-2 overflow-x-auto pb-2"},React.createElement(Sel,{value:m,onChange:r,options:["Todos",...ESTILOS]}),React.createElement(Sel,{value:l,onChange:t,options:["Todas",...ALL_TAGS]}),React.createElement("button",{onClick:()=>g(p=>!p),style:{background:y?C.gold:C.card,color:y?"#2b2100":C.mut,border:`1px solid ${C.line}`},className:"px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap shrink-0"},"\u2605 Favoritas"),E&&React.createElement("button",{onClick:()=>v(!0),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap flex items-center gap-1"},React.createElement(Plus,{size:14})," Nova")),React.createElement("p",{className:"text-xs mb-2",style:{color:C.mut}},d.length," m\xFAsica(s)"),React.createElement("div",{className:"space-y-2"},d.map(p=>React.createElement(SongRow,{key:p.id,s:p,onPlay:n,onEdit:u,editor:E,fav:h.includes(p.id),onFav:A}))),c&&React.createElement(AddSong,{estilos:ESTILOS,onClose:()=>v(!1),onSave:p=>{o(p),v(!1)}}))}function spLink(e){return e&&(e.sp||e.sps)||""}function SongRow({s:e,onPlay:n,onEdit:o,editor:u,fav:E,onFav:a}){return React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full p-3 rounded-xl flex items-center gap-2"},React.createElement("button",{onClick:()=>n(e.id),className:"flex items-center gap-3 min-w-0 flex-1 text-left active:opacity-70"},React.createElement("div",{style:{background:C.card2,color:ESTILO_COR[e.pri]||C.gold,minWidth:40},className:"px-2 py-2 rounded-lg flex items-center justify-center"},React.createElement(Music,{size:16})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},e.t),React.createElement("div",{className:"flex items-center gap-2 text-xs mt-0.5",style:{color:C.mut}},e.artist?React.createElement("span",{className:"truncate"},e.artist):null,React.createElement("span",{style:{color:ESTILO_COR[e.pri]||C.mut}},"\xB7 ",e.pri)))),a?React.createElement("button",{onClick:()=>a(e.id),title:E?"Remover dos favoritos":"Favoritar",style:{color:E?C.gold:C.mut,fontSize:19,lineHeight:1},className:"px-1 shrink-0"},E?"\u2605":"\u2606"):null,spLink(e)?React.createElement("a",{href:spLink(e),target:"_blank",rel:"noreferrer",title:"Ouvir no Spotify",style:{background:C.card2,color:C.green},className:"p-2 rounded-lg shrink-0"},React.createElement(Spotify,{size:18})):null,u?React.createElement("button",{onClick:()=>o(e),title:"Editar",style:{background:C.card2,color:C.gold},className:"p-2 rounded-lg shrink-0"},React.createElement(Pencil,{size:16})):null,React.createElement("button",{onClick:()=>n(e.id),title:"Abrir letra",style:{color:C.gold},className:"p-1.5 shrink-0"},React.createElement(Play,{size:18})))}function Sel({value:e,onChange:n,options:o}){return React.createElement("select",{value:e,onChange:u=>n(u.target.value),style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"px-3 py-1.5 rounded-full text-xs outline-none max-w-[46%]"},o.map(u=>React.createElement("option",{key:u,value:u},u)))}function Player({song:e,settings:n,saveSettings:o,updateSong:u,editor:E,onEdit:a,openViewer:A,onClose:O}){const[i,m]=useState(0),[r,l]=useState(!1),[t,y]=useState(0),g=useRef(null),c=n.font||19;if(useEffect(()=>{m(0),l(!1),y(0)},[e&&e.id]),useEffect(()=>{if(!i||!g.current)return;const I=g.current,k=setInterval(()=>{I.scrollTop+=i},60);return()=>clearInterval(k)},[i]),!e)return null;const v=spLink(e),h=r&&e.cifra?transposeText(e.cifra,t):e.letra||"",d=h.split(`
+`),p=r&&e.cifra;return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-[80] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:O,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-bold truncate"},e.t),React.createElement("p",{className:"text-xs truncate",style:{color:C.mut}},e.artist?e.artist+" \xB7 ":"",e.pri)),E?React.createElement("button",{onClick:()=>a(e),title:"Editar",style:{background:C.card2,color:C.gold},className:"p-2 rounded-lg"},React.createElement(Pencil,{size:16})):null),React.createElement("div",{style:{background:C.card2,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 flex-wrap text-xs"},React.createElement("div",{className:"flex items-center gap-1"},React.createElement(Type,{size:13,style:{color:C.mut}}),React.createElement("button",{onClick:()=>o(R(T({},n),{font:Math.max(13,c-1)})),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{minWidth:22},className:"text-center"},c),React.createElement("button",{onClick:()=>o(R(T({},n),{font:Math.min(34,c+1)})),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14}))),React.createElement("div",{className:"flex items-center gap-1"},React.createElement("button",{onClick:()=>m(I=>I>0?0:1),style:{background:i?C.gold:C.card,color:i?"#2b2100":C.txt},className:"p-1.5 rounded-lg flex items-center gap-1"},i?React.createElement(Pause,{size:14}):React.createElement(Play,{size:14}),React.createElement("span",null,"rolar")),i>0&&React.createElement("input",{type:"range",min:"1",max:"5",value:i,onChange:I=>m(Number(I.target.value)),className:"w-16"})),p?React.createElement("div",{className:"flex items-center gap-1"},React.createElement("span",{style:{color:C.mut}},"Tom"),React.createElement("button",{onClick:()=>y(I=>I-1),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{color:C.gold,minWidth:26},className:"text-center font-bold"},t>0?"+"+t:t),React.createElement("button",{onClick:()=>y(I=>I+1),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14}))):null,e.cifra?React.createElement("button",{onClick:()=>l(I=>!I),style:{background:r?C.gold:C.card,color:r?"#2b2100":C.txt},className:"px-2.5 py-1.5 rounded-lg font-semibold"},r?"Ver letra":"Ver cifra"):null,e.u?React.createElement("button",{onClick:()=>A(e.u,e.t),style:{background:C.blue,color:"#04203f"},className:"px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1"},React.createElement(FileText,{size:13})," PDF"):null,v?React.createElement("a",{href:v,target:"_blank",rel:"noreferrer",style:{background:C.green,color:"#04261b"},className:"ml-auto px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1"},React.createElement(Spotify,{size:14})," Spotify"):null),React.createElement("div",{ref:g,className:"flex-1 px-4 py-4",style:{overflow:"auto",scrollBehavior:"smooth",WebkitOverflowScrolling:"touch"}},h.trim()?p?React.createElement("pre",{style:{fontFamily:"ui-monospace, Menlo, monospace",fontSize:c,lineHeight:1.5,whiteSpace:"pre",display:"inline-block",minWidth:"100%"}},d.map((I,k)=>isChordLine(I)?React.createElement("div",{key:k,style:{color:C.gold,fontWeight:700}},I||"\xA0"):React.createElement("div",{key:k},I||"\xA0"))):React.createElement("div",{style:{fontSize:c,lineHeight:1.65,whiteSpace:"pre-wrap",wordBreak:"break-word",maxWidth:680,margin:"0 auto"}},h):React.createElement("div",{className:"text-center py-10",style:{color:C.mut}},React.createElement(Music,{size:40,className:"mx-auto mb-3"}),React.createElement("p",null,"Sem letra cadastrada ainda."))))}const MES=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];function Agenda({gigs:e,saveGigs:n,bands:o,setlists:u,songs:E,songById:a,editor:A,onOpenLock:O,onOpenShow:i}){const[m,r]=useState(null),l=new Date().toISOString().slice(0,10),t=(e||[]).slice().sort((d,p)=>((d.date||"")+(d.time||"")).localeCompare((p.date||"")+(p.time||""))),y=t.filter(d=>(d.date||"")>=l),g=t.filter(d=>(d.date||"")<l).reverse(),c=d=>{const p=u.find(I=>I.id===d);return p?(p.songs||[]).length:0},v=d=>({name:d.local||"Evento",songs:[...d.setlist?(u.find(p=>p.id===d.setlist)||{}).songs||[]:[],...d.extra||[]]}),h=d=>{const p=(d.date||"--").split("-"),I=(d.setlist?c(d.setlist):0)+(d.extra&&d.extra.length||0);return React.createElement("button",{key:d.id,onClick:()=>r(d),style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full text-left p-3 rounded-xl flex items-center gap-3 active:opacity-70"},React.createElement("div",{style:{background:C.card2,minWidth:50},className:"px-1 py-1.5 rounded-lg text-center"},React.createElement("p",{className:"font-bold",style:{color:C.gold,fontSize:16,lineHeight:1}},p[2]||"--"),React.createElement("p",{style:{color:C.mut,fontSize:10}},MES[Number(p[1])-1]||"")),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},d.local||"Show"),React.createElement("p",{className:"text-xs truncate",style:{color:C.mut}},d.time?d.time+" \xB7 ":"",d.band?d.band:"sem banda",I?" \xB7 "+I+" m\xFAsicas":""),d.requests?React.createElement("p",{className:"text-xs truncate",style:{color:C.gold}},"\u2605 pedidos especiais"):null),React.createElement(ChevronRight,{size:18,style:{color:C.mut}}))};return React.createElement("div",null,React.createElement("div",{className:"flex items-center justify-between mb-3"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},"Minha agenda"),A?React.createElement("button",{onClick:()=>r("new"),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1"},React.createElement(Plus,{size:14})," Novo show"):React.createElement("button",{onClick:O,style:{background:C.card2,color:C.mut},className:"px-3 py-1.5 rounded-full text-xs flex items-center gap-1"},React.createElement(Lock,{size:13})," editar")),t.length===0&&React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Nenhum show marcado. ",A?'Toque em "Novo show".':"Entre no modo edi\xE7\xE3o para adicionar."),y.length>0&&React.createElement("p",{className:"text-xs mb-2 mt-1",style:{color:C.mut}},"Pr\xF3ximos"),React.createElement("div",{className:"space-y-2"},y.map(h)),g.length>0&&React.createElement("p",{className:"text-xs mb-2 mt-4",style:{color:C.mut}},"Anteriores"),React.createElement("div",{className:"space-y-2",style:{opacity:.72}},g.map(h)),m&&React.createElement(GigEditor,{gig:m==="new"?null:m,bands:o,setlists:u,songs:E,songById:a,onShow:i,onClose:()=>r(null),onSave:d=>{n(m==="new"?[...e,T({id:uid("gig")},d)]:e.map(p=>p.id===m.id?T(T({},p),d):p)),r(null)},onDelete:()=>{n(e.filter(d=>d.id!==m.id)),r(null)}}))}function GigEditor({gig:e,bands:n,setlists:o,songs:u,songById:E,onShow:a,onPlay:A,onClose:O,onSave:i,onDelete:m}){const[r,l]=useState(e?{date:e.date||"",time:e.time||"",local:e.local||"",band:e.band||"",setlist:e.setlist||"",extra:e.extra||[],requests:e.requests||"",endereco:e.endereco||"",note:e.note||""}:{date:"",time:"",local:"",band:"",setlist:"",extra:[],requests:"",endereco:"",note:""}),[t,y]=useState(!1),g=(c,v)=>l(h=>R(T({},h),{[c]:v}));return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[65] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[90vh] overflow-y-auto p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},e?"Editar show":"Novo show"),React.createElement("button",{onClick:O},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("div",{className:"flex gap-2"},React.createElement(Field,{label:"Data *"},React.createElement("input",{type:"date",value:r.date,onChange:c=>g("date",c.target.value),style:inp})),React.createElement(Field,{label:"Hora"},React.createElement("input",{type:"time",value:r.time,onChange:c=>g("time",c.target.value),style:inp}))),React.createElement(Field,{label:"Local / evento"},React.createElement("input",{value:r.local,onChange:c=>g("local",c.target.value),placeholder:"Ex.: Casamento Ana & Jo\xE3o \u2014 Espa\xE7o Villa",style:inp})),React.createElement(Field,{label:"Banda"},React.createElement("select",{value:r.band,onChange:c=>g("band",c.target.value),style:inp},React.createElement("option",{value:""},"\u2014 escolher \u2014"),(n||[]).map(c=>React.createElement("option",{key:c},c)),r.band&&!(n||[]).includes(r.band)?React.createElement("option",null,r.band):null)),React.createElement(Field,{label:"Show / estilo (opcional)"},React.createElement("select",{value:r.setlist,onChange:c=>g("setlist",c.target.value),style:inp},React.createElement("option",{value:""},"\u2014 nenhum \u2014"),(o||[]).map(c=>React.createElement("option",{key:c.id,value:c.id},c.name)))),React.createElement("div",null,React.createElement("div",{className:"flex items-center justify-between mb-1"},React.createElement("span",{className:"text-xs",style:{color:C.mut}},"M\xFAsicas especiais deste evento (do repert\xF3rio)"),React.createElement("button",{onClick:()=>y(!0),style:{background:C.gold,color:"#2b2100"},className:"px-2.5 py-1 rounded-full text-xs font-semibold flex items-center gap-1"},React.createElement(Plus,{size:13})," Adicionar")),React.createElement("div",{className:"space-y-1"},(r.extra||[]).map((c,v)=>{const h=E&&E[c];return h?React.createElement("div",{key:c+v,style:{background:C.bg,border:`1px solid ${C.line}`},className:"p-2 rounded-lg flex items-center gap-2"},React.createElement("span",{className:"text-xs",style:{color:C.gold,minWidth:14}},v+1),React.createElement("button",{onClick:()=>A&&A(c),className:"min-w-0 flex-1 truncate text-sm text-left active:opacity-70"},h.t,React.createElement("span",{style:{color:C.mut}}," \xB7 ",h.artist)),h.sp||h.sps?React.createElement("a",{href:h.sp||h.sps,target:"_blank",rel:"noreferrer",title:"Ouvir no Spotify",style:{color:C.green},className:"shrink-0"},React.createElement(Spotify,{size:16})):null,React.createElement("button",{onClick:()=>A&&A(c),title:"Ver letra",style:{color:C.gold},className:"shrink-0"},React.createElement(Play,{size:15})),React.createElement("button",{onClick:()=>g("extra",r.extra.filter((d,p)=>p!==v)),title:"Remover",style:{color:C.danger},className:"shrink-0"},React.createElement(X,{size:14}))):null})),r.extra&&r.extra.length||r.setlist?React.createElement("button",{onClick:()=>a({name:r.local||"Evento",songs:[...r.setlist?(o.find(c=>c.id===r.setlist)||{}).songs||[]:[],...r.extra||[]]}),style:{background:C.green,color:"#04261b"},className:"w-full mt-2 py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-1"},React.createElement(Play,{size:15})," Ver letras do evento (Modo Show)"):null),React.createElement(Field,{label:"Outros pedidos / n\xE3o cadastradas (texto livre)"},React.createElement("textarea",{value:r.requests,onChange:c=>g("requests",c.target.value),rows:4,placeholder:"Ex.: m\xFAsica nova que ainda n\xE3o est\xE1 no app; ordem especial\u2026",style:R(T({},inp),{whiteSpace:"pre-wrap"})})),React.createElement(Field,{label:"Endere\xE7o do evento (para o Waze)"},React.createElement("input",{value:r.endereco,onChange:c=>g("endereco",c.target.value),placeholder:"Rua, n\xFAmero, bairro, cidade\u2026",style:inp})),r.endereco.trim()?React.createElement("a",{href:"https://waze.com/ul?q="+encodeURIComponent(r.endereco.trim())+"&navigate=yes",target:"_blank",rel:"noreferrer",style:{background:C.blue,color:"#04203f"},className:"w-full py-2 rounded-lg text-sm font-semibold flex items-center justify-center gap-1"},React.createElement(MapPin,{size:15})," Abrir no Waze"):null,React.createElement(Field,{label:"Observa\xE7\xF5es (cach\xEA, contato, hor\xE1rio de passagem\u2026)"},React.createElement("textarea",{value:r.note,onChange:c=>g("note",c.target.value),rows:2,style:inp})),React.createElement("div",{className:"flex gap-2"},React.createElement("button",{onClick:()=>{r.date&&i(r)},style:{background:C.green,color:"#04261b"},className:"flex-1 py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Check,{size:16})," Salvar"),e?React.createElement("button",{onClick:m,style:{background:C.card2,color:C.danger},className:"px-4 rounded-xl"},React.createElement(Trash2,{size:16})):null),t&&React.createElement(SongPicker,{songs:u,onClose:()=>y(!1),onPick:c=>g("extra",[...r.extra||[],c])})))}function ShowView({setlist:e,songById:n,settings:o,saveSettings:u,onClose:E}){const[a,A]=useState(0),O=useRef(null),i=o&&o.font||19,m=(e&&e.songs||[]).map(l=>n[l]).filter(Boolean);useEffect(()=>{if(!a||!O.current)return;const l=O.current,t=setInterval(()=>{l.scrollTop+=a},60);return()=>clearInterval(t)},[a]),useEffect(()=>{let l=null;const t=async()=>{try{navigator.wakeLock&&(l=await navigator.wakeLock.request("screen"))}catch(g){}};t();const y=()=>{document.visibilityState==="visible"&&t()};return document.addEventListener("visibilitychange",y),()=>{document.removeEventListener("visibilitychange",y);try{l&&l.release()}catch(g){}}},[]);const r=l=>{const t=document.getElementById("showsong-"+l);t&&O.current&&O.current.scrollTo({top:t.offsetTop-6,behavior:"smooth"})};return e?React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-[68] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:E,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-bold truncate"},e.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Modo show \xB7 ",m.length," m\xFAsica(s)")),React.createElement(Type,{size:13,style:{color:C.mut}}),React.createElement("button",{onClick:()=>u(R(T({},o),{font:Math.max(13,i-1)})),style:{background:C.card2},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{minWidth:20},className:"text-center text-xs"},i),React.createElement("button",{onClick:()=>u(R(T({},o),{font:Math.min(40,i+1)})),style:{background:C.card2},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14})),React.createElement("button",{onClick:()=>A(l=>l>0?0:1),style:{background:a?C.gold:C.card2,color:a?"#2b2100":C.txt},className:"p-1.5 rounded-lg ml-1 flex items-center gap-1"},a?React.createElement(Pause,{size:14}):React.createElement(Play,{size:14})),a>0&&React.createElement("input",{type:"range",min:"1",max:"6",value:a,onChange:l=>A(Number(l.target.value)),className:"w-14"})),React.createElement("div",{style:{background:C.card2,borderBottom:`1px solid ${C.line}`},className:"px-3 py-1.5 flex gap-1 overflow-x-auto"},m.map((l,t)=>React.createElement("button",{key:t,onClick:()=>r(t),style:{background:C.card,color:C.mut},className:"px-2 py-1 rounded-lg text-xs whitespace-nowrap shrink-0"},t+1,". ",l.t))),React.createElement("div",{ref:O,className:"flex-1 px-4 py-4",style:{overflow:"auto",scrollBehavior:"smooth",WebkitOverflowScrolling:"touch"}},m.length===0?React.createElement("p",{className:"text-center py-10",style:{color:C.mut}},"Show vazio. Adicione m\xFAsicas a este setlist."):m.map((l,t)=>React.createElement("div",{key:l.id+t,id:"showsong-"+t,style:{maxWidth:680,margin:"0 auto",marginTop:t>0?64:0,paddingTop:t>0?28:0,borderTop:t>0?`2px solid ${C.line}`:"none"}},React.createElement("div",{className:"flex items-baseline gap-2 mb-3"},React.createElement("span",{style:{color:C.gold,fontSize:i},className:"font-bold"},t+1,"."),React.createElement("span",{className:"font-bold",style:{fontSize:i+4,color:C.gold}},l.t),l.artist?React.createElement("span",{className:"text-xs",style:{color:C.mut}},l.artist):null,l.sp||l.sps?React.createElement("a",{href:l.sp||l.sps,target:"_blank",rel:"noreferrer",style:{color:C.green,marginLeft:"auto"},className:"shrink-0"},React.createElement(Spotify,{size:16})):null),React.createElement("div",{style:{fontSize:i,lineHeight:1.6,whiteSpace:"pre-wrap",wordBreak:"break-word"}},l.letra||"(sem letra)"))),React.createElement("div",{style:{height:90}}))):null}function Setlists({setlists:e,songById:n,onOpen:o,saveSetlists:u,editor:E,onOpenLock:a}){const[A,O]=useState(""),i=useMemo(()=>{const r=nt(A);return e.filter(l=>!r||nt(l.name).includes(r)).slice().sort((l,t)=>l.name.localeCompare(t.name,"pt"))},[e,A]),m=()=>{const r=(prompt("Nome (ex.: Rock, Samba, Casamento...):")||"").trim();r&&u([...e,{id:uid("set"),name:r,style:"",songs:[]}])};return React.createElement("div",null,React.createElement("div",{className:"flex items-center gap-2 mb-3"},React.createElement("div",{className:"relative flex-1"},React.createElement(Search,{size:16,style:{color:C.mut},className:"absolute left-3 top-1/2 -translate-y-1/2"}),React.createElement("input",{value:A,onChange:r=>O(r.target.value),placeholder:"Buscar estilo/lista\u2026",style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"w-full pl-9 pr-3 py-2.5 rounded-xl outline-none"})),E?React.createElement("button",{onClick:m,style:{background:C.gold,color:"#2b2100"},className:"px-3 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-1 shrink-0"},React.createElement(Plus,{size:15})," Novo"):React.createElement("button",{onClick:a,style:{background:C.card2,color:C.mut},className:"px-3 py-2.5 rounded-xl text-sm flex items-center gap-1 shrink-0"},React.createElement(Lock,{size:14}))),React.createElement("p",{className:"text-xs mb-2",style:{color:C.mut}},i.length," estilo(s)/lista(s) \u2014 abra para ver as letras em sequ\xEAncia"),React.createElement("div",{className:"space-y-2"},i.map(r=>React.createElement("div",{key:r.id,style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full p-3 rounded-xl flex items-center gap-3"},React.createElement("button",{onClick:()=>o(r.id),className:"flex items-center gap-3 min-w-0 flex-1 text-left active:opacity-70"},React.createElement("div",{style:{background:C.card2,color:C.violet,minWidth:40},className:"p-2 rounded-lg flex items-center justify-center"},React.createElement(ListMusic,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},r.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},(r.songs||[]).length," m\xFAsica(s)"))),E?React.createElement("button",{onClick:()=>u([...e,R(T({},r),{id:uid("set"),name:r.name+" (c\xF3pia)"})]),title:"Duplicar show",style:{background:C.card2,color:C.mut},className:"p-2 rounded-lg shrink-0"},React.createElement(Plus,{size:15})):null,React.createElement("button",{onClick:()=>o(r.id),className:"shrink-0"},React.createElement(ChevronRight,{size:18,style:{color:C.mut}}))))))}function SetlistEditor({sid:e,setlists:n,saveSetlists:o,songs:u,songById:E,editor:a,onPlay:A,onShow:O,onClose:i}){const m=n.find(h=>h.id===e)||{name:"",songs:[]},[r,l]=useState(!1),t=h=>o(n.map(d=>d.id===e?T(T({},d),h):d)),y=(m.songs||[]).map(h=>E[h]).filter(Boolean),g=(h,d)=>{const p=[...m.songs],I=h+d;I<0||I>=p.length||([p[h],p[I]]=[p[I],p[h]],t({songs:p}))},c=h=>t({songs:m.songs.filter((d,p)=>p!==h)}),v=()=>{confirm("Excluir este setlist? (as m\xFAsicas continuam no repert\xF3rio)")&&(o(n.filter(h=>h.id!==e)),i())};return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-40 flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:i,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},a?React.createElement("input",{value:m.name,onChange:h=>t({name:h.target.value}),style:{background:"transparent",color:C.txt},className:"font-bold w-full outline-none"}):React.createElement("p",{className:"font-bold truncate"},m.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},y.length," m\xFAsica(s)")),a?React.createElement("button",{onClick:v,style:{color:C.danger},className:"p-2"},React.createElement(Trash2,{size:18})):null),React.createElement("div",{className:"overflow-y-auto flex-1 p-3 space-y-3"},y.length>0&&React.createElement("button",{onClick:()=>O(e),style:{background:C.green,color:"#04261b"},className:"w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 active:opacity-80"},React.createElement(Play,{size:18})," Abrir em sequ\xEAncia (Modo Show)"),a&&React.createElement("button",{onClick:()=>l(!0),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1"},React.createElement(Plus,{size:14})," Adicionar m\xFAsica"),y.length===0&&React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Setlist vazio."),React.createElement("div",{className:"space-y-2"},y.map((h,d)=>React.createElement("div",{key:h.id+d,style:{background:C.card,border:`1px solid ${C.line}`},className:"p-2.5 rounded-xl flex items-center gap-2"},React.createElement("span",{style:{color:C.mut,minWidth:20},className:"text-xs text-center"},d+1),a?React.createElement("div",{className:"flex flex-col"},React.createElement("button",{onClick:()=>g(d,-1),style:{color:C.mut},className:"p-0.5"},React.createElement(ArrowUp,{size:14})),React.createElement("button",{onClick:()=>g(d,1),style:{color:C.mut},className:"p-0.5"},React.createElement(ArrowDown,{size:14}))):null,React.createElement("button",{onClick:()=>A(h.id),className:"min-w-0 flex-1 text-left"},React.createElement("p",{className:"font-medium truncate text-sm"},h.t),React.createElement("p",{className:"text-xs",style:{color:C.mut}},h.artist?h.artist+" \xB7 ":"",React.createElement("span",{style:{color:ESTILO_COR[h.pri]}},h.pri))),spLink(h)?React.createElement("a",{href:spLink(h),target:"_blank",rel:"noreferrer",style:{color:C.green},className:"p-1.5"},React.createElement(Spotify,{size:16})):null,a?React.createElement("button",{onClick:()=>c(d),style:{color:C.danger},className:"p-1.5"},React.createElement(Trash2,{size:15})):null)))),r&&React.createElement(SongPicker,{songs:u,onClose:()=>l(!1),onPick:h=>t({songs:[...m.songs||[],h]})}))}function SongPicker({songs:e,onClose:n,onPick:o}){const[u,E]=useState(""),[a,A]=useState("Todos"),O=useMemo(()=>{const m=nt(u).split(" ").filter(Boolean);return e.filter(l=>{if(a!=="Todos"&&l.pri!==a)return!1;if(!m.length)return!0;const t=nt((l.t||"")+" "+(l.artist||""));return m.every(y=>t.includes(y))}).slice().sort((l,t)=>l.t.localeCompare(t.t,"pt")).slice(0,300)},[e,u,a]);return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[90] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[85vh] flex flex-col"},React.createElement("div",{className:"p-3 border-b",style:{borderColor:C.line}},React.createElement("div",{className:"flex items-center justify-between mb-2"},React.createElement("p",{className:"font-semibold"},"Adicionar m\xFAsica"),React.createElement("button",{onClick:n},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("input",{value:u,onChange:i=>E(i.target.value),placeholder:"Buscar\u2026",style:inp,autoFocus:!0}),React.createElement("div",{className:"mt-2"},React.createElement(Sel,{value:a,onChange:A,options:["Todos",...ESTILOS]}))),React.createElement("div",{className:"overflow-y-auto p-2 space-y-1"},O.map(i=>React.createElement("button",{key:i.id,onClick:()=>{o(i.id),n()},style:{background:C.card2},className:"w-full text-left p-2.5 rounded-lg flex items-center gap-2 active:opacity-70"},React.createElement("span",{className:"min-w-0 flex-1 truncate text-sm"},i.t,React.createElement("span",{style:{color:C.mut}}," \xB7 ",i.artist)),React.createElement("span",{className:"text-xs shrink-0",style:{color:ESTILO_COR[i.pri]}},i.pri))))))}function Ajustes({settings:e,saveSettings:n,songs:o,setlists:u,bands:E,saveBands:a,editor:A,hasPin:O,pin:i,onLock:m,onOpenLock:r,savePin:l}){const t=o.filter(g=>(g.letra||"").length>10).length,y=o.filter(g=>g.sp).length;return React.createElement("div",{className:"space-y-4"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4 space-y-2"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},"Senha de edi\xE7\xE3o"),A?React.createElement(React.Fragment,null,React.createElement("p",{className:"text-sm",style:{color:C.green}},"\u2713 Modo edi\xE7\xE3o ativo neste aparelho."),React.createElement(PinChange,{hasPin:O,pin:i,savePin:l}),React.createElement("button",{onClick:m,style:{background:C.card2,color:C.txt},className:"px-3 py-2 rounded-lg text-sm flex items-center gap-1"},React.createElement(Lock,{size:14})," Sair do modo edi\xE7\xE3o")):React.createElement(React.Fragment,null,React.createElement("p",{className:"text-sm",style:{color:C.mut}},O?"S\xF3 quem tem a senha edita m\xFAsicas e setlists.":"Defina uma senha para liberar a edi\xE7\xE3o."),React.createElement("button",{onClick:r,style:{background:C.gold,color:"#2b2100"},className:"px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1"},React.createElement(Unlock,{size:14})," ",O?"Entrar no modo edi\xE7\xE3o":"Criar senha de edi\xE7\xE3o"))),React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4 space-y-2"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},"Bandas / projetos"),React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Use na Agenda para marcar com qual banda \xE9 cada show."),A?React.createElement(BandManage,{bands:E,saveBands:a}):React.createElement("p",{className:"text-sm",style:{color:C.mut}},E&&E.length?E.join(" \xB7 "):"Nenhuma banda ainda.")),React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4"},React.createElement("p",{className:"font-semibold mb-1",style:{color:C.gold}},"Sobre o repert\xF3rio"),React.createElement("p",{className:"text-sm",style:{color:C.mut}},o.length," m\xFAsicas \xB7 ",u.length," setlists \xB7 ",t," com letra \xB7 ",y," com link exato do Spotify."),React.createElement("p",{className:"text-xs mt-2",style:{color:C.mut}},"Filtre por estilo ou marcador na aba M\xFAsicas. Toque numa m\xFAsica para abrir a letra (fonte ajust\xE1vel e rolagem autom\xE1tica) e o Spotify.")),React.createElement(Field,{label:`Tamanho padr\xE3o da letra: ${e.font||19}px`},React.createElement("input",{type:"range",min:"13",max:"34",value:e.font||19,onChange:g=>n(R(T({},e),{font:Number(g.target.value)})),className:"w-full"})),React.createElement("p",{className:"text-xs text-center",style:{color:C.mut}},"Tudo o que voc\xEA edita \xE9 compartilhado em tempo real."),React.createElement("p",{className:"text-xs text-center",style:{color:C.mut}},"Vers\xE3o ",APP_VERSION))}function PinChange({hasPin:e,pin:n,savePin:o}){const[u,E]=useState(!1),[a,A]=useState(""),[O,i]=useState(""),[m,r]=useState("");if(!u)return React.createElement("button",{onClick:()=>E(!0),style:{color:C.blue},className:"text-sm underline block"},"Alterar senha");const l=()=>{if(e&&a.trim()!==n){r("Senha atual incorreta.");return}if(O.trim().length<4){r("M\xEDnimo 4 d\xEDgitos.");return}o(O.trim()),r("Senha atualizada \u2713"),A(""),i(""),setTimeout(()=>E(!1),1e3)};return React.createElement("div",{className:"space-y-2"},e?React.createElement("input",{value:a,onChange:t=>A(t.target.value),type:"password",inputMode:"numeric",placeholder:"Senha atual",style:inp}):null,React.createElement("input",{value:O,onChange:t=>i(t.target.value),type:"password",inputMode:"numeric",placeholder:"Nova senha (m\xEDn. 4 d\xEDgitos)",style:inp}),m?React.createElement("p",{className:"text-xs",style:{color:m.indexOf("\u2713")>=0?C.green:C.danger}},m):null,React.createElement("div",{className:"flex gap-2"},React.createElement("button",{onClick:l,style:{background:C.green,color:"#04261b"},className:"px-3 py-1.5 rounded-lg text-sm font-semibold"},"Salvar senha"),React.createElement("button",{onClick:()=>{E(!1),r("")},style:{background:C.card2,color:C.mut},className:"px-3 py-1.5 rounded-lg text-sm"},"Cancelar")))}function BandManage({bands:e,saveBands:n}){const[o,u]=useState(""),E=()=>{const a=o.trim();if(!a||(e||[]).includes(a)){u("");return}n([...e||[],a]),u("")};return React.createElement("div",{className:"space-y-2"},React.createElement("div",{className:"flex gap-2"},React.createElement("input",{value:o,onChange:a=>u(a.target.value),onKeyDown:a=>a.key==="Enter"&&E(),placeholder:"Nome da banda",style:inp}),React.createElement("button",{onClick:E,style:{background:C.gold,color:"#2b2100"},className:"px-4 rounded-xl font-semibold"},"Add")),React.createElement("div",{className:"flex flex-wrap gap-2"},(e||[]).map(a=>React.createElement("span",{key:a,style:{background:C.card2,border:`1px solid ${C.line}`},className:"px-2.5 py-1 rounded-full text-sm flex items-center gap-1"},a,React.createElement("button",{onClick:()=>n(e.filter(A=>A!==a)),style:{color:C.danger},className:"ml-1"},React.createElement(X,{size:13}))))))}const inp={background:C.bg,border:`1px solid ${C.line}`,color:C.txt,borderRadius:12,padding:"10px 12px",outline:"none",width:"100%"};function Field({label:e,children:n}){return React.createElement("label",{className:"block"},React.createElement("span",{className:"text-xs block mb-1",style:{color:C.mut}},e),n)}function AddSong({onClose:e,onSave:n,initial:o,estilos:u}){const E=!!(o&&o.id),[a,A]=useState(o?{t:o.t||"",artist:o.artist||"",pri:o.pri||"Diversos",tags:(o.tags||[]).join(", "),sp:o.sp||"",letra:o.letra||"",cifra:o.cifra||"",u:o.u||""}:{t:"",artist:"",pri:u&&u[0]||"Diversos",tags:"",sp:"",letra:"",cifra:"",u:""}),[O,i]=useState(""),m=(t,y)=>A(g=>R(T({},g),{[t]:y})),r=async t=>{const y=t.target.files&&t.target.files[0];if(y){if(y.type&&y.type.indexOf("pdf")<0){i("Selecione um PDF.");return}i("Enviando\u2026");try{const g=(y.name||"letra.pdf").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^A-Za-z0-9._-]+/g,"_"),c="up-"+Date.now().toString(36)+"-"+g,{error:v}=await SB.storage.from("letras").upload(c,y,{upsert:!0,contentType:"application/pdf"});if(v){i("Falha: "+v.message);return}const{data:h}=SB.storage.from("letras").getPublicUrl(c);m("u",h.publicUrl),i("PDF enviado \u2713")}catch(g){i("Falha no upload.")}}},l=()=>{if(!a.t.trim())return;const t={t:a.t.trim(),artist:a.artist.trim(),pri:a.pri,tags:a.tags.split(",").map(y=>y.trim()).filter(Boolean),sp:a.sp.trim(),letra:a.letra,cifra:a.cifra,u:a.u.trim()};n(t)};return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[65] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[90vh] overflow-y-auto p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},E?"Editar m\xFAsica":"Nova m\xFAsica"),React.createElement("button",{onClick:e},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement(Field,{label:"T\xEDtulo *"},React.createElement("input",{value:a.t,onChange:t=>m("t",t.target.value),style:inp,autoFocus:!0})),React.createElement(Field,{label:"Artista"},React.createElement("input",{value:a.artist,onChange:t=>m("artist",t.target.value),style:inp})),React.createElement("div",{className:"flex gap-2"},React.createElement(Field,{label:"Estilo principal"},React.createElement("select",{value:a.pri,onChange:t=>m("pri",t.target.value),style:inp},(u||[]).concat(u&&u.indexOf(a.pri)<0?[a.pri]:[]).map(t=>React.createElement("option",{key:t},t)))),React.createElement(Field,{label:"Marcadores (v\xEDrgula)"},React.createElement("input",{value:a.tags,onChange:t=>m("tags",t.target.value),placeholder:"Anos 80, Pop",style:inp}))),React.createElement(Field,{label:"Link do Spotify"},React.createElement("input",{value:a.sp,onChange:t=>m("sp",t.target.value),placeholder:"https://open.spotify.com/track/\u2026",style:inp})),React.createElement(Field,{label:"Letra"},React.createElement("textarea",{value:a.letra,onChange:t=>m("letra",t.target.value),rows:7,style:R(T({},inp),{whiteSpace:"pre-wrap"})})),React.createElement("div",null,React.createElement("label",{style:{background:C.card2,color:C.txt,border:"1px dashed "+C.line},className:"flex items-center justify-center gap-2 py-2.5 rounded-xl cursor-pointer text-sm font-medium"},React.createElement(Upload,{size:16})," Enviar PDF da letra",React.createElement("input",{type:"file",accept:"application/pdf",onChange:r,className:"hidden"})),O?React.createElement("p",{className:"text-xs mt-1",style:{color:O.indexOf("\u2713")>=0?C.green:O.indexOf("Enviando")>=0?C.mut:C.danger}},O):null),React.createElement(Field,{label:"Cifra em texto (opcional \u2014 habilita transpor)"},React.createElement("textarea",{value:a.cifra,onChange:t=>m("cifra",t.target.value),rows:4,wrap:"off",style:R(T({},inp),{fontFamily:"ui-monospace, monospace",whiteSpace:"pre",overflowX:"auto"})})),React.createElement("button",{onClick:l,style:{background:C.green,color:"#04261b"},className:"w-full py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Check,{size:16})," ",E?"Salvar altera\xE7\xF5es":"Salvar m\xFAsica")))}function PdfViewer({url:e,title:n,onClose:o}){const u=driveEmbed(e);return React.createElement("div",{style:{background:"rgba(0,0,0,0.92)"},className:"fixed inset-0 z-[88] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:"1px solid "+C.line},className:"px-3 py-2 flex items-center gap-2"},React.createElement("button",{onClick:o,style:{background:C.card2,color:C.txt},className:"px-3 py-2 rounded-lg flex items-center gap-1 font-semibold shrink-0"},React.createElement(ChevronLeft,{size:18})," Voltar"),React.createElement("p",{className:"font-semibold truncate flex-1"},n),React.createElement("a",{href:e,target:"_blank",rel:"noreferrer",style:{color:C.blue},className:"text-xs flex items-center gap-1 shrink-0"},React.createElement(ExternalLink,{size:13})," nova aba")),React.createElement("iframe",{title:n,src:u,className:"flex-1 w-full",style:{border:0,background:"#fff"}}))}function LockModal({hasPin:e,onClose:n,onSubmit:o}){const[u,E]=useState(""),[a,A]=useState(""),O=()=>{const i=o(u);i?A(i):n()};return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[75] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:"1px solid "+C.line},className:"w-full max-w-sm rounded-t-2xl sm:rounded-2xl p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},e?"Modo edi\xE7\xE3o":"Criar senha de edi\xE7\xE3o"),React.createElement("button",{onClick:n},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("p",{className:"text-xs",style:{color:C.mut}},e?"Digite a senha para editar neste aparelho.":"Defina uma senha (m\xEDn. 4 d\xEDgitos)."),React.createElement("input",{value:u,onChange:i=>{E(i.target.value),A("")},onKeyDown:i=>i.key==="Enter"&&O(),type:"password",inputMode:"numeric",placeholder:e?"Senha":"Nova senha",style:inp,autoFocus:!0}),a?React.createElement("p",{className:"text-xs",style:{color:C.danger}},a):null,React.createElement("button",{onClick:O,style:{background:C.gold,color:"#2b2100"},className:"w-full py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Unlock,{size:16})," ",e?"Entrar":"Criar e entrar")))}const _root=ReactDOM.createRoot(document.getElementById("root"));_root.render(React.createElement(App,null));try{window.__booted=!0}catch(e){}
