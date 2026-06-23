@@ -1,16 +1,18 @@
-var ee=Object.defineProperty,ae=Object.defineProperties;var oe=Object.getOwnPropertyDescriptors;var G=Object.getOwnPropertySymbols;var ne=Object.prototype.hasOwnProperty,te=Object.prototype.propertyIsEnumerable;var U=(e,a,o)=>a in e?ee(e,a,{enumerable:!0,configurable:!0,writable:!0,value:o}):e[a]=o,I=(e,a)=>{for(var o in a||(a={}))ne.call(a,o)&&U(e,o,a[o]);if(G)for(var o of G(a))te.call(a,o)&&U(e,o,a[o]);return e},E=(e,a)=>ae(e,oe(a));const{useState,useEffect,useMemo,useRef,useCallback}=React,_ic=e=>a=>(a=a||{},React.createElement("svg",{width:a.size||22,height:a.size||22,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round",className:a.className,style:a.style,"aria-hidden":"true",dangerouslySetInnerHTML:{__html:e}})),Music=_ic('<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'),Search=_ic('<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>'),ListMusic=_ic('<path d="M21 15V6"/><path d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/><path d="M12 12H3"/><path d="M16 6H3"/><path d="M12 18H3"/>'),Settings=_ic('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>'),Play=_ic('<polygon points="6 3 20 12 6 21 6 3"/>'),Plus=_ic('<path d="M5 12h14"/><path d="M12 5v14"/>'),Trash2=_ic('<path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>'),Pencil=_ic('<path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/>'),ChevronLeft=_ic('<path d="m15 18-6-6 6-6"/>'),ChevronRight=_ic('<path d="m9 18 6-6-6-6"/>'),Save=_ic('<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>'),X=_ic('<path d="M18 6 6 18"/><path d="m6 6 12 12"/>'),ExternalLink=_ic('<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>'),Minus=_ic('<path d="M5 12h14"/>'),Type=_ic('<polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/>'),Pause=_ic('<rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/>'),ArrowUp=_ic('<path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>'),ArrowDown=_ic('<path d="M12 5v14"/><path d="m19 12-7 7-7-7"/>'),Check=_ic('<path d="M20 6 9 17l-5-5"/>'),FileText=_ic('<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>'),Upload=_ic('<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>'),Lock=_ic('<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'),Unlock=_ic('<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>'),Spotify=_ic('<circle cx="12" cy="12" r="10"/><path d="M7.5 14.5c2.5-1 6-0.8 8.5 0.7"/><path d="M7 11.3c3-1.1 7-0.9 10 1"/><path d="M7.2 8.2c3.4-1.1 7.6-0.8 10.3 1.1"/>'),Tag=_ic('<path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.8 8.8a2 2 0 0 0 2.8 0l6.4-6.4a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/>'),SB=window.supabase.createClient(window.SUPA_URL,window.SUPA_KEY),C={bg:"#0c1622",card:"#13243a",card2:"#1b3350",line:"#2b4a66",txt:"#eef5ff",mut:"#9db4d4",gold:"#ffd24d",rose:"#ff8aa6",violet:"#9b8cff",green:"#1ed760",danger:"#ff6b8a",blue:"#5fb0ff"},SEED={songs:[{id:"imagine",t:"Imagine",artist:"John Lennon",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/1jYx1g0BXEqvr9bpZoDMS7",sps:"https://open.spotify.com/search/Imagine%20John%20Lennon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/imagine.pdf",letra:`Imagine there's no heaven
+var se=Object.defineProperty,re=Object.defineProperties;var ie=Object.getOwnPropertyDescriptors;var J=Object.getOwnPropertySymbols;var ue=Object.prototype.hasOwnProperty,le=Object.prototype.propertyIsEnumerable;var Q=(e,a,o)=>a in e?se(e,a,{enumerable:!0,configurable:!0,writable:!0,value:o}):e[a]=o,f=(e,a)=>{for(var o in a||(a={}))ue.call(a,o)&&Q(e,o,a[o]);if(J)for(var o of J(a))le.call(a,o)&&Q(e,o,a[o]);return e},N=(e,a)=>re(e,ie(a));const{useState,useEffect,useMemo,useRef,useCallback}=React,_ic=e=>a=>(a=a||{},React.createElement("svg",{width:a.size||22,height:a.size||22,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth:2,strokeLinecap:"round",strokeLinejoin:"round",className:a.className,style:a.style,"aria-hidden":"true",dangerouslySetInnerHTML:{__html:e}})),Music=_ic('<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>'),Search=_ic('<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>'),ListMusic=_ic('<path d="M21 15V6"/><path d="M18.5 18a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/><path d="M12 12H3"/><path d="M16 6H3"/><path d="M12 18H3"/>'),Settings=_ic('<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>'),Play=_ic('<polygon points="6 3 20 12 6 21 6 3"/>'),Plus=_ic('<path d="M5 12h14"/><path d="M12 5v14"/>'),Trash2=_ic('<path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>'),Pencil=_ic('<path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/>'),ChevronLeft=_ic('<path d="m15 18-6-6 6-6"/>'),ChevronRight=_ic('<path d="m9 18 6-6-6-6"/>'),Save=_ic('<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>'),X=_ic('<path d="M18 6 6 18"/><path d="m6 6 12 12"/>'),ExternalLink=_ic('<path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>'),Minus=_ic('<path d="M5 12h14"/>'),Type=_ic('<polyline points="4 7 4 4 20 4 20 7"/><line x1="9" x2="15" y1="20" y2="20"/><line x1="12" x2="12" y1="4" y2="20"/>'),Pause=_ic('<rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/>'),ArrowUp=_ic('<path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>'),ArrowDown=_ic('<path d="M12 5v14"/><path d="m19 12-7 7-7-7"/>'),Check=_ic('<path d="M20 6 9 17l-5-5"/>'),FileText=_ic('<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/>'),Upload=_ic('<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>'),Lock=_ic('<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'),Unlock=_ic('<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>'),Spotify=_ic('<circle cx="12" cy="12" r="10"/><path d="M7.5 14.5c2.5-1 6-0.8 8.5 0.7"/><path d="M7 11.3c3-1.1 7-0.9 10 1"/><path d="M7.2 8.2c3.4-1.1 7.6-0.8 10.3 1.1"/>'),Tag=_ic('<path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.8 8.8a2 2 0 0 0 2.8 0l6.4-6.4a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.5" r="1.5" fill="currentColor"/>'),SB=window.supabase.createClient(window.SUPA_URL,window.SUPA_KEY),C={bg:"#0c1622",card:"#13243a",card2:"#1b3350",line:"#2b4a66",txt:"#eef5ff",mut:"#9db4d4",gold:"#ffd24d",rose:"#ff8aa6",violet:"#9b8cff",green:"#1ed760",danger:"#ff6b8a",blue:"#5fb0ff"},SEED={songs:[{id:"imagine",t:"Imagine",artist:"John Lennon",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/1jYx1g0BXEqvr9bpZoDMS7",sps:"https://open.spotify.com/search/Imagine%20John%20Lennon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/imagine.pdf",letra:`Imagine there's no heaven
 It's easy if you try
 No hell below us
 Above us only sky
 
-Imagine all the people  Living for today
+Imagine all the people
+Living for today
 
 Imagine there's no countries
 It isn't hard to do
 Nothing to kill or die for
 And no religion too
 
-Imagine all the people  Living life in peace
+Imagine all the people
+Living life in peace
 
 You may say, I'm a dreamer
 But I'm not the only one
@@ -27,7 +29,7 @@ Imagine all the people Sharing all the world
 You may say, I'm a dreamer
 But I'm not the only one
 I hope some day you'll join us
-And the world will live as one`},{id:"livin-on-a-prayer",t:"Livin' On A Prayer",artist:"Bon Jovi",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/5eSs38RYqT8yPW2jRke9cd",sps:"https://open.spotify.com/search/Livin%27%20On%20A%20Prayer%20Bon%20Jovi",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/livin-on-a-prayer.pdf",letra:`Tommy used to work on the docks
+And the world will live as one`},{id:"livin-on-a-prayer",t:"Livin' On A Prayer",artist:"Bon Jovi",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/5eSs38RYqT8yPW2jRke9cd",sps:"https://open.spotify.com/search/Livin%27%20On%20A%20Prayer%20Bon%20Jovi",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/livin-on-a-prayer.pdf",letra:`Tommy used to work on the docks
 Union's been on strike
 He's down on his luck... it's tough, so tough
 
@@ -75,7 +77,7 @@ Whoah, livin' on a prayer
 Oh, we're half way there
 Whoah, livin' on a prayer
 Take my hand, we'll make it, I swear
-Whoah, livin' on a prayer`},{id:"viva-la-vida",t:"Viva La Vida",artist:"Coldplay",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b",sps:"https://open.spotify.com/search/Viva%20La%20Vida%20Coldplay",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/viva-la-vida.pdf",letra:`I used to rule the world
+Whoah, livin' on a prayer`},{id:"viva-la-vida",t:"Viva La Vida",artist:"Coldplay",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/1mea3bSkSGXuIRvnydlB5b",sps:"https://open.spotify.com/search/Viva%20La%20Vida%20Coldplay",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/viva-la-vida.pdf",letra:`I used to rule the world
 Seas would rise when I gave the word
 Now in the morning I sleep alone
 Sweep the streets that I used to own
@@ -126,7 +128,7 @@ My missionaries in a foreign field
 For some reason I can't explain
 I know Saint Peter will call my name
 Never an honest word
-But that was when I ruled the world`},{id:"clocks",t:"Clocks",artist:"Coldplay",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/0BCPKOYdS2jbQ8iyB56Zns",sps:"https://open.spotify.com/search/Clocks%20Coldplay",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/clocks.pdf",letra:`Lights go out and I can't be saved
+But that was when I ruled the world`},{id:"clocks",t:"Clocks",artist:"Coldplay",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/0BCPKOYdS2jbQ8iyB56Zns",sps:"https://open.spotify.com/search/Clocks%20Coldplay",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/clocks.pdf",letra:`Lights go out and I can't be saved
 Tides that I tried to swim against
 Bought me down upon my knees
 Oh I beg, I beg and I plead
@@ -153,7 +155,8 @@ a part of the cure?
 Or am I part of the disease?
 Singing
 
-You are, you are  You are, you are
+You are, you are
+You are, you are
 
 You are, you are
 
@@ -166,14 +169,15 @@ You are, you are
 Home, home where I wanted to go
 Home, home where I wanted to go
 Home (You are), home where I wanted to go
-Home (You are), home where I wanted to go`},{id:"oh-pretty-woman",t:"Oh, Pretty Woman",artist:"Roy Orbison",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/52HAHV1j93s5B8GoTNI7DJ",sps:"https://open.spotify.com/search/Oh%2C%20Pretty%20Woman%20Roy%20Orbison",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/oh-pretty-woman.pdf",letra:`Pretty woman, walkin' down the street, pretty woman
+Home (You are), home where I wanted to go`},{id:"oh-pretty-woman",t:"Oh, Pretty Woman",artist:"Roy Orbison",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/52HAHV1j93s5B8GoTNI7DJ",sps:"https://open.spotify.com/search/Oh%2C%20Pretty%20Woman%20Roy%20Orbison",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/oh-pretty-woman.pdf",letra:`Pretty woman, walkin' down the street, pretty woman
 The kind I like to meet, pretty woman
 I don't believe you, you're not the truth
 No one could look as good as you. Mercy!
 
 Pretty woman, Won't you pardon me? Pretty woman,
 I couldn't help but see, pretty woman, that you look lovely as can be.
-Are you lonely just like me?  Wow!
+Are you lonely just like me?
+Wow!
 
 Pretty woman, stop awhile.
 Pretty woman, talk awhile
@@ -192,7 +196,7 @@ I guess I'll go on home. It's late.
 There'll be tomorrow night, but wait!
 What do I see? Is she walking back to me?
 Yeah, she's walking back to me,
-Oh, oh, pretty woman`},{id:"copacabana",t:"Copacabana",artist:"Renaud (vers. francesa)",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/0loYQvSUksZ84Mr89I4PeQ",sps:"https://open.spotify.com/search/Copacabana%20Renaud%20%28vers.%20francesa%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/copacabana.pdf",letra:`Elle s'appelait Lola, elle \xE9tait Show Girl
+Oh, oh, pretty woman`},{id:"copacabana",t:"Copacabana",artist:"Renaud (vers. francesa)",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/0loYQvSUksZ84Mr89I4PeQ",sps:"https://open.spotify.com/search/Copacabana%20Renaud%20%28vers.%20francesa%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/copacabana.pdf",letra:`Elle s'appelait Lola, elle \xE9tait Show Girl
 Avec ses plumes et son chapeau
 Sa robe fendue de bas en haut
 Elle dansait chantait
@@ -241,7 +245,7 @@ Mais pas pour Lola
 Quand elle r\xEAvait d'\xEAtre une star
 Tony tenait le bar
 
-{au Refrain}`},{id:"corazon-partio",t:"Coraz\xF3n Part\xEDo",artist:"Alejandro Sanz",pri:"Latina",tags:["Latina"],sp:"https://open.spotify.com/track/0wQCKR9OFjYu5Kzrk7WivJ",sps:"https://open.spotify.com/search/Coraz%C3%B3n%20Part%C3%ADo%20Alejandro%20Sanz",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/corazon-partio.pdf",letra:`Tiritas pa este coraz\xF3n part\xEDo.
+{au Refrain}`},{id:"corazon-partio",t:"Coraz\xF3n Part\xEDo",artist:"Alejandro Sanz",pri:"Latina",tags:["Latina"],sp:"https://open.spotify.com/track/0wQCKR9OFjYu5Kzrk7WivJ",sps:"https://open.spotify.com/search/Coraz%C3%B3n%20Part%C3%ADo%20Alejandro%20Sanz",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/corazon-partio.pdf",letra:`Tiritas pa este coraz\xF3n part\xEDo.
 Ti-ri-ti-tando de frio
 Tiritas pa este coraz\xF3n part\xEDo,
 Pa este coraz\xF3n
@@ -297,14 +301,15 @@ y bajar\xE1 la luna para que juguemos?
 Dime, si t\xFA te vas, dime cari\xF1o m\xEDo,
 \xBFqui\xE9n me va a curar el coraz\xF3n part\xEDo?
 
-\xBFQui\xE9n me va a entregar ...`},{id:"with-arms-wide-open",t:"With Arms Wide Open",artist:"Creed",pri:"Rock",tags:["Rock"],sp:"",sps:"https://open.spotify.com/search/With%20Arms%20Wide%20Open%20Creed",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/with-arms-wide-open.pdf",letra:`Well I just heard, the news today
+\xBFQui\xE9n me va a entregar ...`},{id:"with-arms-wide-open",t:"With Arms Wide Open",artist:"Creed",pri:"Rock",tags:["Rock"],sp:"",sps:"https://open.spotify.com/search/With%20Arms%20Wide%20Open%20Creed",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/with-arms-wide-open.pdf",letra:`Well I just heard, the news today
 It seems my life, is going to change
 I close my eyes, begin to pray
 Then tears of joy, stream down my face
 
 With arms wide open Under the sunlight
 Welcome to this place I'll show you everything
-With arms wide open,  With arms wide open
+With arms wide open,
+With arms wide open
 
 Well I don't know, if I'm ready
 To be the man, I have to be
@@ -312,12 +317,16 @@ I'll take a breath, I'll take her by my side
 We stand in awe, we've created life
 
 With arms wide open Under the sunlight
-Welcome to this place  I'll show you everything
+Welcome to this place
+I'll show you everything
 With arms wide open Now everything has changed
-I'll show you love   I'll show you everything
-With arms wide open      wide open
+I'll show you love
+I'll show you everything
+With arms wide open
+wide open
 
-If I had just one wish  Only one demand
+If I had just one wish
+Only one demand
 I hope he's not like me
 I hope he understands
 That he can take this life
@@ -325,8 +334,10 @@ And hold it by the hand
 And he can greet the world
 With arms wide open
 
-With Arms wide open  Under the sunlight
-Welcome to this place  I'll show you everything
+With Arms wide open
+Under the sunlight
+Welcome to this place
+I'll show you everything
 With arms wide open
 Now everything has changed
 I'll show you love
@@ -336,7 +347,7 @@ With arms wide open
 With arms wide open
 I'll show you everything oh yeah
 With arms wide open
-wide open`},{id:"i-just-wanna-stop",t:"I Just Wanna Stop",artist:"Gino Vannelli",pri:"Balada",tags:["Balada","Diversos"],sp:"https://open.spotify.com/track/4Rb5wSmzVArLPBLmMJQuM0",sps:"https://open.spotify.com/search/I%20Just%20Wanna%20Stop%20Gino%20Vannelli",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-just-wanna-stop.pdf",letra:`For your love
+wide open`},{id:"i-just-wanna-stop",t:"I Just Wanna Stop",artist:"Gino Vannelli",pri:"Balada",tags:["Balada","Diversos"],sp:"https://open.spotify.com/track/4Rb5wSmzVArLPBLmMJQuM0",sps:"https://open.spotify.com/search/I%20Just%20Wanna%20Stop%20Gino%20Vannelli",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-just-wanna-stop.pdf",letra:`For your love
 When I think about those nights in Montreal
 I get the sweetest thoughts of you and me
 Memories of love above the city lights
@@ -347,7 +358,8 @@ I just wanna stop
 And tell you what I feel about you babe
 I just wanna stop
 I never wanna live without you babe
-I just gotta stop   For your love
+I just gotta stop
+For your love
 
 When I think about the way the world must turn
 I get the saddest thoughts for you and me
@@ -359,7 +371,8 @@ I just wanna stop
 And tell you what I feel about you babe
 I just wanna stop
 The world ain't right without you babe
-I just wanna stop For your love  (Solo)
+I just wanna stop For your love
+(Solo)
 
 Ooo, I've tried so hard to take it
 But oh Lord my heart won't make it
@@ -368,7 +381,7 @@ I just wanna stop
 And tell you what I feel about you babe
 I just wanna stop
 The world ain't right without you babe
-I just wanna stop`},{id:"i-say-a-little-prayer",t:"I Say A Little Prayer",artist:"Diana King",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/5nRBw0eIbbXWn5zCoSc5aL",sps:"https://open.spotify.com/search/I%20Say%20A%20Little%20Prayer%20Diana%20King",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-say-a-little-prayer.pdf",letra:`The moment I wake up,
+I just wanna stop`},{id:"i-say-a-little-prayer",t:"I Say A Little Prayer",artist:"Diana King",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/5nRBw0eIbbXWn5zCoSc5aL",sps:"https://open.spotify.com/search/I%20Say%20A%20Little%20Prayer%20Diana%20King",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-say-a-little-prayer.pdf",letra:`The moment I wake up,
 before I put on my make up
 I say a little prayer for you
 While combing my hair now
@@ -390,7 +403,7 @@ I say a little prayer for you
 Chorus
 
 Darlin' believe me, for me there is no one but you
-Say you love me too`},{id:"i-was-born-to-love-you",t:"I Was Born To Love You",artist:"Queen",pri:"Rock",tags:["Ax\xE9","Bahia","Rock"],sp:"",sps:"https://open.spotify.com/search/I%20Was%20Born%20To%20Love%20You%20Queen",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-was-born-to-love-you.pdf",letra:`I was born to love you
+Say you love me too`},{id:"i-was-born-to-love-you",t:"I Was Born To Love You",artist:"Queen",pri:"Rock",tags:["Ax\xE9","Bahia","Rock"],sp:"",sps:"https://open.spotify.com/search/I%20Was%20Born%20To%20Love%20You%20Queen",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-was-born-to-love-you.pdf",letra:`I was born to love you
 With every single beat of my heart
 Yes, I was born to take care of you
 Every single day...
@@ -422,7 +435,8 @@ I wanna love you
 I love every little thing about you
 I wanna love you, love you, love you
 Born - to love you
-Born - to love you  Yes I was born to love you
+Born - to love you
+Yes I was born to love you
 Born - to love you
 Born - to love you Every single day - of my life
 
@@ -443,7 +457,7 @@ I wanna love you, love you, love you
 I wanna love you
 I get so lonely, lonely, lonely, lonely
 Yeah, I want to love you
-Yeah, give it to me`},{id:"aicha",t:"A\xEFcha",artist:"Khaled",pri:"Internacional",tags:["Internacional"],sp:"https://open.spotify.com/track/6EbXToKgsxISGvQMl1RnS5",sps:"https://open.spotify.com/search/A%C3%AFcha%20Khaled",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/aicha.pdf",letra:`Comme si je n'existais pas,
+Yeah, give it to me`},{id:"aicha",t:"A\xEFcha",artist:"Khaled",pri:"Internacional",tags:["Internacional"],sp:"https://open.spotify.com/track/6EbXToKgsxISGvQMl1RnS5",sps:"https://open.spotify.com/search/A%C3%AFcha%20Khaled",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/aicha.pdf",letra:`Comme si je n'existais pas,
 elle est pass\xE9e \xE0 c\xF4t\xE9 de moi
 Sans un regard, reine de Saba,
 j'ai dit, A\xEFcha, prends, tout est pour toi
@@ -476,7 +490,7 @@ moi, je vaux mieux que tout \xE7a.
 Des barreaux sont des barreaux m\xEAme en or
 Je veux les m\xEAmes droits que toi
 Et du respect pour chaque jour,
-moi je ne veux que l'amour"`},{id:"ca-fait-rire-les-oiseaux",t:"\xC7a Fait Rire Les Oiseaux",artist:"La Compagnie Cr\xE9ole",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/6YWGQxQyR54ytAtg5Z59OH",sps:"https://open.spotify.com/search/%C3%87a%20Fait%20Rire%20Les%20Oiseaux%20La%20Compagnie%20Cr%C3%A9ole",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ca-fait-rire-les-oiseaux.pdf",letra:`\xC7a fait rir' les oiseaux.
+moi je ne veux que l'amour"`},{id:"ca-fait-rire-les-oiseaux",t:"\xC7a Fait Rire Les Oiseaux",artist:"La Compagnie Cr\xE9ole",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/6YWGQxQyR54ytAtg5Z59OH",sps:"https://open.spotify.com/search/%C3%87a%20Fait%20Rire%20Les%20Oiseaux%20La%20Compagnie%20Cr%C3%A9ole",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ca-fait-rire-les-oiseaux.pdf",letra:`\xC7a fait rir' les oiseaux.
 \xC7a fait chanter les abeilles.
 \xC7a chasse les nuages Et fait briller le soleil.
 \xC7a fait rir' les oiseaux Et danser les \xE9cureuils.
@@ -526,7 +540,7 @@ C'est magique, un refrainQu'on reprend tous en ch\u0153ur
 \xC7a rajoute des couleurs Aux couleurs de
 l'arc-en-ciel.
 \xC7a fait rir' les oiseaux, Oh, oh, oh,
-rir' les oiseaux (3x)`},{id:"et-si-tu-n-existais-pas",t:"Et Si Tu N'existais Pas",artist:"Joe Dassin",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/1GeszH3DWCOKwK0d8D5gEZ",sps:"https://open.spotify.com/search/Et%20Si%20Tu%20N%27existais%20Pas%20Joe%20Dassin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/et-si-tu-n-existais-pas.pdf",letra:`Et si tu n'existais pas,
+rir' les oiseaux (3x)`},{id:"et-si-tu-n-existais-pas",t:"Et Si Tu N'existais Pas",artist:"Joe Dassin",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/1GeszH3DWCOKwK0d8D5gEZ",sps:"https://open.spotify.com/search/Et%20Si%20Tu%20N%27existais%20Pas%20Joe%20Dassin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/et-si-tu-n-existais-pas.pdf",letra:`Et si tu n'existais pas,
 Dis-moi pourquoi j'existerais.
 Pour tra\xEEner dans un monde sans toi,
 Sans espoir et sans regrets.
@@ -556,7 +570,7 @@ Et si tu n'existais pas,
 Je crois que je l'aurais trouv\xE9,
 Le secret de la vie, le pourquoi,
 Simplement pour te cr\xE9er
-Et pour te regarder.`},{id:"il-faut-qu-on-s-aime-il-faut-qu-on-slash",t:"Il Faut Qu'on S'aime (Il Faut Qu'on Slash)",artist:"Patrick S\xE9bastien",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/5oHLDVSTy3M5mXWNAgnzvF",sps:"https://open.spotify.com/search/Il%20Faut%20Qu%27on%20S%27aime%20%28Il%20Faut%20Qu%27on%20Slash%29%20Patrick%20S%C3%A9bastien",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/il-faut-qu-on-s-aime-il-faut-qu-on-slash.pdf",letra:`ll faut qu\u2019\xE7a chang\u2019
+Et pour te regarder.`},{id:"il-faut-qu-on-s-aime-il-faut-qu-on-slash",t:"Il Faut Qu'on S'aime (Il Faut Qu'on Slash)",artist:"Patrick S\xE9bastien",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/5oHLDVSTy3M5mXWNAgnzvF",sps:"https://open.spotify.com/search/Il%20Faut%20Qu%27on%20S%27aime%20%28Il%20Faut%20Qu%27on%20Slash%29%20Patrick%20S%C3%A9bastien",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/il-faut-qu-on-s-aime-il-faut-qu-on-slash.pdf",letra:`ll faut qu\u2019\xE7a chang\u2019
 que I\u2019poisson roug\u2019
 Pass\u2019 \xE0 L\u2019orang
 LL Faut qu\u2019on sach
@@ -580,7 +594,8 @@ Envoyez les chansons
 Champagn\u2019 et mort aux cons
 
 (Vach\u2019 de programm\u2019
-disait le g\xE9n\xE9ral  Yeah)
+disait le g\xE9n\xE9ral
+Yeah)
 
 ll faut qu\u2019\xE7a boug\xB4
 Faut changer l\u2019eau
@@ -598,11 +613,14 @@ Viv\u2019 les kings de la d\xE9glingu\u2019
 les petites lulu qui nous font
 Des bisous des c\xE2lins tout partout
 
-Viv\u2019 la f\xEAt  Et viv\u2019 les fous
+Viv\u2019 la f\xEAt
+Et viv\u2019 les fous
 Les allum\xE9s qui osent tout
 LL faut s\u2019\xE9clater plus
 Pour en profiter plus
-(Ah non  Faut travailler  plus
+(Ah non
+Faut travailler
+plus
 pour gagner plus C\u2019est \xE7a ouais)
 
 Viv\u2019 la f\xEAt\u2019 Et viv\u2019 les dingues
@@ -610,7 +628,8 @@ Viv\u2019 les kings de la d\xE9glingu\u2019
 Et les vill\u2019s qui aim\u2019nt \xE7a
 Bodega Bodega Sangria et salsa
 
-Viv\u2019 la f\xEAt  Et viv\u2019 les fous
+Viv\u2019 la f\xEAt
+Et viv\u2019 les fous
 Les allum\xE9s qui osent tout
 Envoyez la folie champagn\u2019
 Et viv\u2019 la vie
@@ -625,7 +644,7 @@ ll faut qu\u2019\xE7a boug
 Fini l\u2019bocal
 Le poisson roug
 Ce soir s\u2019en va au bal
-yes`},{id:"la-machine-a-danser",t:"La Machine \xE0 Danser",artist:"",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/6zZKGKrRkAQbik76egQEhq",sps:"https://open.spotify.com/search/La%20Machine%20%C3%A0%20Danser",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/la-machine-a-danser.pdf",letra:`La machine \xE0 danser, la machine \xE0 danser
+yes`},{id:"la-machine-a-danser",t:"La Machine \xE0 Danser",artist:"",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/6zZKGKrRkAQbik76egQEhq",sps:"https://open.spotify.com/search/La%20Machine%20%C3%A0%20Danser",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/la-machine-a-danser.pdf",letra:`La machine \xE0 danser, la machine \xE0 danser
 La machine \xE0 rouler, la machine \xE0 zouker zouker,
 La machine \xE0 danser, la machine \xE0 danser
 La machine \xE0 rouler, la machine \xE0 zouker zouker.
@@ -673,7 +692,7 @@ La machine \xE0 danser, la machine \xE0 danser
 La machine \xE0 rouler, la machine \xE0 zouker zouker.
 
 Danser, danser, rouler, zouker, zouker
-oh oh oh oh oh oh oh oh oh oh oh oh oh oh`},{id:"la-vie-en-rose",t:"La Vie en Rose",artist:"Grace Jones",pri:"Pop",tags:["Francesa","Internacional","Pop"],sp:"",sps:"https://open.spotify.com/search/La%20Vie%20en%20Rose%20Grace%20Jones",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/la-vie-en-rose.pdf",letra:`Des yeux qui font baisser les miens
+oh oh oh oh oh oh oh oh oh oh oh oh oh oh`},{id:"la-vie-en-rose",t:"La Vie en Rose",artist:"Grace Jones",pri:"Pop",tags:["Francesa","Internacional","Pop"],sp:"",sps:"https://open.spotify.com/search/La%20Vie%20en%20Rose%20Grace%20Jones",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/la-vie-en-rose.pdf",letra:`Des yeux qui font baisser les miens
 Un rire qui se fait sur sa bouche
 Voil\xE0 le portrait sans retouche
 De l'homme auquel j'appartiens
@@ -707,7 +726,8 @@ and it's so real what I feel
 this is why
 
 Et d\xE8s que je l'aper\xE7ois
-Alors je sens en moi,mon coeur qui bat...     la vie .........
+Alors je sens en moi,mon coeur qui bat...
+la vie .........
 
 La vie en rose,la vie en rose
 ohhhhhhhh.....la vie
@@ -718,7 +738,7 @@ la vie en rose, la vie en rose
 la vie en rose, la vie en rose
 la vie en rose, la vie en rose
 
-Je t'aimerai pour toujours, mon`},{id:"les-champs-elysees",t:"Les Champs-\xC9lys\xE9es",artist:"Joe Dassin",pri:"Francesa",tags:["Francesa"],sp:"https://open.spotify.com/track/4VWbPQUPvLes814r6T11Jz",sps:"https://open.spotify.com/search/Les%20Champs-%C3%89lys%C3%A9es%20Joe%20Dassin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/les-champs-elysees.pdf",letra:`Je m'baladais sur l'avenue
+Je t'aimerai pour toujours, mon`},{id:"les-champs-elysees",t:"Les Champs-\xC9lys\xE9es",artist:"Joe Dassin",pri:"Francesa",tags:["Francesa"],sp:"https://open.spotify.com/track/4VWbPQUPvLes814r6T11Jz",sps:"https://open.spotify.com/search/Les%20Champs-%C3%89lys%C3%A9es%20Joe%20Dassin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/les-champs-elysees.pdf",letra:`Je m'baladais sur l'avenue
 Le coeur ouvert \xE0 l'inconnu
 J'avais envie de dire bonjour \xE0 n'importe qui
 N'importe qui et ce fut toi
@@ -760,7 +780,7 @@ Aux Champs-Elys\xE9es
 Aux Champs-Elys\xE9es
 Au soleil, sous la pluie, \xE0 midi ou \xE0 minuit
 Il y a tout ce que vous voulez
-Aux Champs-Elys\xE9es (2x)`},{id:"ma-plus-belle-histoire-d-amour",t:"Ma Plus Belle Histoire D'Amour",artist:"Claudy Siar",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/7eaS0k65hobnEyjtDzGfRl",sps:"https://open.spotify.com/search/Ma%20Plus%20Belle%20Histoire%20D%27Amour%20Claudy%20Siar",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ma-plus-belle-histoire-d-amour.pdf",letra:`Nous sommes rest\xE9s si longtemps
+Aux Champs-Elys\xE9es (2x)`},{id:"ma-plus-belle-histoire-d-amour",t:"Ma Plus Belle Histoire D'Amour",artist:"Claudy Siar",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/7eaS0k65hobnEyjtDzGfRl",sps:"https://open.spotify.com/search/Ma%20Plus%20Belle%20Histoire%20D%27Amour%20Claudy%20Siar",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ma-plus-belle-histoire-d-amour.pdf",letra:`Nous sommes rest\xE9s si longtemps
 A se regarder \xE0 se d\xE9sirer
 Mais un jour nous avons os\xE9
 et depuis tu es ma plus belle histoire d\u2019amour
@@ -771,7 +791,8 @@ Consumant jusqu\u2019au bout
 Mon coeur, mon corps je te l\u2019avoue
 Et pour toujours tu es ma plus belle histoire d\u2019amour
 
-"Je t'aime"   ahhh ahhhh ahhh
+"Je t'aime"
+ahhh ahhhh ahhh
 
 Toutes les calomnies ne t\u2019ont pas fait renoncer
 Sur moi ils voulaient te tromper
@@ -779,7 +800,7 @@ On verra si demain
 apr\xE8s qu\u2019ils aient compris enfin
 Que pour toujours tu es ma plus belle histoire d\u2019amour
 
-ahhh ahhhh ahhh`},{id:"padam-padam",t:"Padam... Padam",artist:"\xC9dith Piaf",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/194uD6fRM58ztn7Z1Mfyr2",sps:"https://open.spotify.com/search/Padam...%20Padam%20%C3%89dith%20Piaf",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/padam-padam.pdf",letra:`Cet air qui m'obs\xE8de jour et nuit
+ahhh ahhhh ahhh`},{id:"padam-padam",t:"Padam... Padam",artist:"\xC9dith Piaf",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/194uD6fRM58ztn7Z1Mfyr2",sps:"https://open.spotify.com/search/Padam...%20Padam%20%C3%89dith%20Piaf",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/padam-padam.pdf",letra:`Cet air qui m'obs\xE8de jour et nuit
 Cet air n'est pas n\xE9 d'aujourd'hui
 Il vient d'aussi loin que je viens
 Tra\xEEn\xE9 par cent mille musiciens
@@ -825,7 +846,7 @@ Comme si tout mon pass\xE9 d\xE9filait
 
 Faut garder du chagrin pour apr\xE8s
 J'en ai tout un solf\xE8ge sur cet air qui bat
-Qui bat comme un coeur de bois`},{id:"paroles-paroles",t:"Paroles, Paroles",artist:"Dalida & Alain Delon",pri:"Francesa",tags:["Francesa"],sp:"",sps:"https://open.spotify.com/search/Paroles%2C%20Paroles%20Dalida%20%26%20Alain%20Delon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/paroles-paroles.pdf",letra:`C'est \xE9trange,
+Qui bat comme un coeur de bois`},{id:"paroles-paroles",t:"Paroles, Paroles",artist:"Dalida & Alain Delon",pri:"Francesa",tags:["Francesa"],sp:"",sps:"https://open.spotify.com/search/Paroles%2C%20Paroles%20Dalida%20%26%20Alain%20Delon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/paroles-paroles.pdf",letra:`C'est \xE9trange,
 Je ne sais pas ce qui m'arrive ce soir,
 Je te regarde comme pour la premi\xE8re fois.
 Encore des mots toujours des mots
@@ -901,7 +922,7 @@ Que tu es belle!
 Paroles, paroles, paroles
 Que tu es belle!
 Paroles, paroles, paroles, paroles, paroles
-Encore des paroles que tu s\xE8mes au vent`},{id:"pelados-em-santos",t:"Pelados em Santos",artist:"Mamonas Assassinas",pri:"Diversos",tags:["Diversos"],sp:"",sps:"https://open.spotify.com/search/Pelados%20em%20Santos%20Mamonas%20Assassinas",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/pelados-em-santos.pdf",letra:`Mina,
+Encore des paroles que tu s\xE8mes au vent`},{id:"pelados-em-santos",t:"Pelados em Santos",artist:"Mamonas Assassinas",pri:"Diversos",tags:["Diversos"],sp:"",sps:"https://open.spotify.com/search/Pelados%20em%20Santos%20Mamonas%20Assassinas",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/pelados-em-santos.pdf",letra:`Mina,
 Seus cabelo \xE9 "da hora",
 Seu corpo \xE9 um viol\xE3o,
 Meu docinho de coco,
@@ -944,7 +965,7 @@ Voc\xEA me deixa doid\xE3o!!!
 Meu chuchuzinho!
 Eu te I love youuuuu!
 (perai que tem mais um pouquinho de "u")
-uuuuuuuuuuuu...`},{id:"quizas-quizas-quizas",t:"Quiz\xE1s, Quiz\xE1s, Quiz\xE1s",artist:"",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/6GbWI0wsMaBdmyFisOVQFF",sps:"https://open.spotify.com/search/Quiz%C3%A1s%2C%20Quiz%C3%A1s%2C%20Quiz%C3%A1s",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/quizas-quizas-quizas.pdf",letra:`Siempre que te pregunto
+uuuuuuuuuuuu...`},{id:"quizas-quizas-quizas",t:"Quiz\xE1s, Quiz\xE1s, Quiz\xE1s",artist:"",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/6GbWI0wsMaBdmyFisOVQFF",sps:"https://open.spotify.com/search/Quiz%C3%A1s%2C%20Quiz%C3%A1s%2C%20Quiz%C3%A1s",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/quizas-quizas-quizas.pdf",letra:`Siempre que te pregunto
 Que, cu\xE1ndo, c\xF3mo y d\xF3nde
 T\xFA siempre me respondes
 Quiz\xE1s, Quiz\xE1s, Quiz\xE1s.
@@ -984,11 +1005,12 @@ Y yo, desesperado
 Y t\xFA, t\xFA contestando
 Quiz\xE1s, quiz\xE1s, quiz\xE1s.
 Quiz\xE1s, quiz\xE1s, quiz\xE1s.
-Quiz\xE1s!!! Quiz\xE1s!! Quiz\xE1s!`},{id:"thank-you-for-loving-me",t:"Thank You For Loving Me",artist:"Bon Jovi",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/5AxihkVaCZ0TBmQCCkrL4G",sps:"https://open.spotify.com/search/Thank%20You%20For%20Loving%20Me%20Bon%20Jovi",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/thank-you-for-loving-me.pdf",letra:`It\xB4s hard for me to say the things
+Quiz\xE1s!!! Quiz\xE1s!! Quiz\xE1s!`},{id:"thank-you-for-loving-me",t:"Thank You For Loving Me",artist:"Bon Jovi",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/5AxihkVaCZ0TBmQCCkrL4G",sps:"https://open.spotify.com/search/Thank%20You%20For%20Loving%20Me%20Bon%20Jovi",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/thank-you-for-loving-me.pdf",letra:`It\xB4s hard for me to say the things
 I want to say sometimes
 There\xB4s no one here but you and me
 And that broken old street light
-Lock the doors  leave the world outside
+Lock the doors
+leave the world outside
 All I\xB4ve got, to give to you
 Are these five words and I
 
@@ -1040,7 +1062,7 @@ When I couldn\xB4t breathe
 Thank you for loving me
 Thank you for loving me
 Thank you for loving me
-Oh, for loving me.`},{id:"this-love",t:"This Love",artist:"Maroon 5",pri:"Pop",tags:["Pop"],sp:"",sps:"https://open.spotify.com/search/This%20Love%20Maroon%205",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/this-love.pdf",letra:`I was so high I did not recognize
+Oh, for loving me.`},{id:"this-love",t:"This Love",artist:"Maroon 5",pri:"Pop",tags:["Pop"],sp:"",sps:"https://open.spotify.com/search/This%20Love%20Maroon%205",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/this-love.pdf",letra:`I was so high I did not recognize
 The fire burning in her eyes
 The chaos that controlled my mind
 Whispered goodbye and she got on a plane
@@ -1087,9 +1109,10 @@ She said Goodbye too many times before
 This love has taken its toll on me
 She said Goodbye too many times before
 And her heart is breaking in front of me
-I have no choice cause I won't say goodbye anymore...`},{id:"voyage-voyage",t:"Voyage Voyage",artist:"Desireless",pri:"Francesa",tags:["Francesa"],sp:"https://open.spotify.com/track/2d8D7uk3tbAThjRkdfrx9c",sps:"https://open.spotify.com/search/Voyage%20Voyage%20Desireless",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/voyage-voyage.pdf",letra:`Au dessus des vieux volcans,
+I have no choice cause I won't say goodbye anymore...`},{id:"voyage-voyage",t:"Voyage Voyage",artist:"Desireless",pri:"Francesa",tags:["Francesa"],sp:"https://open.spotify.com/track/2d8D7uk3tbAThjRkdfrx9c",sps:"https://open.spotify.com/search/Voyage%20Voyage%20Desireless",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/voyage-voyage.pdf",letra:`Au dessus des vieux volcans,
 Glisse des ailes sous les tapis du vent,
-Voyage, voyage,   Eternellement.
+Voyage, voyage,
+Eternellement.
 
 De nuages en mar\xE9cages,
 De vent d'Espagne en pluie d'\xE9quateur,
@@ -1111,7 +1134,8 @@ Dans tout le royaume.
 
 Sur les dunes du Sahara,
 Des iles Fidji au Fujiyama,
-Voyage, voyage,  Ne t'arr\xEAtes pas.
+Voyage, voyage,
+Ne t'arr\xEAtes pas.
 Au dessus des barbel\xE9s,
 Des coeurs bombard\xE9s,
 Il Regarde l'oc\xE9an.
@@ -1131,7 +1155,7 @@ Plus loin que la nuit et le jour, Voyage
 Dans l'espace inou\xEF de l'amour.
 Voyage, voyage
 Sur l'eau sacr\xE9e d'un fleuve indien, Voyage
-Et jamais ne revient.`},{id:"wonderful-tonight",t:"Wonderful Tonight",artist:"Eric Clapton",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/2Y0VBpX4d1WnkSetBPjj4C",sps:"https://open.spotify.com/search/Wonderful%20Tonight%20Eric%20Clapton",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/wonderful-tonight.pdf",letra:`It's late in the evening
+Et jamais ne revient.`},{id:"wonderful-tonight",t:"Wonderful Tonight",artist:"Eric Clapton",pri:"Rock",tags:["Rock"],sp:"https://open.spotify.com/track/2Y0VBpX4d1WnkSetBPjj4C",sps:"https://open.spotify.com/search/Wonderful%20Tonight%20Eric%20Clapton",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/wonderful-tonight.pdf",letra:`It's late in the evening
 She's wonderin' what clothes to wear
 She puts on her make-up
 And brushes her long blond hair
@@ -1139,14 +1163,17 @@ And brushes her long blond hair
 And then she asks me, "Do I look all right?"
 And I say yes, you look wonderful tonight
 
-We go to a party  And everyone turns to see
-This beautiful lady  walkin around with me
+We go to a party
+And everyone turns to see
+This beautiful lady
+walkin around with me
 
 And then she asks me, "Do you feel all right?"
 And I say yes, I feel wonderful tonight
 
 I feel wonderful because I see the love light in your eyes
-And the wonder of it all is that you just don't realize      how much I love you
+And the wonder of it all is that you just don't realize
+how much I love you
 
 It's time to go home now
 And I've got an achin' head
@@ -1155,7 +1182,7 @@ And she helps me to bed
 
 And then I tell her As I turn out the light
 I say my darlin', you were wonderful tonight
-Oh, my darling, you were wonderful tonight`},{id:"o-jeito-e-da-uma-fugidinha",t:"O Jeito \xC9 D\xE1 Uma Fugidinha",artist:"Luan Santana",pri:"Sertanejo",tags:["Diversos","Sertanejo"],sp:"https://open.spotify.com/track/3rbpdn9eiqXotLoiuF2oTi",sps:"https://open.spotify.com/search/O%20Jeito%20%C3%89%20D%C3%A1%20Uma%20Fugidinha%20Luan%20Santana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/o-jeito-e-da-uma-fugidinha.pdf",letra:`Ohhhhhhhh
+Oh, my darling, you were wonderful tonight`},{id:"o-jeito-e-da-uma-fugidinha",t:"O Jeito \xC9 D\xE1 Uma Fugidinha",artist:"Luan Santana",pri:"Sertanejo",tags:["Diversos","Sertanejo"],sp:"https://open.spotify.com/track/3rbpdn9eiqXotLoiuF2oTi",sps:"https://open.spotify.com/search/O%20Jeito%20%C3%89%20D%C3%A1%20Uma%20Fugidinha%20Luan%20Santana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/o-jeito-e-da-uma-fugidinha.pdf",letra:`Ohhhhhhhh
 
 T\xF4 bem na parada, ningu\xE9m consegue entender
 Chego na balada, todos param pra me ver
@@ -1173,7 +1200,7 @@ O jeito \xE9 d\xE1 uma fugida com voc\xEA
 Se voc\xEA quer saber o que vai acontecer,
 Primeiro a gente foge, depois a gente v\xEA
 
-OHHHHHH`},{id:"forever",t:"Forever",artist:"Kiss",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/1fM0MXvqlJT2H7znb3LiUD",sps:"https://open.spotify.com/search/Forever%20Kiss",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/forever.pdf",letra:`Kiss
+OHHHHHH`},{id:"forever",t:"Forever",artist:"Kiss",pri:"Diversos",tags:["Diversos"],sp:"https://open.spotify.com/track/1fM0MXvqlJT2H7znb3LiUD",sps:"https://open.spotify.com/search/Forever%20Kiss",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/forever.pdf",letra:`Kiss
 
 Forever Kiss
 I gotta tell you what I'm feeling inside
@@ -1221,7 +1248,7 @@ Oh
 It's Forever, this time I know
 And there's no doubt in my mind
 Forever, until my life is through
-Girl, I'll be loving you forever`},{id:"happy-together",t:"Happy Together",artist:"The Turtles",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1JO1xLtVc8mWhIoE3YaCL0",sps:"https://open.spotify.com/search/Happy%20Together%20The%20Turtles",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/happy-together.pdf",letra:`Happy Together The Turtles
+Girl, I'll be loving you forever`},{id:"happy-together",t:"Happy Together",artist:"The Turtles",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1JO1xLtVc8mWhIoE3YaCL0",sps:"https://open.spotify.com/search/Happy%20Together%20The%20Turtles",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/happy-together.pdf",letra:`Happy Together The Turtles
 Imagine me and you, I do
 I think about you day and night
 It's only right
@@ -1234,7 +1261,8 @@ Invest a dime
 And you say you belong to me
 And ease my mind
 Imagine how the world could be
-So very fine  So happy together
+So very fine
+So happy together
 
 I can't see me lovin' nobody but you
 For all my life
@@ -1262,7 +1290,7 @@ So happy together
 How is the weather
 So happy together
 We're happy together
-So happy together...`},{id:"night-fever",t:"Night Fever",artist:"Bee Gees",pri:"Anos 70",tags:["Anos 70"],sp:"",sps:"https://open.spotify.com/search/Night%20Fever%20Bee%20Gees",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/night-fever.pdf",letra:`Listen to the ground:
+So happy together...`},{id:"night-fever",t:"Night Fever",artist:"Bee Gees",pri:"Anos 70",tags:["Anos 70"],sp:"",sps:"https://open.spotify.com/search/Night%20Fever%20Bee%20Gees",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/night-fever.pdf",letra:`Listen to the ground:
 there is movement all around.
 There is something goin' down, and I can feel it.
 On the waves of the air,
@@ -1304,7 +1332,7 @@ Makin' it mine.
 Night fever, night fever: we know how to do it.
 Gimme the night fever, night fever: we know how to show it.
 Gimme the night fever, night fever: we know how to do it.
-Gimme the night fever, night fever: we know`},{id:"celebration",t:"Celebration",artist:"Kool & The Gang",pri:"Anos 70",tags:["Anos 70"],sp:"",sps:"https://open.spotify.com/search/Celebration%20Kool%20%26%20The%20Gang",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/celebration.pdf",letra:`Celebrate good times, come on!
+Gimme the night fever, night fever: we know`},{id:"celebration",t:"Celebration",artist:"Kool & The Gang",pri:"Anos 70",tags:["Anos 70"],sp:"",sps:"https://open.spotify.com/search/Celebration%20Kool%20%26%20The%20Gang",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/celebration.pdf",letra:`Celebrate good times, come on!
 Celebrate good times, come on!
 
 There's a party goin' on right here
@@ -1328,7 +1356,7 @@ Celebrate good times, come on!
 It's a celebration
 
 We're gonna have a good time tonight
-Let's celebrate, it's all right`},{id:"give-it-up",t:"Give It Up",artist:"KC and the Sunshine Band",pri:"Anos 70",tags:["Anos 70"],sp:"https://open.spotify.com/track/3yDhZq8f17SmumVmEyCaRN",sps:"https://open.spotify.com/search/Give%20It%20Up%20KC%20and%20the%20Sunshine%20Band",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/give-it-up.pdf",letra:`Everybody wants you,
+Let's celebrate, it's all right`},{id:"give-it-up",t:"Give It Up",artist:"KC and the Sunshine Band",pri:"Anos 70",tags:["Anos 70"],sp:"https://open.spotify.com/track/3yDhZq8f17SmumVmEyCaRN",sps:"https://open.spotify.com/search/Give%20It%20Up%20KC%20and%20the%20Sunshine%20Band",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/give-it-up.pdf",letra:`Everybody wants you,
 everybody wants your love
 I\xB4d just like to make you mine, oh, mine
 
@@ -1370,7 +1398,7 @@ Can I touch you, can I love you
 Come on baby, baby, I love you
 
 Can you give it, give it up
-Come on baby, give me your love`},{id:"i-say-a-little-prayer-2",t:"I Say A Little Prayer",artist:"Gloria Gaynor",pri:"Anos 70",tags:["Anos 70"],sp:"https://open.spotify.com/track/5HSswafqvU03CJjsTp3zGO",sps:"https://open.spotify.com/search/I%20Say%20A%20Little%20Prayer%20Gloria%20Gaynor",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-say-a-little-prayer-2.pdf",letra:`The moment I wake up
+Come on baby, give me your love`},{id:"i-say-a-little-prayer-2",t:"I Say A Little Prayer",artist:"Gloria Gaynor",pri:"Anos 70",tags:["Anos 70"],sp:"https://open.spotify.com/track/5HSswafqvU03CJjsTp3zGO",sps:"https://open.spotify.com/search/I%20Say%20A%20Little%20Prayer%20Gloria%20Gaynor",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-say-a-little-prayer-2.pdf",letra:`The moment I wake up
 Before I put on my makeup
 I say a little prayer for you
 While combing my hair, now
@@ -1390,7 +1418,7 @@ While riding I think of us, dear
 I say a little prayer for you
 At work I just take time
 And all through my coffee break time
-I say a little prayer for you`},{id:"you-ll-be-in-my-heart",t:"You'll Be In My Heart",artist:"Phil Collins",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1xugsCboIm1yILqpLvH9aD",sps:"https://open.spotify.com/search/You%27ll%20Be%20In%20My%20Heart%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/you-ll-be-in-my-heart.pdf",letra:`COME STOP YOUR CRYING IT WILL BE ALL RIGHT
+I say a little prayer for you`},{id:"you-ll-be-in-my-heart",t:"You'll Be In My Heart",artist:"Phil Collins",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1xugsCboIm1yILqpLvH9aD",sps:"https://open.spotify.com/search/You%27ll%20Be%20In%20My%20Heart%20Phil%20Collins",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/you-ll-be-in-my-heart.pdf",letra:`COME STOP YOUR CRYING IT WILL BE ALL RIGHT
 JUST TAKE MY HAND HOLD IT TIGHT
 
 I WILL PROTECT YOU FROM ALL AROUND YOU
@@ -1443,7 +1471,7 @@ ALWAYS AND ALWAYS
 JUST LOOK OVER YOUR SHOULDER
 JUST LOOK OVER YOUR SHOULDER
 JUST LOOK OVER YOUR SHOULDER
-I'LL BE THERE ALWAYS`},{id:"what-a-wonderful-world",t:"What A Wonderful World",artist:"Louis Armstrong",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/2oJzI2QGN9WaI4aI6iIWmP",sps:"https://open.spotify.com/search/What%20A%20Wonderful%20World%20Louis%20Armstrong",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/what-a-wonderful-world.pdf",letra:`I SEE TREES OF GREEN, RED ROSES TOO.
+I'LL BE THERE ALWAYS`},{id:"what-a-wonderful-world",t:"What A Wonderful World",artist:"Louis Armstrong",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/2oJzI2QGN9WaI4aI6iIWmP",sps:"https://open.spotify.com/search/What%20A%20Wonderful%20World%20Louis%20Armstrong",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/what-a-wonderful-world.pdf",letra:`I SEE TREES OF GREEN, RED ROSES TOO.
 I SEE THEM BLOOM FOR ME AND YOU.
 AND I THINK TO MYSELF,
 WHAT A WONDERFUL WORLD.
@@ -1464,16 +1492,16 @@ AND I THINK TO MYSELF,
 WHAT A WONDERFUL WORLD.
 
 YES, I THINK TO MYSELF,
-WHAT A WONDERFUL WORLD.`},{id:"iris",t:"Iris",artist:"Goo Goo Dolls",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",sps:"https://open.spotify.com/search/Iris%20Goo%20Goo%20Dolls",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/iris.pdf",letra:`AND I'D GIVE UP FOREVER TO TOUCH YOU
+WHAT A WONDERFUL WORLD.`},{id:"iris",t:"Iris",artist:"Goo Goo Dolls",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/6Qyc6fS4DsZjB2mRW9DsQs",sps:"https://open.spotify.com/search/Iris%20Goo%20Goo%20Dolls",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/iris.pdf",letra:`AND I'D GIVE UP FOREVER TO TOUCH YOU
 CAUSE I KNOW THAT YOU FEEL ME SOMEHOW
 YOU'RE THE CLOSEST TO HEAVEN
 THAT I'LL EVER BE
 AND I DON'T WANT TO GO HOME RIGHT NOW
 
- AND ALL I CAN TASTE IS THIS MOMENT
- AND ALL I CAN BREATHE IS YOUR LIFE
- CAUSE SOONER OR LATER IT'S OVER
- I JUST DON'T WANT TO MISS YOU TONIGHT
+AND ALL I CAN TASTE IS THIS MOMENT
+AND ALL I CAN BREATHE IS YOUR LIFE
+CAUSE SOONER OR LATER IT'S OVER
+I JUST DON'T WANT TO MISS YOU TONIGHT
 
 AND I DON'T WANT THE WORLD TO SEE ME
 CAUSE I DON'T THINK THAT THEY'D UNDERSTAND
@@ -1486,13 +1514,13 @@ WHEN EVERYTHING FEELS LIKE THE MOVIES
 YEAH YOU BLEED JUST TO KNOW YOU'RE ALIVE
 
 AND I DON'T WANT THE WORLD TO SEE ME
- CAUSE I DON'T THINK THAT THEY'D UNDERSTAND
- WHEN EVERYTHING'S MADE TO BE BROKEN
- I JUST WANT YOU TO KNOW WHO I AM
- I DON'T WANT THE WORLD TO SEE ME
- CAUSE I DON'T THINK THAT THEY'D UNDERSTAND
- WHEN EVERYTHING'S MADE TO BE BROKEN
- I JUST WANT YOU TO KNOW WHO I AM`},{id:"con-te-partiro",t:"Con Te Partir\xF2",artist:"Andrea Bocelli",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"",sps:"https://open.spotify.com/search/Con%20Te%20Partir%C3%B2%20Andrea%20Bocelli",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/con-te-partiro.pdf",letra:`Quando sono solo Sogno all'orizzonte
+CAUSE I DON'T THINK THAT THEY'D UNDERSTAND
+WHEN EVERYTHING'S MADE TO BE BROKEN
+I JUST WANT YOU TO KNOW WHO I AM
+I DON'T WANT THE WORLD TO SEE ME
+CAUSE I DON'T THINK THAT THEY'D UNDERSTAND
+WHEN EVERYTHING'S MADE TO BE BROKEN
+I JUST WANT YOU TO KNOW WHO I AM`},{id:"con-te-partiro",t:"Con Te Partir\xF2",artist:"Andrea Bocelli",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"",sps:"https://open.spotify.com/search/Con%20Te%20Partir%C3%B2%20Andrea%20Bocelli",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/con-te-partiro.pdf",letra:`Quando sono solo Sogno all'orizzonte
 E mancan le parole,
 S\xEC lo so che non c'\xE8 luce
 In una stanza quando manca il sole,
@@ -1534,7 +1562,7 @@ Su navi per mari
 Che, io lo so,
 No, no, non esistono pi\xF9,
 Con te io li rivivr\xF2.
-Io con te.`},{id:"pai-nosso",t:"Pai Nosso",artist:"",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/27JVPv46zAtCibndHbhVYi",sps:"https://open.spotify.com/search/Pai%20Nosso",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/pai-nosso.pdf",letra:` no c\xE9u,
+Io con te.`},{id:"pai-nosso",t:"Pai Nosso",artist:"",pri:"Balada",tags:["Balada","Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/27JVPv46zAtCibndHbhVYi",sps:"https://open.spotify.com/search/Pai%20Nosso",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/pai-nosso.pdf",letra:`no c\xE9u,
 santificado seja o teu nome
 E venha a n\xF3s o teu reino,
 e seja feita a tua vontade
@@ -1566,7 +1594,7 @@ Que o teu amor vela por mim, vela por mim
 Que seja feito assim
 
 E n\xE3o nos deixeis cair em tenta\xE7\xE3o,
-mas livra-nos de todo o mal, am\xE9m`},{id:"let-s-twist-again",t:"Let's Twist Again",artist:"Chubby Checker",pri:"Anos 50",tags:["Anos 50","Anos 50/60"],sp:"https://open.spotify.com/track/2lrRUnZjUMXTOWAMPpuUSe",sps:"https://open.spotify.com/search/Let%27s%20Twist%20Again%20Chubby%20Checker",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/let-s-twist-again.pdf",letra:`C'mon everybody, clap your hands
+mas livra-nos de todo o mal, am\xE9m`},{id:"let-s-twist-again",t:"Let's Twist Again",artist:"Chubby Checker",pri:"Anos 50",tags:["Anos 50","Anos 50/60"],sp:"https://open.spotify.com/track/2lrRUnZjUMXTOWAMPpuUSe",sps:"https://open.spotify.com/search/Let%27s%20Twist%20Again%20Chubby%20Checker",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/let-s-twist-again.pdf",letra:`C'mon everybody, clap your hands
 Ah, you're looking good
 I'm gonna sing my song and
 It won't take long
@@ -1592,7 +1620,7 @@ You love me so and then
 Twist again
 Like we did last summer
 C\xB4mon. Let's twist again
-Like we did last year`},{id:"tutti-frutti",t:"Tutti Frutti",artist:"Little Richard",pri:"Anos 50",tags:["Anos 50","Anos 50/60"],sp:"https://open.spotify.com/track/0eQJDZuNGSagaqJOZR7dJl",sps:"https://open.spotify.com/search/Tutti%20Frutti%20Little%20Richard",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/tutti-frutti.pdf",letra:`Wop-bop-a-loom-a-boom-bam-boom
+Like we did last year`},{id:"tutti-frutti",t:"Tutti Frutti",artist:"Little Richard",pri:"Anos 50",tags:["Anos 50","Anos 50/60"],sp:"https://open.spotify.com/track/0eQJDZuNGSagaqJOZR7dJl",sps:"https://open.spotify.com/search/Tutti%20Frutti%20Little%20Richard",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/tutti-frutti.pdf",letra:`Wop-bop-a-loom-a-boom-bam-boom
 tutti frutti
 Au rutti tutti frutti au rutti tutti frutti
 Au rutti tutti frutti au rutti tutti frutti
@@ -1608,7 +1636,7 @@ I got a girl named Daisy
 She almost drives me crazy
 She knows how to love me
 Yes indeed, boy you don't know
-What she do with me`},{id:"rock-around-the-clock",t:"Rock Around The Clock",artist:"Bill Haley & His Comets",pri:"Anos 50",tags:["Anos 50","Anos 50/60"],sp:"https://open.spotify.com/track/7F5pfqYzPbJAEzAyszpjCg",sps:"https://open.spotify.com/search/Rock%20Around%20The%20Clock%20Bill%20Haley%20%26%20His%20Comets",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/rock-around-the-clock.pdf",letra:`One, Two, Three O'clock, Four O'clock rock,
+What she do with me`},{id:"rock-around-the-clock",t:"Rock Around The Clock",artist:"Bill Haley & His Comets",pri:"Anos 50",tags:["Anos 50","Anos 50/60"],sp:"https://open.spotify.com/track/7F5pfqYzPbJAEzAyszpjCg",sps:"https://open.spotify.com/search/Rock%20Around%20The%20Clock%20Bill%20Haley%20%26%20His%20Comets",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rock-around-the-clock.pdf",letra:`One, Two, Three O'clock, Four O'clock rock,
 Five, Six, Seven O'clock, Eight O'clock rock.
 Nine, Ten, Eleven O'clock, Twelve O'clock rock,
 We're gonna rock around the clock tonight.
@@ -1646,7 +1674,7 @@ Start rockin' 'round the clock again.
 
 We're gonna rock around the clock tonight,
 We're gonna rock, rock, rock, 'till broad daylight,
-We're gonna rock, gonna rock around the clock tonight.`},{id:"blue-suede-shoes",t:"Blue Suede Shoes",artist:"Elvis Presley",pri:"Anos 50",tags:["Anos 50","Anos 50/60","Rock"],sp:"https://open.spotify.com/track/47gmoUrZV3w20JAnQOZMcO",sps:"https://open.spotify.com/search/Blue%20Suede%20Shoes%20Elvis%20Presley",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/blue-suede-shoes.pdf",letra:`Well, it's one for the money,
+We're gonna rock, gonna rock around the clock tonight.`},{id:"blue-suede-shoes",t:"Blue Suede Shoes",artist:"Elvis Presley",pri:"Anos 50",tags:["Anos 50","Anos 50/60","Rock"],sp:"https://open.spotify.com/track/47gmoUrZV3w20JAnQOZMcO",sps:"https://open.spotify.com/search/Blue%20Suede%20Shoes%20Elvis%20Presley",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/blue-suede-shoes.pdf",letra:`Well, it's one for the money,
 Two for the show,
 Three to get ready,
 Now go, cat, go.
@@ -1676,7 +1704,7 @@ Don't you step on my blue suede shoes.
 You can do anything but lay off of my blue
 suede shoes.
 
-CUPIDO/BANHO DE LUA`},{id:"jailhouse-rock",t:"Jailhouse Rock",artist:"Elvis Presley",pri:"Anos 50",tags:["Anos 50","Anos 50/60"],sp:"https://open.spotify.com/track/4gphxUgq0JSFv2BCLhNDiE",sps:"https://open.spotify.com/search/Jailhouse%20Rock%20Elvis%20Presley",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/jailhouse-rock.pdf",letra:`The warden threw a party in the county jail.
+CUPIDO/BANHO DE LUA`},{id:"jailhouse-rock",t:"Jailhouse Rock",artist:"Elvis Presley",pri:"Anos 50",tags:["Anos 50","Anos 50/60"],sp:"https://open.spotify.com/track/4gphxUgq0JSFv2BCLhNDiE",sps:"https://open.spotify.com/search/Jailhouse%20Rock%20Elvis%20Presley",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/jailhouse-rock.pdf",letra:`The warden threw a party in the county jail.
 The prison band was there and they began to wail.
 The band was jumpin' and the joint began to swing.
 You should've heard those knocked out jailbirds sing.
@@ -1714,7 +1742,7 @@ Bugsy turned to Shifty and he said, "Nix nix,
 I wanna stick around a while and get my kicks."
 Let's rock, everybody, let's rock.
 Everybody in the whole cell block
-was dancin' to the Jailhouse Rock.`},{id:"biquini-de-bolinha-amarelinha",t:"Biqu\xEDni de Bolinha Amarelinha",artist:"Ronnie Cord",pri:"Anos 50/60",tags:["Anos 50/60"],sp:"https://open.spotify.com/track/21W64ISwgoHRs490IkBJt9",sps:"https://open.spotify.com/search/Biqu%C3%ADni%20de%20Bolinha%20Amarelinha%20Ronnie%20Cord",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/biquini-de-bolinha-amarelinha.pdf",letra:`Ana Maria entrou na cabine
+was dancin' to the Jailhouse Rock.`},{id:"biquini-de-bolinha-amarelinha",t:"Biqu\xEDni de Bolinha Amarelinha",artist:"Ronnie Cord",pri:"Anos 50/60",tags:["Anos 50/60"],sp:"https://open.spotify.com/track/21W64ISwgoHRs490IkBJt9",sps:"https://open.spotify.com/search/Biqu%C3%ADni%20de%20Bolinha%20Amarelinha%20Ronnie%20Cord",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/biquini-de-bolinha-amarelinha.pdf",letra:`Ana Maria entrou na cabine
 E foi vestir um biqu\xEDni legal
 Mas era t\xE3o pequenino o biqu\xEDni
 Que Ana Maria ate sentiu-se mal
@@ -1743,7 +1771,7 @@ E escondeu o mai\xF3 no dedal
 Acabou toda folia
 Da mocinha da cabine
 Mas quem \xE9 que n\xE3o queria
-Ver a mo\xE7a no biqu\xEDni`},{id:"meu-erro",t:"Meu Erro",artist:"Bar\xE3o Vermelho",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"https://open.spotify.com/track/5PtogtsJUoNPnw4V5LKhPD",sps:"https://open.spotify.com/search/Meu%20Erro%20Bar%C3%A3o%20Vermelho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/meu-erro.pdf",letra:`Eu quis dizer Voc\xEA n\xE3o quis escutar
+Ver a mo\xE7a no biqu\xEDni`},{id:"meu-erro",t:"Meu Erro",artist:"Bar\xE3o Vermelho",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"https://open.spotify.com/track/5PtogtsJUoNPnw4V5LKhPD",sps:"https://open.spotify.com/search/Meu%20Erro%20Bar%C3%A3o%20Vermelho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/meu-erro.pdf",letra:`Eu quis dizer Voc\xEA n\xE3o quis escutar
 Agora n\xE3o pe\xE7a N\xE3o me fa\xE7a promessas
 Eu n\xE3o quero te ver Nem quero acreditar
 Que vai ser diferente Que tudo mudou
@@ -1762,7 +1790,7 @@ Ent\xE3o n\xE3o me chame N\xE3o olhe pra tr\xE1s
 Voc\xEA diz n\xE3o saber O que houve de errado
 E o meu erro foi crer que estar ao seu lado, bastaria
 Ah meu Deus era tudo o que eu queria
-Eu dizia o seu nome N\xE3o, me abandone jamais`},{id:"oculos",t:"\xD3culos",artist:"Os Paralamas do Sucesso",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"",sps:"https://open.spotify.com/search/%C3%93culos%20Os%20Paralamas%20do%20Sucesso",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/oculos.pdf",letra:`Se as meninas do Leblon
+Eu dizia o seu nome N\xE3o, me abandone jamais`},{id:"oculos",t:"\xD3culos",artist:"Os Paralamas do Sucesso",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"",sps:"https://open.spotify.com/search/%C3%93culos%20Os%20Paralamas%20do%20Sucesso",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/oculos.pdf",letra:`Se as meninas do Leblon
 N\xE3o olham mais pra mim. Eu uso \xF3culos
 
 E volta e meia
@@ -1796,7 +1824,7 @@ Por tr\xE1s dessa lente tem um cara legal.
 Por que voc\xEA n\xE3o olha pra mim?
 Por que voc\xEA diz sempre que n\xE3o?
 Por que voc\xEA n\xE3o olha pra mim?
-Por tr\xE1s dessa lente tambem bate um cora\xE7\xE3o.`},{id:"descobridor-dos-sete-mares",t:"Descobridor dos Sete Mares",artist:"Tim Maia",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"https://open.spotify.com/track/69Uu1BUrjoaf7X67R8RPfX",sps:"https://open.spotify.com/search/Descobridor%20dos%20Sete%20Mares%20Tim%20Maia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/descobridor-dos-sete-mares.pdf",letra:`Uma luz azul me guia
+Por tr\xE1s dessa lente tambem bate um cora\xE7\xE3o.`},{id:"descobridor-dos-sete-mares",t:"Descobridor dos Sete Mares",artist:"Tim Maia",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"https://open.spotify.com/track/69Uu1BUrjoaf7X67R8RPfX",sps:"https://open.spotify.com/search/Descobridor%20dos%20Sete%20Mares%20Tim%20Maia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/descobridor-dos-sete-mares.pdf",letra:`Uma luz azul me guia
 Com a firmeza e os lampejos do farol
 E os recifes la de cima
 Me avisam dos perigos de chegar
@@ -1816,7 +1844,7 @@ Vou colorindo a alegria de chegar
 Boa viagem e Ubatuba
 Grumari e Leme e Guaruj\xE1
 Praia Vermelha e Ilha Bela
-Bra\xE7os abertos sempre a esperar`},{id:"nao-quero-dinheiro-so-quero-amar",t:"N\xE3o Quero Dinheiro (S\xF3 Quero Amar)",artist:"Tim Maia",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"https://open.spotify.com/track/1c9MWxZ8wCSl0Jtlyqfp2G",sps:"https://open.spotify.com/search/N%C3%A3o%20Quero%20Dinheiro%20%28S%C3%B3%20Quero%20Amar%29%20Tim%20Maia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/nao-quero-dinheiro-so-quero-amar.pdf",letra:`Vou pedir pra voc\xEA voltar
+Bra\xE7os abertos sempre a esperar`},{id:"nao-quero-dinheiro-so-quero-amar",t:"N\xE3o Quero Dinheiro (S\xF3 Quero Amar)",artist:"Tim Maia",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"https://open.spotify.com/track/1c9MWxZ8wCSl0Jtlyqfp2G",sps:"https://open.spotify.com/search/N%C3%A3o%20Quero%20Dinheiro%20%28S%C3%B3%20Quero%20Amar%29%20Tim%20Maia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/nao-quero-dinheiro-so-quero-amar.pdf",letra:`Vou pedir pra voc\xEA voltar
 Vou pedir pra voc\xEA ficar
 Eu te amo Eu te quero bem
 
@@ -1862,13 +1890,14 @@ Eu quero amor sincero
 Isto \xE9 que eu espero
 Grito ao mundo inteiro
 N\xE3o quero dinheiro
-Eu s\xF3 quero amar`},{id:"musica-urbana",t:"M\xFAsica Urbana",artist:"Capital Inicial",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"https://open.spotify.com/track/3gIvNAGOcOVHepkBvnRfQd",sps:"https://open.spotify.com/search/M%C3%BAsica%20Urbana%20Capital%20Inicial",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/musica-urbana.pdf",letra:`Contra todos e contra ningu\xE9m
+Eu s\xF3 quero amar`},{id:"musica-urbana",t:"M\xFAsica Urbana",artist:"Capital Inicial",pri:"Anos 80",tags:["Anos 80","Nacional"],sp:"https://open.spotify.com/track/3gIvNAGOcOVHepkBvnRfQd",sps:"https://open.spotify.com/search/M%C3%BAsica%20Urbana%20Capital%20Inicial",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/musica-urbana.pdf",letra:`Contra todos e contra ningu\xE9m
 O vento quase sempre nunca tanto diz
 Estou s\xF3 esperando o que vai acontecer (uo
 
 Eu tenho pedras nos sapatos
 Onde os carros est\xE3o estacionados
-Andando por ruas quase escuras os carros passam... (2x)      briged
+Andando por ruas quase escuras os carros passam... (2x)
+briged
 
 As ruas t\xEAm cheiro de gasolina e \xF3leo diesel
 Por toda plataforma, Toda a plataforma
@@ -1898,11 +1927,12 @@ Por toda a plataforma voc\xEA n\xE3o v\xEA a torre... yeah
 
 (Oho-uo-uo ho. Oho-uo-uo ho uo o. Uo o ho.)
 
-"Deixa eu ver essas m\xE3os a\xED pra cima, vai!"`},{id:"a-little-respect",t:"A Little Respect",artist:"Erasure",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/1WuUHpXs5m5DN6ZflYpIBN",sps:"https://open.spotify.com/search/A%20Little%20Respect%20Erasure",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/a-little-respect.pdf",letra:`I try to discover
+"Deixa eu ver essas m\xE3os a\xED pra cima, vai!"`},{id:"a-little-respect",t:"A Little Respect",artist:"Erasure",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/1WuUHpXs5m5DN6ZflYpIBN",sps:"https://open.spotify.com/search/A%20Little%20Respect%20Erasure",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/a-little-respect.pdf",letra:`I try to discover
 a little something to make me sweeter
 Oh baby refrain from breaking my heart
 I'm so in love with you I'll be forever blue
-That you gimme no reason why you make me work  so hard
+That you gimme no reason why you make me work
+so hard
 
 That you gimme no That you gimme no
 That you gimme no That you gimme no
@@ -1922,11 +1952,13 @@ Don't you tell me no Don't you tell me no
 Don't you tell me no Don't you tell me no
 
 Soul, I hear you calling
-Oh baby please  Give a little respect to me
+Oh baby please
+Give a little respect to me
 
 I'm so in love with you I'll be forever blue
 That you gimme no reason,
-you know you make me  work so hard
+you know you make me
+work so hard
 
 That you gimme no That you gimme no
 That you gimme no That you gimme no
@@ -1938,7 +1970,7 @@ I hear you calling
 Oh baby please
 Give a little respect to me
 
-                    S\xF3 Voz e Teclado`},{id:"the-rhythm-of-the-night",t:"The Rhythm of the Night",artist:"Corona",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/5UCPOJs8VJARoIX6acKRuJ",sps:"https://open.spotify.com/search/The%20Rhythm%20of%20the%20Night%20Corona",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/the-rhythm-of-the-night.pdf",letra:`The night, oh yeah
+S\xF3 Voz e Teclado`},{id:"the-rhythm-of-the-night",t:"The Rhythm of the Night",artist:"Corona",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/5UCPOJs8VJARoIX6acKRuJ",sps:"https://open.spotify.com/search/The%20Rhythm%20of%20the%20Night%20Corona",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/the-rhythm-of-the-night.pdf",letra:`The night, oh yeah
 The rhythm of the night
 
 This is the rhythm of my life
@@ -1963,7 +1995,8 @@ The rhythm of the night
 
 This is the rhythm of my life
 My life, oh yeah
-The rhythm of my life      (Solo Teclado)`},{id:"mr-vain",t:"Mr. Vain",artist:"Culture Beat",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/2rTYgHxgcndkUrRoU7x0Sv",sps:"https://open.spotify.com/search/Mr.%20Vain%20Culture%20Beat",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/mr-vain.pdf",letra:`Call him Mr.Vain
+The rhythm of my life
+(Solo Teclado)`},{id:"mr-vain",t:"Mr. Vain",artist:"Culture Beat",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/2rTYgHxgcndkUrRoU7x0Sv",sps:"https://open.spotify.com/search/Mr.%20Vain%20Culture%20Beat",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/mr-vain.pdf",letra:`Call him Mr.Vain
 
 Call him Mr.Raider call him Mr.wrong
 Call him Mr.vain
@@ -1977,7 +2010,7 @@ I know what I want
 And I want it now
 I want you, cause I'm Mr.Vain\u2026
 
-(Intro Teclado)`},{id:"what-is-love",t:"What Is Love",artist:"Haddaway",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/7JkZ2hQdDonRURJjlMuh8q",sps:"https://open.spotify.com/search/What%20Is%20Love%20Haddaway",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/what-is-love.pdf",letra:`(Teclado)
+(Intro Teclado)`},{id:"what-is-love",t:"What Is Love",artist:"Haddaway",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/7JkZ2hQdDonRURJjlMuh8q",sps:"https://open.spotify.com/search/What%20Is%20Love%20Haddaway",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/what-is-love.pdf",letra:`(Teclado)
 Yeah, h\xEA\u2026
 (Teclado)
 Vocal Feminino:
@@ -1988,7 +2021,7 @@ I give you my love
 But you don't care
 So what is right and what is wrong
 Gimme a sign
- What is love?
+What is love?
 Oh baby, don't hurt me
 Don't hurt me no more
 What is love?
@@ -1998,19 +2031,21 @@ Don't hurt me no more
 (Vocal Feminino)
 Whoa whoa whoa\u2026 Whoa whoa whoa\u2026
 
-(Solo Teclado)`},{id:"run-to-you-verificar",t:"Run To You (verificar)",artist:"",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/2DqasTdZmtyZFCG8wC3oA1",sps:"https://open.spotify.com/search/Run%20To%20You%20%28verificar%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/run-to-you-verificar.pdf",letra:`I never knew that this could end
+(Solo Teclado)`},{id:"run-to-you-verificar",t:"Run To You (verificar)",artist:"",pri:"Anos 90",tags:["Anos 90"],sp:"https://open.spotify.com/track/2DqasTdZmtyZFCG8wC3oA1",sps:"https://open.spotify.com/search/Run%20To%20You%20%28verificar%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/run-to-you-verificar.pdf",letra:`I never knew that this could end
 I'm still thinking about you Now
 and it's hard to find your way
 I never wanted to let you go
 You gotta run to me
-Oh,  can't you see
+Oh,
+can't you see
 You gotta run to me
-Oh,  can't you see
+Oh,
+can't you see
 You gotta run to me
 Oh, can't you see
 You gotta run to me
 Oh, can't you see
-You Gottta run to me\u2026(Fim)`},{id:"listen-to-the-music",t:"Listen To The Music",artist:"The Doobie Brothers",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/7Ar4G7Ci11gpt6sfH9Cgz5",sps:"https://open.spotify.com/search/Listen%20To%20The%20Music%20The%20Doobie%20Brothers",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/listen-to-the-music.pdf",letra:`Don't you feel it growin', day by day
+You Gottta run to me\u2026(Fim)`},{id:"listen-to-the-music",t:"Listen To The Music",artist:"The Doobie Brothers",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/7Ar4G7Ci11gpt6sfH9Cgz5",sps:"https://open.spotify.com/search/Listen%20To%20The%20Music%20The%20Doobie%20Brothers",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/listen-to-the-music.pdf",letra:`Don't you feel it growin', day by day
 People gettin' ready for the news
 Some are happy, some are sad
 
@@ -2057,9 +2092,10 @@ And I got to let them fly
 Oh, oh, listen to the music
 Oh, oh, listen to the music
 Oh, oh, listen to the music
-All the time`},{id:"have-you-ever-seen-the-rain",t:"Have You Ever Seen The Rain?",artist:"Creedence Clearwater Revival",pri:"Rock",tags:["Anos 50/60","Rock","Sertanejo"],sp:"https://open.spotify.com/track/7f1X6tauagdeqpfNuNOYWr",sps:"https://open.spotify.com/search/Have%20You%20Ever%20Seen%20The%20Rain%3F%20Creedence%20Clearwater%20Revival",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/have-you-ever-seen-the-rain.pdf",letra:`Someone told me long ago
+All the time`},{id:"have-you-ever-seen-the-rain",t:"Have You Ever Seen The Rain?",artist:"Creedence Clearwater Revival",pri:"Rock",tags:["Anos 50/60","Rock","Sertanejo"],sp:"https://open.spotify.com/track/7f1X6tauagdeqpfNuNOYWr",sps:"https://open.spotify.com/search/Have%20You%20Ever%20Seen%20The%20Rain%3F%20Creedence%20Clearwater%20Revival",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/have-you-ever-seen-the-rain.pdf",letra:`Someone told me long ago
 There's a calm before the storm
-I know  It's been coming for some time
+I know
+It's been coming for some time
 When it's over, so they say
 It'll rain a sunny day
 I know Shinin' down like water
@@ -2081,11 +2117,12 @@ Comin' down on a sunny day? Yeah!
 
 I wanna know Have you ever seen the rain?
 I wanna know Have you ever seen the rain
-Comin' down on a sunny day?`},{id:"rock-and-roll-all-nite",t:"Rock And Roll All Nite",artist:"Kiss",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Rock%20And%20Roll%20All%20Nite%20Kiss",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/rock-and-roll-all-nite.pdf",letra:`YOU SHOW US EVERYTHING YOU'VE GOT
+Comin' down on a sunny day?`},{id:"rock-and-roll-all-nite",t:"Rock And Roll All Nite",artist:"Kiss",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Rock%20And%20Roll%20All%20Nite%20Kiss",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rock-and-roll-all-nite.pdf",letra:`YOU SHOW US EVERYTHING YOU'VE GOT
 YOU KEEP ON DANCIN' AND THE ROOM GETS HOT
 YOU DRIVE US WILD, WE'LL DRIVE YOU CRAZY
 YOU SAY YOU WANNA GO FOR A SPIN
-THE PARTY'S JUST BEGUN, WE'LL  LET YOU IN
+THE PARTY'S JUST BEGUN, WE'LL
+LET YOU IN
 YOU DRIVE US WILD, WE'LL DRIVE YOU CRAZY
 YOU KEEP ON SHOUTIN', YOU KEEP ON SHOUTIN'
 
@@ -2099,7 +2136,7 @@ YOU SHOW US EVERYTHING YOU'VE GOT
 BABY, BABY THAT'S QUITE A LOT
 AND YOU DRIVE US WILD, WE'LL DRIVE YOU CRAZY
 YOU KEEP ON SHOUTIN', YOU KEEP ON SHOUTIN'
-I WANNA ROCK AND ROLL ALL NIGHT AND PARTY EVERYDAY (11X)`},{id:"i-can-t-get-no-satisfaction",t:"(I Can't Get No) Satisfaction",artist:"The Rolling Stones",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/4RgDitliAA5dVZnvg32jEE",sps:"https://open.spotify.com/search/%28I%20Can%27t%20Get%20No%29%20Satisfaction%20The%20Rolling%20Stones",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-can-t-get-no-satisfaction.pdf",letra:`I can't get no satisfaction
+I WANNA ROCK AND ROLL ALL NIGHT AND PARTY EVERYDAY (11X)`},{id:"i-can-t-get-no-satisfaction",t:"(I Can't Get No) Satisfaction",artist:"The Rolling Stones",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/4RgDitliAA5dVZnvg32jEE",sps:"https://open.spotify.com/search/%28I%20Can%27t%20Get%20No%29%20Satisfaction%20The%20Rolling%20Stones",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-can-t-get-no-satisfaction.pdf",letra:`I can't get no satisfaction
 I can't get no satisfaction
 'Cause I try and I try and I try and I try
 I can't get no, I can't get no
@@ -2140,7 +2177,7 @@ Hey hey hey, that's what I say
 
 I can't get no, I can't get no
 I can't get no satisfaction
-No satisfaction, no satisfaction, no satisfaction`},{id:"born-to-be-wild",t:"Born To Be Wild",artist:"Steppenwolf",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/5jnnWBtegMuZ7A95sCqf5x",sps:"https://open.spotify.com/search/Born%20To%20Be%20Wild%20Steppenwolf",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/born-to-be-wild.pdf",letra:`GET YOUR MOTOR RUNNING
+No satisfaction, no satisfaction, no satisfaction`},{id:"born-to-be-wild",t:"Born To Be Wild",artist:"Steppenwolf",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/5jnnWBtegMuZ7A95sCqf5x",sps:"https://open.spotify.com/search/Born%20To%20Be%20Wild%20Steppenwolf",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/born-to-be-wild.pdf",letra:`GET YOUR MOTOR RUNNING
 HEAD OUT ON THE HIGHWAY
 LOOKIN' FOR ADVENTURE
 IN WHATEVER COMES OUR WAY
@@ -2180,7 +2217,7 @@ LIKE A TRUE NATURE'S CHILD
 WE WERE BORN, BORN TO BE WILD
 WE CAN CLIMB SO HIGH
 I NEVER WANNA DIE
-BORN TO BE WILD BORN TO BE WILD`},{id:"suddenly-i-see",t:"Suddenly I See",artist:"KT Tunstall",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Suddenly%20I%20See%20KT%20Tunstall",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/suddenly-i-see.pdf",letra:`Her face is a map of the world, is a map of the world
+BORN TO BE WILD BORN TO BE WILD`},{id:"suddenly-i-see",t:"Suddenly I See",artist:"KT Tunstall",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Suddenly%20I%20See%20KT%20Tunstall",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/suddenly-i-see.pdf",letra:`Her face is a map of the world, is a map of the world
 You can see she's a beautiful girl, she's a beautiful girl
 And everything around her is a silver pool of light
 People who surround her feel the benefit of it
@@ -2221,7 +2258,7 @@ The power to see, yeah, yeah
 Suddenly I see this is what I wanna be
 Suddenly I see why the hell it means so much to me
 Suddenly I see this is what I want to be
-Suddenly I see why the hell it means so much to me`},{id:"kiss-me",t:"Kiss Me",artist:"Sixpence None the Richer",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/754kgU5rWscRTfvlsuEwFp",sps:"https://open.spotify.com/search/Kiss%20Me%20Sixpence%20None%20the%20Richer",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/kiss-me.pdf",letra:`Kiss me out of the bearded barley.
+Suddenly I see why the hell it means so much to me`},{id:"kiss-me",t:"Kiss Me",artist:"Sixpence None the Richer",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/754kgU5rWscRTfvlsuEwFp",sps:"https://open.spotify.com/search/Kiss%20Me%20Sixpence%20None%20the%20Richer",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/kiss-me.pdf",letra:`Kiss me out of the bearded barley.
 Nightly, beside the green, green grass.
 Swing, swing, swing the spinning step.
 You wear those shoes and I will wear that dress.
@@ -2230,7 +2267,8 @@ Oh, kiss me beneath the milky twilight.
 Lead me out on the moonlit floor.
 Lift your open hand.
 Strike up the band and make the fireflies dance,
-Silver moon's sparkling.   So kiss me.
+Silver moon's sparkling.
+So kiss me.
 
 Kiss me down by the broken tree house.
 Swing me high upon its hanging tire.
@@ -2247,7 +2285,8 @@ Oh, kiss me beneath the milky twilight.
 Lead me out on the moonlit floor.
 Lift your open hand.
 Strike up the band and make the fireflies dance,
-Silver moon's sparkling. So kiss me.  So kiss me.`},{id:"la-puerta",t:"La Puerta",artist:"Luis Miguel",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/5dlNzEPBCM7HgmhfaK0xph",sps:"https://open.spotify.com/search/La%20Puerta%20Luis%20Miguel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/la-puerta.pdf",letra:`La puerta se cerr\xF3 detr\xE1s de ti
+Silver moon's sparkling. So kiss me.
+So kiss me.`},{id:"la-puerta",t:"La Puerta",artist:"Luis Miguel",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/5dlNzEPBCM7HgmhfaK0xph",sps:"https://open.spotify.com/search/La%20Puerta%20Luis%20Miguel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/la-puerta.pdf",letra:`La puerta se cerr\xF3 detr\xE1s de ti
 Y nunca m\xE1s volviste a aparecer
 Dejaste abandonada la ilusi\xF3n
 Que hab\xEDa en mi coraz\xF3n por ti
@@ -2267,7 +2306,7 @@ Nos vino a castigar con el dolor
 La puerta se cerr\xF3 detr\xE1s de ti
 Y nunca m\xE1s volviste a aparecer
 Dejaste abandonada la ilusi\xF3n
-Que hab\xEDa en mi coraz\xF3n por ti`},{id:"historia-de-un-amor",t:"Historia de un Amor",artist:"",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/6av3uLAacGG7c9fjshWmuH",sps:"https://open.spotify.com/search/Historia%20de%20un%20Amor",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/historia-de-un-amor.pdf",letra:`Ya no estas mas a mi lado coraz\xF3n
+Que hab\xEDa en mi coraz\xF3n por ti`},{id:"historia-de-un-amor",t:"Historia de un Amor",artist:"",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/6av3uLAacGG7c9fjshWmuH",sps:"https://open.spotify.com/search/Historia%20de%20un%20Amor",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/historia-de-un-amor.pdf",letra:`Ya no estas mas a mi lado coraz\xF3n
 en el alma s\xF3lo tengo soledad
 y si ya no puedo verte
 por qu\xE9 Dios me hizo quererte
@@ -2307,13 +2346,14 @@ Siempre fuiste la raz\xF3n de mi existir
 adorarte para mi fue religi\xF3n
 en tus besos yo encontraba
 el calor que me brindaba
-el amor y la pasi\xF3n.`},{id:"el-dia-que-me-quieras",t:"El D\xEDa Que Me Quieras",artist:"Carlos Gardel",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/0mAPRz8lp5UsaPL00JN8zZ",sps:"https://open.spotify.com/search/El%20D%C3%ADa%20Que%20Me%20Quieras%20Carlos%20Gardel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/el-dia-que-me-quieras.pdf",letra:`Acaricia mi sue\xF1o El suave murmullo
+el amor y la pasi\xF3n.`},{id:"el-dia-que-me-quieras",t:"El D\xEDa Que Me Quieras",artist:"Carlos Gardel",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/0mAPRz8lp5UsaPL00JN8zZ",sps:"https://open.spotify.com/search/El%20D%C3%ADa%20Que%20Me%20Quieras%20Carlos%20Gardel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/el-dia-que-me-quieras.pdf",letra:`Acaricia mi sue\xF1o El suave murmullo
 De tu suspirar
 Como r\xEDe la vida Si tus ojos negros
 Me quieren mirar
 
 Y si es m\xEDo el amparo
-De tu risa leve  Que es como un cantar
+De tu risa leve
+Que es como un cantar
 
 Ella aqu\xEDeta mi herida Todo, todo se olvida
 
@@ -2330,7 +2370,7 @@ Que eres mi...consuelo
 
 Y un rayo misterioso har\xE1 nido en tu pelo
 Luciernaga curiosa que ver\xE1
-Que eres mi...consuelo`},{id:"la-barca",t:"La Barca",artist:"Luis Miguel",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/2MkeDQiyZ8MV45IjLhCPSF",sps:"https://open.spotify.com/search/La%20Barca%20Luis%20Miguel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/la-barca.pdf",letra:`Dicen que la distancia es el olvido
+Que eres mi...consuelo`},{id:"la-barca",t:"La Barca",artist:"Luis Miguel",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/2MkeDQiyZ8MV45IjLhCPSF",sps:"https://open.spotify.com/search/La%20Barca%20Luis%20Miguel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/la-barca.pdf",letra:`Dicen que la distancia es el olvido
 Pero yo no concibo esta raz\xF3n
 Porque yo seguir\xE9 siendo el cautivo
 De los caprichos de tu coraz\xF3n
@@ -2363,7 +2403,7 @@ Cuida que no naufrague tu vivir
 Cuando la luz del sol se est\xE9 apagando
 Y te sientas cansada de vagar
 Piensa que yo por ti estar\xE9 esperando
-Hasta que t\xFA decidas regresar`},{id:"el-reloj",t:"El Reloj",artist:"",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/3WcKNa2Ia2uHLEQK7B3IIL",sps:"https://open.spotify.com/search/El%20Reloj",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/el-reloj.pdf",letra:`Reloj no marques las horas
+Hasta que t\xFA decidas regresar`},{id:"el-reloj",t:"El Reloj",artist:"",pri:"Bolero",tags:["Bolero","Latina"],sp:"https://open.spotify.com/track/3WcKNa2Ia2uHLEQK7B3IIL",sps:"https://open.spotify.com/search/El%20Reloj",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/el-reloj.pdf",letra:`Reloj no marques las horas
 Porque voy a enloquecer
 Ella se ir\xE1 para siempre
 Cuando amanezca otra vez.
@@ -2393,7 +2433,7 @@ Yo sin su amor no soy nada.
 Det\xE9n el tiempo en tus manos
 Haz esta noche perpetua
 Para que nunca se vaya de m\xED
-Para que nunca amanezca.`},{id:"sway",t:"Sway",artist:"Michael Bubl\xE9",pri:"Latina",tags:["Latina"],sp:"https://open.spotify.com/track/2ajUl8lBLAXOXNpG4NEPMz",sps:"https://open.spotify.com/search/Sway%20Michael%20Bubl%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/sway.pdf",letra:`When marimba rhythms start to play
+Para que nunca amanezca.`},{id:"sway",t:"Sway",artist:"Michael Bubl\xE9",pri:"Latina",tags:["Latina"],sp:"https://open.spotify.com/track/2ajUl8lBLAXOXNpG4NEPMz",sps:"https://open.spotify.com/search/Sway%20Michael%20Bubl%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/sway.pdf",letra:`When marimba rhythms start to play
 Dance with me, make me sway
 Like a lazy ocean hugs the shore
 Hold me close, sway me more
@@ -2438,7 +2478,7 @@ Stay with me, sway with me
 When marimba start to play
 Hold me close, make me sway
 When we dance you have a way with me
-Stay with me, sway with me`},{id:"can-t-take-my-eyes-off-you",t:"Can't Take My Eyes Off You",artist:"Frankie Valli",pri:"Latina",tags:["Jazz","Latina","Standard"],sp:"https://open.spotify.com/track/6ft9PAgNOjmZ2kFVP7LGqb",sps:"https://open.spotify.com/search/Can%27t%20Take%20My%20Eyes%20Off%20You%20Frankie%20Valli",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/can-t-take-my-eyes-off-you.pdf",letra:` and The Four Seasons
+Stay with me, sway with me`},{id:"can-t-take-my-eyes-off-you",t:"Can't Take My Eyes Off You",artist:"Frankie Valli",pri:"Latina",tags:["Jazz","Latina","Standard"],sp:"https://open.spotify.com/track/6ft9PAgNOjmZ2kFVP7LGqb",sps:"https://open.spotify.com/search/Can%27t%20Take%20My%20Eyes%20Off%20You%20Frankie%20Valli",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/can-t-take-my-eyes-off-you.pdf",letra:`and The Four Seasons
 You're just too good to be true.
 Can't take my eyes off you.
 You'd be like Heaven to touch.
@@ -2483,7 +2523,7 @@ I need you, baby, To warm a lonely night.
 I love you, baby.Trust in me when I say:
 Oh, pretty baby,
 Don't bring me down, I pray.
-Oh, pretty baby, now that I found you, stay..`},{id:"la-vida-es-un-carnaval",t:"La Vida Es Un Carnaval",artist:"Celia Cruz",pri:"Latina",tags:["Latina"],sp:"https://open.spotify.com/track/2ZuHSTPNDTIFgOZ7PGUbYo",sps:"https://open.spotify.com/search/La%20Vida%20Es%20Un%20Carnaval%20Celia%20Cruz",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/la-vida-es-un-carnaval.pdf",letra:`Todo aqu\xE9l que piense
+Oh, pretty baby, now that I found you, stay..`},{id:"la-vida-es-un-carnaval",t:"La Vida Es Un Carnaval",artist:"Celia Cruz",pri:"Latina",tags:["Latina"],sp:"https://open.spotify.com/track/2ZuHSTPNDTIFgOZ7PGUbYo",sps:"https://open.spotify.com/search/La%20Vida%20Es%20Un%20Carnaval%20Celia%20Cruz",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/la-vida-es-un-carnaval.pdf",letra:`Todo aqu\xE9l que piense
 Que la vida es desigual
 Tiene que saber que no es as\xED
 Que la vida es una hermosura
@@ -2519,7 +2559,7 @@ Que la vida es un carnaval
 Y es m\xE1s bello vivir cantando
 Oh oh oh ay, no hay que llorar
 Que la vida es un carnaval
-Y las penas se van cantando (2x)`},{id:"la-camisa-negra",t:"La Camisa Negra",artist:"Juanes",pri:"Latina",tags:["Latina"],sp:"",sps:"https://open.spotify.com/search/La%20Camisa%20Negra%20Juanes",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/la-camisa-negra.pdf",letra:`Tengo la camisa negra
+Y las penas se van cantando (2x)`},{id:"la-camisa-negra",t:"La Camisa Negra",artist:"Juanes",pri:"Latina",tags:["Latina"],sp:"",sps:"https://open.spotify.com/search/La%20Camisa%20Negra%20Juanes",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/la-camisa-negra.pdf",letra:`Tengo la camisa negra
 Hoy mi amor est\xE1 de luto
 Hoy tengo en el alma una pena
 y es por culpa de tu embrujo
@@ -2576,7 +2616,7 @@ y casi pierdo hasta mi cama
 cama cama camon baby
 te digo con disimulo
 que tengo la camisa negra
-y debajo tengo el difunto`},{id:"corazon-espinado",t:"Coraz\xF3n Espinado",artist:"Santana feat. Man\xE1",pri:"Latina",tags:["Balada","Latina"],sp:"https://open.spotify.com/track/2WoqgtWEBbbBKMDN6Becs7",sps:"https://open.spotify.com/search/Coraz%C3%B3n%20Espinado%20Santana%20feat.%20Man%C3%A1",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/corazon-espinado.pdf",letra:`CORAZ\xD3N ESPINADO
+y debajo tengo el difunto`},{id:"corazon-espinado",t:"Coraz\xF3n Espinado",artist:"Santana feat. Man\xE1",pri:"Latina",tags:["Balada","Latina"],sp:"https://open.spotify.com/track/2WoqgtWEBbbBKMDN6Becs7",sps:"https://open.spotify.com/search/Coraz%C3%B3n%20Espinado%20Santana%20feat.%20Man%C3%A1",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/corazon-espinado.pdf",letra:`CORAZ\xD3N ESPINADO
 Esa mujer me esta matando
 me ha espinado el coraz\xF3n
 por m\xE1s que trato de olvidarla
@@ -2606,7 +2646,7 @@ como me duele estar vivo
 sin tenerte a un lado amor
 
 Coraz\xF3n espinado....
-coraz\xF3n espinado....`},{id:"medo-de-chuva",t:"Medo de Chuva",artist:"",pri:"Forr\xF3",tags:["Forr\xF3"],sp:"https://open.spotify.com/track/5RkPULKkPpFKkS5BnvK1t6",sps:"https://open.spotify.com/search/Medo%20de%20Chuva",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/medo-de-chuva.pdf",letra:`Voc\xEA que tem medo de chuva
+coraz\xF3n espinado....`},{id:"medo-de-chuva",t:"Medo de Chuva",artist:"",pri:"Forr\xF3",tags:["Forr\xF3"],sp:"https://open.spotify.com/track/5RkPULKkPpFKkS5BnvK1t6",sps:"https://open.spotify.com/search/Medo%20de%20Chuva",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/medo-de-chuva.pdf",letra:`Voc\xEA que tem medo de chuva
 voc\xEA n\xE3o \xE9 nem de papel
 muito menos feito de a\xE7ucar
 ou algo parecido com mel,
@@ -2626,7 +2666,7 @@ ou algo parecido com mel,
 experimente tomar banho de chuva
 e conhecer a energia do c\xE9u
 a energia dessa \xE1gua sagrada
-nos aben\xE7oa da cabe\xE7a aos p\xE9s,`},{id:"esperando-na-janela",t:"Esperando na Janela",artist:"Gilberto Gil / Targino Gondim",pri:"Forr\xF3",tags:["Forr\xF3"],sp:"https://open.spotify.com/track/3zcBNmJH6ToRCI0WNEIuES",sps:"https://open.spotify.com/search/Esperando%20na%20Janela%20Gilberto%20Gil%20/%20Targino%20Gondim",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/esperando-na-janela.pdf",letra:`Ainda me lembro do seu caminhar
+nos aben\xE7oa da cabe\xE7a aos p\xE9s,`},{id:"esperando-na-janela",t:"Esperando na Janela",artist:"Gilberto Gil / Targino Gondim",pri:"Forr\xF3",tags:["Forr\xF3"],sp:"https://open.spotify.com/track/3zcBNmJH6ToRCI0WNEIuES",sps:"https://open.spotify.com/search/Esperando%20na%20Janela%20Gilberto%20Gil%20/%20Targino%20Gondim",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/esperando-na-janela.pdf",letra:`Ainda me lembro do seu caminhar
 Seu jeito de olhar, eu me lembro bem
 Fico querendo sentir o seu cheiro
 \xC9 daquele jeito que ela tem
@@ -2642,7 +2682,7 @@ Eu n\xE3o vejo a hora de poder lhe falar
 Por isso eu vou na casa dela, ai, ai
 Falar do meu amor pra ela, vai
 T\xE1 me esperando na janela, ai, ai
-N\xE3o sei se vou me segurar`},{id:"nosso-xote",t:"Nosso Xote",artist:"",pri:"Forr\xF3",tags:["Forr\xF3"],sp:"https://open.spotify.com/track/1SA60f6E80FHeeYBwKSikE",sps:"https://open.spotify.com/search/Nosso%20Xote",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/nosso-xote.pdf",letra:`Moreno me convidou para dan\xE7ar um xote
+N\xE3o sei se vou me segurar`},{id:"nosso-xote",t:"Nosso Xote",artist:"",pri:"Forr\xF3",tags:["Forr\xF3"],sp:"https://open.spotify.com/track/1SA60f6E80FHeeYBwKSikE",sps:"https://open.spotify.com/search/Nosso%20Xote",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/nosso-xote.pdf",letra:`Moreno me convidou para dan\xE7ar um xote
 Beijou o meu cabelo cheirou meu cangote
 Fez meu corpo inteiro se arrepiar
 Fiquei sem jeito e ele me acolheu junto ao peito
@@ -2654,8 +2694,9 @@ Meu dengo vem me chameg\xE1
 Oi oi oi oi oi oi teu jeito de balancear
 O corpo inteiro
 Faz meu cora\xE7\xE3o bater
-ligeiro assim eu vou me apaixonar`},{id:"voce-nao-vale-nada",t:"Voc\xEA N\xE3o Vale Nada",artist:"Avi\xF5es do Forr\xF3",pri:"Forr\xF3",tags:["Forr\xF3"],sp:"https://open.spotify.com/track/2RRYTYw7caifhoOopfJrpj",sps:"https://open.spotify.com/search/Voc%C3%AA%20N%C3%A3o%20Vale%20Nada%20Avi%C3%B5es%20do%20Forr%C3%B3",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/voce-nao-vale-nada.pdf",letra:`Voc\xEA n\xE3o vale nada, Mas eu gosto de voc\xEA!
-Voc\xEA n\xE3o vale nada,  Mas eu gosto de voc\xEA!
+ligeiro assim eu vou me apaixonar`},{id:"voce-nao-vale-nada",t:"Voc\xEA N\xE3o Vale Nada",artist:"Avi\xF5es do Forr\xF3",pri:"Forr\xF3",tags:["Forr\xF3"],sp:"https://open.spotify.com/track/2RRYTYw7caifhoOopfJrpj",sps:"https://open.spotify.com/search/Voc%C3%AA%20N%C3%A3o%20Vale%20Nada%20Avi%C3%B5es%20do%20Forr%C3%B3",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/voce-nao-vale-nada.pdf",letra:`Voc\xEA n\xE3o vale nada, Mas eu gosto de voc\xEA!
+Voc\xEA n\xE3o vale nada,
+Mas eu gosto de voc\xEA!
 Tudo que eu queriaera saber Porqu\xEA?!?
 Tudo que eu queria era saber Porqu\xEA?!?
 
@@ -2684,22 +2725,25 @@ Mas eu gosto de voc\xEA!
 Tudo que eu queria
 era saber Porqu\xEA?!?
 Tudo que eu queria
-era saber Porqu\xEA?!?`},{id:"i-ve-got-you-under-my-skin",t:"I've Got You Under My Skin",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Baile","Fox","Jazz","Standard"],sp:"",sps:"https://open.spotify.com/search/I%27ve%20Got%20You%20Under%20My%20Skin%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-ve-got-you-under-my-skin.pdf",letra:`I've got you under my skin
+era saber Porqu\xEA?!?`},{id:"i-ve-got-you-under-my-skin",t:"I've Got You Under My Skin",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Baile","Fox","Jazz","Standard"],sp:"",sps:"https://open.spotify.com/search/I%27ve%20Got%20You%20Under%20My%20Skin%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-ve-got-you-under-my-skin.pdf",letra:`I've got you under my skin
 I've got you deep in the heart of me
 So deep in my heart, that you're really a part of me
 I've got you under my skin
 
 I've tried so not to give in
 I've said to myself this affair it never gonna go so well
-But why should I try to resist, when baby I know so well   I've got you under my skin
+But why should I try to resist, when baby I know so well
+I've got you under my skin
 
 I would sacrifice anything come what might
 For the sake of having you near
-In spite of a warning voice that comes in the night  And repeats in my ear
+In spite of a warning voice that comes in the night
+And repeats in my ear
 
 Don't you know little fool, you never can win
 Use your mentality, wake up to reality
-But each time that I do, just the thought of you  Makes me stop before I begin
+But each time that I do, just the thought of you
+Makes me stop before I begin
 'Cause I've got you under my skin
 
 I would sacrifice anything come what might
@@ -2712,7 +2756,7 @@ why not Use your mentality, wake up to reality
 but each time I do, just the thought of you
 makes me stop just before i begin
 cause I've got you under my skin
-I love you under my skin`},{id:"cheek-to-cheek",t:"Cheek to Cheek",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Baile","Fox","Jazz","Standard"],sp:"https://open.spotify.com/track/6xcbl2XkUuXuK1X6S6vacw",sps:"https://open.spotify.com/search/Cheek%20to%20Cheek%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/cheek-to-cheek.pdf",letra:`HEAVEN I'M IN HEAVEN
+I love you under my skin`},{id:"cheek-to-cheek",t:"Cheek to Cheek",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Baile","Fox","Jazz","Standard"],sp:"https://open.spotify.com/track/6xcbl2XkUuXuK1X6S6vacw",sps:"https://open.spotify.com/search/Cheek%20to%20Cheek%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/cheek-to-cheek.pdf",letra:`HEAVEN I'M IN HEAVEN
 AND MY HEART BEATS SO THAT I CAN HARDLY SPEAK
 AND I SEEM TO FIND THE HAPPINESS I SEEK
 WHEN WE'RE OUT TOGETHER DANCING CHEEK TO CHEEK
@@ -2744,12 +2788,13 @@ I WANT MY ARM ABOUT YOU
 THAT CHARM ABOUT YOU WILL CARRY ME THROUGH
 RIGHT UP TO...
 
-HEAVEN  I'M IN HEAVEN
+HEAVEN
+I'M IN HEAVEN
 AND MY HEART BEATS SO THAT I CAN HARDLY SPEAK
 AND I SEEM TO FIND THAT HAPPINESS I SEEK
 WHEN WE'RE OUT TOGHETHER DANCING
 OUT TOGETHER DANCING
-OUT TOGETHER DANCING CHEEK TO CHEEK!`},{id:"fly-me-to-the-moon",t:"Fly Me To The Moon",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Baile","Fox","Jazz","Standard"],sp:"https://open.spotify.com/track/3WbJBg5P23EhEC7o5NN2lu",sps:"https://open.spotify.com/search/Fly%20Me%20To%20The%20Moon%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/fly-me-to-the-moon.pdf",letra:`FLY ME TO THE MOON
+OUT TOGETHER DANCING CHEEK TO CHEEK!`},{id:"fly-me-to-the-moon",t:"Fly Me To The Moon",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Baile","Fox","Jazz","Standard"],sp:"https://open.spotify.com/track/3WbJBg5P23EhEC7o5NN2lu",sps:"https://open.spotify.com/search/Fly%20Me%20To%20The%20Moon%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/fly-me-to-the-moon.pdf",letra:`FLY ME TO THE MOON
 LET ME PLAY AMOUNG THE STARS
 LET ME SEE WHAT SPRING IS LIKE
 ON JUPITER AND MARS
@@ -2769,7 +2814,7 @@ YOU ARE ALL I LONG FOR
 ALL I WORSHIP AND ADORE
 IN OTHER WORDS, PLEASE BE TRUE
 IN OTHER WORDS
-IN OTHER WORDSSS, I LOVE YOU`},{id:"new-york-new-york",t:"New York, New York",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Baile","Balada","Fox","Jazz","Standard"],sp:"",sps:"https://open.spotify.com/search/New%20York%2C%20New%20York%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/new-york-new-york.pdf",letra:`Start spreading the news, I'm leaving today
+IN OTHER WORDSSS, I LOVE YOU`},{id:"new-york-new-york",t:"New York, New York",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Baile","Balada","Fox","Jazz","Standard"],sp:"",sps:"https://open.spotify.com/search/New%20York%2C%20New%20York%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/new-york-new-york.pdf",letra:`Start spreading the news, I'm leaving today
 I want to be part of it, New York, New York
 
 These vagabond shoes Are longing to stray
@@ -2779,7 +2824,8 @@ New York, New York
 I wanna wake up in a city That doesn't sleep
 And find I'm king of the hill, Top of the heap
 
-These little town blues  Are melting away.
+These little town blues
+Are melting away.
 I'll make a brand new start of it,
 In old New York.
 
@@ -2805,7 +2851,7 @@ I'm gonna make it anywhere.
 It's up to you,
 New York,
 New York!
-New York!!`},{id:"verdade-chinesa",t:"Verdade Chinesa",artist:"Zeca Pagodinho",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/7BuxRSKVtfKDFiDNmW6Z0G",sps:"https://open.spotify.com/search/Verdade%20Chinesa%20Zeca%20Pagodinho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/verdade-chinesa.pdf",letra:`Era s\xF3 isso Que eu queria da vida
+New York!!`},{id:"verdade-chinesa",t:"Verdade Chinesa",artist:"Zeca Pagodinho",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/7BuxRSKVtfKDFiDNmW6Z0G",sps:"https://open.spotify.com/search/Verdade%20Chinesa%20Zeca%20Pagodinho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/verdade-chinesa.pdf",letra:`Era s\xF3 isso Que eu queria da vida
 Uma cerveja Uma ilus\xE3o atrevida
 Que me dissesse Uma verdade chinesa
 Com uma inten\xE7\xE3o
@@ -2847,7 +2893,7 @@ Deixa, pr\xE1 amanh\xE3
 Tem muito tempo
 O que vale \xC9 o sentimento
 E o amor que a gente
-Tem no cora\xE7\xE3o...(2x)`},{id:"agamamou",t:"Agamamou",artist:"Olodum",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/6Vi3zrYtd2n53YUiYLTnNC",sps:"https://open.spotify.com/search/Agamamou%20Olodum",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/agamamou.pdf",letra:`E a galera l\xE1 do Morro do Salgueiro e Vidigal, t\xE1 querendo balan\xE7ar
+Tem no cora\xE7\xE3o...(2x)`},{id:"agamamou",t:"Agamamou",artist:"Olodum",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/6Vi3zrYtd2n53YUiYLTnNC",sps:"https://open.spotify.com/search/Agamamou%20Olodum",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/agamamou.pdf",letra:`E a galera l\xE1 do Morro do Salgueiro e Vidigal, t\xE1 querendo balan\xE7ar
 A torcida do Corinthians e Flamengo t\xE1 tamb\xE9m, t\xE1 querendo balan\xE7ar
 E o povo do nordeste, do xaxado quer oque?
 T\xE1 querendo balan\xE7ar
@@ -2876,7 +2922,7 @@ t\xE1 querendo balan\xE7ar
 E bl\xE1, bl\xE1, bl\xE1, e bl\xE1, bl\xE1, bl\xE1,
 t\xE1 querendo balan\xE7ar
 
-Agamamou, love, love, love, jou, jou`},{id:"flor-de-lis",t:"Flor de Lis",artist:"Djavan",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/1TX4h6MrIZ0K3r4OOG11WO",sps:"https://open.spotify.com/search/Flor%20de%20Lis%20Djavan",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/flor-de-lis.pdf",letra:`Valei-me, Deus! \xC9 o fim do nosso amor
+Agamamou, love, love, love, jou, jou`},{id:"flor-de-lis",t:"Flor de Lis",artist:"Djavan",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/1TX4h6MrIZ0K3r4OOG11WO",sps:"https://open.spotify.com/search/Flor%20de%20Lis%20Djavan",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/flor-de-lis.pdf",letra:`Valei-me, Deus! \xC9 o fim do nosso amor
 Perdoa, por favor
 Eu sei que o erro aconteceu
 Mas n\xE3o sei o que fez Tudo mudar de vez
@@ -2902,7 +2948,7 @@ Nem margarida nasceu.
 E o meu jardim da vida
 Ressecou, morreu
 Do p\xE9 que brotou Maria
-Nem margarida nasceu.`},{id:"fato-consumado",t:"Fato Consumado",artist:"Djavan",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/0TCiAdmUnbvEdrT0vSUujh",sps:"https://open.spotify.com/search/Fato%20Consumado%20Djavan",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/fato-consumado.pdf",letra:`Eu quero ver voc\xEA mandar na raz\xE3o
+Nem margarida nasceu.`},{id:"fato-consumado",t:"Fato Consumado",artist:"Djavan",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/0TCiAdmUnbvEdrT0vSUujh",sps:"https://open.spotify.com/search/Fato%20Consumado%20Djavan",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/fato-consumado.pdf",letra:`Eu quero ver voc\xEA mandar na raz\xE3o
 Pra mim n\xE3o \xE9 qualquer not\xEDcia que abala um cora\xE7\xE3o (4x)
 
 Se toda hora \xE9 hora de dar decis\xE3o,
@@ -2917,7 +2963,7 @@ Por favor me beije a boca
 Que louca, que louca!
 Eu quero \xE9 viver em paz
 Por favor me beije a boca
-Que louca, que louca!`},{id:"ive-brussel",t:"Ive Brussel",artist:"",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/0O4jXGUyxec2hQc7oyhTlr",sps:"https://open.spotify.com/search/Ive%20Brussel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ive-brussel.pdf",letra:`Voc\xEA com essa mania sensual ....
+Que louca, que louca!`},{id:"ive-brussel",t:"Ive Brussel",artist:"",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/0O4jXGUyxec2hQc7oyhTlr",sps:"https://open.spotify.com/search/Ive%20Brussel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ive-brussel.pdf",letra:`Voc\xEA com essa mania sensual ....
 de sentir e me olhar
 Voc\xEA com esse seu jeito contagiante....
 fiel e sutil de lutar
@@ -2927,14 +2973,15 @@ N\xE3o sei n\xE3o, assim eu acabo me entregando
 
 Pois est\xE1 fazendo um ano e meio amor
 Que eu estive por aqui
-Desconfiado, sem jeito  quase calado
+Desconfiado, sem jeito
+quase calado
 Quando fui bem recebido e desejado por voc\xEA
 
 Nunca como eu poderia esquecer amor
 Ai, ai ai se naquele dia voc\xEA foi tudo, foi demais pra mim
 Ai, ai se naquele dia voc\xEA. foi tudo, fez de mim um anjo
 
-Ive, Ive Ive Brussel, Brussel, Brussel, Brussel`},{id:"eu-fui",t:"Eu Fui",artist:"",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/4Wpklr10yxUvkjaJC2VUD4",sps:"https://open.spotify.com/search/Eu%20Fui",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/eu-fui.pdf",letra:` d\xE1 mais
+Ive, Ive Ive Brussel, Brussel, Brussel, Brussel`},{id:"eu-fui",t:"Eu Fui",artist:"",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/4Wpklr10yxUvkjaJC2VUD4",sps:"https://open.spotify.com/search/Eu%20Fui",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/eu-fui.pdf",letra:`d\xE1 mais
 N\xE3o adianta se desesperar, gritar, chorar
 Se voc\xEA quiser acreditar ou n\xE3o tanto faz
 Eu j\xE1 t\xF4 na pista, na pegada pronto pra atacar
@@ -2958,7 +3005,7 @@ FUI..
 deu pra mim n\xE3o d\xE1 mais
 S\xF3 quero aproveitar o tempo que deixei pra tr\xE1s
 Deu pra mim n\xE3o d\xE1 mais
-J\xE1 me cansei de ser aquele bom rapaz.`},{id:"danca-do-bole-bole",t:"Dan\xE7a do Bole-bole",artist:"Exalta Samba",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/1l1PjOnoNWjpQ6WUmVehvY",sps:"https://open.spotify.com/search/Dan%C3%A7a%20do%20Bole-bole%20Exalta%20Samba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/danca-do-bole-bole.pdf",letra:`Mulherada que dan\xE7a \xE9 essa que o corpo fica todo mole?
+J\xE1 me cansei de ser aquele bom rapaz.`},{id:"danca-do-bole-bole",t:"Dan\xE7a do Bole-bole",artist:"Exalta Samba",pri:"Samba",tags:["Samba"],sp:"https://open.spotify.com/track/1l1PjOnoNWjpQ6WUmVehvY",sps:"https://open.spotify.com/search/Dan%C3%A7a%20do%20Bole-bole%20Exalta%20Samba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/danca-do-bole-bole.pdf",letra:`Mulherada que dan\xE7a \xE9 essa que o corpo fica todo mole?
 [Mulherada que dan\xE7a \xE9 essa que o corpo fica todo mole?]
 \xC9 uma dan\xE7a nova que bole, bole, bole, bole
 [\xC9 uma dan\xE7a nova que bole, bole, bole, bole]
@@ -2990,7 +3037,7 @@ Bole, bole, bole, bole [dan\xE7a ruivinha]
 Bole, bole, bole, bole [japonesinha]
 Bole, bole, bole, bole
 
-[Mulheraaaada]`},{id:"peguei-um-ita-no-norte-salgueiro",t:"Peguei Um Ita No Norte (Salgueiro)",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/76oZ6nCFV0DGBJIYwETiiU",sps:"https://open.spotify.com/search/Peguei%20Um%20Ita%20No%20Norte%20%28Salgueiro%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/peguei-um-ita-no-norte-salgueiro.pdf",letra:`Explode cora\xE7\xE3o
+[Mulheraaaada]`},{id:"peguei-um-ita-no-norte-salgueiro",t:"Peguei Um Ita No Norte (Salgueiro)",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/76oZ6nCFV0DGBJIYwETiiU",sps:"https://open.spotify.com/search/Peguei%20Um%20Ita%20No%20Norte%20%28Salgueiro%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/peguei-um-ita-no-norte-salgueiro.pdf",letra:`Explode cora\xE7\xE3o
 Na maior felicidade
 \xC9 lindo meu Salgueiro
 Contagiando e sacudindo esta cidade
@@ -3021,7 +3068,7 @@ Embalado na magia Do seu carnaval
 Explode cora\xE7\xE3o
 Na maior felicidade
 \xC9 lindo meu Salgueiro
-Contagiando e sacudindo esta cidade`},{id:"gavioes-fiel",t:"Gavi\xF5es Fiel",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/1Pvc7s23oTW5uv6o2qIZhv",sps:"https://open.spotify.com/search/Gavi%C3%B5es%20Fiel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/gavioes-fiel.pdf",letra:`Me d\xEA a m\xE3o, me abra\xE7a
+Contagiando e sacudindo esta cidade`},{id:"gavioes-fiel",t:"Gavi\xF5es Fiel",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/1Pvc7s23oTW5uv6o2qIZhv",sps:"https://open.spotify.com/search/Gavi%C3%B5es%20Fiel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/gavioes-fiel.pdf",letra:`Me d\xEA a m\xE3o, me abra\xE7a
 Viaja comigo pro c\xE9u
 Sou Gavi\xE3o, levanto a ta\xE7a
 Com muito orgulho, pra del\xEDrio da Fiel
@@ -3063,7 +3110,7 @@ Olha pra mim abre o teu sorriso
 Vou gargalhar, quero alegria
 Lavar a alma com o som da bateria
 Me d\xEA a m\xE3o
-Me d\xEA a m\xE3o, ma abra\xE7a...`},{id:"atras-da-verde-e-rosa-so-nao-vai-quem-ja-morreu-",t:"Atr\xE1s da Verde e Rosa S\xF3 N\xE3o Vai Quem J\xE1 Morreu (Mangueira 1994)",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/5Z3LaBW5cM3PkXKi47U2eF",sps:"https://open.spotify.com/search/Atr%C3%A1s%20da%20Verde%20e%20Rosa%20S%C3%B3%20N%C3%A3o%20Vai%20Quem%20J%C3%A1%20Morreu%20%28Mangueira%201994%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/atras-da-verde-e-rosa-so-nao-vai-quem-ja-morreu-.pdf",letra:`ME LEVA QUE EU VOU
+Me d\xEA a m\xE3o, ma abra\xE7a...`},{id:"atras-da-verde-e-rosa-so-nao-vai-quem-ja-morreu-",t:"Atr\xE1s da Verde e Rosa S\xF3 N\xE3o Vai Quem J\xE1 Morreu (Mangueira 1994)",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/5Z3LaBW5cM3PkXKi47U2eF",sps:"https://open.spotify.com/search/Atr%C3%A1s%20da%20Verde%20e%20Rosa%20S%C3%B3%20N%C3%A3o%20Vai%20Quem%20J%C3%A1%20Morreu%20%28Mangueira%201994%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/atras-da-verde-e-rosa-so-nao-vai-quem-ja-morreu-.pdf",letra:`ME LEVA QUE EU VOU
 SONHO MEU ATR\xC1S DA VERDE E ROSA S\xD3 N\xC3O VAI QUEM J\xC1 MORREU
 
 Bahia \xE9 luz
@@ -3101,7 +3148,7 @@ Aplausos ao cancioneiro
 Me leva que eu vou
 Sonho meu bis
 Atras da verde-e-rosa
-S\xF3 n\xE3o vai quem j\xE1 morreu`},{id:"o-que-e-o-que-e",t:"O Que \xC9, O Que \xC9?",artist:"Gonzaguinha",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"",sps:"https://open.spotify.com/search/O%20Que%20%C3%89%2C%20O%20Que%20%C3%89%3F%20Gonzaguinha",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/o-que-e-o-que-e.pdf",letra:`Eu fico com a pureza das respostas das crian\xE7as
+S\xF3 n\xE3o vai quem j\xE1 morreu`},{id:"o-que-e-o-que-e",t:"O Que \xC9, O Que \xC9?",artist:"Gonzaguinha",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"",sps:"https://open.spotify.com/search/O%20Que%20%C3%89%2C%20O%20Que%20%C3%89%3F%20Gonzaguinha",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/o-que-e-o-que-e.pdf",letra:`Eu fico com a pureza das respostas das crian\xE7as
 \xC9 a vida, \xE9 bonita e \xE9 bonita
 Viver e n\xE3o ter a vergonha de ser feliz
 Cantar (e cantar e cantar)a beleza de ser um eterno
@@ -3161,7 +3208,7 @@ Cantar (e cantar e cantar) a beleza de ser um eterno
 aprendiz
 Eu sei que a vida devia ser bem melhor e ser\xE1
 Mas isso n\xE3o impede que eu repita
-\xC9 bonita, \xE9 bonita e \xE9 bonita`},{id:"samba-enredo-1986-mangueira",t:"Samba-Enredo 1986 (Mangueira)",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/5kKOb34eNsGxRVHRj295tN",sps:"https://open.spotify.com/search/Samba-Enredo%201986%20%28Mangueira%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/samba-enredo-1986-mangueira.pdf",letra:`A hora \xE9 essa!!!!!
+\xC9 bonita, \xE9 bonita e \xE9 bonita`},{id:"samba-enredo-1986-mangueira",t:"Samba-Enredo 1986 (Mangueira)",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/5kKOb34eNsGxRVHRj295tN",sps:"https://open.spotify.com/search/Samba-Enredo%201986%20%28Mangueira%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/samba-enredo-1986-mangueira.pdf",letra:`A hora \xE9 essa!!!!!
 
 Tem xinxim e acaraj\xE9,
 Tamborim e samba no p\xE9. (bis)
@@ -3179,11 +3226,11 @@ De Iemanja Ians\xE3,
 Mangueira supercampe\xE3.
 
 Tem xinxim e acaraj\xE9,
-Tamborim e samba no p\xE9. (bis)`},{id:"bum-bum-paticumbum-prugurundum-verificar",t:"Bum Bum Paticumbum Prugurundum (verificar)",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/6nhXt0Lrtd4rsjrDF9CFu0",sps:"https://open.spotify.com/search/Bum%20Bum%20Paticumbum%20Prugurundum%20%28verificar%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bum-bum-paticumbum-prugurundum-verificar.pdf",letra:` Paticundum Prugurudum
+Tamborim e samba no p\xE9. (bis)`},{id:"bum-bum-paticumbum-prugurundum-verificar",t:"Bum Bum Paticumbum Prugurundum (verificar)",artist:"",pri:"Samba",tags:["Carnaval","Samba","Samba-Enredo"],sp:"https://open.spotify.com/track/6nhXt0Lrtd4rsjrDF9CFu0",sps:"https://open.spotify.com/search/Bum%20Bum%20Paticumbum%20Prugurundum%20%28verificar%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bum-bum-paticumbum-prugurundum-verificar.pdf",letra:`Paticundum Prugurudum
 Nosso samba minha gente \xE9 isso ai
 
 Bum Bum Paticundum Prugurudum
-Contagiando a marques de sapuca\xED`},{id:"man-i-feel-like-a-woman",t:"Man! I Feel Like A Woman!",artist:"Shania Twain",pri:"Sertanejo",tags:["Sertanejo"],sp:"",sps:"https://open.spotify.com/search/Man%21%20I%20Feel%20Like%20A%20Woman%21%20Shania%20Twain",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/man-i-feel-like-a-woman.pdf",letra:`Let's go girls!
+Contagiando a marques de sapuca\xED`},{id:"man-i-feel-like-a-woman",t:"Man! I Feel Like A Woman!",artist:"Shania Twain",pri:"Sertanejo",tags:["Sertanejo"],sp:"",sps:"https://open.spotify.com/search/Man%21%20I%20Feel%20Like%20A%20Woman%21%20Shania%20Twain",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/man-i-feel-like-a-woman.pdf",letra:`Let's go girls!
 
 I'm going out tonight - I'm feelin' alright
 Gonna let it all hang out
@@ -3222,7 +3269,7 @@ Man! I feel like a woman!
 I get totally crazy
 Can you feel it
 Come, come, come on baby
-I feel like a woman`},{id:"meteoro",t:"Meteoro",artist:"Luan Santana",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/6tt4jM4axfSj3rZU299JZI",sps:"https://open.spotify.com/search/Meteoro%20Luan%20Santana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/meteoro.pdf",letra:`Te dei o Sol, Te dei o Mar
+I feel like a woman`},{id:"meteoro",t:"Meteoro",artist:"Luan Santana",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/6tt4jM4axfSj3rZU299JZI",sps:"https://open.spotify.com/search/Meteoro%20Luan%20Santana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/meteoro.pdf",letra:`Te dei o Sol, Te dei o Mar
 Pra ganhar seu cora\xE7\xE3o;
 Voc\xEA \xE9 raio de saudade;
 Meteoro da paix\xE3o;
@@ -3245,7 +3292,7 @@ pelo Universo eu viajei;
 Vem me guia, me conduz;
 Que pra sempre te amarei;
 
-(Refrao 2x)`},{id:"ciumenta",t:"Ciumenta",artist:"C\xE9sar Menotti & Fabiano",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/4vaCSaMxBgKuIF289qcY16",sps:"https://open.spotify.com/search/Ciumenta%20C%C3%A9sar%20Menotti%20%26%20Fabiano",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ciumenta.pdf",letra:`Saia dessa paran\xF3ia
+(Refrao 2x)`},{id:"ciumenta",t:"Ciumenta",artist:"C\xE9sar Menotti & Fabiano",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/4vaCSaMxBgKuIF289qcY16",sps:"https://open.spotify.com/search/Ciumenta%20C%C3%A9sar%20Menotti%20%26%20Fabiano",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ciumenta.pdf",letra:`Saia dessa paran\xF3ia
 De dizer que tenho outra
 Porque assim voc\xEA vai ficar louca
 \xC9 uma barra o teu ci\xFAme possessivo
@@ -3263,14 +3310,16 @@ Ah eu j\xE1 nem sei o que fazer
 Ciumenta
 Para de ser t\xE3o ciumenta
 Desse jeito nenhum homem te aguenta
-Se liga ou voc\xEA vai me perder.`},{id:"chora-me-liga",t:"Chora, Me Liga!",artist:"Jo\xE3o Bosco & Vin\xEDcius",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/1NpD7cQH8hGMZrufOQQ0Xk",sps:"https://open.spotify.com/search/Chora%2C%20Me%20Liga%21%20Jo%C3%A3o%20Bosco%20%26%20Vin%C3%ADcius",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/chora-me-liga.pdf",letra:`N\xE3o era pra voc\xEA se apaixonar
+Se liga ou voc\xEA vai me perder.`},{id:"chora-me-liga",t:"Chora, Me Liga!",artist:"Jo\xE3o Bosco & Vin\xEDcius",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/1NpD7cQH8hGMZrufOQQ0Xk",sps:"https://open.spotify.com/search/Chora%2C%20Me%20Liga%21%20Jo%C3%A3o%20Bosco%20%26%20Vin%C3%ADcius",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/chora-me-liga.pdf",letra:`N\xE3o era pra voc\xEA se apaixonar
 Era s\xF3 pra gente ficar,
-Eu te avisei  Meu bem eu te avisei.
+Eu te avisei
+Meu bem eu te avisei.
 
 Voc\xEA sabia que eu era assim
 Paix\xE3o de uma noite
 Que logo tem fim
-Eu te falei  Meu bem eu te falei
+Eu te falei
+Meu bem eu te falei
 
 N\xE3o vai ser t\xE3o f\xE1cil assim
 voc\xEA me ter nas m\xE3os
@@ -3279,12 +3328,14 @@ N\xE3o venha me perguntar Qual a melhor sa\xEDda
 Eu j\xE1 sofri muito por amor
 Agora eu vou curtir a vida
 
-Chora, me liga  Implora o meu beijo de novo
+Chora, me liga
+Implora o meu beijo de novo
 Me pede socorro
 Quem sabe eu vou te salvar
 Chora, me liga
-Implora pelo meu amor  Pede por favor
-Quem sabe um dia eu volto a te procurer`},{id:"amo-noite-e-dia",t:"Amo Noite e Dia",artist:"Jorge & Mateus",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/2tX9QwcHOwWx01QSbLuB71",sps:"https://open.spotify.com/search/Amo%20Noite%20e%20Dia%20Jorge%20%26%20Mateus",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/amo-noite-e-dia.pdf",letra:` colado ao teu,
+Implora pelo meu amor
+Pede por favor
+Quem sabe um dia eu volto a te procurer`},{id:"amo-noite-e-dia",t:"Amo Noite e Dia",artist:"Jorge & Mateus",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/2tX9QwcHOwWx01QSbLuB71",sps:"https://open.spotify.com/search/Amo%20Noite%20e%20Dia%20Jorge%20%26%20Mateus",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/amo-noite-e-dia.pdf",letra:`colado ao teu,
 Alguma chave, algum segredo
 que me prende ao seu,
 Teu jeito perigoso de me conquistar,
@@ -3300,7 +3351,7 @@ I\xEA, I\xEA, I\xEA...
 Passa o dia, passa a noite t\xF4 apaixonado,
 Cora\xE7\xE3o no peito sofre sem voc\xEA do lado,
 Dessa vez tudo \xE9 real, nada de fantasia...
-Saiba que eu te amo. Amo Noite e Dia....`},{id:"paga-pau",t:"Paga Pau",artist:"Fernando & Sorocaba",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/0lZdeunc3FCJHoCfFaunkZ",sps:"https://open.spotify.com/search/Paga%20Pau%20Fernando%20%26%20Sorocaba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/paga-pau.pdf",letra:`Ela \xE9 atriz, ela faz cena,
+Saiba que eu te amo. Amo Noite e Dia....`},{id:"paga-pau",t:"Paga Pau",artist:"Fernando & Sorocaba",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/0lZdeunc3FCJHoCfFaunkZ",sps:"https://open.spotify.com/search/Paga%20Pau%20Fernando%20%26%20Sorocaba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/paga-pau.pdf",letra:`Ela \xE9 atriz, ela faz cena,
 Ela mete uma press\xE3o.
 Se joga na minha frente .. Me engana n\xE3o!
 
@@ -3324,7 +3375,7 @@ Todo dia seu teatro \xE9
 Exatamente igual,
 Voc\xEA finge que me
 Odeia mais no fundo
-Paga pau!`},{id:"leilao",t:"Leil\xE3o",artist:"C\xE9sar Menotti & Fabiano",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/4Fcjhg725SEJ5D71JgwAYf",sps:"https://open.spotify.com/search/Leil%C3%A3o%20C%C3%A9sar%20Menotti%20%26%20Fabiano",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/leilao.pdf",letra:`Estou a beira da loucura
+Paga pau!`},{id:"leilao",t:"Leil\xE3o",artist:"C\xE9sar Menotti & Fabiano",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/4Fcjhg725SEJ5D71JgwAYf",sps:"https://open.spotify.com/search/Leil%C3%A3o%20C%C3%A9sar%20Menotti%20%26%20Fabiano",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/leilao.pdf",letra:`Estou a beira da loucura
 Ningu\xE9m mais me segura
 T\xF4 fora da sua vida Eu j\xE1 fui!!!
 
@@ -3347,7 +3398,7 @@ Eu vou fazer um leil\xE3o
 Quem da mais pelo meu cora\xE7\xE3o
 Me ajude voltar a viver
 Estou aqui t\xE3o perto
-Me arremate para voc\xEA.`},{id:"que-pescar-que-nada",t:"Que Pescar, Que Nada!",artist:"Bruno & Marrone",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/2kNPNRGi88szzMkh74FIR4",sps:"https://open.spotify.com/search/Que%20Pescar%2C%20Que%20Nada%21%20Bruno%20%26%20Marrone",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/que-pescar-que-nada.pdf",letra:`J\xE1 paguei quem eu devia
+Me arremate para voc\xEA.`},{id:"que-pescar-que-nada",t:"Que Pescar, Que Nada!",artist:"Bruno & Marrone",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/2kNPNRGi88szzMkh74FIR4",sps:"https://open.spotify.com/search/Que%20Pescar%2C%20Que%20Nada%21%20Bruno%20%26%20Marrone",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/que-pescar-que-nada.pdf",letra:`J\xE1 paguei quem eu devia
 Gra\xE7as a Deus eu t\xF4 sossegado
 Eu pus o burro na sombra
 E t\xF4 levando at\xE9 meu cunhado
@@ -3371,7 +3422,7 @@ Ficando louca
 
 Que pescar que nada Vou matar a fome
 L\xE1 ninguem se mete
-l\xE1 Vai ter sete pra cada homem`},{id:"bebo-pra-carai",t:"Bebo Pra Cara\xED",artist:"Gino & Geno",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/46ujTxF3hRzordBy3sYEXO",sps:"https://open.spotify.com/search/Bebo%20Pra%20Cara%C3%AD%20Gino%20%26%20Geno",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bebo-pra-carai.pdf",letra:`Toda vez que agente briga ela diz que vai embora
+l\xE1 Vai ter sete pra cada homem`},{id:"bebo-pra-carai",t:"Bebo Pra Cara\xED",artist:"Gino & Geno",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/46ujTxF3hRzordBy3sYEXO",sps:"https://open.spotify.com/search/Bebo%20Pra%20Cara%C3%AD%20Gino%20%26%20Geno",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bebo-pra-carai.pdf",letra:`Toda vez que agente briga ela diz que vai embora
 Aquela mala me assusta, pronta do lado de fora
 Quando a gente quebra o pau, sempre eu fico e ela sai
 Fico doido de saudade, ai eu bebo pa carai...
@@ -3389,7 +3440,7 @@ Refr\xE3o 2X
 (*) Depois de uma semana em casa, quero um trenzinho diferente
 Uma coisa mais novinha, dessas que anima a gente
 Toda vez que eu dou uma volta, quando eu chego a casa cai
-Outra vez aquela mala, ai eu bebo pa carai`},{id:"o-bicho-vai-pegar-o-chao-vai-tremer",t:"O Bicho Vai Pegar (O Ch\xE3o Vai Tremer)",artist:"Edson & Hudson",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/6jJ68c4CQlBBxaNPpQCKF8",sps:"https://open.spotify.com/search/O%20Bicho%20Vai%20Pegar%20%28O%20Ch%C3%A3o%20Vai%20Tremer%29%20Edson%20%26%20Hudson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/o-bicho-vai-pegar-o-chao-vai-tremer.pdf",letra:`O ch\xE3o vai tremer
+Outra vez aquela mala, ai eu bebo pa carai`},{id:"o-bicho-vai-pegar-o-chao-vai-tremer",t:"O Bicho Vai Pegar (O Ch\xE3o Vai Tremer)",artist:"Edson & Hudson",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/6jJ68c4CQlBBxaNPpQCKF8",sps:"https://open.spotify.com/search/O%20Bicho%20Vai%20Pegar%20%28O%20Ch%C3%A3o%20Vai%20Tremer%29%20Edson%20%26%20Hudson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/o-bicho-vai-pegar-o-chao-vai-tremer.pdf",letra:`O ch\xE3o vai tremer
 O bicho vai pegar
 Sanfona vai gemer
 Poeir\xE3o vai levantar
@@ -3402,7 +3453,7 @@ No tinido da madeira, quero ver tremer o ch\xE3o
 Mulherada bate palma, os homens batendo o p\xE9
 Abra\xE7o, beijo na boca, \xE9 isso que a galera quer
 Pode misturar cacha\xE7a com cerveja e guaran\xE1
-Hoje eu quero a tristeza bem longe deste lugar`},{id:"pode-chorar",t:"Pode Chorar",artist:"Jorge & Mateus",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/7uXbenxrpLtmMXxP198nlz",sps:"https://open.spotify.com/search/Pode%20Chorar%20Jorge%20%26%20Mateus",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/pode-chorar.pdf",letra:`Quase que acabo com a minha vida
+Hoje eu quero a tristeza bem longe deste lugar`},{id:"pode-chorar",t:"Pode Chorar",artist:"Jorge & Mateus",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/7uXbenxrpLtmMXxP198nlz",sps:"https://open.spotify.com/search/Pode%20Chorar%20Jorge%20%26%20Mateus",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/pode-chorar.pdf",letra:`Quase que acabo com a minha vida
 Voc\xEA me p\xF4s num beco sem sa\xEDda
 Por que fez isso comigo?
 Me dediquei somente a voc\xEA
@@ -3423,7 +3474,7 @@ Mas eu n\xE3o volto pra voc\xEA.
 Pode chorar,
 Voc\xEA n\xE3o vai me convencer.
 Pode chorar,
-Voc\xEA se lembra o quanto eu chorei por voc\xEA.`},{id:"bala-de-prata",t:"Bala de Prata",artist:"Fernando & Sorocaba",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/7fTTlRaPUZ0qv3n0fsGsxy",sps:"https://open.spotify.com/search/Bala%20de%20Prata%20Fernando%20%26%20Sorocaba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bala-de-prata.pdf",letra:`Criminosa
+Voc\xEA se lembra o quanto eu chorei por voc\xEA.`},{id:"bala-de-prata",t:"Bala de Prata",artist:"Fernando & Sorocaba",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/7fTTlRaPUZ0qv3n0fsGsxy",sps:"https://open.spotify.com/search/Bala%20de%20Prata%20Fernando%20%26%20Sorocaba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bala-de-prata.pdf",letra:`Criminosa
 N\xE3o posso olhar dentro do seu olhar,
 Bala de Prata acerta pra matar.
 Virei seu ref\xE9m e n\xE3o quero escapar.
@@ -3473,7 +3524,7 @@ Virei seu ref\xE9m e n\xE3o quero escapar.
 Bandida
 Voc\xEA atirou em minha dire\xE7\xE3o,
 E acertou bem no meu cora\xE7\xE3o.
-minha vida ficou na palma de suas m\xE3os.`},{id:"mala-pronta",t:"Mala Pronta",artist:"Hugo Pena & Gabriel",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/5Spwne755NirGu6aQPqNR5",sps:"https://open.spotify.com/search/Mala%20Pronta%20Hugo%20Pena%20%26%20Gabriel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/mala-pronta.pdf",letra:`Voc\xEA passou da conta
+minha vida ficou na palma de suas m\xE3os.`},{id:"mala-pronta",t:"Mala Pronta",artist:"Hugo Pena & Gabriel",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/5Spwne755NirGu6aQPqNR5",sps:"https://open.spotify.com/search/Mala%20Pronta%20Hugo%20Pena%20%26%20Gabriel",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/mala-pronta.pdf",letra:`Voc\xEA passou da conta
 E me tirou do s\xE9rio
 Voc\xEA fez tudo errado e acabou o mist\xE9rio
 Hoje eu tirei a prova
@@ -3495,7 +3546,7 @@ Dessa vez, voc\xEA me perdeu
 Deixa a mala pronta Arruma a sua roupa
 Pode ir embora que eu arranjo outra
 Eu t\xF4 falando s\xE9rio, pode acreditar
-Sabendo que eu tenho raz\xE3o porque que eu vou chorar(2X)`},{id:"vendaval",t:"Vendaval",artist:"Fernando & Sorocaba",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/09F4ts3dXFXcuwSTPeS8Ux",sps:"https://open.spotify.com/search/Vendaval%20Fernando%20%26%20Sorocaba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/vendaval.pdf",letra:`Vendaval
+Sabendo que eu tenho raz\xE3o porque que eu vou chorar(2X)`},{id:"vendaval",t:"Vendaval",artist:"Fernando & Sorocaba",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/09F4ts3dXFXcuwSTPeS8Ux",sps:"https://open.spotify.com/search/Vendaval%20Fernando%20%26%20Sorocaba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/vendaval.pdf",letra:`Vendaval
 Ela devasta minha vida
 Por causa de um ci\xFAme banal
 Um erro de um minuto n\xE3o pode ter valor,
@@ -3507,7 +3558,8 @@ A chama se apagou
 Ser\xE1 que tudo isso \xE9 erro meu
 Voc\xEA \xE9 imprevisivel menina e mulher
 Fecha a cara quando quer
-N\xE3o sabe ouvir um n\xE3o  uou n\xE3o
+N\xE3o sabe ouvir um n\xE3o
+uou n\xE3o
 
 Vendaval
 Ela devasta minha vida
@@ -3527,7 +3579,7 @@ Vendaval
 Ela devasta minha vida
 Por causa de um ci\xFAme banal
 Um erro de um minuto n\xE3o pode ter valor,
-se eu vivi com voc\xEA 24 horas de amor`},{id:"vou-fazer-pirraca",t:"Vou Fazer Pirra\xE7a",artist:"Jorge & Mateus",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/1AgWbF14HGYzkVdmqEMvWu",sps:"https://open.spotify.com/search/Vou%20Fazer%20Pirra%C3%A7a%20Jorge%20%26%20Mateus",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/vou-fazer-pirraca.pdf",letra:`Vou pagar promessa de joelhos
+se eu vivi com voc\xEA 24 horas de amor`},{id:"vou-fazer-pirraca",t:"Vou Fazer Pirra\xE7a",artist:"Jorge & Mateus",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/1AgWbF14HGYzkVdmqEMvWu",sps:"https://open.spotify.com/search/Vou%20Fazer%20Pirra%C3%A7a%20Jorge%20%26%20Mateus",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/vou-fazer-pirraca.pdf",letra:`Vou pagar promessa de joelhos
 S\xF3 pra esquecer voc\xEA
 Vou passar uns dias l\xE1 na lua
 Eu n\xE3o quero mais te ver
@@ -3555,7 +3607,7 @@ Chega de sofrer..adeus, ponto final.
 N\xE3o vou mais chorar, como chorei
 Nem me lembrar que um dia te amei
 Bye Bye tristeza, adeus solid\xE3o
-Vou fazer pirra\xE7a pro seu cora\xE7\xE3o (2x)`},{id:"borboletas",t:"Borboletas",artist:"Victor & Leo",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/1Go5sZ2OZeWNyskKsX2CFW",sps:"https://open.spotify.com/search/Borboletas%20Victor%20%26%20Leo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/borboletas.pdf",letra:`Percebo que o tempo j\xE1 n\xE3o passa
+Vou fazer pirra\xE7a pro seu cora\xE7\xE3o (2x)`},{id:"borboletas",t:"Borboletas",artist:"Victor & Leo",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/1Go5sZ2OZeWNyskKsX2CFW",sps:"https://open.spotify.com/search/Borboletas%20Victor%20%26%20Leo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/borboletas.pdf",letra:`Percebo que o tempo j\xE1 n\xE3o passa
 Voc\xEA diz que n\xE3o tem gra\xE7a amar assim
 Foi tudo t\xE3o bonito, mas voou pro infinito
 Parecido com borboletas de um jardim
@@ -3570,8 +3622,9 @@ Mas nada est\xE1 igual
 Numa noite estranha,a gente se estranha,e fica mal
 Voc\xEA tenta provar que tudo em n\xF3s morreu
 Borboletas sempre voltam
-E o seu jardim sou eu`},{id:"fada",t:"Fada",artist:"",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/2SbeBuXi2WGK5C48pK29AO",sps:"https://open.spotify.com/search/Fada",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/fada.pdf",letra:`Dona... da minha vida
-Voc\xEA se foi  Levou meu calor
+E o seu jardim sou eu`},{id:"fada",t:"Fada",artist:"",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/2SbeBuXi2WGK5C48pK29AO",sps:"https://open.spotify.com/search/Fada",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/fada.pdf",letra:`Dona... da minha vida
+Voc\xEA se foi
+Levou meu calor
 Voc\xEA se foi mas n\xE3o me levou
 
 Lua, lua de encanto
@@ -3592,7 +3645,7 @@ Minha hist\xF3ria linda, meu conto de amor
 Algo aqui me diz que essa paix\xE3o n\xE3o \xE9 em v\xE3o
 O meu sentimento \xE9 bem mais que uma emo\xE7\xE3o
 Eu espero o tempo que for
-Minha fada do amor`},{id:"como-um-anjo",t:"Como Um Anjo",artist:"C\xE9sar Menotti & Fabiano",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/1Untc7TFjhJXEV7NrrApTd",sps:"https://open.spotify.com/search/Como%20Um%20Anjo%20C%C3%A9sar%20Menotti%20%26%20Fabiano",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/como-um-anjo.pdf",letra:`Como um anjo Voc\xEA apareceu na minha vida
+Minha fada do amor`},{id:"como-um-anjo",t:"Como Um Anjo",artist:"C\xE9sar Menotti & Fabiano",pri:"Sertanejo",tags:["Sertanejo"],sp:"https://open.spotify.com/track/1Untc7TFjhJXEV7NrrApTd",sps:"https://open.spotify.com/search/Como%20Um%20Anjo%20C%C3%A9sar%20Menotti%20%26%20Fabiano",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/como-um-anjo.pdf",letra:`Como um anjo Voc\xEA apareceu na minha vida
 Como um anjo Repleto de ternura e de paix\xE3o oh oh...
 Como um anjo
 Encanto e sedu\xE7\xE3o doce aventura
@@ -3626,7 +3679,8 @@ Anjo, a luz do sol t\xE1 me acordando
 N\xE3o v\xE1 embora estou te amando
 Por favor n\xE3o me deixe s\xF3 Ai Ai Ai Ai Ai
 Anjo, n\xE3o quero abrir meus olhos
-Quero seguir vivendo um sonho de sermos s\xF3 voc\xEA e eu..`},{id:"my-girl",t:"My Girl",artist:"The Temptations",pri:"Ax\xE9",tags:["Ax\xE9","Bahia","Balada"],sp:"https://open.spotify.com/track/52HAHV1j93s5B8GoTNI7DJ",sps:"https://open.spotify.com/search/My%20Girl%20The%20Temptations",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/my-girl.pdf",letra:`I\xB4ve got sunshine   on a cloudy day
+Quero seguir vivendo um sonho de sermos s\xF3 voc\xEA e eu..`},{id:"my-girl",t:"My Girl",artist:"The Temptations",pri:"Ax\xE9",tags:["Ax\xE9","Bahia","Balada"],sp:"https://open.spotify.com/track/52HAHV1j93s5B8GoTNI7DJ",sps:"https://open.spotify.com/search/My%20Girl%20The%20Temptations",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/my-girl.pdf",letra:`I\xB4ve got sunshine
+on a cloudy day
 When it's cold outside
 I\xB4ve got the month of May
 I guess you'd say
@@ -3637,9 +3691,11 @@ Talking about my girl (my girl)
 I've got so much honey
 The bees envy me
 I\xB4ve got a sweeter song
-Than the birds  in the trees
+Than the birds
+in the trees
 
-Well    I guess you'd say
+Well
+I guess you'd say
 What can make me feel this way
 My girl (my girl, my girl)
 Talking about my girl (my girl)
@@ -3655,7 +3711,8 @@ I don't need no money fortune or fame
 I\xB4ve got all the riches baby
 One man can claim
 
-Well,  I guess you'd say
+Well,
+I guess you'd say
 What can make me feel this way
 My girl (my girl, my girl)
 Talking about my girl (my girl)
@@ -3664,7 +3721,7 @@ Talking about my girl
 I've got sunshine on a cloudy day
 With my girl
 I've even got the month of may
-With my girl`},{id:"let-s-stay-together",t:"Let's Stay Together",artist:"Al Green",pri:"Ax\xE9",tags:["Ax\xE9","Bahia"],sp:"https://open.spotify.com/track/63xdwScd1Ai1GigAwQxE8y",sps:"https://open.spotify.com/search/Let%27s%20Stay%20Together%20Al%20Green",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/let-s-stay-together.pdf",letra:`I, I'm so in love with you,
+With my girl`},{id:"let-s-stay-together",t:"Let's Stay Together",artist:"Al Green",pri:"Ax\xE9",tags:["Ax\xE9","Bahia"],sp:"https://open.spotify.com/track/63xdwScd1Ai1GigAwQxE8y",sps:"https://open.spotify.com/search/Let%27s%20Stay%20Together%20Al%20Green",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/let-s-stay-together.pdf",letra:`I, I'm so in love with you,
 whatever you want to do,
 is alright with me,
 'cause you make me feel
@@ -3674,7 +3731,8 @@ I want to spend my life with you,
 
 they say it seems, baby,
 since we've been together,
-oh  loving you forever,
+oh
+loving you forever,
 is what I neeeeed.
 
 Let me be the one you come runnin' to,
@@ -3690,7 +3748,8 @@ happy or sad.
 
 Why, somebody?,
 Why do people break up,
-Ohh  and turn around and make up?
+Ohh
+and turn around and make up?
 I just can't see.
 
 You'd never do that to me
@@ -3707,7 +3766,7 @@ happy or sad.
 Let's... Let's stay together,
 loving you whether, whether,
 times are good or bad,
-happy or sad...`},{id:"sexbomb",t:"Sexbomb",artist:"Tom Jones",pri:"Ax\xE9",tags:["Ax\xE9","Bahia"],sp:"",sps:"https://open.spotify.com/search/Sexbomb%20Tom%20Jones",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/sexbomb.pdf",letra:`Spy on me baby use satellite
+happy or sad...`},{id:"sexbomb",t:"Sexbomb",artist:"Tom Jones",pri:"Ax\xE9",tags:["Ax\xE9","Bahia"],sp:"",sps:"https://open.spotify.com/search/Sexbomb%20Tom%20Jones",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/sexbomb.pdf",letra:`Spy on me baby use satellite
 Infrared to see me move through the night
 Aim gonna fire shoot me right
 I'm gonna like the way you fight
@@ -3747,7 +3806,7 @@ Chorus:
 Sexbomb Sexbomb you're a Sexbomb
 You can give it to me, when I need to come along
 Sexbomb Sexbomb you're my Sexbomb
-And baby you can turn me on. 8x`},{id:"crazy-little-thing-called-love",t:"Crazy Little Thing Called Love",artist:"Queen",pri:"Ax\xE9",tags:["Ax\xE9","Bahia"],sp:"https://open.spotify.com/track/1RYzDEcBam49OzcAP9YvdX",sps:"https://open.spotify.com/search/Crazy%20Little%20Thing%20Called%20Love%20Queen",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/crazy-little-thing-called-love.pdf",letra:`This thing called love I just can't handle it
+And baby you can turn me on. 8x`},{id:"crazy-little-thing-called-love",t:"Crazy Little Thing Called Love",artist:"Queen",pri:"Ax\xE9",tags:["Ax\xE9","Bahia"],sp:"https://open.spotify.com/track/1RYzDEcBam49OzcAP9YvdX",sps:"https://open.spotify.com/search/Crazy%20Little%20Thing%20Called%20Love%20Queen",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/crazy-little-thing-called-love.pdf",letra:`This thing called love I just can't handle it
 This thing called love I must get round to it
 I ain't ready
 Crazy little thing called love
@@ -3786,7 +3845,7 @@ Crazy little thing called love
 This thing called love I just can't handle it
 This thing called love I must get round to it
 I ain't ready
-Crazy little thing called love...`},{id:"i-gotta-feeling",t:"I Gotta Feeling",artist:"The Black Eyed Peas",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/I%20Gotta%20Feeling%20The%20Black%20Eyed%20Peas",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-gotta-feeling.pdf",letra:`I gotta feeling
+Crazy little thing called love...`},{id:"i-gotta-feeling",t:"I Gotta Feeling",artist:"The Black Eyed Peas",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/I%20Gotta%20Feeling%20The%20Black%20Eyed%20Peas",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-gotta-feeling.pdf",letra:`I gotta feeling
 That tonight's gonna be a good night
 That tonight's gonna be a good night
 That tonight's gonna be a good, good night
@@ -3841,7 +3900,7 @@ That tonight's gonna be a good, good night
 I gotta feeling
 That tonight's gonna be a good night
 That tonight's gonna be a good night
-That tonight's gonna be a good, good night`},{id:"stereo-love",t:"Stereo Love",artist:"Edward Maya & Vika Jigulina",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/4rCDfKjSS4KZk6hMB9epXh",sps:"https://open.spotify.com/search/Stereo%20Love%20Edward%20Maya%20%26%20Vika%20Jigulina",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/stereo-love.pdf",letra:`When you're gonna stop breaking my heart
+That tonight's gonna be a good, good night`},{id:"stereo-love",t:"Stereo Love",artist:"Edward Maya & Vika Jigulina",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/4rCDfKjSS4KZk6hMB9epXh",sps:"https://open.spotify.com/search/Stereo%20Love%20Edward%20Maya%20%26%20Vika%20Jigulina",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/stereo-love.pdf",letra:`When you're gonna stop breaking my heart
 I don't wanna be another one
 Paying for the things I never done
 Don't let go Don't let go To my love
@@ -3885,7 +3944,7 @@ My heart is in pain but I'm smiling for you
 Oh baby I'll try to make the things right
 I need you more than air when I'm not with you
 Please don't ask me why, just kiss me this time
-My only dream \xEFs about you and I...`},{id:"rise-up",t:"Rise Up",artist:"Yves Larock",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/09m1TcymsKszj3ito4Hmp7",sps:"https://open.spotify.com/search/Rise%20Up%20Yves%20Larock",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/rise-up.pdf",letra:`My dream is to fly
+My only dream \xEFs about you and I...`},{id:"rise-up",t:"Rise Up",artist:"Yves Larock",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/09m1TcymsKszj3ito4Hmp7",sps:"https://open.spotify.com/search/Rise%20Up%20Yves%20Larock",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rise-up.pdf",letra:`My dream is to fly
 Over the rainbow so high (4x)
 
 My dream is to fly
@@ -3905,7 +3964,7 @@ I try to fly, no lie, so high Direction sky
 I try to fly, no lie, so high Direction sky
 
 My dream is to fly
-Over the rainbow so high`},{id:"bad-romance-poker-face-medley-lady-gaga",t:"Bad Romance / Poker Face (Medley Lady Gaga)",artist:"Lady Gaga",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Bad%20Romance%20/%20Poker%20Face%20%28Medley%20Lady%20Gaga%29%20Lady%20Gaga",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bad-romance-poker-face-medley-lady-gaga.pdf",letra:`Rah-rah-ah-ah-ah! Roma-roma-ma!
+Over the rainbow so high`},{id:"bad-romance-poker-face-medley-lady-gaga",t:"Bad Romance / Poker Face (Medley Lady Gaga)",artist:"Lady Gaga",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Bad%20Romance%20/%20Poker%20Face%20%28Medley%20Lady%20Gaga%29%20Lady%20Gaga",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bad-romance-poker-face-medley-lady-gaga.pdf",letra:`Rah-rah-ah-ah-ah! Roma-roma-ma!
 Ga-ga-ooh-la-la! Want your bad romance
 
 I want your ugly I want your disease
@@ -3961,7 +4020,8 @@ A dizzy twister dance, \u2028can't find my drink or man
 Where are my keys, I lost my phone (phone)
 
 What's go-ing on-on the floor?
-I love this record baby but I can't see straight  anymore
+I love this record baby but I can't see straight
+anymore
 Keep it cool, what's the name of this club?
 I can't remember but it's alright, a-alright
 
@@ -3987,7 +4047,7 @@ No he can't read my poker face
 (She got me like nobody)
 Can't read my, can't read my
 No he can't read my poker face
-(She got me like nobody)`},{id:"loca",t:"Loca",artist:"Shakira",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/42k1KeBehAd83lrGt1okiC",sps:"https://open.spotify.com/search/Loca%20Shakira",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/loca.pdf",letra:`She's playing dumb all the time
+(She got me like nobody)`},{id:"loca",t:"Loca",artist:"Shakira",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/42k1KeBehAd83lrGt1okiC",sps:"https://open.spotify.com/search/Loca%20Shakira",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/loca.pdf",letra:`She's playing dumb all the time
 Just to keep it fun
 To get you on like (ahh!)
 Be careful amigo
@@ -4077,7 +4137,7 @@ I got my kiki
 And I'm crazy, but you like it (loca, loca, loca)
 You like that it ain't easy (loca, loca, loca)
 Loca, loca, loca, loca
-Loca`},{id:"club-can-t-handle-me",t:"Club Can't Handle Me",artist:"Flo Rida feat. David Guetta",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/6ebkx7Q5tTxrCxKq4GYj0Y",sps:"https://open.spotify.com/search/Club%20Can%27t%20Handle%20Me%20Flo%20Rida%20feat.%20David%20Guetta",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/club-can-t-handle-me.pdf",letra:`You know I know how
+Loca`},{id:"club-can-t-handle-me",t:"Club Can't Handle Me",artist:"Flo Rida feat. David Guetta",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/6ebkx7Q5tTxrCxKq4GYj0Y",sps:"https://open.spotify.com/search/Club%20Can%27t%20Handle%20Me%20Flo%20Rida%20feat.%20David%20Guetta",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/club-can-t-handle-me.pdf",letra:`You know I know how
 To make em stop and stare as I zone out
 The club can't even handle me right now
 Watchin you watchin me I go all out
@@ -4130,7 +4190,7 @@ You know I know how
 To make em stop and stare as I zone out
 The club can't even handle me right now
 Watchin you watchin me I go all out
-The club can't even handle me right now Crazy`},{id:"crazy-in-love",t:"Crazy in Love",artist:"Beyonc\xE9",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/5IVuqXILoxVWvWEPm82Jxr",sps:"https://open.spotify.com/search/Crazy%20in%20Love%20Beyonc%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/crazy-in-love.pdf",letra:`I look and stare so deep in your eyes,
+The club can't even handle me right now Crazy`},{id:"crazy-in-love",t:"Crazy in Love",artist:"Beyonc\xE9",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/5IVuqXILoxVWvWEPm82Jxr",sps:"https://open.spotify.com/search/Crazy%20in%20Love%20Beyonc%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/crazy-in-love.pdf",letra:`I look and stare so deep in your eyes,
 I touch on you more and more every time,
 When you leave I'm begging you not to go,
 Call your name two or three times in a row,
@@ -4170,10 +4230,11 @@ I've been playing myself, baby I don't care
 'Cuz your love's got the best of me,
 And baby you're making a fool of me,
 You got me sprung and I don't care who sees,
-'Cuz baby you got me, you got me, so crazy baby   HEY!
+'Cuz baby you got me, you got me, so crazy baby
+HEY!
 
 Got me looking so crazy right now, your love's
-Got me looking so crazy right now (lookin' crazy)`},{id:"love-is-gone",t:"Love Is Gone",artist:"David Guetta",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/03oK265y87YNXHIQSOAWOp",sps:"https://open.spotify.com/search/Love%20Is%20Gone%20David%20Guetta",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/love-is-gone.pdf",letra:`What are we supposed to do
+Got me looking so crazy right now (lookin' crazy)`},{id:"love-is-gone",t:"Love Is Gone",artist:"David Guetta",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/03oK265y87YNXHIQSOAWOp",sps:"https://open.spotify.com/search/Love%20Is%20Gone%20David%20Guetta",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/love-is-gone.pdf",letra:`What are we supposed to do
 After all that we've been through
 When everything that felt so right is wrong
 Now that the love is gone
@@ -4181,7 +4242,8 @@ Now that the love is gone
 There is nothing else to prove
 Now you still deny the simple truth
 Can't find a reason to keep holding on
-Now that love is gone  Love is gone...(2x)
+Now that love is gone
+Love is gone...(2x)
 
 I feel so hurt inside
 Feel so hurt inside
@@ -4191,8 +4253,9 @@ What are we supposed to do
 After all that we've been through
 
 Got to find a reason (x5)
-To hold on`},{id:"love-generation",t:"Love Generation",artist:"Bob Sinclar",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/7iee007QypdrTXbLVF5KuF",sps:"https://open.spotify.com/search/Love%20Generation%20Bob%20Sinclar",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/love-generation.pdf",letra:`From Jamaica to the world,
-it's just love, it's just love,  Yeah!
+To hold on`},{id:"love-generation",t:"Love Generation",artist:"Bob Sinclar",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/7iee007QypdrTXbLVF5KuF",sps:"https://open.spotify.com/search/Love%20Generation%20Bob%20Sinclar",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/love-generation.pdf",letra:`From Jamaica to the world,
+it's just love, it's just love,
+Yeah!
 
 Why must our children play in the streets,
 broken hearts and fading dreams,
@@ -4212,12 +4275,16 @@ Be the love generation, Yeah, yeah, yeah, yeah
 Be the love generation, Ooohhh
 
 Don't worry about a thing,
-it's gonna be alright,`},{id:"let-me-think-about-it",t:"Let Me Think About It",artist:"Ida Corr & Fedde Le Grand",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/4LjfIjS8iweFCPdKxLnEoV",sps:"https://open.spotify.com/search/Let%20Me%20Think%20About%20It%20Ida%20Corr%20%26%20Fedde%20Le%20Grand",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/let-me-think-about-it.pdf",letra:`Let me think about it  Let me think about it
+it's gonna be alright,`},{id:"let-me-think-about-it",t:"Let Me Think About It",artist:"Ida Corr & Fedde Le Grand",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/4LjfIjS8iweFCPdKxLnEoV",sps:"https://open.spotify.com/search/Let%20Me%20Think%20About%20It%20Ida%20Corr%20%26%20Fedde%20Le%20Grand",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/let-me-think-about-it.pdf",letra:`Let me think about it
+Let me think about it
 
-You're saying baby  I'll take you for a ride
-Let's get together  Work it all night
+You're saying baby
+I'll take you for a ride
+Let's get together
+Work it all night
 
-I'll be your love  You sexy look fine
+I'll be your love
+You sexy look fine
 I'll make you feel like Heaven is near
 
 Let me think about it Let me think about it
@@ -4228,7 +4295,8 @@ Come on girl believe me I'll make you see
 That I am the true way Towards ecstasy
 
 Touch me, feel me Then you will find
-We are meant to be...  And I ain't lying
+We are meant to be...
+And I ain't lying
 
 Let me think about it Let me think about it
 
@@ -4247,7 +4315,7 @@ Ain\xB4t believe (4x)
 
 Let me think about it
 Let me think about it
-Let me think about it`},{id:"i-don-t-know-why",t:"I Don't Know Why",artist:"Moony",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/2wGjwatu3E4gkw2H6ZVTHA",sps:"https://open.spotify.com/search/I%20Don%27t%20Know%20Why%20Moony",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-don-t-know-why.pdf",letra:`Never happy, not satisfied
+Let me think about it`},{id:"i-don-t-know-why",t:"I Don't Know Why",artist:"Moony",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/2wGjwatu3E4gkw2H6ZVTHA",sps:"https://open.spotify.com/search/I%20Don%27t%20Know%20Why%20Moony",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-don-t-know-why.pdf",letra:`Never happy, not satisfied
 Always complains for nothing
 Hopes and dreams are fading away
 It's not hard to figure it out
@@ -4256,7 +4324,8 @@ Live the moment, each and every day
 
 I don't know why
 I cannot see the beauty in front of me
-I cannot...  I don't know why
+I cannot...
+I don't know why
 I cannot see the beauty in front of me
 (in front of me)
 
@@ -4266,10 +4335,11 @@ Right in front of you (right in front of you)
 This is what you've been looking for
 For a long, long time
 Make it real, make it right now (make it right now, make it right now)
-You've got to live it now`},{id:"set-me-free",t:"Set Me Free",artist:"House Boulevard",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/35LalB0qEQa7zcF2NgCq8H",sps:"https://open.spotify.com/search/Set%20Me%20Free%20House%20Boulevard",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/set-me-free.pdf",letra:`And the things you do
+You've got to live it now`},{id:"set-me-free",t:"Set Me Free",artist:"House Boulevard",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/35LalB0qEQa7zcF2NgCq8H",sps:"https://open.spotify.com/search/Set%20Me%20Free%20House%20Boulevard",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/set-me-free.pdf",letra:`And the things you do
 Time after time
 You made me blue
-Crying for help  But now we're through
+Crying for help
+But now we're through
 
 I was lost and despair
 But now I know
@@ -4285,7 +4355,7 @@ Come on somebody come on
 Rescue me
 Come on somebody come on
 
-Set me free`},{id:"thriller",t:"Thriller",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3S2R0EVwBSAVMd5UMgKTL0",sps:"https://open.spotify.com/search/Thriller%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/thriller.pdf",letra:`something evil's lurkin' in the dark
+Set me free`},{id:"thriller",t:"Thriller",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3S2R0EVwBSAVMd5UMgKTL0",sps:"https://open.spotify.com/search/Thriller%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/thriller.pdf",letra:`something evil's lurkin' in the dark
 Under the moonlight
 You see a sight that almost stops your heart
 
@@ -4325,7 +4395,8 @@ Inside a killerThriller tonight
 
 Night creatures call
 And the dead start to walk in their masquerade
-There's no escaping the jaws of the\u2019 alien this time   This is the end of your life
+There's no escaping the jaws of the\u2019 alien this time
+This is the end of your life
 
 They're out to get you
 There's demons closing in on every side
@@ -4357,7 +4428,8 @@ I'm gonna thrill you tonight
 Darkness falls across the land
 The midnight hour is close at hand
 Creatures crawl in search of blood
-To terrorize y'all's neighborhood  (I'm gonna thrill you tonight)
+To terrorize y'all's neighborhood
+(I'm gonna thrill you tonight)
 
 And whosoever shall be found
 Without the soul for getting down
@@ -4380,7 +4452,7 @@ Are closing in to seal your doom
 And though you fight to stay alive
 Your body starts to shiver
 for no mere mortal can resist
-the evil of the thriller`},{id:"ben",t:"Ben",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/451F57lzZPmlkTsqKqdmGg",sps:"https://open.spotify.com/search/Ben%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ben.pdf",letra:` need look no more
+the evil of the thriller`},{id:"ben",t:"Ben",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/451F57lzZPmlkTsqKqdmGg",sps:"https://open.spotify.com/search/Ben%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ben.pdf",letra:`need look no more
 We both found what we were looking for
 With a friend to call my own
 I'll never be alone
@@ -4388,15 +4460,17 @@ And you, my friend will see
 You've got a friend in me
 (You've got a friend in me)
 I used to say "I" and "me"
-Now it's "us", now it's "we"`},{id:"i-ll-be-there",t:"I'll Be There",artist:"The Jackson 5",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"",sps:"https://open.spotify.com/search/I%27ll%20Be%20There%20The%20Jackson%205",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-ll-be-there.pdf",letra:`We must bring salvation back
+Now it's "us", now it's "we"`},{id:"i-ll-be-there",t:"I'll Be There",artist:"The Jackson 5",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"",sps:"https://open.spotify.com/search/I%27ll%20Be%20There%20The%20Jackson%205",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-ll-be-there.pdf",letra:`We must bring salvation back
 Where there is love, I'll be there
 
 And oh - I'll be there to comfort you,
 Build my world of dreams around you
 I'm so glad that I found you
 I'll be there with a love that's strong
-I'll be your strength,      I'll keep holding on`},{id:"i-want-you-back",t:"I Want You Back",artist:"The Jackson 5",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/6iHDF2P52qJTQXBSLZWKAL",sps:"https://open.spotify.com/search/I%20Want%20You%20Back%20The%20Jackson%205",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-want-you-back.pdf",letra:`Uh-huh huh huh huh
-Let me tell ya now  Uh-huh
+I'll be your strength,
+I'll keep holding on`},{id:"i-want-you-back",t:"I Want You Back",artist:"The Jackson 5",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/6iHDF2P52qJTQXBSLZWKAL",sps:"https://open.spotify.com/search/I%20Want%20You%20Back%20The%20Jackson%205",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-want-you-back.pdf",letra:`Uh-huh huh huh huh
+Let me tell ya now
+Uh-huh
 When I had you to myself
 I didn't want you around
 Those pretty faces always made you
@@ -4412,7 +4486,7 @@ Won't you please let me
 (back to your heart)
 Oh darlin' I was blind to let you go
 (let you go baby)
-But now since I see you in his arms`},{id:"abc",t:"ABC",artist:"The Jackson 5",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"",sps:"https://open.spotify.com/search/ABC%20The%20Jackson%205",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/abc.pdf",letra:` to learn, girl
+But now since I see you in his arms`},{id:"abc",t:"ABC",artist:"The Jackson 5",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"",sps:"https://open.spotify.com/search/ABC%20The%20Jackson%205",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/abc.pdf",letra:`to learn, girl
 Things you never, never knew before...
 Like I before E except after C...
 And why 2 plus 2 makes 4
@@ -4427,7 +4501,7 @@ Easy as...
 123
 Or simple as...
 DO RE MI, ABC, 123
-Baby, you and me, girl! (2x)`},{id:"billie-jean",t:"Billie Jean",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/7J1uxwnxfQLu4APicE5Rnj",sps:"https://open.spotify.com/search/Billie%20Jean%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/billie-jean.pdf",letra:`From a movie scene
+Baby, you and me, girl! (2x)`},{id:"billie-jean",t:"Billie Jean",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/7J1uxwnxfQLu4APicE5Rnj",sps:"https://open.spotify.com/search/Billie%20Jean%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/billie-jean.pdf",letra:`From a movie scene
 I said: Don't mind, but what do you mean
 I am the one
 Gonna dance on the floor in the round
@@ -4451,15 +4525,18 @@ Be careful of what you do
 Billie Jean is not my lover
 She's just a girl who claims that I am the one
 But the kid is not my son
-She says I am the one, but the kid is not my son`},{id:"bad",t:"Bad",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3tS8q8SXxtrYSN8UgeQt6q",sps:"https://open.spotify.com/search/Bad%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bad.pdf",letra:` Gonna tell you right
+She says I am the one, but the kid is not my son`},{id:"bad",t:"Bad",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3tS8q8SXxtrYSN8UgeQt6q",sps:"https://open.spotify.com/search/Bad%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bad.pdf",letra:`Gonna tell you right
 Just show your face In broad daylight
 I'm telling you On how I feel
 Gonna hurt your mind Don't shoot to kill
 Come on. Come on.
-Lay it on me   All right...
+Lay it on me
+All right...
 
-I'm giving you  On count of three
-To show your stuff  Or let it be...
+I'm giving you
+On count of three
+To show your stuff
+Or let it be...
 
 I'm telling you Just watch your mouth
 I know your game What you're about
@@ -4476,7 +4553,8 @@ You know I'm bad, I'm bad. You know it.
 You know I'm bad, I'm bad.
 Come on, you know.
 (Bad bad-really, really bad)
-And the whole world has to answer right now Just to tell you once again,   Who's bad...`},{id:"beat-it",t:"Beat It",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3BovdzfaX4jb5KFQwoPfAw",sps:"https://open.spotify.com/search/Beat%20It%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/beat-it.pdf",letra:` don't you ever come around here
+And the whole world has to answer right now Just to tell you once again,
+Who's bad...`},{id:"beat-it",t:"Beat It",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3BovdzfaX4jb5KFQwoPfAw",sps:"https://open.spotify.com/search/Beat%20It%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/beat-it.pdf",letra:`don't you ever come around here
 Don't wanna see your face, you better disappear
 The fire's in their eyes and their words are really clear
 So beat it, just beat it
@@ -4492,7 +4570,7 @@ Showin' how funky and strong is your fight
 It doesn't matter who's wrong or right
 Just beat it, beat it
 Just beat it, beat it
-Just beat it, beat it`},{id:"ain-t-no-sunshine",t:"Ain't No Sunshine",artist:"Bill Withers",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/1k1Bqnv2R0uJXQN4u6LKYt",sps:"https://open.spotify.com/search/Ain%27t%20No%20Sunshine%20Bill%20Withers",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ain-t-no-sunshine.pdf",letra:`You ever want something
+Just beat it, beat it`},{id:"ain-t-no-sunshine",t:"Ain't No Sunshine",artist:"Bill Withers",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/1k1Bqnv2R0uJXQN4u6LKYt",sps:"https://open.spotify.com/search/Ain%27t%20No%20Sunshine%20Bill%20Withers",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ain-t-no-sunshine.pdf",letra:`You ever want something
 that you know you shouldn't have
 The more you know you shouldn't have it,
 The more you want it
@@ -4512,7 +4590,7 @@ Ain't no sunshine when she's gone
 It's not warm when she's away
 Ain't no sunshine when she's gone
 And she's always gone too long
-Anytime she goes away`},{id:"the-girl-is-mine",t:"The Girl Is Mine",artist:"Michael Jackson & Paul McCartney",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/4IT6vDuKprKl6jyVndlY8V",sps:"https://open.spotify.com/search/The%20Girl%20Is%20Mine%20Michael%20Jackson%20%26%20Paul%20McCartney",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/the-girl-is-mine.pdf",letra:`Every night she walks right in my dreams
+Anytime she goes away`},{id:"the-girl-is-mine",t:"The Girl Is Mine",artist:"Michael Jackson & Paul McCartney",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/4IT6vDuKprKl6jyVndlY8V",sps:"https://open.spotify.com/search/The%20Girl%20Is%20Mine%20Michael%20Jackson%20%26%20Paul%20McCartney",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/the-girl-is-mine.pdf",letra:`Every night she walks right in my dreams
 Since I met her from the start
 I\xB4m so proud I am the only one
 Who is special in her heart
@@ -4523,7 +4601,8 @@ I know she\xB4s mine
 Because the doggone girl is mine
 
 (Paul)
-I love you more than he  (Take you anywhere)
+I love you more than he
+(Take you anywhere)
 
 (Michael)
 But I love you endlessly (Loving we will share)
@@ -4536,7 +4615,7 @@ Two on the town
 But we both cannot have her
 So it\xB4s one or the other
 And one day you\xB4ll discover
-That she\xB4s my girl forever and ever`},{id:"you-are-not-alone",t:"You Are Not Alone",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3AoeaZs8dFemFJr3JdzOL0",sps:"https://open.spotify.com/search/You%20Are%20Not%20Alone%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/you-are-not-alone.pdf",letra:`Another day has gone I'm still all alone
+That she\xB4s my girl forever and ever`},{id:"you-are-not-alone",t:"You Are Not Alone",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3AoeaZs8dFemFJr3JdzOL0",sps:"https://open.spotify.com/search/You%20Are%20Not%20Alone%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/you-are-not-alone.pdf",letra:`Another day has gone I'm still all alone
 How could this be?
 You're not here with me
 You never said good-bye
@@ -4559,7 +4638,8 @@ Though we're far apart
 You're always in my heart
 You are not alone...
 
-...and girl you know that I'll   be there
+...and girl you know that I'll
+be there
 I'll be there...
 
 But you are not alone
@@ -4581,7 +4661,7 @@ You are not alone (You are always in my heart)
 I am here with you
 Though we're far apart
 You're always in my heart
-You are not alone...`},{id:"they-don-t-care-about-us",t:"They Don't Care About Us",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3wuCCNCnBhJlwkIJTBZFiv",sps:"https://open.spotify.com/search/They%20Don%27t%20Care%20About%20Us%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/they-don-t-care-about-us.pdf",letra:`Skin head
+You are not alone...`},{id:"they-don-t-care-about-us",t:"They Don't Care About Us",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/3wuCCNCnBhJlwkIJTBZFiv",sps:"https://open.spotify.com/search/They%20Don%27t%20Care%20About%20Us%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/they-don-t-care-about-us.pdf",letra:`Skin head
 Dead head
 Everybody
 Gone bad
@@ -4653,7 +4733,7 @@ In jail
 All I wanna say is that
 They don't really care about us
 All I wanna say is that
-They don't really care about us`},{id:"human-nature",t:"Human Nature",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/4cgjA7B4fJBHyB9Ya2bu0t",sps:"https://open.spotify.com/search/Human%20Nature%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/human-nature.pdf",letra:`Across the nighttime
+They don't really care about us`},{id:"human-nature",t:"Human Nature",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/4cgjA7B4fJBHyB9Ya2bu0t",sps:"https://open.spotify.com/search/Human%20Nature%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/human-nature.pdf",letra:`Across the nighttime
 The city winks a sleepless eye
 Hear her voice
 Shake my window
@@ -4684,7 +4764,7 @@ Why, why, tell 'em that it's human nature
 Why, why, does he do me that way
 If they say --
 Why, why, tell 'em that it's human nature
-Why, why , why`},{id:"black-or-white",t:"Black or White",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/7EsjkelQuoUlJXEw7SeVV4",sps:"https://open.spotify.com/search/Black%20or%20White%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/black-or-white.pdf",letra:`On a Saturday bang
+Why, why , why`},{id:"black-or-white",t:"Black or White",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/7EsjkelQuoUlJXEw7SeVV4",sps:"https://open.spotify.com/search/Black%20or%20White%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/black-or-white.pdf",letra:`On a Saturday bang
 Boy is that girl with you
 Yes we're one and the same
 
@@ -4692,7 +4772,8 @@ Now I believe in miracles
 And a miracle Has happened tonight
 
 But, IF You're thinkin' About my baby
-It don't matter if you're  Black or White
+It don't matter if you're
+Black or White
 
 They print my message In the Saturday sun
 I had to tell them I ain't second to none
@@ -4715,7 +4796,8 @@ Girl when the
 Goin' gets mean
 
 (L. T. B. Rap performance)
-Protection  For gangs, clubs And nations
+Protection
+For gangs, clubs And nations
 Causing grief in Human relations
 It's a turf war On a global scale
 I'd rather hear both sides Of the tale
@@ -4738,7 +4820,7 @@ It's black , it's white, whoo
 It's black, it's white
 It's tough for you
 To get by
-It's black , it's white, whoo`},{id:"heal-the-world",t:"Heal The World",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/7woW97CfcWaKtuC6W5BP2K",sps:"https://open.spotify.com/search/Heal%20The%20World%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/heal-the-world.pdf",letra:`And I know that it is love
+It's black , it's white, whoo`},{id:"heal-the-world",t:"Heal The World",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/7woW97CfcWaKtuC6W5BP2K",sps:"https://open.spotify.com/search/Heal%20The%20World%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/heal-the-world.pdf",letra:`And I know that it is love
 And this place could be much
 Brighter than tomorrow
 
@@ -4756,7 +4838,8 @@ Heal the world
 Make it a better place
 For you and for me
 And the entire human race
-There are,  people dying
+There are,
+people dying
 If you care enough for the living
 Make it a better place
 For you and for me
@@ -4807,7 +4890,7 @@ Make a better place for you and for me (3x)
 you and for me, you and for me, you and for me
 
 Heal the world we\u2019re living
-Say it before like children`},{id:"smooth-criminal",t:"Smooth Criminal",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/2bCQHF9gdG5BNDVuEIEnNk",sps:"https://open.spotify.com/search/Smooth%20Criminal%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/smooth-criminal.pdf",letra:`It was the sound of a crescendo
+Say it before like children`},{id:"smooth-criminal",t:"Smooth Criminal",artist:"Michael Jackson",pri:"Pop",tags:["Anos 80","Michael Jackson","Pop"],sp:"https://open.spotify.com/track/2bCQHF9gdG5BNDVuEIEnNk",sps:"https://open.spotify.com/search/Smooth%20Criminal%20Michael%20Jackson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/smooth-criminal.pdf",letra:`It was the sound of a crescendo
 He came into her apartment
 He left the bloodstains on the carpet
 She ran underneath the table
@@ -4841,7 +4924,8 @@ Are you ok annie?
 Annie are you ok? So, annie are you ok?
 Are you ok annie?
 You've been hit by
-You've been hit by -   a smooth criminal
+You've been hit by -
+a smooth criminal
 
 So they came into the outway
 It was sunday - what a black day
@@ -4913,7 +4997,8 @@ Dad gone it!
 Aaow!!!
 
 You've been hit by
-You've been hit by -   a smooth criminal`},{id:"do-you-wanna-dance",t:"Do You Wanna Dance?",artist:"Bobby Freeman / Johnny Rivers",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/1bTBlxlWsyYauMU5ZoSiL6",sps:"https://open.spotify.com/search/Do%20You%20Wanna%20Dance%3F%20Bobby%20Freeman%20/%20Johnny%20Rivers",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/do-you-wanna-dance.pdf",letra:`Do you wanna dance and hold my hand ?
+You've been hit by -
+a smooth criminal`},{id:"do-you-wanna-dance",t:"Do You Wanna Dance?",artist:"Bobby Freeman / Johnny Rivers",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/1bTBlxlWsyYauMU5ZoSiL6",sps:"https://open.spotify.com/search/Do%20You%20Wanna%20Dance%3F%20Bobby%20Freeman%20/%20Johnny%20Rivers",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/do-you-wanna-dance.pdf",letra:`Do you wanna dance and hold my hand ?
 Tell me that I'm your man
 Baby, do you wanna dance ?
 
@@ -4924,7 +5009,7 @@ Baby, do you wanna dance ? (2x)
 Girl now
 do you do you do you do you wanna dance ?
 Do you do you do you do you wanna dance ?
-Do you do you wanna dance ?`},{id:"stand-by-me",t:"Stand By Me",artist:"Ben E. King / John Lennon",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/3SdTKo2uVsxFblQjpScoHy",sps:"https://open.spotify.com/search/Stand%20By%20Me%20Ben%20E.%20King%20/%20John%20Lennon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/stand-by-me.pdf",letra:`When the night has come
+Do you do you wanna dance ?`},{id:"stand-by-me",t:"Stand By Me",artist:"Ben E. King / John Lennon",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/3SdTKo2uVsxFblQjpScoHy",sps:"https://open.spotify.com/search/Stand%20By%20Me%20Ben%20E.%20King%20/%20John%20Lennon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/stand-by-me.pdf",letra:`When the night has come
 And the land is dark
 And the moon is the only light we'll see
 
@@ -4941,7 +5026,7 @@ I won't cry, I won't cry, no I won't shed a tear
 Just as long as you stand, stand by me
 
 And darling, darling, stand by me, oh stand by me, oh stand now
-Stand by me, stand by me`},{id:"rock-and-roll-lullaby",t:"Rock and Roll Lullaby",artist:"B.J. Thomas",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/7de91j1ffIrsaQInG9PrzC",sps:"https://open.spotify.com/search/Rock%20and%20Roll%20Lullaby%20B.J.%20Thomas",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/rock-and-roll-lullaby.pdf",letra:`She was just sixteen and all alone
+Stand by me, stand by me`},{id:"rock-and-roll-lullaby",t:"Rock and Roll Lullaby",artist:"B.J. Thomas",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/7de91j1ffIrsaQInG9PrzC",sps:"https://open.spotify.com/search/Rock%20and%20Roll%20Lullaby%20B.J.%20Thomas",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rock-and-roll-lullaby.pdf",letra:`She was just sixteen and all alone
 When I came to be
 So we grew up together
 My mama child and me
@@ -4975,9 +5060,10 @@ Now just hold on tigh
 
 I can hear you mama, mama, mama, mama
 nothing loose my soul
-like the sound of the good old rock and roll lullaby`},{id:"put-your-records-on",t:"Put Your Records On",artist:"Corinne Bailey Rae",pri:"Balada",tags:["Balada"],sp:"",sps:"https://open.spotify.com/search/Put%20Your%20Records%20On%20Corinne%20Bailey%20Rae",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/put-your-records-on.pdf",letra:`Three little birds, sat on my window.
+like the sound of the good old rock and roll lullaby`},{id:"put-your-records-on",t:"Put Your Records On",artist:"Corinne Bailey Rae",pri:"Balada",tags:["Balada"],sp:"",sps:"https://open.spotify.com/search/Put%20Your%20Records%20On%20Corinne%20Bailey%20Rae",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/put-your-records-on.pdf",letra:`Three little birds, sat on my window.
 And they told me I don't need to worry.
-Summer came like cinnamon  So sweet,
+Summer came like cinnamon
+So sweet,
 Little girls double-dutch on the concrete.
 
 Maybe sometimes, we got it wrong, but it's alright
@@ -5019,7 +5105,7 @@ Just go ahead, let your hair down.
 Girl, put your records on, tell me your favorite song
 You go ahead, let your hair down
 Sapphire and faded jeans, I hope you get your dreams,
-Just go ahead, let your hair down.`},{id:"how-deep-is-your-love",t:"How Deep Is Your Love",artist:"Bee Gees",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/1MQAExS7Z3pwudMQTyTqU6",sps:"https://open.spotify.com/search/How%20Deep%20Is%20Your%20Love%20Bee%20Gees",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/how-deep-is-your-love.pdf",letra:`I know your eyes in the morning sun
+Just go ahead, let your hair down.`},{id:"how-deep-is-your-love",t:"How Deep Is Your Love",artist:"Bee Gees",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/1MQAExS7Z3pwudMQTyTqU6",sps:"https://open.spotify.com/search/How%20Deep%20Is%20Your%20Love%20Bee%20Gees",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/how-deep-is-your-love.pdf",letra:`I know your eyes in the morning sun
 I feel you touch me in the pouring rain
 and the moment that you wander far from me
 I wanna feel you in my arms again.
@@ -5042,7 +5128,7 @@ you're my saviour when I fall
 
 And you may not think I care for you
 when you know down inside that I really do
-and it's me you need to show How deep is your love?`},{id:"cruisin",t:"Cruisin'",artist:"Huey Lewis & Gwyneth Paltrow",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/4STDCDwgOj9zZADI8Q57Dr",sps:"https://open.spotify.com/search/Cruisin%27%20Huey%20Lewis%20%26%20Gwyneth%20Paltrow",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/cruisin.pdf",letra:`Baby let's cruise, away from here
+and it's me you need to show How deep is your love?`},{id:"cruisin",t:"Cruisin'",artist:"Huey Lewis & Gwyneth Paltrow",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/4STDCDwgOj9zZADI8Q57Dr",sps:"https://open.spotify.com/search/Cruisin%27%20Huey%20Lewis%20%26%20Gwyneth%20Paltrow",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/cruisin.pdf",letra:`Baby let's cruise, away from here
 Don't be confused, the way is clear
 And if you want it you got it forever
 This is not a one night stand, baby, yeah so
@@ -5074,7 +5160,8 @@ I love it when we're cruising together
 Cruise with me baby Uhhhh Uhhhh
 
 Ooooh
-Baby let's cruise  Let's flow, let's glide
+Baby let's cruise
+Let's flow, let's glide
 Ooooh let's open up, and go inside
 and if you want it you got it forever
 I could just stay here beside you and love you baby
@@ -5087,7 +5174,7 @@ I'm glad you're going my way
 I love it, when we're cruising together
 The music is played for love,
 Cruising is made for love
-I love it, when we're cruising together`},{id:"i-ll-be-over-you",t:"I'll Be Over You",artist:"Toto",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/1WeoeHh0TSzsApyJ6Q8OOK",sps:"https://open.spotify.com/search/I%27ll%20Be%20Over%20You%20Toto",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-ll-be-over-you.pdf",letra:`Some people live their dreams
+I love it, when we're cruising together`},{id:"i-ll-be-over-you",t:"I'll Be Over You",artist:"Toto",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/1WeoeHh0TSzsApyJ6Q8OOK",sps:"https://open.spotify.com/search/I%27ll%20Be%20Over%20You%20Toto",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-ll-be-over-you.pdf",letra:`Some people live their dreams
 Some people close their eyes
 Some people's destiny
 Passes by
@@ -5121,7 +5208,7 @@ As soon as my heart stops breakin'
 Anticipating
 Someday I\`ll be over you
 
-As soon as my heart`},{id:"fallen",t:"Fallen",artist:"Lauren Wood",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/02HtMmMgd4SYJx76Alv71n",sps:"https://open.spotify.com/search/Fallen%20Lauren%20Wood",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/fallen.pdf",letra:`I can't believe it, you're a dream comin' true.
+As soon as my heart`},{id:"fallen",t:"Fallen",artist:"Lauren Wood",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/02HtMmMgd4SYJx76Alv71n",sps:"https://open.spotify.com/search/Fallen%20Lauren%20Wood",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/fallen.pdf",letra:`I can't believe it, you're a dream comin' true.
 I can't believe how I have fallen for you.
 And I was not looking, was content to remain.
 And it's ironic to be back in the game.
@@ -5139,7 +5226,8 @@ I can't believe it, you're a dream comin' true.
 I can't believe how I have fallen for you.
 
 And I was not looking, was content to remain.
-And it's erotic to be back in the game.`},{id:"everything",t:"Everything",artist:"Michael Bubl\xE9",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/4T6HLdP6OcAtqC6tGnQelG",sps:"https://open.spotify.com/search/Everything%20Michael%20Bubl%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/everything.pdf",letra:`You're a falling star  You're the getaway car
+And it's erotic to be back in the game.`},{id:"everything",t:"Everything",artist:"Michael Bubl\xE9",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/4T6HLdP6OcAtqC6tGnQelG",sps:"https://open.spotify.com/search/Everything%20Michael%20Bubl%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/everything.pdf",letra:`You're a falling star
+You're the getaway car
 You're the line in the sand When I go too far
 You're the swimming pool
 On an august day
@@ -5155,9 +5243,11 @@ It's you It's you
 You make me sing You're every line
 You're every word You're everything
 
-You're a carousel  You're a wishing well
+You're a carousel
+You're a wishing well
 And you light me up When you ring my bell
-You're a mystery  You're from out of space
+You're a mystery
+You're from out of space
 You're every minute of my every day
 And I can't believe that i'm your man
 And I get to kiss you baby just because I can
@@ -5170,19 +5260,23 @@ It's you It's you
 You make me sing You're every line
 You're every word You're everything
 
-And so la la la la... la la la  So la la la la... la la
+And so la la la la... la la la
+So la la la la... la la
 
 And in this crazy life
 And through these crazy times
 It's you It's you
 You make me sing
-You're every line  You're every word
+You're every line
+You're every word
 You're everything...
 
-You're every song  And i sing along
+You're every song
+And i sing along
 Cause you're my everything
 
-Yeah, yeah  So la la la la... la la la`},{id:"easy",t:"Easy",artist:"Commodores / Lionel Richie",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/4Y3WqmBWmG23thvU9xEhMv",sps:"https://open.spotify.com/search/Easy%20Commodores%20/%20Lionel%20Richie",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/easy.pdf",letra:`Know it sounds funny
+Yeah, yeah
+So la la la la... la la la`},{id:"easy",t:"Easy",artist:"Commodores / Lionel Richie",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/4Y3WqmBWmG23thvU9xEhMv",sps:"https://open.spotify.com/search/Easy%20Commodores%20/%20Lionel%20Richie",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/easy.pdf",letra:`Know it sounds funny
 But, I just can't stand the pain
 Girl, I'm leaving you tomorrow
 Seems to me girl
@@ -5220,7 +5314,7 @@ I'm easy like Sunday morning, whoa
 'Cause I'm easy
 Easy like Sunday morning, yeah
 'Cause I'm easy
-Easy like Sunday morning`},{id:"dona",t:"Dona",artist:"Roupa Nova",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/4Bd8jSFBXHC1K7JAKW9Ojm",sps:"https://open.spotify.com/search/Dona%20Roupa%20Nova",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/dona.pdf",letra:`Sonhos, sempre verdadeiros
+Easy like Sunday morning`},{id:"dona",t:"Dona",artist:"Roupa Nova",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/4Bd8jSFBXHC1K7JAKW9Ojm",sps:"https://open.spotify.com/search/Dona%20Roupa%20Nova",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/dona.pdf",letra:`Sonhos, sempre verdadeiros
 Oh Dona desses animais
 Dona dos seus ideais
 
@@ -5265,7 +5359,7 @@ O poder que nos levanta
 A for\xE7a que nos faz cair
 Qual de n\xF3s ainda n\xE3o sabe
 Que isso tudo te faz
-Dona, Dona...`},{id:"eu-te-devoro",t:"Eu Te Devoro",artist:"Djavan",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/6wky1KFF0YvgtrFaH4ep9r",sps:"https://open.spotify.com/search/Eu%20Te%20Devoro%20Djavan",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/eu-te-devoro.pdf",letra:` Me confundem da cabe\xE7a aos p\xE9s
+Dona, Dona...`},{id:"eu-te-devoro",t:"Eu Te Devoro",artist:"Djavan",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/6wky1KFF0YvgtrFaH4ep9r",sps:"https://open.spotify.com/search/Eu%20Te%20Devoro%20Djavan",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/eu-te-devoro.pdf",letra:`Me confundem da cabe\xE7a aos p\xE9s
 Mas por dentro eu te devoro
 Teu olhar N\xE3o me diz exato quem tu \xE9s
 Mesmo assim eu te devoro
@@ -5289,7 +5383,7 @@ N\xE3o, n\xE3o.
 
 Eu quero mesmo \xE9 viver
 Pra esperar, esperar
-Devorar voc\xEA`},{id:"final-feliz",t:"Final Feliz",artist:"Jorge Arag\xE3o",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/1e0rtYbEK5Ozyf7Ch2hv2Q",sps:"https://open.spotify.com/search/Final%20Feliz%20Jorge%20Arag%C3%A3o",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/final-feliz.pdf",letra:`Eu n\xE3o tenho nada a esconder
+Devorar voc\xEA`},{id:"final-feliz",t:"Final Feliz",artist:"Jorge Arag\xE3o",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/1e0rtYbEK5Ozyf7Ch2hv2Q",sps:"https://open.spotify.com/search/Final%20Feliz%20Jorge%20Arag%C3%A3o",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/final-feliz.pdf",letra:`Eu n\xE3o tenho nada a esconder
 Agora \xE9 pra valer
 Haja o que houver.
 
@@ -5312,7 +5406,7 @@ Oh, meu bem,
 Acredite no final
 Feliz
 
-Meu amor, meu amor`},{id:"don-t-know-why",t:"Don't Know Why",artist:"Norah Jones",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/2wGjwatu3E4gkw2H6ZVTHA",sps:"https://open.spotify.com/search/Don%27t%20Know%20Why%20Norah%20Jones",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/don-t-know-why.pdf",letra:` 'til I saw the sun
+Meu amor, meu amor`},{id:"don-t-know-why",t:"Don't Know Why",artist:"Norah Jones",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/2wGjwatu3E4gkw2H6ZVTHA",sps:"https://open.spotify.com/search/Don%27t%20Know%20Why%20Norah%20Jones",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/don-t-know-why.pdf",letra:`'til I saw the sun
 I don't know why I didn't come
 I left you by the house of fun
 I don't know why I didn't come
@@ -5353,7 +5447,7 @@ I don't know why I didn't come
 Something has to make you run
 I don't know why I didn't come
 I feel as empty as a drum
-I don't know why I didn't come`},{id:"besame-mucho",t:"B\xE9same Mucho",artist:"",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/3llKUN9le04V1enu8MHudF",sps:"https://open.spotify.com/search/B%C3%A9same%20Mucho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/besame-mucho.pdf",letra:`B\xE9same, b\xE9same mucho
+I don't know why I didn't come`},{id:"besame-mucho",t:"B\xE9same Mucho",artist:"",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/3llKUN9le04V1enu8MHudF",sps:"https://open.spotify.com/search/B%C3%A9same%20Mucho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/besame-mucho.pdf",letra:`B\xE9same, b\xE9same mucho
 como si fuera esta noche
 la \xFAltima vez
 b\xE9same, b\xE9same mucho
@@ -5372,7 +5466,7 @@ tenerte a mi lado
 verte junto a mi
 piensa que tal vez ma\xF1ana
 yo ya estar\xE9 lejos
-muy lejos de ti`},{id:"i-ve-had-the-time-of-my-life",t:"(I've Had) The Time of My Life",artist:"Bill Medley & Jennifer Warnes",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/6W7ztLBiRzBN46ZaPAcQ0F",sps:"https://open.spotify.com/search/%28I%27ve%20Had%29%20The%20Time%20of%20My%20Life%20Bill%20Medley%20%26%20Jennifer%20Warnes",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-ve-had-the-time-of-my-life.pdf",letra:`Now I've had the time of my life
+muy lejos de ti`},{id:"i-ve-had-the-time-of-my-life",t:"(I've Had) The Time of My Life",artist:"Bill Medley & Jennifer Warnes",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/6W7ztLBiRzBN46ZaPAcQ0F",sps:"https://open.spotify.com/search/%28I%27ve%20Had%29%20The%20Time%20of%20My%20Life%20Bill%20Medley%20%26%20Jennifer%20Warnes",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-ve-had-the-time-of-my-life.pdf",letra:`Now I've had the time of my life
 No, I never felt like this before
 Yes, I swear it's the true
 And I owe it all to you
@@ -5390,7 +5484,8 @@ There's no way we could disguise it
 Secretly
 So we take each other's hand
 'Cause we seem to understand
-The urgency  Just remember
+The urgency
+Just remember
 
 You're the one thing
 I can't get enough of
@@ -5403,7 +5498,8 @@ And I owe it all to you
 'Cause I had the time of my life
 And I've searched through every open door
 Till I've found the truth
-and I owe it all to you  hey baby
+and I owe it all to you
+hey baby
 
 With my body and soul
 I want you more than you'll ever know
@@ -5427,7 +5523,7 @@ And I owe it all to you
 'Cause I had the time of my life
 And I've searched through every open door
 Till I've found the truth
-And I owe it all to you`},{id:"unforgettable",t:"Unforgettable",artist:"Nat King Cole",pri:"Baile",tags:["Baile","Fox"],sp:"",sps:"https://open.spotify.com/search/Unforgettable%20Nat%20King%20Cole",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/unforgettable.pdf",letra:`Unforgettable, that's what you are
+And I owe it all to you`},{id:"unforgettable",t:"Unforgettable",artist:"Nat King Cole",pri:"Baile",tags:["Baile","Fox"],sp:"",sps:"https://open.spotify.com/search/Unforgettable%20Nat%20King%20Cole",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/unforgettable.pdf",letra:`Unforgettable, that's what you are
 Unforgettable though near or far
 Like a song of love that clings to me
 How the thought of you that stings to me
@@ -5443,7 +5539,7 @@ Unforgettable in every way
 And forever more, that's how you'll stay
 That's why, darling, it's incredible
 That someone so unforgettable
-Thinks that I am unforgettable too`},{id:"the-way-you-look-tonight",t:"The Way You Look Tonight",artist:"Rod Stewart",pri:"Baile",tags:["Baile","Fox"],sp:"https://open.spotify.com/track/7hP1DiP1l4y2zU5HxurVo3",sps:"https://open.spotify.com/search/The%20Way%20You%20Look%20Tonight%20Rod%20Stewart",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/the-way-you-look-tonight.pdf",letra:`Some day, when I'm awfully low
+Thinks that I am unforgettable too`},{id:"the-way-you-look-tonight",t:"The Way You Look Tonight",artist:"Rod Stewart",pri:"Baile",tags:["Baile","Fox"],sp:"https://open.spotify.com/track/7hP1DiP1l4y2zU5HxurVo3",sps:"https://open.spotify.com/search/The%20Way%20You%20Look%20Tonight%20Rod%20Stewart",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/the-way-you-look-tonight.pdf",letra:`Some day, when I'm awfully low
 When the world is cold
 I will feel a glow just thinking of you
 And the way you look tonight
@@ -5476,7 +5572,7 @@ Won't you please arrange it?
 Just the way you look tonight
 Just the way you look tonight
 Darling
-Just the way you look tonight`},{id:"close-to-you",t:"Close To You",artist:"The Carpenters",pri:"Baile",tags:["Baile","Fox"],sp:"",sps:"https://open.spotify.com/search/Close%20To%20You%20The%20Carpenters",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/close-to-you.pdf",letra:`WHY DO BIRDS SUDDENLY APPEAR
+Just the way you look tonight`},{id:"close-to-you",t:"Close To You",artist:"The Carpenters",pri:"Baile",tags:["Baile","Fox"],sp:"",sps:"https://open.spotify.com/search/Close%20To%20You%20The%20Carpenters",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/close-to-you.pdf",letra:`WHY DO BIRDS SUDDENLY APPEAR
 EVERY TIME YOU ARE NEAR?
 JUST LIKE ME, THEY LONG TO BE
 CLOSE TO YOU
@@ -5511,7 +5607,7 @@ JUST LIKE ME, THEY LONG TO BE
 CLOSE TO YOU
 
 JUST LIKE ME, THEY LONG TO BE
-CLOSE TO YOU`},{id:"can-t-smile-without-you",t:"Can't Smile Without You",artist:"Barry Manilow",pri:"Baile",tags:["Baile","Fox"],sp:"https://open.spotify.com/track/7qUTZEf6bgiApJEXpMAH5y",sps:"https://open.spotify.com/search/Can%27t%20Smile%20Without%20You%20Barry%20Manilow",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/can-t-smile-without-you.pdf",letra:`You know I can't smile without you
+CLOSE TO YOU`},{id:"can-t-smile-without-you",t:"Can't Smile Without You",artist:"Barry Manilow",pri:"Baile",tags:["Baile","Fox"],sp:"https://open.spotify.com/track/7qUTZEf6bgiApJEXpMAH5y",sps:"https://open.spotify.com/search/Can%27t%20Smile%20Without%20You%20Barry%20Manilow",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/can-t-smile-without-you.pdf",letra:`You know I can't smile without you
 I can't smile without you
 I can't laugh and I can't sing
 I'm finding it hard to do anything
@@ -5545,7 +5641,7 @@ I'm finding it hard to do anything
 You see I feel glad when you're glad
 I feel sad when you're sad
 If you only knew what I'm going through
-I just can't smile without you`},{id:"i-left-my-heart-in-san-francisco",t:"I Left My Heart In San Francisco",artist:"Tony Bennett",pri:"Baile",tags:["Baile","Fox"],sp:"https://open.spotify.com/track/1bYItjcPRtxZs6Ir71O5RB",sps:"https://open.spotify.com/search/I%20Left%20My%20Heart%20In%20San%20Francisco%20Tony%20Bennett",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-left-my-heart-in-san-francisco.pdf",letra:`The loveliness of Paris
+I just can't smile without you`},{id:"i-left-my-heart-in-san-francisco",t:"I Left My Heart In San Francisco",artist:"Tony Bennett",pri:"Baile",tags:["Baile","Fox"],sp:"https://open.spotify.com/track/1bYItjcPRtxZs6Ir71O5RB",sps:"https://open.spotify.com/search/I%20Left%20My%20Heart%20In%20San%20Francisco%20Tony%20Bennett",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-left-my-heart-in-san-francisco.pdf",letra:`The loveliness of Paris
 seems somehow sadly gay
 The glory that was Rome
 is of another day
@@ -5562,7 +5658,7 @@ I don't care!
 My love waits there... in San Francisco
 Above the blue and windy sea
 When I come home to you, San Francisco,
-your golden sun will shine for me!`},{id:"hello-detroit",t:"Hello Detroit",artist:"Sammy Davis Jr.",pri:"Baile",tags:["Baile","Fox","Jazz","Standard"],sp:"https://open.spotify.com/track/3Lj6rIJeRhQoiZp765IYUM",sps:"https://open.spotify.com/search/Hello%20Detroit%20Sammy%20Davis%20Jr.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/hello-detroit.pdf",letra:`Hello Detroit
+your golden sun will shine for me!`},{id:"hello-detroit",t:"Hello Detroit",artist:"Sammy Davis Jr.",pri:"Baile",tags:["Baile","Fox","Jazz","Standard"],sp:"https://open.spotify.com/track/3Lj6rIJeRhQoiZp765IYUM",sps:"https://open.spotify.com/search/Hello%20Detroit%20Sammy%20Davis%20Jr.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/hello-detroit.pdf",letra:`Hello Detroit
 You've won my heart
 Your renaissance, and waterfronts
 Give you a flare of your own
@@ -5571,10 +5667,12 @@ Hug and kissable you
 You're alive with so much feeling
 And I will always, be there for you
 I will say, a little prayer for you
-And I will always care for you  hello
+And I will always care for you
+hello
 
 Hello Detroit You've touched my soul
-Thanks for the memories  I cherish so
+Thanks for the memories
+I cherish so
 
 Winter, Spring, Summer and Fall
 You've got it all
@@ -5588,8 +5686,10 @@ Greektown after dark
 You instill in the young, the will to become
 Stars and champions
 
-Hello my friend  How have you been?
-It's in the air  It's everywhere
+Hello my friend
+How have you been?
+It's in the air
+It's everywhere
 The magical touch of you
 
 Irresistible you Hug and kissable you
@@ -5599,13 +5699,15 @@ And I will always be there for you
 I will say a little prayer for you
 I will always care for you
 
-Hello  Big D  Motor City
+Hello
+Big D
+Motor City
 And the Motown sound that's got the whole world singin'
 
 I will always be there for you
 I will always say a little prayer for you
 I will always care for you
-Hello Detroit`},{id:"just-a-gigolo",t:"Just A Gigolo",artist:"David Lee Roth",pri:"Baile",tags:["Baile","Fox","Jazz","Standard"],sp:"https://open.spotify.com/track/0QcIphdyZIVgFvW7ijEiPX",sps:"https://open.spotify.com/search/Just%20A%20Gigolo%20David%20Lee%20Roth",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/just-a-gigolo.pdf",letra:`I 'm just a gigolo, and everywhere I go,
+Hello Detroit`},{id:"just-a-gigolo",t:"Just A Gigolo",artist:"David Lee Roth",pri:"Baile",tags:["Baile","Fox","Jazz","Standard"],sp:"https://open.spotify.com/track/0QcIphdyZIVgFvW7ijEiPX",sps:"https://open.spotify.com/search/Just%20A%20Gigolo%20David%20Lee%20Roth",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/just-a-gigolo.pdf",letra:`I 'm just a gigolo, and everywhere I go,
 People know the part I'm playin'.
 Pay for every dance, sellin' each romance,
 Ooohh what they're sayin'.
@@ -5619,7 +5721,7 @@ Life goes on without me. (Volta capo)
 I ain't got nobody, nobody, cares for me,
 Nobody, nobody, cares for me.
 I'm so sad and lonely, sad and lonely, sad and lonely
-Won't some sweet mama come and take a chance with me? Cause I ain't so bad.`},{id:"beauty-and-the-beast",t:"Beauty and the Beast",artist:"Celine Dion & Peabo Bryson",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/7B3UAPLYAbwXVgbHSKEaTw",sps:"https://open.spotify.com/search/Beauty%20and%20the%20Beast%20Celine%20Dion%20%26%20Peabo%20Bryson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/beauty-and-the-beast.pdf",letra:`Tale as old as time True as it can be
+Won't some sweet mama come and take a chance with me? Cause I ain't so bad.`},{id:"beauty-and-the-beast",t:"Beauty and the Beast",artist:"Celine Dion & Peabo Bryson",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/7B3UAPLYAbwXVgbHSKEaTw",sps:"https://open.spotify.com/search/Beauty%20and%20the%20Beast%20Celine%20Dion%20%26%20Peabo%20Bryson",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/beauty-and-the-beast.pdf",letra:`Tale as old as time True as it can be
 Barely even friends Then somebody bends
 Unexpectedly
 
@@ -5627,11 +5729,13 @@ Just a little change Small, to say the least
 Both a little scared Neither one prepared
 Beauty and the Beast
 
-Ever just the same  Ever a surprise
+Ever just the same
+Ever a surprise
 Ever as before Ever just as sure
 As the sun will rise (Oooh, Oooh)
 
-Ever just the same  Ever a surprise
+Ever just the same
+Ever a surprise
 Ever as before Ever just as sure
 As the sun will rise (Oooh, Oooh)
 
@@ -5646,7 +5750,7 @@ Beauty and the Beast
 
 Tale as old as time Song as old as rhyme
 Beauty and the Beast
-Beauty and the Beast.`},{id:"endless-love",t:"Endless Love",artist:"Lionel Richie & Diana Ross",pri:"Balada",tags:["Balada"],sp:"",sps:"https://open.spotify.com/search/Endless%20Love%20Lionel%20Richie%20%26%20Diana%20Ross",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/endless-love.pdf",letra:`, There's only you in my life
+Beauty and the Beast.`},{id:"endless-love",t:"Endless Love",artist:"Lionel Richie & Diana Ross",pri:"Balada",tags:["Balada"],sp:"",sps:"https://open.spotify.com/search/Endless%20Love%20Lionel%20Richie%20%26%20Diana%20Ross",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/endless-love.pdf",letra:`, There's only you in my life
 The only thing that's right
 My first love,You're every breath that I take
 You're every step I make
@@ -5691,7 +5795,7 @@ This love I have inside
 And I'll give it all to you
 My love
 My love, my love
-My endless love`},{id:"hero",t:"Hero",artist:"Mariah Carey",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/5mgCMlxQW7fmHbrdJuowbB",sps:"https://open.spotify.com/search/Hero%20Mariah%20Carey",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/hero.pdf",letra:`, if you look inside your heart.
+My endless love`},{id:"hero",t:"Hero",artist:"Mariah Carey",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/5mgCMlxQW7fmHbrdJuowbB",sps:"https://open.spotify.com/search/Hero%20Mariah%20Carey",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/hero.pdf",letra:`, if you look inside your heart.
 You don't have to be afraid of what you are.
 There's an answer, if you reach into your soul,
 And the sorrow that you know will melt away.
@@ -5725,7 +5829,7 @@ Look inside you and be strong,
 And you'll finally see the truth, that a hero lies in you .
 
 That a hero lies in... you
-That a hero lies in... you`},{id:"after-the-love-has-gone",t:"After the Love Has Gone",artist:"Earth, Wind & Fire",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/3cfnGXJ9bmiWvFqEO6ff8B",sps:"https://open.spotify.com/search/After%20the%20Love%20Has%20Gone%20Earth%2C%20Wind%20%26%20Fire",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/after-the-love-has-gone.pdf",letra:`For a while to love was all we could do
+That a hero lies in... you`},{id:"after-the-love-has-gone",t:"After the Love Has Gone",artist:"Earth, Wind & Fire",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/3cfnGXJ9bmiWvFqEO6ff8B",sps:"https://open.spotify.com/search/After%20the%20Love%20Has%20Gone%20Earth%2C%20Wind%20%26%20Fire",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/after-the-love-has-gone.pdf",letra:`For a while to love was all we could do
 we were young and we knew
 and our eyes were alive
 Deep inside we knew our love was true
@@ -5791,7 +5895,7 @@ Can love that's lost be found
 Woh woh woh after the love has gone
 what used to be right is wrong
 Can love that's lost be found
-Woh woh woh`},{id:"emocoes",t:"Emo\xE7\xF5es",artist:"Roberto Carlos",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/0Uv6nESLwN1CsUUZMq2CD0",sps:"https://open.spotify.com/search/Emo%C3%A7%C3%B5es%20Roberto%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/emocoes.pdf",letra:`Quando eu estou aqui
+Woh woh woh`},{id:"emocoes",t:"Emo\xE7\xF5es",artist:"Roberto Carlos",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/0Uv6nESLwN1CsUUZMq2CD0",sps:"https://open.spotify.com/search/Emo%C3%A7%C3%B5es%20Roberto%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/emocoes.pdf",letra:`Quando eu estou aqui
 Eu vivo esse momento lindo
 Olhando pra voc\xEA
 E as mesmas emo\xE7\xF5es sentindo
@@ -5835,15 +5939,17 @@ O importante
 
 Se chorei Ou se sorri
 O importante
-\xC9 que emo\xE7\xF5es eu vivi`},{id:"they-can-t-take-that-away-from-me",t:"They Can't Take That Away From Me",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/1HtrTXnQiYUUz5nL0c0lRu",sps:"https://open.spotify.com/search/They%20Can%27t%20Take%20That%20Away%20From%20Me%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/they-can-t-take-that-away-from-me.pdf",letra:`The way you wear your hat
+\xC9 que emo\xE7\xF5es eu vivi`},{id:"they-can-t-take-that-away-from-me",t:"They Can't Take That Away From Me",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/1HtrTXnQiYUUz5nL0c0lRu",sps:"https://open.spotify.com/search/They%20Can%27t%20Take%20That%20Away%20From%20Me%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/they-can-t-take-that-away-from-me.pdf",letra:`The way you wear your hat
 The way you sip your tea
 The memory of all that
-No no  they can't take that away from me
+No no
+they can't take that away from me
 
 The way your smile just beams
 The way you sing off key
 The way you haunt my dreams
-No no  they can't take that away from me
+No no
+they can't take that away from me
 
 We may never
 Never never meet again, on that bumpy road to love
@@ -5867,7 +5973,7 @@ The way you changed my life
 Oh No they can't take that away from me
 No they can't take that away from me
 No they can't take that away from me
-No they can't take that away from me`},{id:"for-once-in-my-life",t:"For Once In My Life",artist:"Michael Bubl\xE9",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/0aei3EH5p7mzipPPAXxpzq",sps:"https://open.spotify.com/search/For%20Once%20In%20My%20Life%20Michael%20Bubl%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/for-once-in-my-life.pdf",letra:`For once in my life
+No they can't take that away from me`},{id:"for-once-in-my-life",t:"For Once In My Life",artist:"Michael Bubl\xE9",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/0aei3EH5p7mzipPPAXxpzq",sps:"https://open.spotify.com/search/For%20Once%20In%20My%20Life%20Michael%20Bubl%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/for-once-in-my-life.pdf",letra:`For once in my life
 I've got someone who needs me
 Someone I've needed so long
 For once unafraid
@@ -5899,7 +6005,7 @@ For once in my life
 I've got someone who needs me
 
 For once in my life
-I've got someone who needs me`},{id:"beyond-the-sea",t:"Beyond The Sea",artist:"Bobby Darin",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/3KzgdYUlqV6TOG7JCmx2Wg",sps:"https://open.spotify.com/search/Beyond%20The%20Sea%20Bobby%20Darin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/beyond-the-sea.pdf",letra:`Somewhere beyond the sea
+I've got someone who needs me`},{id:"beyond-the-sea",t:"Beyond The Sea",artist:"Bobby Darin",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/3KzgdYUlqV6TOG7JCmx2Wg",sps:"https://open.spotify.com/search/Beyond%20The%20Sea%20Bobby%20Darin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/beyond-the-sea.pdf",letra:`Somewhere beyond the sea
 Somewhere waiting for me
 My lover stands on golden sands
 And watches the ships that go sailing
@@ -5934,22 +6040,28 @@ And never again i'll go sailing
 And never again i'll go sailing
 
 And never again i'll go sailing
-Yeah`},{id:"all-of-me",t:"All of Me",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/44G3vprWyquCb0i6nDYJ4G",sps:"https://open.spotify.com/search/All%20of%20Me%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/all-of-me.pdf",letra:`  Why not take all of me?
+Yeah`},{id:"all-of-me",t:"All of Me",artist:"Frank Sinatra",pri:"Jazz/Standard",tags:["Jazz","Standard"],sp:"https://open.spotify.com/track/44G3vprWyquCb0i6nDYJ4G",sps:"https://open.spotify.com/search/All%20of%20Me%20Frank%20Sinatra",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/all-of-me.pdf",letra:`Why not take all of me?
 Can't you see?
-I'm no good     without you
+I'm no good
+without you
 
-Take my lips    I want to lose them
-Take this arms  I'll never use them
+Take my lips
+I want to lose them
+Take this arms
+I'll never use them
 
 Your goodbyes left me with eyes that cry
 How can I get along, without you?
 You got the part that once was my heart
-So, why not why not  take all of me?
+So, why not why not
+take all of me?
 
-All of me  Step of all of me?
+All of me
+Step of all of me?
 Can't you see?
 I'm a mess without you
-Take my lips    I want to lose them
+Take my lips
+I want to lose them
 Take this arms I'll never use them
 
 Your goodbye left me with eyes that I cry
@@ -5958,7 +6070,7 @@ And now that you took that part
 That used to be my heart
 
 You took the part that used to be my heart
-So, why not take all of me?`},{id:"proud-mary",t:"Proud Mary",artist:"Creedence Clearwater Revival",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Proud%20Mary%20Creedence%20Clearwater%20Revival",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/proud-mary.pdf",letra:`Left a good job in the city,
+So, why not take all of me?`},{id:"proud-mary",t:"Proud Mary",artist:"Creedence Clearwater Revival",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Proud%20Mary%20Creedence%20Clearwater%20Revival",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/proud-mary.pdf",letra:`Left a good job in the city,
 Working for The Man every night and day,
 And I never lost one minute of sleeping,
 Worrying 'bout the way things might have been.
@@ -5980,7 +6092,7 @@ People on the river are happy to give.
 
 Rolling, rolling, rolling on the river.
 Rolling, rolling, rolling on the river.
-Rolling, rolling, rolling on the river.`},{id:"twist-and-shout",t:"Twist and Shout",artist:"The Beatles",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Twist%20and%20Shout%20The%20Beatles",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/twist-and-shout.pdf",letra:`Well, shake it up baby now
+Rolling, rolling, rolling on the river.`},{id:"twist-and-shout",t:"Twist and Shout",artist:"The Beatles",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Twist%20and%20Shout%20The%20Beatles",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/twist-and-shout.pdf",letra:`Well, shake it up baby now
 Twist and shout
 Come on, come on, come, come on baby now
 Come on and work it on out
@@ -6007,7 +6119,7 @@ You know you twist, little girl
 You know you twist so fine
 Come on and twist a little closer now
 And let me know that you're mine
-Well shake it, shake it, shake it, baby now`},{id:"a-hard-day-s-night",t:"A Hard Day's Night",artist:"The Beatles",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/A%20Hard%20Day%27s%20Night%20The%20Beatles",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/a-hard-day-s-night.pdf",letra:`It's been a hard day's night
+Well shake it, shake it, shake it, baby now`},{id:"a-hard-day-s-night",t:"A Hard Day's Night",artist:"The Beatles",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/A%20Hard%20Day%27s%20Night%20The%20Beatles",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/a-hard-day-s-night.pdf",letra:`It's been a hard day's night
 And I've been workin' like a dog.
 It's been a hard day's night.
 I should be sleepin' like a log,
@@ -6063,7 +6175,7 @@ But when I get home to you,
 I find the things that you do
 Make me feel alright.
 You make me feel alright.
-You know I feel alright.`},{id:"i-wanna-hold-your-hand",t:"I Wanna Hold Your Hand",artist:"The Beatles",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/1HGM3X85ckLkD2G5PXPetB",sps:"https://open.spotify.com/search/I%20Wanna%20Hold%20Your%20Hand%20The%20Beatles",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-wanna-hold-your-hand.pdf",letra:`Oh yeah, I'll tell you something
+You know I feel alright.`},{id:"i-wanna-hold-your-hand",t:"I Wanna Hold Your Hand",artist:"The Beatles",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/1HGM3X85ckLkD2G5PXPetB",sps:"https://open.spotify.com/search/I%20Wanna%20Hold%20Your%20Hand%20The%20Beatles",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-wanna-hold-your-hand.pdf",letra:`Oh yeah, I'll tell you something
 I think you'll understand
 When I say that something
 I wanna hold your hand
@@ -6102,7 +6214,7 @@ I wanna hold your hand
 
 I wanna hold your hand
 I wanna hold your hand
-I wanna hold your hand`},{id:"stayin-alive",t:"Stayin' Alive",artist:"Bee Gees",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/3JsPk7ZPo3ruhkNVhknVvA",sps:"https://open.spotify.com/search/Stayin%27%20Alive%20Bee%20Gees",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/stayin-alive.pdf",letra:`Well, you can tell by the way I use my walk
+I wanna hold your hand`},{id:"stayin-alive",t:"Stayin' Alive",artist:"Bee Gees",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/3JsPk7ZPo3ruhkNVhknVvA",sps:"https://open.spotify.com/search/Stayin%27%20Alive%20Bee%20Gees",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/stayin-alive.pdf",letra:`Well, you can tell by the way I use my walk
 I'm a woman's man, no time to talk.
 Music loud and women warm,
 I've been kicked around since I was born.
@@ -6145,7 +6257,7 @@ I've been kicked around since I was born.
 And now it's all right, it's okay,
 you may look the other way.
 We can try to understand
-the New York Times' effect on man.`},{id:"summer-nights",t:"Summer Nights",artist:"Grease (trilha)",pri:"Rock",tags:["Anos 50/60","Grease","Rock","Trilha"],sp:"https://open.spotify.com/track/5Vrczz39CvlD3OGCa6utoA",sps:"https://open.spotify.com/search/Summer%20Nights%20Grease%20%28trilha%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/summer-nights.pdf",letra:`Summer loving had me a blast
+the New York Times' effect on man.`},{id:"summer-nights",t:"Summer Nights",artist:"Grease (trilha)",pri:"Rock",tags:["Anos 50/60","Grease","Rock","Trilha"],sp:"https://open.spotify.com/track/5Vrczz39CvlD3OGCa6utoA",sps:"https://open.spotify.com/search/Summer%20Nights%20Grease%20%28trilha%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/summer-nights.pdf",letra:`Summer loving had me a blast
 Summer loving happened so fast
 I met a girl crazy for me
 Met a boy cute as can be
@@ -6197,7 +6309,7 @@ Wonder what she's doing now
 
 Summer dreams ripped at the seams, but oh those summer nights
 
-Tell me more, tell me more`},{id:"you-re-the-one-that-i-want",t:"You're The One That I Want",artist:"Grease (trilha)",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/You%27re%20The%20One%20That%20I%20Want%20Grease%20%28trilha%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/you-re-the-one-that-i-want.pdf",letra:`I got chills. They\xB4re multiplyin
+Tell me more, tell me more`},{id:"you-re-the-one-that-i-want",t:"You're The One That I Want",artist:"Grease (trilha)",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/You%27re%20The%20One%20That%20I%20Want%20Grease%20%28trilha%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/you-re-the-one-that-i-want.pdf",letra:`I got chills. They\xB4re multiplyin
 And I\xB4m losin\xB4 control.
 Cause the power you\xB4re suplyin
 it\xB4s electrifyin\xB4!
@@ -6223,14 +6335,15 @@ I better shape up if I\xB4m gonna prove
 you better prove that my faith is justified.
 Are you sure? Yes, I\xB4m sure down deep inside.
 
-HAVAI 5.0`},{id:"johnny-b-goode",t:"Johnny B. Goode",artist:"Chuck Berry",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Johnny%20B.%20Goode%20Chuck%20Berry",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/johnny-b-goode.pdf",letra:`Deep down in Louisiana close to New Orleans
+HAVAI 5.0`},{id:"johnny-b-goode",t:"Johnny B. Goode",artist:"Chuck Berry",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"",sps:"https://open.spotify.com/search/Johnny%20B.%20Goode%20Chuck%20Berry",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/johnny-b-goode.pdf",letra:`Deep down in Louisiana close to New Orleans
 Way back up in the woods among the evergreens,
 There stood a log cabin made of earth and wood
 Where lived a country boy named Johnny B. Goode,
 Who never ever learned to read or write so well
 But he could play a guitar just like a ringin' a bell.
 
-Go Go  Go Johnny Go Go (x4)
+Go Go
+Go Johnny Go Go (x4)
 Johnny B. Goode
 
 He carry his guitar in a gunny sack,
@@ -6247,7 +6360,7 @@ And you will be the leader of a big ol' band
 Many people comin' from miles around,
 To hear you play your music till the sun go down,
 Maybe some day your name will be in lights sayin
-'Johnny B. Goode' tonight"`},{id:"pode-vir-quente-que-eu-estou-fervendo",t:"Pode Vir Quente Que Eu Estou Fervendo",artist:"Erasmo Carlos",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/44GQLbwu7BHs3goAyvMZEs",sps:"https://open.spotify.com/search/Pode%20Vir%20Quente%20Que%20Eu%20Estou%20Fervendo%20Erasmo%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/pode-vir-quente-que-eu-estou-fervendo.pdf",letra:`Se voc\xEA quer brigar
+'Johnny B. Goode' tonight"`},{id:"pode-vir-quente-que-eu-estou-fervendo",t:"Pode Vir Quente Que Eu Estou Fervendo",artist:"Erasmo Carlos",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/44GQLbwu7BHs3goAyvMZEs",sps:"https://open.spotify.com/search/Pode%20Vir%20Quente%20Que%20Eu%20Estou%20Fervendo%20Erasmo%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/pode-vir-quente-que-eu-estou-fervendo.pdf",letra:`Se voc\xEA quer brigar
 E acha que com isso estou sofrendo
 Se enganou meu bem
 Pode vir quente que eu estou fervendo (2x)
@@ -6255,7 +6368,7 @@ Pode vir quente que eu estou fervendo (2x)
 Pode tirar seu time de campo
 Que o meu cora\xE7\xE3o \xE9 do tamanho de um trem
 Iguais \xE0 voc\xEA j\xE1 apanhei mais de cem
-Pode vir quente que eu estou fervendo`},{id:"menina-linda",t:"Menina Linda",artist:"Renato e Seus Blue Caps",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/6V1OPeehmiZFs2gNHtCit8",sps:"https://open.spotify.com/search/Menina%20Linda%20Renato%20e%20Seus%20Blue%20Caps",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/menina-linda.pdf",letra:`Ah! Deixe essa boneca, fa\xE7a-me o favor
+Pode vir quente que eu estou fervendo`},{id:"menina-linda",t:"Menina Linda",artist:"Renato e Seus Blue Caps",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/6V1OPeehmiZFs2gNHtCit8",sps:"https://open.spotify.com/search/Menina%20Linda%20Renato%20e%20Seus%20Blue%20Caps",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/menina-linda.pdf",letra:`Ah! Deixe essa boneca, fa\xE7a-me o favor
 Deixe isso tudo e vem brincar de amor
 De amor, hei hei hei de amor
 
@@ -6267,7 +6380,7 @@ Sem ningu\xE9m, sem ningu\xE9m
 Menina linda eu lhe adoro ahhhh
 Menina pura como a flor
 Sua boneca vai quebrar AHHHH
-Mas viver\xE1 o nosso amor`},{id:"festa-de-arromba",t:"Festa de Arromba",artist:"Erasmo Carlos",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/3HYkvUm7u9z0CvRAhmxcRf",sps:"https://open.spotify.com/search/Festa%20de%20Arromba%20Erasmo%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/festa-de-arromba.pdf",letra:`Vejam s\xF3 que festa de arromba
+Mas viver\xE1 o nosso amor`},{id:"festa-de-arromba",t:"Festa de Arromba",artist:"Erasmo Carlos",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/3HYkvUm7u9z0CvRAhmxcRf",sps:"https://open.spotify.com/search/Festa%20de%20Arromba%20Erasmo%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/festa-de-arromba.pdf",letra:`Vejam s\xF3 que festa de arromba
 No outro dia eu fui parar
 Presentes no local,O r\xE1dio e a televis\xE3o
 Cinema, mil jornais Muita gente, confus\xE3o
@@ -6315,7 +6428,7 @@ Fumavam no jardim
 S\xE9rgio e Z\xE9 Ricardo Esbarravam em mim
 L\xE1 fora um corre corre Dos brotos do lugar
 Era o Ed Wilson que acabava de chegar
-Hey, Hey,(hey, hey) Que onda`},{id:"o-bom",t:"O Bom",artist:"Eduardo Ara\xFAjo",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/7lJKaJZYAhKGRL7riU1Wfx",sps:"https://open.spotify.com/search/O%20Bom%20Eduardo%20Ara%C3%BAjo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/o-bom.pdf",letra:`Ele \xC9 O Bom, \xC9 O Bom, \xC9 O Bom
+Hey, Hey,(hey, hey) Que onda`},{id:"o-bom",t:"O Bom",artist:"Eduardo Ara\xFAjo",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/7lJKaJZYAhKGRL7riU1Wfx",sps:"https://open.spotify.com/search/O%20Bom%20Eduardo%20Ara%C3%BAjo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/o-bom.pdf",letra:`Ele \xC9 O Bom, \xC9 O Bom, \xC9 O Bom
 
 Ah!, Meu Carro \xC9 Vermelho, \u2028N\xE3o Uso Espelho Pra Me Pentear
 Botinha Sem Meia
@@ -6328,7 +6441,7 @@ Quando Eu Apare\xE7o O Coment\xE1rio \xC9 Geral, Ele \xC9 O Bom, \xC9 O BomDemai
 
 Ter Muitas Garotas Para Mim \xC9 Normal, Eu Sou O Bom, Entre Os DezMais
 
-Ele \xC9 O Bom, \xC9 O Bom, \xC9 O Bom`},{id:"rua-augusta",t:"Rua Augusta",artist:"Roberto Carlos",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/4PrpXWFJHkbHeRABCjguU0",sps:"https://open.spotify.com/search/Rua%20Augusta%20Roberto%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/rua-augusta.pdf",letra:` a 120 por hora
+Ele \xC9 O Bom, \xC9 O Bom, \xC9 O Bom`},{id:"rua-augusta",t:"Rua Augusta",artist:"Roberto Carlos",pri:"Rock",tags:["Anos 50/60","Rock"],sp:"https://open.spotify.com/track/4PrpXWFJHkbHeRABCjguU0",sps:"https://open.spotify.com/search/Rua%20Augusta%20Roberto%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rua-augusta.pdf",letra:`a 120 por hora
 Botei a turma toda do passeio pra fora
 Fiz curva em duas rodas sem usar a buzina
 Parei a quatro dedos da vitrina
@@ -6349,14 +6462,14 @@ Toquei a 130 com destino \xE0 cidade
 No Anhangaba\xFA eu botei mais velocidade
 Com tr\xEAs pneus carecas derrapando na raia
 Subi a galeria Prestes Maia Tremend\xE3o
-Hay, hay, Johnny Hay, hay, Alfredo`},{id:"on-the-floor",t:"On The Floor",artist:"Jennifer Lopez feat. Pitbull",pri:"Francesa",tags:["Francesa","Internacional"],sp:"",sps:"https://open.spotify.com/search/On%20The%20Floor%20Jennifer%20Lopez%20feat.%20Pitbull",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/on-the-floor.pdf",letra:` and stay out on the floor
+Hay, hay, Johnny Hay, hay, Alfredo`},{id:"on-the-floor",t:"On The Floor",artist:"Jennifer Lopez feat. Pitbull",pri:"Francesa",tags:["Francesa","Internacional"],sp:"",sps:"https://open.spotify.com/search/On%20The%20Floor%20Jennifer%20Lopez%20feat.%20Pitbull",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/on-the-floor.pdf",letra:`and stay out on the floor
 Dance the night away
 Grab somebody drink a little more
 
 La la la la la la la la la la la la la la
 Tonight we gon' be it on the floor
 La la la la la la la la la la la la la la
-Tonight we gon' be it on the floor`},{id:"chorando-se-foi-llorando-se-fue-lambada",t:"Chorando Se Foi (Llorando Se Fue / Lambada)",artist:"Ivete Sangalo",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/6xepovPqjvrkEw9Y5AMmTm",sps:"https://open.spotify.com/search/Chorando%20Se%20Foi%20%28Llorando%20Se%20Fue%20/%20Lambada%29%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/chorando-se-foi-llorando-se-fue-lambada.pdf",letra:`Chorando se foi Quem um dia s\xF3 me fez chorar
+Tonight we gon' be it on the floor`},{id:"chorando-se-foi-llorando-se-fue-lambada",t:"Chorando Se Foi (Llorando Se Fue / Lambada)",artist:"Ivete Sangalo",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/6xepovPqjvrkEw9Y5AMmTm",sps:"https://open.spotify.com/search/Chorando%20Se%20Foi%20%28Llorando%20Se%20Fue%20/%20Lambada%29%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/chorando-se-foi-llorando-se-fue-lambada.pdf",letra:`Chorando se foi Quem um dia s\xF3 me fez chorar
 Chorando se foi Quem um dia s\xF3 me fez chorar
 
 Chorando estar\xE1 Ao lembrar de um amor
@@ -6370,7 +6483,8 @@ A recorda\xE7\xE3o Vai estar com ele aonde for
 Chorando estar\xE1 Ao lembrar de um amor
 Que um dia n\xE3o soube cuidar
 Chorando estar\xE1 Ao lembrar de um amor
-Que um dia n\xE3o soube cuidar  (solo volta)`},{id:"c-est-une-bossa-nova",t:"C'est Une Bossa Nova",artist:"",pri:"Francesa",tags:["Francesa","Internacional"],sp:"",sps:"https://open.spotify.com/search/C%27est%20Une%20Bossa%20Nova",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/c-est-une-bossa-nova.pdf",letra:`C'est une bossa nova,
+Que um dia n\xE3o soube cuidar
+(solo volta)`},{id:"c-est-une-bossa-nova",t:"C'est Une Bossa Nova",artist:"",pri:"Francesa",tags:["Francesa","Internacional"],sp:"",sps:"https://open.spotify.com/search/C%27est%20Une%20Bossa%20Nova",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/c-est-une-bossa-nova.pdf",letra:`C'est une bossa nova,
 Que j'ai dans\xE9 avec toi.
 Je n'me souviens plus tr\xE8s bien o\xF9 \xE7a.
 
@@ -6393,7 +6507,7 @@ Je me souviens que je dansais.
 
 C'est une bossa nova,
 Que j'ai dans\xE9 avec toi.
-Je n'me souviens plus tr\xE8s bien o\xF9 \xE7a.`},{id:"for-me-formidable",t:"For Me Formidable",artist:"Charles Aznavour",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/17VWTx7LD7liGlpnlGhUbn",sps:"https://open.spotify.com/search/For%20Me%20Formidable%20Charles%20Aznavour",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/for-me-formidable.pdf",letra:`You are the one for me, for me, for me, formidable
+Je n'me souviens plus tr\xE8s bien o\xF9 \xE7a.`},{id:"for-me-formidable",t:"For Me Formidable",artist:"Charles Aznavour",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/17VWTx7LD7liGlpnlGhUbn",sps:"https://open.spotify.com/search/For%20Me%20Formidable%20Charles%20Aznavour",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/for-me-formidable.pdf",letra:`You are the one for me, for me, for me, formidable
 You are my love very, very, very, v\xE9ritable
 Et je voudrais pouvoir un jour enfin te le dire
 Te l' \xE9crire
@@ -6425,10 +6539,11 @@ Darling, I want you
 Et puis le reste on s'en fout
 You are the one for me, for me, for me, formidable
 
-Je me demande m\xEAme  Pourquoi je t'aime
+Je me demande m\xEAme
+Pourquoi je t'aime
 Toi qui te moques de moi et de tout
 Avec ton air canaille, canaille, canaille
-How can I love you`},{id:"non-je-ne-regrette-rien",t:"Non, Je Ne Regrette Rien",artist:"\xC9dith Piaf",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/3dkIE8P7hvl3tHl9KSb6dA",sps:"https://open.spotify.com/search/Non%2C%20Je%20Ne%20Regrette%20Rien%20%C3%89dith%20Piaf",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/non-je-ne-regrette-rien.pdf",letra:`Non, rien de rien
+How can I love you`},{id:"non-je-ne-regrette-rien",t:"Non, Je Ne Regrette Rien",artist:"\xC9dith Piaf",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/3dkIE8P7hvl3tHl9KSb6dA",sps:"https://open.spotify.com/search/Non%2C%20Je%20Ne%20Regrette%20Rien%20%C3%89dith%20Piaf",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/non-je-ne-regrette-rien.pdf",letra:`Non, rien de rien
 Non, je ne regrette rien
 Ni le bien qu'on m'a fait, ni le mal
 Tout \xE7a m'est bien \xE9gal
@@ -6436,13 +6551,13 @@ Tout \xE7a m'est bien \xE9gal
 Non, rien de rien
 Non, je ne regrette rien
 C'est pay\xE9, balay\xE9, oubli\xE9
-Je me fous du pass\xE9`},{id:"besame-mucho-versao-francesa",t:"B\xE9same Mucho (vers\xE3o francesa)",artist:"",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/53aIKFz4e1WM7FXpnM2agN",sps:"https://open.spotify.com/search/B%C3%A9same%20Mucho%20%28vers%C3%A3o%20francesa%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/besame-mucho-versao-francesa.pdf",letra:` un autre pays \xE7a veut dire embrasse-moi
+Je me fous du pass\xE9`},{id:"besame-mucho-versao-francesa",t:"B\xE9same Mucho (vers\xE3o francesa)",artist:"",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/53aIKFz4e1WM7FXpnM2agN",sps:"https://open.spotify.com/search/B%C3%A9same%20Mucho%20%28vers%C3%A3o%20francesa%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/besame-mucho-versao-francesa.pdf",letra:`un autre pays \xE7a veut dire embrasse-moi
 
 Besame besame mucho
 Toute ma vie je voudrais
 la chanter avec toi
 
-Besame, besame mucho`},{id:"bye-bye",t:"Bye Bye",artist:"Dalida",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/4r8lRYnoOGdEi6YyI5OC1o",sps:"https://open.spotify.com/search/Bye%20Bye%20Dalida",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bye-bye.pdf",letra:`Bye bye ce n'est pas un adieu
+Besame, besame mucho`},{id:"bye-bye",t:"Bye Bye",artist:"Dalida",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/4r8lRYnoOGdEi6YyI5OC1o",sps:"https://open.spotify.com/search/Bye%20Bye%20Dalida",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bye-bye.pdf",letra:`Bye bye ce n'est pas un adieu
 Bye bye c'est un mot merveilleux
 Qu'on dit quand on se quitte en chantant
 Qu'on se reverra dans pas longtemps
@@ -6498,9 +6613,10 @@ C'est un mot merveilleux
 Qu'on dit quand on se quitte en chantant
 Qu'on se reverra dans pas longtemps
 Ciao ciao Ce n'est pas un adieu
-Ciao ciao  C'est un mot merveilleux
+Ciao ciao
+C'est un mot merveilleux
 Qui rend moins triste tous les d\xE9parts
-Enfin c'est un au revoir (2x)`},{id:"hello",t:"Hello",artist:"Martin Solveig & Dragonette",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/4c0iBlCPyLs5luOY8NWCVd",sps:"https://open.spotify.com/search/Hello%20Martin%20Solveig%20%26%20Dragonette",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/hello.pdf",letra:` and get along with you
+Enfin c'est un au revoir (2x)`},{id:"hello",t:"Hello",artist:"Martin Solveig & Dragonette",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/4c0iBlCPyLs5luOY8NWCVd",sps:"https://open.spotify.com/search/Hello%20Martin%20Solveig%20%26%20Dragonette",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/hello.pdf",letra:`and get along with you
 Hello
 It doesn't really mean that I'm into you
 Hello
@@ -6518,7 +6634,7 @@ Its alright I'm getting dizzy just enjoy the party
 Its okay with me if you don't have that much to say, hey
 
 Kinda like this thing but there's something you should know
-I just came to say hello`},{id:"sexy-and-i-know-it",t:"Sexy and I Know It",artist:"LMFAO",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Sexy%20and%20I%20Know%20It%20LMFAO",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/sexy-and-i-know-it.pdf",letra:`Girl look at that body(3x)
+I just came to say hello`},{id:"sexy-and-i-know-it",t:"Sexy and I Know It",artist:"LMFAO",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Sexy%20and%20I%20Know%20It%20LMFAO",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/sexy-and-i-know-it.pdf",letra:`Girl look at that body(3x)
 I work out (2x)
 
 When I walk in the spot
@@ -6533,9 +6649,12 @@ I'm sexy and I know it (2x)
 Wiggle, wiggle, wiggle, wiggle, yeah...
 
 Do the wiggle man
-I do the wiggle man  Yeah
+I do the wiggle man
+Yeah
 
-I'm sexy and I know it  hey  yeah
+I'm sexy and I know it
+hey
+yeah
 Girl look at that body
 Girl look at that body
 Girl look at that body I work out (2x)
@@ -6543,7 +6662,7 @@ Party rock!
 Shake That !
 
 Party rock!
-Let's go!`},{id:"party-rock-anthem",t:"Party Rock Anthem",artist:"LMFAO",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Party%20Rock%20Anthem%20LMFAO",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/party-rock-anthem.pdf",letra:`Everybody just have a good time
+Let's go!`},{id:"party-rock-anthem",t:"Party Rock Anthem",artist:"LMFAO",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Party%20Rock%20Anthem%20LMFAO",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/party-rock-anthem.pdf",letra:`Everybody just have a good time
 And we gonna make you lose your mind
 Everybody just have a good time
 
@@ -6552,13 +6671,13 @@ Everybody just have a good time
 And we gonna make you lose your mind
 We just wanna see yaa!
 
-Shake That !`},{id:"take-over-control",t:"Take Over Control",artist:"Afrojack feat. Eva Simons",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/5DdDbJvoaT8fqQMJkiGg4T",sps:"https://open.spotify.com/search/Take%20Over%20Control%20Afrojack%20feat.%20Eva%20Simons",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/take-over-control.pdf",letra:` Take over control
+Shake That !`},{id:"take-over-control",t:"Take Over Control",artist:"Afrojack feat. Eva Simons",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/5DdDbJvoaT8fqQMJkiGg4T",sps:"https://open.spotify.com/search/Take%20Over%20Control%20Afrojack%20feat.%20Eva%20Simons",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/take-over-control.pdf",letra:`Take over control
 Plug it in and turn me on
 
 I want you to
 Take over control (3x)
 Plug it in and turn me on
-Ohhh ohhh Plug it in and turn me on (2x)`},{id:"getting-over-you",t:"Getting Over You",artist:"David Guetta feat. Chris Willis",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/0QFhSpTIEGnv7F4VxHOvKA",sps:"https://open.spotify.com/search/Getting%20Over%20You%20David%20Guetta%20feat.%20Chris%20Willis",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/getting-over-you.pdf",letra:` right now,
+Ohhh ohhh Plug it in and turn me on (2x)`},{id:"getting-over-you",t:"Getting Over You",artist:"David Guetta feat. Chris Willis",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/0QFhSpTIEGnv7F4VxHOvKA",sps:"https://open.spotify.com/search/Getting%20Over%20You%20David%20Guetta%20feat.%20Chris%20Willis",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/getting-over-you.pdf",letra:`right now,
 If I only knew back then,
 There's no gettin' over,
 There's no gettin' over,
@@ -6581,7 +6700,7 @@ Yeah yeah yeah, Girl I wanna, Yeah yeah
 I wanna see you tonight,
 
 Yeah yeah yeah, Girl I gotta, yeah yeah
-I gotta I gotta I gotta see you tonight (2x)`},{id:"where-them-girls-at",t:"Where Them Girls At",artist:"David Guetta feat. Flo Rida & Nicki Minaj",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/7ks6AZmFcm3Y6PGGxGSmlB",sps:"https://open.spotify.com/search/Where%20Them%20Girls%20At%20David%20Guetta%20feat.%20Flo%20Rida%20%26%20Nicki%20Minaj",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/where-them-girls-at.pdf",letra:` in here, where do I begin?
+I gotta I gotta I gotta see you tonight (2x)`},{id:"where-them-girls-at",t:"Where Them Girls At",artist:"David Guetta feat. Flo Rida & Nicki Minaj",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/7ks6AZmFcm3Y6PGGxGSmlB",sps:"https://open.spotify.com/search/Where%20Them%20Girls%20At%20David%20Guetta%20feat.%20Flo%20Rida%20%26%20Nicki%20Minaj",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/where-them-girls-at.pdf",letra:`in here, where do I begin?
 I seen this one, I'm bout to go in
 Then she said, I'm here with my friends
 She got me thinking, and that's when I said
@@ -6589,13 +6708,14 @@ She got me thinking, and that's when I said
 Where dem girls at, girls at?
 Where dem girls at, girls at?
 Where dem girls at, girls at?
-So go get them, we can all be friends`},{id:"the-time-dirty-bit",t:"The Time (Dirty Bit)",artist:"The Black Eyed Peas",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/The%20Time%20%28Dirty%20Bit%29%20The%20Black%20Eyed%20Peas",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/the-time-dirty-bit.pdf",letra:`And I never felt this way before
+So go get them, we can all be friends`},{id:"the-time-dirty-bit",t:"The Time (Dirty Bit)",artist:"The Black Eyed Peas",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/The%20Time%20%28Dirty%20Bit%29%20The%20Black%20Eyed%20Peas",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/the-time-dirty-bit.pdf",letra:`And I never felt this way before
 And I swear this is true
 And I owe it all to you
 Oh I had the time of my life
 And I never felt this way before
 And I swear this is true
-And I owe it all to you   Dirty bit (2x)
+And I owe it all to you
+Dirty bit (2x)
 
 I came over here to rock
 Light a fire, make it hot
@@ -6632,7 +6752,8 @@ And I owe it all to you
 Oh I had the time of my life
 And I never felt this way before
 And I swear this is true
-And I owe it all to you   Dirty bit (2x)`},{id:"dynamite",t:"Dynamite",artist:"Taio Cruz",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Dynamite%20Taio%20Cruz",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/dynamite.pdf",letra:` in the air sometimes
+And I owe it all to you
+Dirty bit (2x)`},{id:"dynamite",t:"Dynamite",artist:"Taio Cruz",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Dynamite%20Taio%20Cruz",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/dynamite.pdf",letra:`in the air sometimes
 Saying AYO
 Gotta let go
 I wanna celebrate and live my life
@@ -6647,7 +6768,7 @@ Like it's dynamite
 Cause I told you once
 Now I told you twice
 We gon' light it up
-Like it's dynamite`},{id:"last-friday-night-t-g-i-f",t:"Last Friday Night (T.G.I.F.)",artist:"Katy Perry",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Last%20Friday%20Night%20%28T.G.I.F.%29%20Katy%20Perry",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/last-friday-night-t-g-i-f.pdf",letra:`Yeah we danced on tabletops
+Like it's dynamite`},{id:"last-friday-night-t-g-i-f",t:"Last Friday Night (T.G.I.F.)",artist:"Katy Perry",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Last%20Friday%20Night%20%28T.G.I.F.%29%20Katy%20Perry",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/last-friday-night-t-g-i-f.pdf",letra:`Yeah we danced on tabletops
 And we took too many shots
 Think we kissed but I forgot
 
@@ -6667,7 +6788,7 @@ Always say we're gonna stop-op
 Whoa-oh-oah
 
 This Friday night
-Do it all again`},{id:"only-girl-in-the-world",t:"Only Girl (In the World)",artist:"Rihanna",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Only%20Girl%20%28In%20the%20World%29%20Rihanna",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/only-girl-in-the-world.pdf",letra:`Like I'm the only girl in the world
+Do it all again`},{id:"only-girl-in-the-world",t:"Only Girl (In the World)",artist:"Rihanna",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Only%20Girl%20%28In%20the%20World%29%20Rihanna",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/only-girl-in-the-world.pdf",letra:`Like I'm the only girl in the world
 Like I'm the only one that you'll ever love
 Like I'm the only one who knows your heart
 Only girl in the world...
@@ -6676,7 +6797,7 @@ Cuz I'm the only one who understands
 How to make you feel like a man
 
 Only girl in the world...
-Only girl in the world...`},{id:"moves-like-jagger",t:"Moves Like Jagger",artist:"Maroon 5 feat. Christina Aguilera",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Moves%20Like%20Jagger%20Maroon%205%20feat.%20Christina%20Aguilera",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/moves-like-jagger.pdf",letra:`Just shoot for the stars if it feels right
+Only girl in the world...`},{id:"moves-like-jagger",t:"Moves Like Jagger",artist:"Maroon 5 feat. Christina Aguilera",pri:"Dance",tags:["Dance"],sp:"",sps:"https://open.spotify.com/search/Moves%20Like%20Jagger%20Maroon%205%20feat.%20Christina%20Aguilera",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/moves-like-jagger.pdf",letra:`Just shoot for the stars if it feels right
 Then aim for my heart if you feel like
 Take me away and make it okay
 I swear I'll behave
@@ -6697,7 +6818,7 @@ I don't need to try to control you
 Look into my eyes and I'll own you
 With them moves like Jagger
 I've got the moves like Jagger
-I've got the moooooves like Jagger`},{id:"give-me-everything",t:"Give Me Everything",artist:"Pitbull feat. Ne-Yo",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/4QNpBfC0zvjKqPJcyqBy9W",sps:"https://open.spotify.com/search/Give%20Me%20Everything%20Pitbull%20feat.%20Ne-Yo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/give-me-everything.pdf",letra:`Tonight
+I've got the moooooves like Jagger`},{id:"give-me-everything",t:"Give Me Everything",artist:"Pitbull feat. Ne-Yo",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/4QNpBfC0zvjKqPJcyqBy9W",sps:"https://open.spotify.com/search/Give%20Me%20Everything%20Pitbull%20feat.%20Ne-Yo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/give-me-everything.pdf",letra:`Tonight
 (Don't care what they say All the games they play Nothing is enough Till they handle love)
 Let's do it tonight
 (I want you tonight,I want you to stay
@@ -6705,7 +6826,8 @@ Let's do it tonight
 Grab somebody sexy tell 'em hey
 Give me everything tonight (4x)
 
-Reach for the stars And if you don't grab em, at least you're on top of the world  Think about it
+Reach for the stars And if you don't grab em, at least you're on top of the world
+Think about it
 Cuz if you slip I'm gonna fall on top of you girl
 Put on 'em ball when they sleep at the Macy's
 Baby baby And it ain't no secret
@@ -6720,16 +6842,21 @@ Excuse me But I might drink a little more than I should tonight And I might take
 Tonight I want all of you tonight
 Give me everything tonight
 For all we know we might not get tomorrow
-Let's do it tonight`},{id:"i-wanna-go",t:"I Wanna Go",artist:"Britney Spears",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/5cCAZS9VhLGEDV4NCfieeg",sps:"https://open.spotify.com/search/I%20Wanna%20Go%20Britney%20Spears",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-wanna-go.pdf",letra:`-o-o All the way-ay-ay
+Let's do it tonight`},{id:"i-wanna-go",t:"I Wanna Go",artist:"Britney Spears",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/5cCAZS9VhLGEDV4NCfieeg",sps:"https://open.spotify.com/search/I%20Wanna%20Go%20Britney%20Spears",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-wanna-go.pdf",letra:`-o-o All the way-ay-ay
 Takin' out my freak tonight
-I-I-I wanna sho-o-ow  All the dir-ir-irt
-I got runnin' through my mind  Woah (2x)
+I-I-I wanna sho-o-ow
+All the dir-ir-irt
+I got runnin' through my mind
+Woah (2x)
 
-Shame on me   To need release   Uncontrollably
+Shame on me
+To need release
+Uncontrollably
 
 I-I-I wanna go-o-o All the way-ay-ay
 Takin' out my freak tonight
-I-I-I wanna sho-o-ow  All the dir-ir-irt
+I-I-I wanna sho-o-ow
+All the dir-ir-irt
 I got runnin' through my mind
 
 I-I-I wanna go-o-o
@@ -6737,7 +6864,8 @@ All the way-ay-ay
 Takin' out my freak tonight
 I-I-I wanna sho-o-ow
 All the dir-ir-irt
-I got runnin' through my mind  Woah`},{id:"till-the-world-ends",t:"Till the World Ends",artist:"Britney Spears",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/38iU2jg98IZZEIJPrP7aWD",sps:"https://open.spotify.com/search/Till%20the%20World%20Ends%20Britney%20Spears",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/till-the-world-ends.pdf",letra:`I can't take it, take it, take no more
+I got runnin' through my mind
+Woah`},{id:"till-the-world-ends",t:"Till the World Ends",artist:"Britney Spears",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/38iU2jg98IZZEIJPrP7aWD",sps:"https://open.spotify.com/search/Till%20the%20World%20Ends%20Britney%20Spears",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/till-the-world-ends.pdf",letra:`I can't take it, take it, take no more
 Never felt like, felt like, felt like this before
 Come on get me, get me on the floor
 DJ what you, what you waiting for?
@@ -6747,7 +6875,7 @@ Oh oh oh oh oh oh oh
 See the sunlight, we ain't stopping
 Keep on dancing til the world ends
 If you feel it, let it happen
-Keep on dancing til the world ends (2x)`},{id:"rabiosa",t:"Rabiosa",artist:"Shakira",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/2Xh7dyCHCErCv3PmdVEGw4",sps:"https://open.spotify.com/search/Rabiosa%20Shakira",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/rabiosa.pdf",letra:`Let me get that mocha
+Keep on dancing til the world ends (2x)`},{id:"rabiosa",t:"Rabiosa",artist:"Shakira",pri:"Dance",tags:["Dance"],sp:"https://open.spotify.com/track/2Xh7dyCHCErCv3PmdVEGw4",sps:"https://open.spotify.com/search/Rabiosa%20Shakira",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rabiosa.pdf",letra:`Let me get that mocha
 Come get a little closer
 And bite me en la boca
 
@@ -6769,7 +6897,7 @@ And bite me en la boca
 Rabiosa, rabiosa
 Come closer, come pull me closer
 Yo soy rabiosa, rabiosa
-Come closer, come pull me closer`},{id:"greased-lightnin-you-re-the-one-that-i-want",t:"Greased Lightnin' / You're The One That I Want",artist:"Grease (trilha)",pri:"Trilha",tags:["Grease","Trilha"],sp:"https://open.spotify.com/track/5Vrczz39CvlD3OGCa6utoA",sps:"https://open.spotify.com/search/Greased%20Lightnin%27%20/%20You%27re%20The%20One%20That%20I%20Want%20Grease%20%28trilha%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/greased-lightnin-you-re-the-one-that-i-want.pdf",letra:`, it's systematic, it's hydromatic
+Come closer, come pull me closer`},{id:"greased-lightnin-you-re-the-one-that-i-want",t:"Greased Lightnin' / You're The One That I Want",artist:"Grease (trilha)",pri:"Trilha",tags:["Grease","Trilha"],sp:"https://open.spotify.com/track/5Vrczz39CvlD3OGCa6utoA",sps:"https://open.spotify.com/search/Greased%20Lightnin%27%20/%20You%27re%20The%20One%20That%20I%20Want%20Grease%20%28trilha%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/greased-lightnin-you-re-the-one-that-i-want.pdf",letra:`, it's systematic, it's hydromatic
 Why it's greased lightnin'!
 
 I got chills. They're multiplyin'.
@@ -6810,14 +6938,14 @@ A palomino dashboard and duel muffler twins, oh yeah
 With new pistons, plugs, and shocks,
 I can get off my rocks
 You know that I ain't braggin',
-she's a real pussy wagon - greased lightnin`},{id:"o-teu-cabelo-nao-nega",t:"O Teu Cabelo N\xE3o Nega",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/6lp5PxPGtOfePQDsb7HSvx",sps:"https://open.spotify.com/search/O%20Teu%20Cabelo%20N%C3%A3o%20Nega",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/o-teu-cabelo-nao-nega.pdf",letra:`Porque \xE9s mulata na cor,
+she's a real pussy wagon - greased lightnin`},{id:"o-teu-cabelo-nao-nega",t:"O Teu Cabelo N\xE3o Nega",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/6lp5PxPGtOfePQDsb7HSvx",sps:"https://open.spotify.com/search/O%20Teu%20Cabelo%20N%C3%A3o%20Nega",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/o-teu-cabelo-nao-nega.pdf",letra:`Porque \xE9s mulata na cor,
 Mas como a cor n\xE3o pega, mulata,
 Mulata eu quero o teu amor.
 
 Tens um sabor bem do Brasil;
 Tens a alma cor de anil;
 Mulata, mulatinha, meu amor,
-Fui nomeado teu tenente interventor.`},{id:"a-cabeleira-do-zeze",t:"A Cabeleira do Zez\xE9",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/7rwXwVOfULqhoa8vdOSLJx",sps:"https://open.spotify.com/search/A%20Cabeleira%20do%20Zez%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/a-cabeleira-do-zeze.pdf",letra:`Olha a cabeleira do zez\xE9!
+Fui nomeado teu tenente interventor.`},{id:"a-cabeleira-do-zeze",t:"A Cabeleira do Zez\xE9",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/7rwXwVOfULqhoa8vdOSLJx",sps:"https://open.spotify.com/search/A%20Cabeleira%20do%20Zez%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/a-cabeleira-do-zeze.pdf",letra:`Olha a cabeleira do zez\xE9!
 Ser\xE1 que ele \xE9?!
 Ser\xE1 que ele \xE9?!
 
@@ -6827,29 +6955,31 @@ Parece que \xE9 transviado,
 Mas isso eu n\xE3o sei se ele \xE9.
 
 Corta o cabelo dele!
-Corta o cabelo dele!`},{id:"me-da-um-dinheiro-ai",t:"Me D\xE1 Um Dinheiro A\xED",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/6LZbr5LJXHvFG1Cztgs1HF",sps:"https://open.spotify.com/search/Me%20D%C3%A1%20Um%20Dinheiro%20A%C3%AD",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/me-da-um-dinheiro-ai.pdf",letra:`Ei, voc\xEA a\xED!
+Corta o cabelo dele!`},{id:"me-da-um-dinheiro-ai",t:"Me D\xE1 Um Dinheiro A\xED",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/6LZbr5LJXHvFG1Cztgs1HF",sps:"https://open.spotify.com/search/Me%20D%C3%A1%20Um%20Dinheiro%20A%C3%AD",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/me-da-um-dinheiro-ai.pdf",letra:`Ei, voc\xEA a\xED!
 Me d\xE1 um dinheiro a\xED!
 Me d\xE1 um dinheiro a\xED!
 
-N\xE3o vai dar?  N\xE3o vai dar n\xE3o?
+N\xE3o vai dar?
+N\xE3o vai dar n\xE3o?
 Voc\xEA vai ver a grande confus\xE3o
 Que eu vou fazer bebendo at\xE9 cair
 Me d\xE1 me d\xE1 me d\xE1, \xF4!
-Me d\xE1 um dinheiro a\xED`},{id:"colombina-ie-ie-ie",t:"Colombina I\xEA I\xEA I\xEA",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/065PJWYom7SrTSZJQsTACQ",sps:"https://open.spotify.com/search/Colombina%20I%C3%AA%20I%C3%AA%20I%C3%AA",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/colombina-ie-ie-ie.pdf",letra:`Colombina onde vai voc\xEA
+Me d\xE1 um dinheiro a\xED`},{id:"colombina-ie-ie-ie",t:"Colombina I\xEA I\xEA I\xEA",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/065PJWYom7SrTSZJQsTACQ",sps:"https://open.spotify.com/search/Colombina%20I%C3%AA%20I%C3%AA%20I%C3%AA",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/colombina-ie-ie-ie.pdf",letra:`Colombina onde vai voc\xEA
 Eu vou dan\xE7ar o i\xEA i\xEA i\xEA
 
 A gangue s\xF3 me chama de palha\xE7o (\xE9 a m\xE3e!)
 Palha\xE7o (\xE9 a m\xE3e!)
 Palha\xE7o (\xE9 a m\xE3e!)
 E a minha colombina que \xE9 voc\xEA
-S\xF3 quer saber de i\xEA i\xEA i\xEA`},{id:"maria-sapatao",t:"Maria Sapat\xE3o",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/4VwBGhSRtgyPXt5CDKeDiO",sps:"https://open.spotify.com/search/Maria%20Sapat%C3%A3o",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/maria-sapatao.pdf",letra:`Maria Sapat\xE3o,
+S\xF3 quer saber de i\xEA i\xEA i\xEA`},{id:"maria-sapatao",t:"Maria Sapat\xE3o",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/4VwBGhSRtgyPXt5CDKeDiO",sps:"https://open.spotify.com/search/Maria%20Sapat%C3%A3o",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/maria-sapatao.pdf",letra:`Maria Sapat\xE3o,
 Sapat\xE3o, Sapat\xE3o:
 De dia \xE9 Maria; De noite \xE9 Jo\xE3o.
 
 O sapat\xE3o est\xE1 na moda:
 O mundo aplaudiu!
 \xC9 um barato, \xE9 um sucesso
-Dentro e fora do Brasil.`},{id:"bota-camisinha",t:"Bota Camisinha",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/5VzucHxuirSthu6yk2S9t2",sps:"https://open.spotify.com/search/Bota%20Camisinha",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bota-camisinha.pdf",letra:`Bota camisinha  Bota meu amor
+Dentro e fora do Brasil.`},{id:"bota-camisinha",t:"Bota Camisinha",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/5VzucHxuirSthu6yk2S9t2",sps:"https://open.spotify.com/search/Bota%20Camisinha",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bota-camisinha.pdf",letra:`Bota camisinha
+Bota meu amor
 Que hoje t\xE1 chovendo
 N\xE3o vai fazer calor
 
@@ -6858,14 +6988,14 @@ Bota geral
 N\xE3o quero ver ningu\xE9m
 Sem camisinha
 Pr\xE1 n\xE3o se machucar
-No Carnaval...`},{id:"tai-pra-voce-gostar-de-mim",t:"Ta\xED (Pra Voc\xEA Gostar de Mim)",artist:"Carmen Miranda",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/5M8NxfowIU9qJq1ytmXFQW",sps:"https://open.spotify.com/search/Ta%C3%AD%20%28Pra%20Voc%C3%AA%20Gostar%20de%20Mim%29%20Carmen%20Miranda",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/tai-pra-voce-gostar-de-mim.pdf",letra:`Ta\xED, eu fiz tudo pra voc\xEA gostar de mim.
+No Carnaval...`},{id:"tai-pra-voce-gostar-de-mim",t:"Ta\xED (Pra Voc\xEA Gostar de Mim)",artist:"Carmen Miranda",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/5M8NxfowIU9qJq1ytmXFQW",sps:"https://open.spotify.com/search/Ta%C3%AD%20%28Pra%20Voc%C3%AA%20Gostar%20de%20Mim%29%20Carmen%20Miranda",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/tai-pra-voce-gostar-de-mim.pdf",letra:`Ta\xED, eu fiz tudo pra voc\xEA gostar de mim.
 Ai meu bem, n\xE3o faz assim comigo n\xE3o!
 Voc\xEA tem, voc\xEA tem que me dar seu cora\xE7\xE3o!
 
 Meu amor, n\xE3o posso esquecer,
 Se d\xE1 alegria faz tamb\xE9m sofrer.
 A minha vida foi sempre assim:
-S\xF3 chorando as m\xE1goas que n\xE3o t\xEAm fim.`},{id:"mulata-ie-ie-ie",t:"Mulata I\xEA I\xEA I\xEA",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/1iRIKU9V8U4cnLgHOv6NOw",sps:"https://open.spotify.com/search/Mulata%20I%C3%AA%20I%C3%AA%20I%C3%AA",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/mulata-ie-ie-ie.pdf",letra:`Mulata bossa nova
+S\xF3 chorando as m\xE1goas que n\xE3o t\xEAm fim.`},{id:"mulata-ie-ie-ie",t:"Mulata I\xEA I\xEA I\xEA",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/1iRIKU9V8U4cnLgHOv6NOw",sps:"https://open.spotify.com/search/Mulata%20I%C3%AA%20I%C3%AA%20I%C3%AA",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/mulata-ie-ie-ie.pdf",letra:`Mulata bossa nova
 Caiu no hully gully
 E s\xF3 d\xE1 ela
 \xCA \xEA \xEA \xEA \xEA \xEA \xEA \xEA
@@ -6874,7 +7004,7 @@ Na passarela
 A boneca est\xE1
 Cheia de fiufiu
 Esnobando as louras
-E as morenas do Brasil`},{id:"me-da-um-gelinho",t:"Me D\xE1 Um Gelinho",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/6i1N6tewPitKrjSi3vYBOx",sps:"https://open.spotify.com/search/Me%20D%C3%A1%20Um%20Gelinho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/me-da-um-gelinho.pdf",letra:`Me d\xE1 um gelinho a\xED,
+E as morenas do Brasil`},{id:"me-da-um-gelinho",t:"Me D\xE1 Um Gelinho",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/6i1N6tewPitKrjSi3vYBOx",sps:"https://open.spotify.com/search/Me%20D%C3%A1%20Um%20Gelinho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/me-da-um-gelinho.pdf",letra:`Me d\xE1 um gelinho a\xED,
 Eu t\xF4 a cem por hora,
 Se n\xE3o, parar o calor,
 Eu jogo a roupa fora. (bis)
@@ -6882,14 +7012,14 @@ Eu jogo a roupa fora. (bis)
 \xC9 agora, \xE9 agora,
 Que eu jogo a roupa fora,
 \xC9 agora, \xE9 agora,
-Que eu jogo a roupa fora.`},{id:"coracao-corinthiano",t:"Cora\xE7\xE3o Corinthiano",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/2devGGWNdL6zkZcVtlAULu",sps:"https://open.spotify.com/search/Cora%C3%A7%C3%A3o%20Corinthiano",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/coracao-corinthiano.pdf",letra:`Doutor, eu n\xE3o me engano,
+Que eu jogo a roupa fora.`},{id:"coracao-corinthiano",t:"Cora\xE7\xE3o Corinthiano",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/2devGGWNdL6zkZcVtlAULu",sps:"https://open.spotify.com/search/Cora%C3%A7%C3%A3o%20Corinthiano",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/coracao-corinthiano.pdf",letra:`Doutor, eu n\xE3o me engano,
 Meu cora\xE7\xE3o \xE9 Corinthiano (2x)
 
 Eu n\xE3o sabia mais o que fazer
 Troquei meu cora\xE7\xE3o cansado de sofrer
 
 Ah! Doutor, eu n\xE3o me engano,
-Botaram outro cora\xE7\xE3o Corinthiano`},{id:"saca-rolha",t:"Saca-Rolha",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/64kFmNFB1ml6g6r73dyhL1",sps:"https://open.spotify.com/search/Saca-Rolha",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/saca-rolha.pdf",letra:`As \xE1guas v\xE3o rolar
+Botaram outro cora\xE7\xE3o Corinthiano`},{id:"saca-rolha",t:"Saca-Rolha",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/64kFmNFB1ml6g6r73dyhL1",sps:"https://open.spotify.com/search/Saca-Rolha",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/saca-rolha.pdf",letra:`As \xE1guas v\xE3o rolar
 Garrafa cheia eu n\xE3o quero ver sobrar
 Eu passo m\xE3o na saca saca saca rolha
 E bebo at\xE9 me afogar
@@ -6898,7 +7028,7 @@ Deixa as \xE1guas rolar
 Se a pol\xEDcia por isso me prender
 Mas na \xFAltima hora me soltar
 Eu pego o saca saca saca rolha
-Ningu\xE9m me agarra ningu\xE9m me agarra`},{id:"marcha-da-cueca",t:"Marcha da Cueca",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/1EvHQBcDY9FhB6uD0bbgP0",sps:"https://open.spotify.com/search/Marcha%20da%20Cueca",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/marcha-da-cueca.pdf",letra:`Eu mato, Eu mato,
+Ningu\xE9m me agarra ningu\xE9m me agarra`},{id:"marcha-da-cueca",t:"Marcha da Cueca",artist:"",pri:"Marchinha",tags:["Carnaval","Marchinha"],sp:"https://open.spotify.com/track/1EvHQBcDY9FhB6uD0bbgP0",sps:"https://open.spotify.com/search/Marcha%20da%20Cueca",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/marcha-da-cueca.pdf",letra:`Eu mato, Eu mato,
 Quem roubou minha cueca
 pra fazer pano de prato (2x)
 
@@ -6906,22 +7036,26 @@ Minha cueca Tava lavada
 Foi um presente que eu ganhei da namorada
 
 Minha cueca Tava lavada
-Foi um presente que eu ganhei da namorada`},{id:"your-song",t:"Your Song",artist:"Billy Paul",pri:"Soul",tags:["Internacional","Soul"],sp:"https://open.spotify.com/track/5TUs6T93fNFvgQov6MlYkP",sps:"https://open.spotify.com/search/Your%20Song%20Billy%20Paul",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/your-song.pdf",letra:`It's a little bit funny Lord, this feeling inside
+Foi um presente que eu ganhei da namorada`},{id:"your-song",t:"Your Song",artist:"Billy Paul",pri:"Soul",tags:["Internacional","Soul"],sp:"https://open.spotify.com/track/5TUs6T93fNFvgQov6MlYkP",sps:"https://open.spotify.com/search/Your%20Song%20Billy%20Paul",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/your-song.pdf",letra:`It's a little bit funny Lord, this feeling inside
 I'm not one of those who can easily hide
 I don't have much money but, boy, if I did
 I'd buy a big mansion where we both could live
 
 If, if, if I was a sculpture Lord, honey,
-but then again, no   (then again no, no)
+but then again, no
+(then again no, no)
 Ora man who makes potions in a travelin' show
 I know it's not much, I know it's not much, but it's the best I can do
 
 You gave me a gift Lord,
 and I'm go' sing for you
 And you can tell everybody that
-this is your song      (this is your song)
+this is your song
+(this is your song)
 It may be a quite quite simple, but that's how it's done
-I hope you don't mind, I hope you don't mind    What I wrote down in wordsssss, words      How wonderful life issss
+I hope you don't mind, I hope you don't mind
+What I wrote down in wordsssss, words
+How wonderful life issss
 when you're in the world, world, world
 (if), if I was upon a rooftop
 I'd kick off my shoes (kick my shoes off)
@@ -6942,7 +7076,7 @@ You are the sweetest eyes,
 the sweetest eyes
 The sweetest eyes I've ever seen
 
-REFR\xC3O`},{id:"somewhere-over-the-rainbow-what-a-wonderful-worl",t:"Somewhere Over The Rainbow / What A Wonderful World",artist:"Israel Kamakawiwo'ole",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/25U7raB3ZSszayTYClh4hF",sps:"https://open.spotify.com/search/Somewhere%20Over%20The%20Rainbow%20/%20What%20A%20Wonderful%20World%20Israel%20Kamakawiwo%27ole",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/somewhere-over-the-rainbow-what-a-wonderful-worl.pdf",letra:`Somewhere over the rainbow
+REFR\xC3O`},{id:"somewhere-over-the-rainbow-what-a-wonderful-worl",t:"Somewhere Over The Rainbow / What A Wonderful World",artist:"Israel Kamakawiwo'ole",pri:"Balada",tags:["Balada"],sp:"https://open.spotify.com/track/25U7raB3ZSszayTYClh4hF",sps:"https://open.spotify.com/search/Somewhere%20Over%20The%20Rainbow%20/%20What%20A%20Wonderful%20World%20Israel%20Kamakawiwo%27ole",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/somewhere-over-the-rainbow-what-a-wonderful-worl.pdf",letra:`Somewhere over the rainbow
 Way up high
 And the dreams that you dreamed of
 Once in a lullaby ii ii iii
@@ -6986,7 +7120,7 @@ Where trouble melts like lemon drops
 High above the chimney top that's where you'll find me
 Oh, Somewhere over the rainbow way up high
 And the dream that you dare to, why, oh why can't I?
-ooooooooooooooooooooooooo`},{id:"em-nome-do-nosso-amor",t:"Em Nome do Nosso Amor",artist:"Padre Jonas Abib / Jonny",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/3NLs4IcwE6uDVgqhJo1exu",sps:"https://open.spotify.com/search/Em%20Nome%20do%20Nosso%20Amor%20Padre%20Jonas%20Abib%20/%20Jonny",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/em-nome-do-nosso-amor.pdf",letra:`Eu te escolhi e hoje estou aqui
+ooooooooooooooooooooooooo`},{id:"em-nome-do-nosso-amor",t:"Em Nome do Nosso Amor",artist:"Padre Jonas Abib / Jonny",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/3NLs4IcwE6uDVgqhJo1exu",sps:"https://open.spotify.com/search/Em%20Nome%20do%20Nosso%20Amor%20Padre%20Jonas%20Abib%20/%20Jonny",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/em-nome-do-nosso-amor.pdf",letra:`Eu te escolhi e hoje estou aqui
 para celebrar nossa uni\xE3o
 Aos olhos do Senhor quero entregar a ti o meu cora\xE7\xE3o
 
@@ -7018,7 +7152,7 @@ Eu vou estar ao teu lado
 E juntos poderemos at\xE9 chorar
 E se a dor invadir o meu ser
 Venceremos a dor em nome do amor
-Em nome do nosso amor`},{id:"ceu-de-santo-amaro-verificar",t:"C\xE9u de Santo Amaro (verificar)",artist:"Caetano Veloso",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/5iTFBGI1y3HGcqE2DWd5Bf",sps:"https://open.spotify.com/search/C%C3%A9u%20de%20Santo%20Amaro%20%28verificar%29%20Caetano%20Veloso",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ceu-de-santo-amaro-verificar.pdf",letra:`Olho para o c\xE9u
+Em nome do nosso amor`},{id:"ceu-de-santo-amaro-verificar",t:"C\xE9u de Santo Amaro (verificar)",artist:"Caetano Veloso",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/5iTFBGI1y3HGcqE2DWd5Bf",sps:"https://open.spotify.com/search/C%C3%A9u%20de%20Santo%20Amaro%20%28verificar%29%20Caetano%20Veloso",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ceu-de-santo-amaro-verificar.pdf",letra:`Olho para o c\xE9u
 Tantas estrelas dizendo da imensid\xE3o
 Do universo em n\xF3s
 A for\xE7a desse amor Nos invadiu
@@ -7045,7 +7179,7 @@ Olho para o c\xE9u
 Tantas estrelas dizendo da imensid\xE3o
 Do universo em n\xF3s
 A for\xE7a desse amor nos invadiu
-Ent\xE3o Veio a certeza de amar voc\xEA`},{id:"she",t:"She",artist:"Charles Aznavour / Elvis Costello",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"",sps:"https://open.spotify.com/search/She%20Charles%20Aznavour%20/%20Elvis%20Costello",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/she.pdf",letra:`Temas de Filmes
+Ent\xE3o Veio a certeza de amar voc\xEA`},{id:"she",t:"She",artist:"Charles Aznavour / Elvis Costello",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"",sps:"https://open.spotify.com/search/She%20Charles%20Aznavour%20/%20Elvis%20Costello",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/she.pdf",letra:`Temas de Filmes
 She
 Maybe the face I can't forget,
 A trace of pleasure or regret,
@@ -7092,7 +7226,7 @@ And make them all my souvenirs
 For where she goes I've got to be.
 The meaning of my life is she, she
 
-She`},{id:"como-e-grande-o-meu-amor-por-voce",t:"Como \xC9 Grande o Meu Amor por Voc\xEA",artist:"Roberto Carlos",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1Kj2S2YdEgXJZp4OQHQ7hM",sps:"https://open.spotify.com/search/Como%20%C3%89%20Grande%20o%20Meu%20Amor%20por%20Voc%C3%AA%20Roberto%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/como-e-grande-o-meu-amor-por-voce.pdf",letra:`Eu tenho tanto pra lhe falar
+She`},{id:"como-e-grande-o-meu-amor-por-voce",t:"Como \xC9 Grande o Meu Amor por Voc\xEA",artist:"Roberto Carlos",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1Kj2S2YdEgXJZp4OQHQ7hM",sps:"https://open.spotify.com/search/Como%20%C3%89%20Grande%20o%20Meu%20Amor%20por%20Voc%C3%AA%20Roberto%20Carlos",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/como-e-grande-o-meu-amor-por-voce.pdf",letra:`Eu tenho tanto pra lhe falar
 Mas com palavras n\xE3o sei dizer
 Como \xE9 grande o meu amor por voc\xEA
 E n\xE3o ha nada pra comparar
@@ -7115,7 +7249,7 @@ Nunca se esque\xE7a nem um segundo
 Que eu tenho o amor maior do mundo
 Como \xE9 grande o meu amor por voc\xEA
 
-Mas como \xE9 grande o meu amor por voc\xEA`},{id:"je-t-aime-moi-non-plus",t:"Je T'aime... Moi Non Plus",artist:"Serge Gainsbourg & Jane Birkin",pri:"Francesa",tags:["Francesa","Internacional"],sp:"",sps:"https://open.spotify.com/search/Je%20T%27aime...%20Moi%20Non%20Plus%20Serge%20Gainsbourg%20%26%20Jane%20Birkin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/je-t-aime-moi-non-plus.pdf",letra:`Je t'aime je t'aime
+Mas como \xE9 grande o meu amor por voc\xEA`},{id:"je-t-aime-moi-non-plus",t:"Je T'aime... Moi Non Plus",artist:"Serge Gainsbourg & Jane Birkin",pri:"Francesa",tags:["Francesa","Internacional"],sp:"",sps:"https://open.spotify.com/search/Je%20T%27aime...%20Moi%20Non%20Plus%20Serge%20Gainsbourg%20%26%20Jane%20Birkin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/je-t-aime-moi-non-plus.pdf",letra:`Je t'aime je t'aime
 Oh oui je t'aime
 Moi non plus
 Oh mon amour
@@ -7125,7 +7259,7 @@ Je vais, je vais et je viens
 Entre tes reins
 Je vais et je viens
 Entre tes reins
-Et je me retiens`},{id:"c-est-si-bon",t:"C'est Si Bon",artist:"",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/5PmnyAmBMDOzPp5sGhLV78",sps:"https://open.spotify.com/search/C%27est%20Si%20Bon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/c-est-si-bon.pdf",letra:`De se dire des mots doux
+Et je me retiens`},{id:"c-est-si-bon",t:"C'est Si Bon",artist:"",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/5PmnyAmBMDOzPp5sGhLV78",sps:"https://open.spotify.com/search/C%27est%20Si%20Bon",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/c-est-si-bon.pdf",letra:`De se dire des mots doux
 Des petits rien du tout
 Mais qui en disent long
 
@@ -7142,7 +7276,7 @@ Cette petite sensation
 Et si nous nous aimons
 C'est parce que c'est si bon
 C'est parce que c'est si bon
-C'est parce que c'est si bon`},{id:"l-amerique",t:"L'Am\xE9rique",artist:"Joe Dassin",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/0bdPQOFYpNqiGHe6yWzvcy",sps:"https://open.spotify.com/search/L%27Am%C3%A9rique%20Joe%20Dassin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/l-amerique.pdf",letra:`Mes amis, je dois m'en aller
+C'est parce que c'est si bon`},{id:"l-amerique",t:"L'Am\xE9rique",artist:"Joe Dassin",pri:"Francesa",tags:["Francesa","Internacional"],sp:"https://open.spotify.com/track/0bdPQOFYpNqiGHe6yWzvcy",sps:"https://open.spotify.com/search/L%27Am%C3%A9rique%20Joe%20Dassin",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/l-amerique.pdf",letra:`Mes amis, je dois m'en aller
 Je n'ai plus qu'\xE0 jeter mes cl\xE9s
 Car elle m'attend depuis que je suis n\xE9
 L'Am\xE9rique
@@ -7157,11 +7291,12 @@ L'Am\xE9rique, l'Am\xE9rique, je veux l'avoir et je l'aurai
 L'Am\xE9rique, l'Am\xE9rique, si c'est un r\xEAve, je le saurai
 
 Tous les sifflets des trains, toutes les sir\xE8nes des bateaux
-M'ont chant\xE9 cent fois la chanson de l'Eldorado`},{id:"i-love-america",t:"I Love America",artist:"Patrick Juvet",pri:"Francesa",tags:["Francesa","Internacional"],sp:"",sps:"https://open.spotify.com/search/I%20Love%20America%20Patrick%20Juvet",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/i-love-america.pdf",letra:`A magic fills the air
+M'ont chant\xE9 cent fois la chanson de l'Eldorado`},{id:"i-love-america",t:"I Love America",artist:"Patrick Juvet",pri:"Francesa",tags:["Francesa","Internacional"],sp:"",sps:"https://open.spotify.com/search/I%20Love%20America%20Patrick%20Juvet",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/i-love-america.pdf",letra:`A magic fills the air
 There's music everywhere
 I love America
 I love America
-I love America  America
+I love America
+America
 
 La, la, la, la -
 La, la, la, la - salsa music
@@ -7170,7 +7305,7 @@ Rock and roll America, rock and roll
 What I say
 Rock and roll America, rock and roll
 What I say
-Rock and roll America, rock and roll`},{id:"rivers-of-babylon",t:"Rivers of Babylon",artist:"Boney M.",pri:"Dance",tags:["Dance","Disco"],sp:"https://open.spotify.com/track/78His8pbKjbDQF7aX5asgv",sps:"https://open.spotify.com/search/Rivers%20of%20Babylon%20Boney%20M.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/rivers-of-babylon.pdf",letra:`Ahahahahaahahahahaaaaaa
+Rock and roll America, rock and roll`},{id:"rivers-of-babylon",t:"Rivers of Babylon",artist:"Boney M.",pri:"Dance",tags:["Dance","Disco"],sp:"https://open.spotify.com/track/78His8pbKjbDQF7aX5asgv",sps:"https://open.spotify.com/search/Rivers%20of%20Babylon%20Boney%20M.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rivers-of-babylon.pdf",letra:`Ahahahahaahahahahaaaaaa
 Ahahahahaahahahahaaaaaahahahahahahaha
 
 By the rivers of Babylon,
@@ -7188,7 +7323,7 @@ THEN THE WICKED
 Carried us away in captivity,
 required from us a song.
 Now how shall we sing the Lord song
-in a strange land.`},{id:"daddy-cool",t:"Daddy Cool",artist:"Boney M.",pri:"Dance",tags:["Dance","Disco"],sp:"https://open.spotify.com/track/3WMbD1OyfKuwWDWMNbPQ4g",sps:"https://open.spotify.com/search/Daddy%20Cool%20Boney%20M.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/daddy-cool.pdf",letra:`She's crazy like a fool
+in a strange land.`},{id:"daddy-cool",t:"Daddy Cool",artist:"Boney M.",pri:"Dance",tags:["Dance","Disco"],sp:"https://open.spotify.com/track/3WMbD1OyfKuwWDWMNbPQ4g",sps:"https://open.spotify.com/search/Daddy%20Cool%20Boney%20M.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/daddy-cool.pdf",letra:`She's crazy like a fool
 What about it Daddy Cool
 
 She's crazy like a fool
@@ -7196,7 +7331,7 @@ What about it Daddy Cool
 I'm crazy like a fool
 What about it Daddy Cool
 
-Daddy Daddy Cool Daddy Daddy Cool (2x)`},{id:"sunny",t:"Sunny",artist:"Boney M.",pri:"Dance",tags:["Dance","Disco"],sp:"https://open.spotify.com/track/3pf96IFggfQuT6Gafqx2rt",sps:"https://open.spotify.com/search/Sunny%20Boney%20M.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/sunny.pdf",letra:`Sunny, yesterday my life was filled with rain.
+Daddy Daddy Cool Daddy Daddy Cool (2x)`},{id:"sunny",t:"Sunny",artist:"Boney M.",pri:"Dance",tags:["Dance","Disco"],sp:"https://open.spotify.com/track/3pf96IFggfQuT6Gafqx2rt",sps:"https://open.spotify.com/search/Sunny%20Boney%20M.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/sunny.pdf",letra:`Sunny, yesterday my life was filled with rain.
 Sunny, you smiled at me and really eased the pain.
 The dark days are gone, and the bright days are here,
 My Sunny one shines so sincere.
@@ -7206,7 +7341,8 @@ Sunny, thank you for the sunshine bouquet.
 Sunny, thank you for the love you brought my way.
 You gave to me your all and all.
 Now I feel ten feet tall.
-Sunny one so true, I love you.`},{id:"ma-baker",t:"Ma Baker",artist:"Boney M.",pri:"Dance",tags:["Dance","Disco"],sp:"https://open.spotify.com/track/1BqnZOkYJbvYLOhN0qPJDm",sps:"https://open.spotify.com/search/Ma%20Baker%20Boney%20M.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ma-baker.pdf",letra:`FREEZE ! I'm Ma Baker - put your hands in the air,    gimme all your money
+Sunny one so true, I love you.`},{id:"ma-baker",t:"Ma Baker",artist:"Boney M.",pri:"Dance",tags:["Dance","Disco"],sp:"https://open.spotify.com/track/1BqnZOkYJbvYLOhN0qPJDm",sps:"https://open.spotify.com/search/Ma%20Baker%20Boney%20M.",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ma-baker.pdf",letra:`FREEZE ! I'm Ma Baker - put your hands in the air,
+gimme all your money
 
 She was the meanest cat
 In old Chicago town
@@ -7225,7 +7361,8 @@ She took her boys along
 Ma Ma Ma Ma - Ma Baker - she thought her four sons
 Ma Ma Ma Ma - Ma Baker - to handle their guns
 Ma Ma Ma Ma - Ma Baker - she never could cry
-Ma Ma Ma Ma - Ma Baker - but she knew how to die`},{id:"rock-and-roll-mops",t:"Rock And Roll-Mops",artist:"",pri:"Rock",tags:["Francesa","Rock"],sp:"https://open.spotify.com/track/5xBEmNzeYwZwXXOeLKVKce",sps:"https://open.spotify.com/search/Rock%20And%20Roll-Mops",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/rock-and-roll-mops.pdf",letra:`Adubadu adubadu badabada badibidi  badubadu\u2026
+Ma Ma Ma Ma - Ma Baker - but she knew how to die`},{id:"rock-and-roll-mops",t:"Rock And Roll-Mops",artist:"",pri:"Rock",tags:["Francesa","Rock"],sp:"https://open.spotify.com/track/5xBEmNzeYwZwXXOeLKVKce",sps:"https://open.spotify.com/search/Rock%20And%20Roll-Mops",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rock-and-roll-mops.pdf",letra:`Adubadu adubadu badabada badibidi
+badubadu\u2026
 
 Qu'est-ce qu'il faut vous apporter ?
 
@@ -7238,11 +7375,13 @@ Et du beefsteak hach\xE9
 Rock and roll-mops
 Avec un \u0153uf \xE0 cheval
 Rock and roll-mops
-Je me sens cannibal  Ohhhhhh Ohhhhhh
+Je me sens cannibal
+Ohhhhhh Ohhhhhh
 
 Et dans un plat
 Rien que pour moi
-Bien prepares  Pas trop assaisonn\xE9s
+Bien prepares
+Pas trop assaisonn\xE9s
 
 Rock and roll-mops
 \xC7a m'a r\xE9confort\xE9
@@ -7250,7 +7389,7 @@ Rock and roll-mops
 Je suis plein \xE0 craquer
 Rock and roll-mops
 Ma force a d\xE9cupl\xE9
-On est retourn\xE9 s' coucher`},{id:"t-as-l-bonjour-d-alfred",t:"T'as L'Bonjour D'Alfred",artist:"",pri:"Rock",tags:["Francesa","Rock"],sp:"https://open.spotify.com/track/6yLB0XwDQK8cQcXZSsHz48",sps:"https://open.spotify.com/search/T%27as%20L%27Bonjour%20D%27Alfred",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/t-as-l-bonjour-d-alfred.pdf",letra:` Ahh Oui
+On est retourn\xE9 s' coucher`},{id:"t-as-l-bonjour-d-alfred",t:"T'as L'Bonjour D'Alfred",artist:"",pri:"Rock",tags:["Francesa","Rock"],sp:"https://open.spotify.com/track/6yLB0XwDQK8cQcXZSsHz48",sps:"https://open.spotify.com/search/T%27as%20L%27Bonjour%20D%27Alfred",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/t-as-l-bonjour-d-alfred.pdf",letra:`Ahh Oui
 T'as l'bonjour d'Alfred Rock and Roll
 T'as l'bonjour d'Alfred On the Rock
 
@@ -7278,11 +7417,13 @@ Mais comm je n'ai pas de galette !
 J' ai l' bonjour d' Alfred
 
 TIRAR MUSICA FEMININA
-DESCOBRIR NOME`},{id:"ca-rock-ca-va-verificar",t:"\xC7a Rock \xC7a Va (verificar)",artist:"",pri:"Rock",tags:["Francesa","Rock"],sp:"https://open.spotify.com/track/72hpTHMLFrO4ErhSQl2FhZ",sps:"https://open.spotify.com/search/%C3%87a%20Rock%20%C3%87a%20Va%20%28verificar%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ca-rock-ca-va-verificar.pdf",letra:`Rock and Roll pas c\u2019est
+DESCOBRIR NOME`},{id:"ca-rock-ca-va-verificar",t:"\xC7a Rock \xC7a Va (verificar)",artist:"",pri:"Rock",tags:["Francesa","Rock"],sp:"https://open.spotify.com/track/72hpTHMLFrO4ErhSQl2FhZ",sps:"https://open.spotify.com/search/%C3%87a%20Rock%20%C3%87a%20Va%20%28verificar%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ca-rock-ca-va-verificar.pdf",letra:`Rock and Roll pas c\u2019est
 Rock and Roll parla
-Rock and Roll  Mary
+Rock and Roll
+Mary
 Oh no non pizza
-O demande  pis \xE7a vaaaaa
+O demande
+pis \xE7a vaaaaa
 Au Sarro oue toi
 
 \xC7a va \xE7a va Au Sarro oue toi
@@ -7291,14 +7432,15 @@ Au Sarro oue toi
 
 \xC7a va \xE7a va Au Sarro oue toi
 
-Rock and Roll \xE7a vo \xE7a va`},{id:"one",t:"One",artist:"U2",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"",sps:"https://open.spotify.com/search/One%20U2",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/one.pdf",letra:`Is it getting better
+Rock and Roll \xE7a vo \xE7a va`},{id:"one",t:"One",artist:"U2",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"",sps:"https://open.spotify.com/search/One%20U2",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/one.pdf",letra:`Is it getting better
 Or do you feel the same?
 Will it make it easier on you now
 You got someone to blame?
 
 You say
 One love,one life
-When it's one need  In the night
+When it's one need
+In the night
 One love
 We get to share It
 leaves you, baby
@@ -7357,12 +7499,13 @@ One life But we're not the same
 We get to carry each other
 Carry each other
 
-One... one   Uh, uh, uh, oh
+One... one
+Uh, uh, uh, oh
 Make, make it, make it
 Ahh, ahh, oh
 Ahh, ahh
 And one
-Ahh, ahh... oh`},{id:"the-prayer",t:"The Prayer",artist:"Celine Dion & Andrea Bocelli",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/6zlY4xmlgqvn4LxjzoS2mz",sps:"https://open.spotify.com/search/The%20Prayer%20Celine%20Dion%20%26%20Andrea%20Bocelli",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/the-prayer.pdf",letra:`I pray you'll be our eyes,
+Ahh, ahh... oh`},{id:"the-prayer",t:"The Prayer",artist:"Celine Dion & Andrea Bocelli",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/6zlY4xmlgqvn4LxjzoS2mz",sps:"https://open.spotify.com/search/The%20Prayer%20Celine%20Dion%20%26%20Andrea%20Bocelli",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/the-prayer.pdf",letra:`I pray you'll be our eyes,
 and watch us where we go
 And help us to be wise,
 in times when we don't know
@@ -7410,7 +7553,7 @@ guide us with your grace
 Give us faith so we'll be safe
 E la fede che
 Hai acceso in noi
-Sento che ci salver\xE1`},{id:"can-you-feel-the-love-tonight",t:"Can You Feel the Love Tonight",artist:"Elton John",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/0N3dyeET5adXRe2YSQMy0F",sps:"https://open.spotify.com/search/Can%20You%20Feel%20the%20Love%20Tonight%20Elton%20John",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/can-you-feel-the-love-tonight.pdf",letra:`There's a calm surrender To the rush of day
+Sento che ci salver\xE1`},{id:"can-you-feel-the-love-tonight",t:"Can You Feel the Love Tonight",artist:"Elton John",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/0N3dyeET5adXRe2YSQMy0F",sps:"https://open.spotify.com/search/Can%20You%20Feel%20the%20Love%20Tonight%20Elton%20John",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/can-you-feel-the-love-tonight.pdf",letra:`There's a calm surrender To the rush of day
 When the heat of a rolling wind
 Can be turned away
 
@@ -7444,7 +7587,7 @@ That we got this far
 And can you feel the love tonight
 How it's laid to rest?
 It's enough to make kings and vagabonds
-Believe the very best.`},{id:"can-t-help-falling-in-love",t:"Can't Help Falling in Love",artist:"Elvis Presley",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/44AyOl4qVkzS48vBsbNXaC",sps:"https://open.spotify.com/search/Can%27t%20Help%20Falling%20in%20Love%20Elvis%20Presley",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/can-t-help-falling-in-love.pdf",letra:`Wise men say, only fools rush in
+Believe the very best.`},{id:"can-t-help-falling-in-love",t:"Can't Help Falling in Love",artist:"Elvis Presley",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/44AyOl4qVkzS48vBsbNXaC",sps:"https://open.spotify.com/search/Can%27t%20Help%20Falling%20in%20Love%20Elvis%20Presley",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/can-t-help-falling-in-love.pdf",letra:`Wise men say, only fools rush in
 But I can't help, falling in love with you
 Shall I stay? Would it be a sin
 If I can't help, falling in love with you?
@@ -7459,7 +7602,7 @@ Darling so it goes, somethings are meant to be
 Take my hand, take my whole life too.
 For I can't help falling in love with you.
 
-For I can't help falling in love with you.`},{id:"perhaps-love",t:"Perhaps Love",artist:"Pl\xE1cido Domingo & John Denver",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1XeCCcv0C9vD6Z8P9E8uhG",sps:"https://open.spotify.com/search/Perhaps%20Love%20Pl%C3%A1cido%20Domingo%20%26%20John%20Denver",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/perhaps-love.pdf",letra:`Perhaps love is like a resting place,
+For I can't help falling in love with you.`},{id:"perhaps-love",t:"Perhaps Love",artist:"Pl\xE1cido Domingo & John Denver",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1XeCCcv0C9vD6Z8P9E8uhG",sps:"https://open.spotify.com/search/Perhaps%20Love%20Pl%C3%A1cido%20Domingo%20%26%20John%20Denver",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/perhaps-love.pdf",letra:`Perhaps love is like a resting place,
 a shelter from the storm
 It exists to give you confort,
 it is there to keep you warm
@@ -7496,7 +7639,7 @@ full of conflict, full of pain
 Like a fire when it's cold outside,
 thunder when it rains
 If I should live forever, and all my dreams come true
-My memories of love will be of you`},{id:"somewhere-over-the-rainbow",t:"Somewhere Over The Rainbow",artist:"Judy Garland",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/568SEFtDjKr7N2PytpA6D5",sps:"https://open.spotify.com/search/Somewhere%20Over%20The%20Rainbow%20Judy%20Garland",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/somewhere-over-the-rainbow.pdf",letra:`Somewhere over the rainbow
+My memories of love will be of you`},{id:"somewhere-over-the-rainbow",t:"Somewhere Over The Rainbow",artist:"Judy Garland",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/568SEFtDjKr7N2PytpA6D5",sps:"https://open.spotify.com/search/Somewhere%20Over%20The%20Rainbow%20Judy%20Garland",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/somewhere-over-the-rainbow.pdf",letra:`Somewhere over the rainbow
 Way up high
 There's a land that I heard of
 Once in a lullaby
@@ -7529,7 +7672,7 @@ Why then, oh why can't I?
 
 If happy little bluebirds fly
 Beyond the rainbow
-Why, oh why can't I?`},{id:"tudo-que-se-quer",t:"Tudo Que Se Quer",artist:"Em\xEDlio Santiago",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1rCrJem6MNI4jcTfbJsuET",sps:"https://open.spotify.com/search/Tudo%20Que%20Se%20Quer%20Em%C3%ADlio%20Santiago",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/tudo-que-se-quer.pdf",letra:`Olha nos meus olhos,Esquece o que passou.
+Why, oh why can't I?`},{id:"tudo-que-se-quer",t:"Tudo Que Se Quer",artist:"Em\xEDlio Santiago",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/1rCrJem6MNI4jcTfbJsuET",sps:"https://open.spotify.com/search/Tudo%20Que%20Se%20Quer%20Em%C3%ADlio%20Santiago",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/tudo-que-se-quer.pdf",letra:`Olha nos meus olhos,Esquece o que passou.
 Aqui neste momento. Sil\xEAncio e sentimento
 Sou o teu poeta Eu sou o teu cantor
 Teu rei e teu escravo Teu rio e tua estrada
@@ -7555,15 +7698,17 @@ Vem comigo meu amado amigo
 Sou teu barco, neste mar de amor
 Sou a vela que te leva longe
 Da tristeza Eu sei, eu vou
-E onde estiver estou.`},{id:"all-i-ask-of-you",t:"All I Ask of You",artist:"Andrew Lloyd Webber (Phantom of the Opera)",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/7uq8865MVnUPMFJ8dLnedm",sps:"https://open.spotify.com/search/All%20I%20Ask%20of%20You%20Andrew%20Lloyd%20Webber%20%28Phantom%20of%20the%20Opera%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/all-i-ask-of-you.pdf",letra:`Temas de Filmes
+E onde estiver estou.`},{id:"all-i-ask-of-you",t:"All I Ask of You",artist:"Andrew Lloyd Webber (Phantom of the Opera)",pri:"Casamento",tags:["Casamento","Cerim\xF4nia"],sp:"https://open.spotify.com/track/7uq8865MVnUPMFJ8dLnedm",sps:"https://open.spotify.com/search/All%20I%20Ask%20of%20You%20Andrew%20Lloyd%20Webber%20%28Phantom%20of%20the%20Opera%29",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/all-i-ask-of-you.pdf",letra:`Temas de Filmes
 (Raoul:)
 No more talk Of darkness,
 Forget these Wide-eyed fears
 I'm here, Nothing can harm you -
 My words will Warm and calm you
-Let me be  Your freedom,
+Let me be
+Your freedom,
 Let daylight Dry -your tears
-I'm here,  With you, beside you,
+I'm here,
+With you, beside you,
 To guard you And to guide you...
 
 Say you love me
@@ -7571,7 +7716,8 @@ Every Waking moment,
 Turn my head With talk of summertime...
 Say you need me With you, Now and always...
 Promise me that all
-You say is true - That's all I ask  Of you...
+You say is true - That's all I ask
+Of you...
 
 Let me be Your shelter,
 Let me Be your light
@@ -7605,7 +7751,7 @@ Love me - That's all I ask Of you...
 
 Anywhere you go Let me go too...
 Love me - That's all I ask
-Of you`},{id:"we-are-the-world-of-carnaval",t:"We Are the World of Carnaval",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/50ejVdjwYVBO8J8W6CGIVE",sps:"https://open.spotify.com/search/We%20Are%20the%20World%20of%20Carnaval%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/we-are-the-world-of-carnaval.pdf",letra:`Ah, que bom voc\xEA chegou
+Of you`},{id:"we-are-the-world-of-carnaval",t:"We Are the World of Carnaval",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/50ejVdjwYVBO8J8W6CGIVE",sps:"https://open.spotify.com/search/We%20Are%20the%20World%20of%20Carnaval%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/we-are-the-world-of-carnaval.pdf",letra:`Ah, que bom voc\xEA chegou
 Bem-vindo a Salvador
 Cora\xE7\xE3o do Brasil, do Brasil
 Vem, voc\xEA vai conhecer
@@ -7620,7 +7766,7 @@ E o Diabo no quadril
 We are Carnaval
 We are folia
 We are the world of Carnaval
-We are Bahia`},{id:"beijar-na-boca",t:"Beijar na Boca",artist:"Claudia Leitte",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/29VglJSWQLGjXo9ugmP037",sps:"https://open.spotify.com/search/Beijar%20na%20Boca%20Claudia%20Leitte",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/beijar-na-boca.pdf",letra:`Eu estava numa vida de horror
+We are Bahia`},{id:"beijar-na-boca",t:"Beijar na Boca",artist:"Claudia Leitte",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/29VglJSWQLGjXo9ugmP037",sps:"https://open.spotify.com/search/Beijar%20na%20Boca%20Claudia%20Leitte",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/beijar-na-boca.pdf",letra:`Eu estava numa vida de horror
 Com a cabe\xE7a baixa sem ningu\xE9m me d\xE1 valor
 Andava atr\xE1s (thururu) da minha paz (thururu)
 
@@ -7661,7 +7807,7 @@ Deixei pra tr\xE1s (thururu), pois tanto faz (thururu)
 Eu quero mais \xE9 beijar na boca
 Eu quero mais \xE9 beijar na boca (eu quero mais)
 Eu quero mais \xE9 beijar na boca
-E ser feliz daqui pra frente... Pra sempre (2x)`},{id:"erva-venenosa",t:"Erva Venenosa",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1gijahzIGGHoJIq58iFn3n",sps:"https://open.spotify.com/search/Erva%20Venenosa%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/erva-venenosa.pdf",letra:`Parece uma rosa, de longe \xE9 formosa
+E ser feliz daqui pra frente... Pra sempre (2x)`},{id:"erva-venenosa",t:"Erva Venenosa",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1gijahzIGGHoJIq58iFn3n",sps:"https://open.spotify.com/search/Erva%20Venenosa%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/erva-venenosa.pdf",letra:`Parece uma rosa, de longe \xE9 formosa
 E toda recalcada, alegria alheia incomoda
 Venenosa \xCAh,\xCAh...erva venenosa
 \xC9 pior do que cobra cascavel seu veneno \xE9 cruel
@@ -7682,7 +7828,7 @@ Fazer maldade e seu ideal..
 Como um c\xE3o danado,Seu grito \xE9 abafado
 \xC9 vil, \xE9 mentirosa
 Deus do ceu como ela \xE9 maldosa
-Venenosa \xCAH....\xCAH...Erva venenosa.............`},{id:"empurra-empurra",t:"Empurra-Empurra",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1wu3NE4mW6jtuaiBBIT24G",sps:"https://open.spotify.com/search/Empurra-Empurra%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/empurra-empurra.pdf",letra:`T\xE1 um empurra, empurra aqui
+Venenosa \xCAH....\xCAH...Erva venenosa.............`},{id:"empurra-empurra",t:"Empurra-Empurra",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1wu3NE4mW6jtuaiBBIT24G",sps:"https://open.spotify.com/search/Empurra-Empurra%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/empurra-empurra.pdf",letra:`T\xE1 um empurra, empurra aqui
 Mas t\xE1 gostoso
 T\xE1 um empurra, empurra aqui
 Mas t\xE1 gostoso
@@ -7704,7 +7850,7 @@ Embalou, embala
 embalou
 N\xE3o para, n\xE3o para
 N\xE3o para
-(2x)`},{id:"bomba",t:"Bomba",artist:"Braga Boys",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1syj5noYd0GUqHflMH6zda",sps:"https://open.spotify.com/search/Bomba%20Braga%20Boys",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bomba.pdf",letra:`Um movimento sensual (sensual)
+(2x)`},{id:"bomba",t:"Bomba",artist:"Braga Boys",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1syj5noYd0GUqHflMH6zda",sps:"https://open.spotify.com/search/Bomba%20Braga%20Boys",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bomba.pdf",letra:`Um movimento sensual (sensual)
 Um movimento bem sexy (sexy)
 Um movimento bem sexy (sexy)
 J\xE1 t\xE1 chegando o Braga Boys come\xE7a a dan\xE7a que \xE9 uma (bomba)
@@ -7797,7 +7943,7 @@ Por isso pega na cintura
 e acaba, e acaba, acaba, acaba, acaba logo
 e acaba, e acaba, acaba, acaba, acaba logo
 e acaba, e acaba, acaba, acaba, acaba logo
-e acaba, e acaba, acaba, acaba, acaba logo`},{id:"eva",t:"Eva",artist:"Banda Eva",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/7EScnp28wyS0UH8Gybs8qq",sps:"https://open.spotify.com/search/Eva%20Banda%20Eva",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/eva.pdf",letra:`Meu amor, olha s\xF3 hoje o sol n\xE3o apareceu
+e acaba, e acaba, acaba, acaba, acaba logo`},{id:"eva",t:"Eva",artist:"Banda Eva",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/7EScnp28wyS0UH8Gybs8qq",sps:"https://open.spotify.com/search/Eva%20Banda%20Eva",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/eva.pdf",letra:`Meu amor, olha s\xF3 hoje o sol n\xE3o apareceu
 \xC9 o fim da aventura humana na Terra
 Meu planeta adeus,
 Fugiremos n\xF3s dois na arca de No\xE9
@@ -7851,7 +7997,7 @@ a for\xE7a pra viver
 Minha pequena Eva (Eva)
 O nosso amor na ultima astronave (Eva)
 alem do infinito eu vou voar
-sozinho com voc\xEA...`},{id:"o-neguinha-vixe-mainha",t:"\xD3 Neguinha (Vixe Mainha)",artist:"Banda Mel / Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1erkQ7tWD7ogbicBJu1M9t",sps:"https://open.spotify.com/search/%C3%93%20Neguinha%20%28Vixe%20Mainha%29%20Banda%20Mel%20/%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/o-neguinha-vixe-mainha.pdf",letra:`Por essa nega eu ponho roupa nova, uso \xF3culos escuros,
+sozinho com voc\xEA...`},{id:"o-neguinha-vixe-mainha",t:"\xD3 Neguinha (Vixe Mainha)",artist:"Banda Mel / Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1erkQ7tWD7ogbicBJu1M9t",sps:"https://open.spotify.com/search/%C3%93%20Neguinha%20%28Vixe%20Mainha%29%20Banda%20Mel%20/%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/o-neguinha-vixe-mainha.pdf",letra:`Por essa nega eu ponho roupa nova, uso \xF3culos escuros,
 des\xE7o do muro, ela sabe me fazer feliz.
 Nega! \xD3culos escuros, na parede, na parede, na parede do
 meu sonho. Ela pintou alegria, arrumou tudo em mim,
@@ -7882,7 +8028,7 @@ io io mainha, \xF3 neguinha, tudo \xE9 tempo
 Vixe mainha \xF3 neguinha, tudo \xE9 t\xE3o bom
 io io mainha, \xF3 neguinha, tudo \xE9 tempo
 
-NEGA!`},{id:"amor-perfeito",t:"Amor Perfeito",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/43u8nWOOYmAO5j0DZUIuMT",sps:"https://open.spotify.com/search/Amor%20Perfeito%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/amor-perfeito.pdf",letra:`Fecho os olhos pra n\xE3o ver passar o tempo
+NEGA!`},{id:"amor-perfeito",t:"Amor Perfeito",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/43u8nWOOYmAO5j0DZUIuMT",sps:"https://open.spotify.com/search/Amor%20Perfeito%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/amor-perfeito.pdf",letra:`Fecho os olhos pra n\xE3o ver passar o tempo
 Sinto falta de voc\xEA....
 Anjo bom, amor perfeito no meu peito
 Sem voc\xEA n\xE3o sei viver
@@ -7909,17 +8055,19 @@ Sem seu carinho, amor, sem voc\xEA
 Vem me tirar da solid\xE3o,
 Fazer feliz meu cora\xE7\xE3o
 J\xE1 n\xE3o importa quem errou
-O que passou, passou Ent\xE3o vem....`},{id:"100-voce",t:"100% Voc\xEA",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/2msjqUjA6Eg5TI2M5EwJ8A",sps:"https://open.spotify.com/search/100%25%20Voc%C3%AA%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/100-voce.pdf",letra:`Um c\xE9u Sem Estrela, Uma Praia Sem Mar
+O que passou, passou Ent\xE3o vem....`},{id:"100-voce",t:"100% Voc\xEA",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/2msjqUjA6Eg5TI2M5EwJ8A",sps:"https://open.spotify.com/search/100%25%20Voc%C3%AA%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/100-voce.pdf",letra:`Um c\xE9u Sem Estrela, Uma Praia Sem Mar
 Um amor Sem Carinho, Um Romance Sem Par
 Carnaval sem festa, Um Jardim sem flor
 \xC9 assim que eu me sinto longe do seu amor !
 Como enganar um cora\xE7\xE3o t\xE3o ligado nesse amor ?
 Como viver a minha vida sem teu jeito sedutor ?
-N\xE3o d\xE1 mais pra segurar  T\xF4 viciado em voc\xEA !
+N\xE3o d\xE1 mais pra segurar
+T\xF4 viciado em voc\xEA !
 
 N\xE3o d\xE1..., N\xE3o d\xE1..., Pra ficar..., Pra ficar Sem te Ver
 J\xE1 estou ficando louco
-N\xE3o d\xE1..., N\xE3o d\xE1..., Pra ficar..., Pra ficar Sem te Ver  Sou 100% voc\xEA!
+N\xE3o d\xE1..., N\xE3o d\xE1..., Pra ficar..., Pra ficar Sem te Ver
+Sou 100% voc\xEA!
 L\xEA L\xEA L\xEA L\xEA L\xEA L\xEA L\xEA L\xEA
 
 Estrada sem rumo, Saudade sem dor
@@ -7927,7 +8075,7 @@ Tv sem novela, Arco \xCDris sem cor
 Chiclete sem Nana, Ver\xE3o sem calor
 \xC9 assim que eu me sinto longe do seu amor
 Como enganar um cora\xE7\xE3o tao ligado nesse amor ? Como viver a minha vida sem teu jeito sedutor ? N\xE3o d\xE1 mais pra segurar
-T\xF4 viciado em voc\xEA !`},{id:"o-araketu-e-bom-demais",t:"O Araketu \xE9 Bom Demais",artist:"Ara Ketu",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/2pgP6IT08m0Uw9cEMZM7A6",sps:"https://open.spotify.com/search/O%20Araketu%20%C3%A9%20Bom%20Demais%20Ara%20Ketu",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/o-araketu-e-bom-demais.pdf",letra:`N\xE3o d\xE1 pr\xE1 esconder
+T\xF4 viciado em voc\xEA !`},{id:"o-araketu-e-bom-demais",t:"O Araketu \xE9 Bom Demais",artist:"Ara Ketu",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/2pgP6IT08m0Uw9cEMZM7A6",sps:"https://open.spotify.com/search/O%20Araketu%20%C3%A9%20Bom%20Demais%20Ara%20Ketu",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/o-araketu-e-bom-demais.pdf",letra:`N\xE3o d\xE1 pr\xE1 esconder
 O que eu sinto por voc\xEA Ara
 N\xE3o d\xE1, n\xE3o d\xE1, n\xE3o d\xE1, n\xE3o d\xE1
 
@@ -7947,7 +8095,8 @@ Dancei, eu quebrei balancei, vibrei
 O Ara Ketu me fez dan\xE7ar
 Bota as m\xE3ozinhas pro ar
 \xCA \xF4
-\xCA a \xEA a \xF4`},{id:"abalou",t:"Abalou",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Abalou%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/abalou.pdf",letra:`Voc\xEA comigo \xE9 par  \xC9 mais do que sonhar
+\xCA a \xEA a \xF4`},{id:"abalou",t:"Abalou",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Abalou%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/abalou.pdf",letra:`Voc\xEA comigo \xE9 par
+\xC9 mais do que sonhar
 Amor t\xE3o raro de se viver
 E eu quero aproveitar esse momento pra te dizer
 
@@ -7995,7 +8144,7 @@ Sacudiu, balan\xE7ou
 Cora\xE7\xE3o \xE9 s\xF3 felicidade
 Abalou, abalou
 Isso sim
-\xC9 amor de verdade`},{id:"praieiro",t:"Praieiro",artist:"Jammil e Uma Noites",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/20ochCcJRvg7DeruwxvwN4",sps:"https://open.spotify.com/search/Praieiro%20Jammil%20e%20Uma%20Noites",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/praieiro.pdf",letra:`X\xE1, la la la la la
+\xC9 amor de verdade`},{id:"praieiro",t:"Praieiro",artist:"Jammil e Uma Noites",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/20ochCcJRvg7DeruwxvwN4",sps:"https://open.spotify.com/search/Praieiro%20Jammil%20e%20Uma%20Noites",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/praieiro.pdf",letra:`X\xE1, la la la la la
 
 Sou praieiro Sou guerreiro T\xF4 solteiro
 Quero mais o qu\xEA? (2X)
@@ -8043,7 +8192,7 @@ Eu sou do carnaval!
 
 Sou praieiro Sou guerreiro T\xF4 solteiro
 Quero mais o qu\xEA?
-(2x)`},{id:"extravasa",t:"Extravasa",artist:"Claudia Leitte",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/29VglJSWQLGjXo9ugmP037",sps:"https://open.spotify.com/search/Extravasa%20Claudia%20Leitte",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/extravasa.pdf",letra:`Dominou geral Sacudiu a pra\xE7a
+(2x)`},{id:"extravasa",t:"Extravasa",artist:"Claudia Leitte",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/29VglJSWQLGjXo9ugmP037",sps:"https://open.spotify.com/search/Extravasa%20Claudia%20Leitte",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/extravasa.pdf",letra:`Dominou geral Sacudiu a pra\xE7a
 Venha que o som \xE9 massa
 Rock de timbau Groove de caba\xE7a
 E a galera embala (2x)
@@ -8066,7 +8215,7 @@ Venha que o som \xE9 massa
 Rock de timbau Groove de caba\xE7a
 E a galera embala
 
-Tem que ter`},{id:"sorte-grande-poeira",t:"Sorte Grande (Poeira)",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Sorte%20Grande%20%28Poeira%29%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/sorte-grande-poeira.pdf",letra:`A minha sorte grande foi voc\xEA cair do c\xE9u
+Tem que ter`},{id:"sorte-grande-poeira",t:"Sorte Grande (Poeira)",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Sorte%20Grande%20%28Poeira%29%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/sorte-grande-poeira.pdf",letra:`A minha sorte grande foi voc\xEA cair do c\xE9u
 Minha paix\xE3o verdadeira...
 
 Viver a emo\xE7\xE3o, ganhar teu cora\xE7\xE3o
@@ -8085,7 +8234,7 @@ Dan\xE7ou bem no compasso,
 de prazer levantou poeira
 
 Poeira, poeira, poeira
-Levantou poeira`},{id:"rebolation",t:"Rebolation",artist:"Parangol\xE9",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5SRFo4fG3F4mqnn7DkEMiP",sps:"https://open.spotify.com/search/Rebolation%20Parangol%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/rebolation.pdf",letra:`Rebolation \xE9 bom bom
+Levantou poeira`},{id:"rebolation",t:"Rebolation",artist:"Parangol\xE9",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5SRFo4fG3F4mqnn7DkEMiP",sps:"https://open.spotify.com/search/Rebolation%20Parangol%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/rebolation.pdf",letra:`Rebolation \xE9 bom bom
 Rebolation \xE9 bom bom bom (6x)
 
 Bota a m\xE3o na cabe\xE7a que vai come\xE7ar
@@ -8107,7 +8256,7 @@ Se voc\xEA fizer fica melhor (4x)
 
 Bota a m\xE3o na cabe\xE7a que vai come\xE7ar
 O Rebolation tion tion, Rebolation
-O Rebolation tion tion, Rebolation`},{id:"pancadao",t:"Pancad\xE3o",artist:"Ax\xE9 Blond",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/7CPKjMf5lMDV4Xk21VqAq5",sps:"https://open.spotify.com/search/Pancad%C3%A3o%20Ax%C3%A9%20Blond",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/pancadao.pdf",letra:`E vai jogando pro lado de l\xE1
+O Rebolation tion tion, Rebolation`},{id:"pancadao",t:"Pancad\xE3o",artist:"Ax\xE9 Blond",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/7CPKjMf5lMDV4Xk21VqAq5",sps:"https://open.spotify.com/search/Pancad%C3%A3o%20Ax%C3%A9%20Blond",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/pancadao.pdf",letra:`E vai jogando pro lado de l\xE1
 E vai jogando pro lado de l\xE1
 E vem jogando pro lado pro lado de c\xE1
 E vem jogando pro lado de c\xE1
@@ -8131,7 +8280,7 @@ e vai jogando pro lado de l\xE1...
 e vem jogando pro lado, pro lado de c\xE1,
 e vem jogando pro lado de c\xE1...
 rago mof...e vai,vai,vai...
-e vai,vai,vai,vai.... RUA!!!`},{id:"ela-e-toda-boa",t:"Ela \xC9 Toda Boa",artist:"Psirico",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1GifzEcCFKll4eVEwLo73T",sps:"https://open.spotify.com/search/Ela%20%C3%89%20Toda%20Boa%20Psirico",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ela-e-toda-boa.pdf",letra:`Pele bronzeada mulher brasileira a coisa mais linda
+e vai,vai,vai,vai.... RUA!!!`},{id:"ela-e-toda-boa",t:"Ela \xC9 Toda Boa",artist:"Psirico",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1GifzEcCFKll4eVEwLo73T",sps:"https://open.spotify.com/search/Ela%20%C3%89%20Toda%20Boa%20Psirico",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ela-e-toda-boa.pdf",letra:`Pele bronzeada mulher brasileira a coisa mais linda
 Chamada de aviao, corpo de violao, a maior obra prima
 Em todos os cantos do universo, se v\xEA v\xE1rias delas brilhar
 fruto do pecado que o homem sempre quer desfrutar
@@ -8159,14 +8308,14 @@ Auto estima coroa
 Auto estima negona
 (t\xE1 toda gatinha) 2 x.
 
-Mulher brasileira \xE9 toda boa`},{id:"brincadeira-da-tomada",t:"Brincadeira da Tomada",artist:"\xC9 o Tchan",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/7kwJxTpEXof3SuQRwH4fqs",sps:"https://open.spotify.com/search/Brincadeira%20da%20Tomada%20%C3%89%20o%20Tchan",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/brincadeira-da-tomada.pdf",letra:`Olha a brincadeira da tomada,
+Mulher brasileira \xE9 toda boa`},{id:"brincadeira-da-tomada",t:"Brincadeira da Tomada",artist:"\xC9 o Tchan",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/7kwJxTpEXof3SuQRwH4fqs",sps:"https://open.spotify.com/search/Brincadeira%20da%20Tomada%20%C3%89%20o%20Tchan",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/brincadeira-da-tomada.pdf",letra:`Olha a brincadeira da tomada,
 chega pra c\xE1 pra brincadeira da tomada.
 Seus bra\xE7os v\xE3o ficar bem l\xE1 no alto,
 o seu par tamb\xE9m coloca as m\xE3os no alto.
 Pluga a m\xE3o direita, Pluga a m\xE3o esquerda, deixa coladinho, vai, vai vai.
 
 Encaixa, encaixa, encaixa, encaixa, encaixa, encaixa
-Remeche e agacha`},{id:"danca-da-maozinha",t:"Dan\xE7a da M\xE3ozinha",artist:"Tchakabum",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0guD5C1NmCWcnKZKYkbVtb",sps:"https://open.spotify.com/search/Dan%C3%A7a%20da%20M%C3%A3ozinha%20Tchakabum",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/danca-da-maozinha.pdf",letra:`Dance
+Remeche e agacha`},{id:"danca-da-maozinha",t:"Dan\xE7a da M\xE3ozinha",artist:"Tchakabum",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0guD5C1NmCWcnKZKYkbVtb",sps:"https://open.spotify.com/search/Dan%C3%A7a%20da%20M%C3%A3ozinha%20Tchakabum",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/danca-da-maozinha.pdf",letra:`Dance
 A dan\xE7a da m\xE3ozinha
 Que no final
 Vai dar uma rodadinha
@@ -8184,7 +8333,7 @@ Que a dan\xE7a vai come\xE7ar
 Olhe pro lado
 Olhe pro outro
 Preparem o terreno
-Que a dan\xE7a vai come\xE7ar`},{id:"caranguejo",t:"Caranguejo",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Caranguejo%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/caranguejo.pdf",letra:`Vou catar Caranguejo l\xE1 no manguezal
+Que a dan\xE7a vai come\xE7ar`},{id:"caranguejo",t:"Caranguejo",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Caranguejo%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/caranguejo.pdf",letra:`Vou catar Caranguejo l\xE1 no manguezal
 Eu vou passar molho lamb\xE3o para temperar
 Vou sair do jururu quando voc\xEA chegar
 E sua anca que balan\xE7a pra l\xE1 e pra c\xE1 2X
@@ -8202,11 +8351,12 @@ e na corda do carangueijo...
 Segura na corda do caranguejo... pra l\xE1 e pra c\xE1
 Segura na corda do caranguejo... pra l\xE1 e pra c\xE1
 
-Mar\xE9 ta cheia espera esvaziar joga flores no mar  Sa\xFAda a rainha Iemanj\xE1 2X
+Mar\xE9 ta cheia espera esvaziar joga flores no mar
+Sa\xFAda a rainha Iemanj\xE1 2X
 
 e na corda do caranguejo...
 
-Segura na corda do caranguejo... pra l\xE1 e pra c\xE1`},{id:"agua-mineral",t:"\xC1gua Mineral",artist:"Timbalada",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/%C3%81gua%20Mineral%20Timbalada",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/agua-mineral.pdf",letra:`Bebeu \xE1gua? N\xE3o!
+Segura na corda do caranguejo... pra l\xE1 e pra c\xE1`},{id:"agua-mineral",t:"\xC1gua Mineral",artist:"Timbalada",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/%C3%81gua%20Mineral%20Timbalada",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/agua-mineral.pdf",letra:`Bebeu \xE1gua? N\xE3o!
 
 T\xE1 com sede? T\xF4!
 
@@ -8220,7 +8370,7 @@ Olha, olha, olha, olha a \xE1gua mineral
 
 Do Candeal
 
-Voc\xEA vai ficar legal`},{id:"joga-agua",t:"Joga \xC1gua",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/6FBkDUUvnHyII621Tstb6J",sps:"https://open.spotify.com/search/Joga%20%C3%81gua%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/joga-agua.pdf",letra:`J\xE1 n\xE3o sou mais um pit bull de 25.
+Voc\xEA vai ficar legal`},{id:"joga-agua",t:"Joga \xC1gua",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/6FBkDUUvnHyII621Tstb6J",sps:"https://open.spotify.com/search/Joga%20%C3%81gua%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/joga-agua.pdf",letra:`J\xE1 n\xE3o sou mais um pit bull de 25.
 porque preciso proteger o meu amor.
 ou fa\xE7a sol, fa\xE7a chuva, ou fa\xE7a vento
 n\xE3o pare o movimento nessa onda de calor
@@ -8231,13 +8381,14 @@ quero a felicidade
 bem pertinho de mim
 
 ai, que calor, tum tum tum tum tum tum
-ai, que calor joga \xE1gua, joga agua`},{id:"beber-cair-e-levantar",t:"Beber, Cair e Levantar",artist:"Saia Rodada",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1t2BewtR5w59lkNWgrHn9z",sps:"https://open.spotify.com/search/Beber%2C%20Cair%20e%20Levantar%20Saia%20Rodada",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/beber-cair-e-levantar.pdf",letra:`Vamos embora, pra um bar,
+ai, que calor joga \xE1gua, joga agua`},{id:"beber-cair-e-levantar",t:"Beber, Cair e Levantar",artist:"Saia Rodada",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1t2BewtR5w59lkNWgrHn9z",sps:"https://open.spotify.com/search/Beber%2C%20Cair%20e%20Levantar%20Saia%20Rodada",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/beber-cair-e-levantar.pdf",letra:`Vamos embora, pra um bar,
 Beber, cair e levantar.
 Vamos embora, pra um bar,
 Beber, cair e levantar.
 Beber, cair e levantar.(Bis)
 
-Cabra safado,  Cara zoeira,
+Cabra safado,
+Cara zoeira,
 S\xF3 gosta mesmo \xE9 de mulher tranqueira.
 Mulher direita o cara n\xE3o quer
 Fica travado e at\xE9 briga com a mulher.
@@ -8251,7 +8402,7 @@ Beber, cair e levantar.
 Bora, bora.
 Vamos embora, pra um bar,
 Beber, cair e levantar.
-Beber, cair e levantar.(Bis)`},{id:"xo-satanas",t:"X\xF4 Satan\xE1s",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5VPio7UCYcy0LuSUYXkecX",sps:"https://open.spotify.com/search/X%C3%B4%20Satan%C3%A1s%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/xo-satanas.pdf",letra:`Eu era um b\xEAbado que vivia drogado, hoje estou curado
+Beber, cair e levantar.(Bis)`},{id:"xo-satanas",t:"X\xF4 Satan\xE1s",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5VPio7UCYcy0LuSUYXkecX",sps:"https://open.spotify.com/search/X%C3%B4%20Satan%C3%A1s%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/xo-satanas.pdf",letra:`Eu era um b\xEAbado que vivia drogado, hoje estou curado
 Encontrei jesus! encontrei jesus! encontrei jesus!
 Na casa do senhor n\xE3o existe satan\xE1s
 X\xF4 satan\xE1s! x\xF4 satan\xE1s! [2x]
@@ -8264,15 +8415,17 @@ X\xF4 satan\xE1s! x\xF4 satan\xE1s!x\xF4 satan\xE1s! x\xF4 satan\xE1s!
 Eu era um b\xEAbado que vivia drogado, hoje estou curado
 Encontrei jesus! encontrei jesus! encontrei jesus!
 Na casa do senhor n\xE3o existe satan\xE1s
-X\xF4 satan\xE1s! x\xF4 satan\xE1s! [2x]`},{id:"minha-mulher-nao-deixa-nao",t:"Minha Mulher N\xE3o Deixa N\xE3o",artist:"Avi\xF5es do Forr\xF3",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/4BB9RasXUore3VJhWMLSmo",sps:"https://open.spotify.com/search/Minha%20Mulher%20N%C3%A3o%20Deixa%20N%C3%A3o%20Avi%C3%B5es%20do%20Forr%C3%B3",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/minha-mulher-nao-deixa-nao.pdf",letra:`Ei tu que beber?
+X\xF4 satan\xE1s! x\xF4 satan\xE1s! [2x]`},{id:"minha-mulher-nao-deixa-nao",t:"Minha Mulher N\xE3o Deixa N\xE3o",artist:"Avi\xF5es do Forr\xF3",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/4BB9RasXUore3VJhWMLSmo",sps:"https://open.spotify.com/search/Minha%20Mulher%20N%C3%A3o%20Deixa%20N%C3%A3o%20Avi%C3%B5es%20do%20Forr%C3%B3",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/minha-mulher-nao-deixa-nao.pdf",letra:`Ei tu que beber?
 - Quero n\xE3o!
 - N\xE3o quer por qu\xEA?
 - Por nada n\xE3o!
 - Tu que fumar?
 - Han han!
 - N\xE3o quer por qu\xEA?
-Vou n\xE3o, quero n\xE3o, posso n\xE3o, minha mulher, n\xE3o deixa N\xE3o,  N\xE3o vou n\xE3o, quero n\xE3o.
-Vou n\xE3o, quero n\xE3o, posso n\xE3o, minha mulher, n\xE3o deixa  N\xE3o, N\xE3o vou n\xE3o, quero n\xE3o.
+Vou n\xE3o, quero n\xE3o, posso n\xE3o, minha mulher, n\xE3o deixa N\xE3o,
+N\xE3o vou n\xE3o, quero n\xE3o.
+Vou n\xE3o, quero n\xE3o, posso n\xE3o, minha mulher, n\xE3o deixa
+N\xE3o, N\xE3o vou n\xE3o, quero n\xE3o.
 
 - Ei no meu carr\xE3o vamos sair,
 Tem avi\xF5es todo mundo vai curtir.
@@ -8292,7 +8445,7 @@ N\xE3o,
 N\xE3o vou n\xE3o, quero n\xE3o.
 Vou n\xE3o, quero n\xE3o, posso n\xE3o, minha mulher, n\xE3o deixa
 N\xE3o,
-N\xE3o vou n\xE3o, quero n\xE3o.`},{id:"saia-e-bicicletinha",t:"Saia e Bicicletinha",artist:"Ka\xE7amba",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/3xqRhRcHfsJgJPPyxMg22u",sps:"https://open.spotify.com/search/Saia%20e%20Bicicletinha%20Ka%C3%A7amba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/saia-e-bicicletinha.pdf",letra:`Ela ta de saia, De bicicletinha
+N\xE3o vou n\xE3o, quero n\xE3o.`},{id:"saia-e-bicicletinha",t:"Saia e Bicicletinha",artist:"Ka\xE7amba",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/3xqRhRcHfsJgJPPyxMg22u",sps:"https://open.spotify.com/search/Saia%20e%20Bicicletinha%20Ka%C3%A7amba",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/saia-e-bicicletinha.pdf",letra:`Ela ta de saia, De bicicletinha
 Uma m\xE3o vai no guidon
 E a outra tapando a calcinha {bis}
 
@@ -8322,7 +8475,7 @@ Vamos tirar essa m\xE3o
 
 Bota a saia e vem pra rua
 Na sua bicicletinhaa
-Eu quero ver a cor da sua calcinha {bis}`},{id:"piriri-pom-pom",t:"Piriri Pom Pom",artist:"Oz Bambaz",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0UUXLAuOKBbIFIJ1Dfd2JP",sps:"https://open.spotify.com/search/Piriri%20Pom%20Pom%20Oz%20Bambaz",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/piriri-pom-pom.pdf",letra:`Piriri pom pom, piriri pom pom
+Eu quero ver a cor da sua calcinha {bis}`},{id:"piriri-pom-pom",t:"Piriri Pom Pom",artist:"Oz Bambaz",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0UUXLAuOKBbIFIJ1Dfd2JP",sps:"https://open.spotify.com/search/Piriri%20Pom%20Pom%20Oz%20Bambaz",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/piriri-pom-pom.pdf",letra:`Piriri pom pom, piriri pom pom
 Vem rebolar gostoso
 
 Piriri pom pom, piriri pom pom
@@ -8372,7 +8525,7 @@ Piriri pom pom, piriri pom pom
 Sim, Eu sou Oz Bambaz da alegria
 
 Piriri pom pom, piriri pom pom
-E swing\xE3o que contagia`},{id:"na-base-do-beijo",t:"Na Base do Beijo",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0LW6YoAboQtyz2uKaZirV0",sps:"https://open.spotify.com/search/Na%20Base%20do%20Beijo%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/na-base-do-beijo.pdf",letra:`Quando eu te pegar voc\xEA vai ver...
+E swing\xE3o que contagia`},{id:"na-base-do-beijo",t:"Na Base do Beijo",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0LW6YoAboQtyz2uKaZirV0",sps:"https://open.spotify.com/search/Na%20Base%20do%20Beijo%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/na-base-do-beijo.pdf",letra:`Quando eu te pegar voc\xEA vai ver...
 voc\xEA vai ver...ai de ti...ai de ti...
 
 Vai se amarrar, s\xF3 vai querer saber de mim
@@ -8396,7 +8549,7 @@ Dou carinho, me entrego, fa\xE7o o amor acontecer
 Quando amo \xE9 pra valerQuando amo \xE9 pra valer
 Dou carinho, me entrego, fa\xE7o o amor acontecer
 
-Vamos namorar beijar na boca`},{id:"ceu-da-boca",t:"C\xE9u da Boca",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1MZKJRRzZPFxoVJBoCrHYr",sps:"https://open.spotify.com/search/C%C3%A9u%20da%20Boca%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ceu-da-boca.pdf",letra:`\xC9 de babaix\xE1! \xC9 de balacubaca!
+Vamos namorar beijar na boca`},{id:"ceu-da-boca",t:"C\xE9u da Boca",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1MZKJRRzZPFxoVJBoCrHYr",sps:"https://open.spotify.com/search/C%C3%A9u%20da%20Boca%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ceu-da-boca.pdf",letra:`\xC9 de babaix\xE1! \xC9 de balacubaca!
 \xC9 de babaix\xE1! \xC9 de balacubaca!
 tetetetere tere tete tere tetere
 
@@ -8405,8 +8558,10 @@ Eu quero beijar a sua boca louca
 Eu vou enfiar uva no c\xE9u da sua boca
 Eu vou enfiar uva no c\xE9u da sua boca
 
-E a\xED?  Chupa toda, disse toda
-E a\xED?  Chupa toda, disse toda
+E a\xED?
+Chupa toda, disse toda
+E a\xED?
+Chupa toda, disse toda
 
 \xC9 de babaix\xE1! \xC9 de balacubaca!
 \xC9 de babaix\xE1!\xC9 de balacubaca!
@@ -8420,7 +8575,7 @@ Eu vou enfiar uva no c\xE9u da sua boca
 E a\xED?
 Chupa toda, disse toda
 E a\xED?
-Chupa toda, disse toda`},{id:"a-galera",t:"A Galera",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/4xmesHvrrRHN3uhfNfFknc",sps:"https://open.spotify.com/search/A%20Galera%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/a-galera.pdf",letra:`Fevereiro Alegria
+Chupa toda, disse toda`},{id:"a-galera",t:"A Galera",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/4xmesHvrrRHN3uhfNfFknc",sps:"https://open.spotify.com/search/A%20Galera%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/a-galera.pdf",letra:`Fevereiro Alegria
 Muita festa Todo dia
 Quem pode, pode
 Quem n\xE3o pode se sacode
@@ -8443,7 +8598,7 @@ Bonitinho
 E essa dan\xE7a todo mundo t\xE1 jogando no meio da pra\xE7a
 O som da banda empurrando todo mundo
 Num swing massa
-E a galera, \xF4, \xF4`},{id:"berimbau-metalizado",t:"Berimbau Metalizado",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Berimbau%20Metalizado%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/berimbau-metalizado.pdf",letra:`Que som \xE9 esse mano que o povo t\xE1 dan\xE7ando
+E a galera, \xF4, \xF4`},{id:"berimbau-metalizado",t:"Berimbau Metalizado",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Berimbau%20Metalizado%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/berimbau-metalizado.pdf",letra:`Que som \xE9 esse mano que o povo t\xE1 dan\xE7ando
 Que vem de l\xE1 pra c\xE1?
 \xC9 um som diferente
 Que alucina a gente, faz dan\xE7ar
@@ -8480,7 +8635,7 @@ L\xE1 no fundo t\xE1 rolando o som que vem empurrando \xE9 o berimbau
 T\xE1 t\xE1 t\xE1,t\xE1 arrastando toda a massa
 T\xE1 t\xE1 t\xE1,t\xE1 balan\xE7ando o ch\xE3o da pra\xE7a
 T\xE1 t\xE1 t\xE1, t\xE1 todo mundo arrepiado
-Curtindo o som do berimbau metalizado (4x)`},{id:"coracao",t:"Cora\xE7\xE3o",artist:"Rapazolla",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/14OXkY3IUNTVt6VO6ScJlW",sps:"https://open.spotify.com/search/Cora%C3%A7%C3%A3o%20Rapazolla",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/coracao.pdf",letra:`Cora\xE7\xE3o
+Curtindo o som do berimbau metalizado (4x)`},{id:"coracao",t:"Cora\xE7\xE3o",artist:"Rapazolla",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/14OXkY3IUNTVt6VO6ScJlW",sps:"https://open.spotify.com/search/Cora%C3%A7%C3%A3o%20Rapazolla",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/coracao.pdf",letra:`Cora\xE7\xE3o
 Para que se apaixonou por algu\xE9m que nunca te amou
 Algu\xE9m que nunca vai te amar
 
@@ -8525,7 +8680,8 @@ N\xE3o sei, com voc\xEA pode ser bem diferente
 O amor, \xE0s vezes s\xF3 confunde a gente
 N\xE3o sei, com voc\xEA pode ser bem diferente
 
-Cora\xE7\xE3o`},{id:"bola-de-sabao",t:"Bola de Sab\xE3o",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Bola%20de%20Sab%C3%A3o%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bola-de-sabao.pdf",letra:`Baby baby  Queria tanto te ver
+Cora\xE7\xE3o`},{id:"bola-de-sabao",t:"Bola de Sab\xE3o",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Bola%20de%20Sab%C3%A3o%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bola-de-sabao.pdf",letra:`Baby baby
+Queria tanto te ver
 V\xEA se me liga as vezes
 S\xF3 pra dizer um oi
 Talvez quem sabe
@@ -8541,7 +8697,8 @@ Anjo venha voar s\xF3 no meu c\xE9u
 Me pegue no teu colo
 Que eu viajo al\xE9m do horizonte
 
-Virou minha cabe\xE7a  E o cora\xE7\xE3o
+Virou minha cabe\xE7a
+E o cora\xE7\xE3o
 Feito bola de sab\xE3o Me desmancho por voc\xEA
 
 \xD4 \xF4 \xF4
@@ -8559,7 +8716,7 @@ Que eu viajo al\xE9m do horizonte
 Pirou minha cabe\xE7a
 E o cora\xE7\xE3o
 Feito bola de sab\xE3o
-Me desmancho por voc\xEA`},{id:"lirirrixa",t:"Lirirrixa",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1k6wl6w2Dp5ItataGw8Swo",sps:"https://open.spotify.com/search/Lirirrixa%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/lirirrixa.pdf",letra:`Lirirrixa Timbaleia
+Me desmancho por voc\xEA`},{id:"lirirrixa",t:"Lirirrixa",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1k6wl6w2Dp5ItataGw8Swo",sps:"https://open.spotify.com/search/Lirirrixa%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/lirirrixa.pdf",letra:`Lirirrixa Timbaleia
 Badala, badala, badala
 Rucutum, tan, tan, tan (bis)
 
@@ -8632,7 +8789,7 @@ Rucutum, tan, tan, tan (bis)
 Lirirrixa
 Timbaleia
 Badala, badala, badala
-Rucutum, tan, tan, tan`},{id:"flor-do-reggae",t:"Flor do Reggae",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/2A8bo03B4KgpzlLviivvZZ",sps:"https://open.spotify.com/search/Flor%20do%20Reggae%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/flor-do-reggae.pdf",letra:`Um brilho de amor chegou na ilha inteira
+Rucutum, tan, tan, tan`},{id:"flor-do-reggae",t:"Flor do Reggae",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/2A8bo03B4KgpzlLviivvZZ",sps:"https://open.spotify.com/search/Flor%20do%20Reggae%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/flor-do-reggae.pdf",letra:`Um brilho de amor chegou na ilha inteira
 E a Lua que traz o amor \xE9 Lua cheia
 Um grito de dor que vem do peito de quem amou algu\xE9m
 O reggae me traz saudades de quem me beijou
@@ -8643,7 +8800,7 @@ E disse que eu era algu\xE9m pra vida inteira
 Como se eu fosse flor, voc\xEA me cheira
 Como se eu fosse flor, voc\xEA me rega
 E nesse reggae eu vou a noite inteira
-Porque morrer de amor \xE9 brincadeira`},{id:"quero-chiclete",t:"Quero Chiclete",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1cfIZz2c1IdRvylisp4oOv",sps:"https://open.spotify.com/search/Quero%20Chiclete%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/quero-chiclete.pdf",letra:`CHICLETE,CHICLETE QUERO CHICLETE
+Porque morrer de amor \xE9 brincadeira`},{id:"quero-chiclete",t:"Quero Chiclete",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1cfIZz2c1IdRvylisp4oOv",sps:"https://open.spotify.com/search/Quero%20Chiclete%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/quero-chiclete.pdf",letra:`CHICLETE,CHICLETE QUERO CHICLETE
 CHICLETE,QUERO CHICLETE
 CHICLETE,QUERO CHICLETE
 
@@ -8663,7 +8820,7 @@ SABE QUAL \xC9, QUAL \xC9, QUAL \xC9?
 \xC9 CHICLETE COM BANANA
 
 CHICLETE OBA OBA...
-CHICLETE OBA OBA...`},{id:"simbora",t:"Simbora",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0KtHU2dA86bTWAdmMP8Q7O",sps:"https://open.spotify.com/search/Simbora%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/simbora.pdf",letra:`O sol j\xE1 foi embora, e o agito da rua chegou
+CHICLETE OBA OBA...`},{id:"simbora",t:"Simbora",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0KtHU2dA86bTWAdmMP8Q7O",sps:"https://open.spotify.com/search/Simbora%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/simbora.pdf",letra:`O sol j\xE1 foi embora, e o agito da rua chegou
 \xC9 mais uma noite de festa
 Luminosa como sempre, agito da Bahia
 Lembrando vaga-lumes l\xE1 no meio da floresta
@@ -8679,7 +8836,7 @@ Abre a clareira que ela vai sambar
 Simbora \xEA, Simbora \xF4
 lelelele \xF4o
 Simbora \xEA, Simbora l\xE1
-lelelele aa`},{id:"pais-tropical-arere-taj-mahal",t:"Pa\xEDs Tropical / Arer\xEA / Taj Mahal",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5lHuWUt1vdpef2bl93mp3P",sps:"https://open.spotify.com/search/Pa%C3%ADs%20Tropical%20/%20Arer%C3%AA%20/%20Taj%20Mahal%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/pais-tropical-arere-taj-mahal.pdf",letra:`Moro...
+lelelele aa`},{id:"pais-tropical-arere-taj-mahal",t:"Pa\xEDs Tropical / Arer\xEA / Taj Mahal",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5lHuWUt1vdpef2bl93mp3P",sps:"https://open.spotify.com/search/Pa%C3%ADs%20Tropical%20/%20Arer%C3%AA%20/%20Taj%20Mahal%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/pais-tropical-arere-taj-mahal.pdf",letra:`Moro...
 Num pa\xEDs tropical,
 Aben\xE7oado por Deus
 E bonito por natureza (Mas que beleza!)
@@ -8720,7 +8877,7 @@ Tudo, tudo,tudo, vai rolar
 Arer\xEA,
 Um lobby, um hobby, um love com voc\xEA
 Arer\xEA,
-um lobby, um hobby, um love com voc\xEA`},{id:"bota-pra-ferver",t:"Bota Pra Ferver",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5kEIW3V9e8LlpoqumNVwmH",sps:"https://open.spotify.com/search/Bota%20Pra%20Ferver%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bota-pra-ferver.pdf",letra:`No c\xE9u azul destino das estrelas
+um lobby, um hobby, um love com voc\xEA`},{id:"bota-pra-ferver",t:"Bota Pra Ferver",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5kEIW3V9e8LlpoqumNVwmH",sps:"https://open.spotify.com/search/Bota%20Pra%20Ferver%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bota-pra-ferver.pdf",letra:`No c\xE9u azul destino das estrelas
 Onde o vento sentiu a flor
 A vida, bota pra ferver
 
@@ -8739,7 +8896,7 @@ Fiquei pinel,i\xF4 i\xF4 i\xF4 i\xF4 i\xF4
 Eu disse
 Bota pra ferver, no caldeir\xE3o do amor
 Bota pra ferver, a ilus\xE3o e a dor
-Bota pra ferver, um rio de lagrimas.`},{id:"lobo-mau",t:"Lobo Mau",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Lobo%20Mau%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/lobo-mau.pdf",letra:`Quem \xE9 voc\xEA?
+Bota pra ferver, um rio de lagrimas.`},{id:"lobo-mau",t:"Lobo Mau",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Lobo%20Mau%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/lobo-mau.pdf",letra:`Quem \xE9 voc\xEA?
 Chapeuzinho Vermelho
 
 Bom, se voc\xEA \xE9 chapeuzinho vermelho, ent\xE3o..
@@ -8775,14 +8932,16 @@ danadinha
 Chapeuzinho de mai\xF4,
 ouviu buzina e n\xE3o parou..
 
-[REFR\xC3O}`},{id:"tchubirabiron",t:"Tchubirabiron",artist:"Parangol\xE9",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5lReOybvBNxpclJZzXkIMc",sps:"https://open.spotify.com/search/Tchubirabiron%20Parangol%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/tchubirabiron.pdf",letra:`Pra frente, pra frente Cintura cabe\xE7a
+[REFR\xC3O}`},{id:"tchubirabiron",t:"Tchubirabiron",artist:"Parangol\xE9",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5lReOybvBNxpclJZzXkIMc",sps:"https://open.spotify.com/search/Tchubirabiron%20Parangol%C3%A9",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/tchubirabiron.pdf",letra:`Pra frente, pra frente Cintura cabe\xE7a
 Tchubirabiron
 Olha pra frente, pra frente Cintura cabe\xE7a
 Tchubirabiron (2x)
 
 Que dancinha legalTodo mundo vai fazer
 Nesse Carnaval Eu sei que vai ferver
-Voc\xEA quer tome  a\xED  Swingueira pra voc\xEA
+Voc\xEA quer tome
+a\xED
+Swingueira pra voc\xEA
 Pega na cabe\xE7a e vai
 
 Olha Pra frente, pra frente Cintura cabe\xE7a
@@ -8799,7 +8958,7 @@ Sei que voc\xEA t\xE1 querendo
 Eu sei que voc\xEA quer
 Sei que voc\xEA t\xE1 querendo
 Pega na cintura e vai
-Pra frente, pra frente`},{id:"explosao",t:"Explos\xE3o",artist:"Tchakabum",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/18GyOllB82uQAy7C03p5i8",sps:"https://open.spotify.com/search/Explos%C3%A3o%20Tchakabum",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/explosao.pdf",letra:`Explos\xE3o TchacaBum
+Pra frente, pra frente`},{id:"explosao",t:"Explos\xE3o",artist:"Tchakabum",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/18GyOllB82uQAy7C03p5i8",sps:"https://open.spotify.com/search/Explos%C3%A3o%20Tchakabum",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/explosao.pdf",letra:`Explos\xE3o TchacaBum
 com a dan\xE7a do ver\xE3o
 Explos\xE3o muito quente
 quente feito um vulc\xE3o
@@ -8821,7 +8980,7 @@ Como uma cobra rebolarebola corpo de mola
 o caldeir\xE3o fervendo vai entrar em erup\xE7\xE3o
 voc\xEA vai ver daqui a pouco
 o caldo vai ferver
-vai ferver vai ferver`},{id:"olha-a-onda",t:"Olha a Onda",artist:"Tchakabum",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/4ohps6RKcqCWMfK8GFcYE5",sps:"https://open.spotify.com/search/Olha%20a%20Onda%20Tchakabum",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/olha-a-onda.pdf",letra:`Vou te pegar, essa \xE9 a galera do avi\xE3o
+vai ferver vai ferver`},{id:"olha-a-onda",t:"Olha a Onda",artist:"Tchakabum",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/4ohps6RKcqCWMfK8GFcYE5",sps:"https://open.spotify.com/search/Olha%20a%20Onda%20Tchakabum",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/olha-a-onda.pdf",letra:`Vou te pegar, essa \xE9 a galera do avi\xE3o
 Se ligue agora nessa nova onda
 Sou um pirata jogando a marca\xE7\xE3o, \xF4 \xF4 \xF4
 
@@ -8854,7 +9013,7 @@ Andou na prancha, cuidado o tubar\xE3o vai te pegar
 Onda, onda, olha a onda
 Onda, onda, olha a onda
 Onda, onda, olha a onda
-Onda, onda, olha a onda!`},{id:"danca-do-vampiro",t:"Dan\xE7a do Vampiro",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/4f22K7R92tQeFuYYuRgtlG",sps:"https://open.spotify.com/search/Dan%C3%A7a%20do%20Vampiro%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/danca-do-vampiro.pdf",letra:`Voc\xEA \xE9 o amor que eu sempre quisVem pra mim
+Onda, onda, olha a onda!`},{id:"danca-do-vampiro",t:"Dan\xE7a do Vampiro",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/4f22K7R92tQeFuYYuRgtlG",sps:"https://open.spotify.com/search/Dan%C3%A7a%20do%20Vampiro%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/danca-do-vampiro.pdf",letra:`Voc\xEA \xE9 o amor que eu sempre quisVem pra mim
 Coisinha sensual me despertou Fazendo assim
 
 Por isso, mexe a bundinha
@@ -8877,7 +9036,8 @@ O, o, o, ooo, na dan\xE7a do vampiro
 
 2 vezes
 
-Voc\xEA \xE9 o amor...`},{id:"danca-da-manivela",t:"Dan\xE7a da Manivela",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/3xdmFwG1jTUs0T8BqfRxLk",sps:"https://open.spotify.com/search/Dan%C3%A7a%20da%20Manivela%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/danca-da-manivela.pdf",letra:`Dan\xE7a da Manivela  Dan\xE7a da Manivela
+Voc\xEA \xE9 o amor...`},{id:"danca-da-manivela",t:"Dan\xE7a da Manivela",artist:"Asa de \xC1guia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/3xdmFwG1jTUs0T8BqfRxLk",sps:"https://open.spotify.com/search/Dan%C3%A7a%20da%20Manivela%20Asa%20de%20%C3%81guia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/danca-da-manivela.pdf",letra:`Dan\xE7a da Manivela
+Dan\xE7a da Manivela
 
 eu fui perguntar pra ela meu amor [meu amor]
 se a dan\xE7a da manivela ela topou (bis)
@@ -8899,7 +9059,7 @@ sobe mais um pouquinho
 pega no rostinho dela,
 pega no peitinho dela
 pega no umbigo dela,
-desce devagarinho`},{id:"tchau-i-have-to-go-now",t:"Tchau, I Have to Go Now",artist:"Jammil e Uma Noites",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/6iUX4iqMyyDtRSTkUB5ozs",sps:"https://open.spotify.com/search/Tchau%2C%20I%20Have%20to%20Go%20Now%20Jammil%20e%20Uma%20Noites",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/tchau-i-have-to-go-now.pdf",letra:`Tchau I have to go now I have to go now
+desce devagarinho`},{id:"tchau-i-have-to-go-now",t:"Tchau, I Have to Go Now",artist:"Jammil e Uma Noites",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/6iUX4iqMyyDtRSTkUB5ozs",sps:"https://open.spotify.com/search/Tchau%2C%20I%20Have%20to%20Go%20Now%20Jammil%20e%20Uma%20Noites",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/tchau-i-have-to-go-now.pdf",letra:`Tchau I have to go now I have to go now
 Tchau (2x)
 
 Eu queria ficar Mas s\xF3 que hoje n\xE3o d\xE1
@@ -8920,7 +9080,7 @@ Ser seu amanh\xE3
 Tchau, I have to go now
 I have to go now, tchau ei,ei(2x)
 
-Espero a gente, te quero agora e sempre...`},{id:"festa",t:"Festa",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/3XyCSaEvFQeflTqlF8FAjL",sps:"https://open.spotify.com/search/Festa%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/festa.pdf",letra:`Festa no gueto,
+Espero a gente, te quero agora e sempre...`},{id:"festa",t:"Festa",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/3XyCSaEvFQeflTqlF8FAjL",sps:"https://open.spotify.com/search/Festa%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/festa.pdf",letra:`Festa no gueto,
 Pode vir, pode chegar
 Misturando o mundo inteiro
 Vamos ver no que \xE9 que d\xE1
@@ -8944,7 +9104,7 @@ Avisou, Avisou, Avisou, Avisou
 
 Que vai rolar a festa Vai rolar
 O povo no gueto
-Mandou avisar`},{id:"canibal",t:"Canibal",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Canibal%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/canibal.pdf",letra:`Morava numa ilha perdida e deserta
+Mandou avisar`},{id:"canibal",t:"Canibal",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Canibal%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/canibal.pdf",letra:`Morava numa ilha perdida e deserta
 deserta, ilha deserta da dor,sonhava com um \xEDndio
 que me desse alegria,e esse \xEDndio era voc\xEA amor
 Com um penacho na cabe\xE7a,de uma tribo de paz
@@ -8955,7 +9115,7 @@ O seu amor \xE9 canibal
 Comeu meu cora\xE7\xE3o
 Mas agora eu sou feliz
 O seu amor \xE9 canibal
-Meu cora\xE7\xE3o agora \xE9 todo carnaval`},{id:"bate-lata",t:"Bate Lata",artist:"Gil Mel\xEAndia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5W89ogIAeCflryyDQWRH8R",sps:"https://open.spotify.com/search/Bate%20Lata%20Gil%20Mel%C3%AAndia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/bate-lata.pdf",letra:`Era um menino tocador que dispensou o agog\xF4
+Meu cora\xE7\xE3o agora \xE9 todo carnaval`},{id:"bate-lata",t:"Bate Lata",artist:"Gil Mel\xEAndia",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5W89ogIAeCflryyDQWRH8R",sps:"https://open.spotify.com/search/Bate%20Lata%20Gil%20Mel%C3%AAndia",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/bate-lata.pdf",letra:`Era um menino tocador que dispensou o agog\xF4
 E o tambor pra tocar lata
 Do ta ta ta ele gostou
 Do tum tum tum ele adorou
@@ -8979,7 +9139,7 @@ Improvisa, bate na palma da m\xE3o
 Venha de lata neg\xE3o
 No meio da multid\xE3o
 Se n\xE3o tem lata
-Improvisa, bate na palma da m\xE3o`},{id:"safado-cachorro-sem-vergonha",t:"Safado, Cachorro, Sem-Vergonha",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1NbO7gbdZ46hnvypObwZUY",sps:"https://open.spotify.com/search/Safado%2C%20Cachorro%2C%20Sem-Vergonha%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/safado-cachorro-sem-vergonha.pdf",letra:`Deixa de ser mulherengo homem
+Improvisa, bate na palma da m\xE3o`},{id:"safado-cachorro-sem-vergonha",t:"Safado, Cachorro, Sem-Vergonha",artist:"Babado Novo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1NbO7gbdZ46hnvypObwZUY",sps:"https://open.spotify.com/search/Safado%2C%20Cachorro%2C%20Sem-Vergonha%20Babado%20Novo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/safado-cachorro-sem-vergonha.pdf",letra:`Deixa de ser mulherengo homem
 O dia todo pensando em mulher
 Voc\xEA t\xE1 doido pra ficar sozinho
 T\xE1 querendo ficar a migu\xE9
@@ -9003,7 +9163,7 @@ Sai pra l\xE1 Que eu j\xE1 t\xF4 vacinada
 Voc\xEA n\xE3o mudou nada
 Caladinho, que eu vou falar
 
-Safado`},{id:"carro-velho",t:"Carro Velho",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/50oHZbd2SfshzvHvjXoEnS",sps:"https://open.spotify.com/search/Carro%20Velho%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/carro-velho.pdf",letra:`Cheiro de pneu queimado, carburador furado, cora\xE7\xE3o dilacerado!
+Safado`},{id:"carro-velho",t:"Carro Velho",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/50oHZbd2SfshzvHvjXoEnS",sps:"https://open.spotify.com/search/Carro%20Velho%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/carro-velho.pdf",letra:`Cheiro de pneu queimado, carburador furado, cora\xE7\xE3o dilacerado!
 Quero meu neg\xE3o do lado, cabelo penteado no meu carro envenenado
 
 Eu vou Eu vou Ent\xE3o venha!
@@ -9020,7 +9180,7 @@ Quer andar de carro velho amor, que venha, pois eu sei que amar a p\xE9 amor, \x
 Cheiro de pneu queimado, carburador furado, cora\xE7\xE3o dilacerado!
 Quero meu neg\xE3o do lado, cabelo penteado no meu carro envenenado
 
-Eu vou Eu vou`},{id:"milla",t:"Milla",artist:"Netinho",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Milla%20Netinho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/milla.pdf",letra:`Oh Milla, mil e uma noites de amor com voc\xEA,
+Eu vou Eu vou`},{id:"milla",t:"Milla",artist:"Netinho",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Milla%20Netinho",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/milla.pdf",letra:`Oh Milla, mil e uma noites de amor com voc\xEA,
 Na praia, num barco, num farol apagado
 Num moinho abandonado,
 Em mar grande, alto astral,
@@ -9040,7 +9200,7 @@ Num moinho abandonado,
 Em mar grande, alto astral,
 L\xE1 em Hollywood pra de tudo rolar,
 Vendo estrelas caindo, vendo a noite passar,
-Eu e voc\xEA, na ilha do sol`},{id:"pipoca",t:"Pipoca",artist:"Ara Ketu",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5RcHfPJwZ3S2pXZphXO590",sps:"https://open.spotify.com/search/Pipoca%20Ara%20Ketu",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/pipoca.pdf",letra:`O Araketo o Araketu quando toca, deixa todo mundo pulando que nem pipoca
+Eu e voc\xEA, na ilha do sol`},{id:"pipoca",t:"Pipoca",artist:"Ara Ketu",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/5RcHfPJwZ3S2pXZphXO590",sps:"https://open.spotify.com/search/Pipoca%20Ara%20Ketu",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/pipoca.pdf",letra:`O Araketo o Araketu quando toca, deixa todo mundo pulando que nem pipoca
 O Araketo o Araketu quando toca, deixa todo mundo pulando que nem pipoca
 O fogo \xE9 fogo, esquenta, esquenta o nosso amor
 O fogo \xE9 fogo, esquenta, esquenta que o Ara chegou, vai vai vai
@@ -9051,7 +9211,7 @@ Eu vejo o povo cantar, eu vejo o povo dan\xE7ar na melodia da can\xE7\xE3o (2x)
 
 Vamos dan\xE7ar no compasso, que eu vou seguir o teu passo abra o teu cora\xE7\xE3o
 Vamos dan\xE7ar no compasso, que eu vou seguir o teu passo explode cora\xE7\xE3o (a galera sai do ch\xE3o comigo)
-O fogo \xE9 fogo, esquenta, esquenta que o Ara chegou, vai vai vai`},{id:"a-fila-andou",t:"A Fila Andou",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/3XA7mGbfRRyFkhKF5zCXPo",sps:"https://open.spotify.com/search/A%20Fila%20Andou%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/a-fila-andou.pdf",letra:`Nanan\xE1 Nanananan\xE1 Nanan\xE1
+O fogo \xE9 fogo, esquenta, esquenta que o Ara chegou, vai vai vai`},{id:"a-fila-andou",t:"A Fila Andou",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/3XA7mGbfRRyFkhKF5zCXPo",sps:"https://open.spotify.com/search/A%20Fila%20Andou%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/a-fila-andou.pdf",letra:`Nanan\xE1 Nanananan\xE1 Nanan\xE1
 
 Cansei de esperar na janela de casa
 Desisti do seu jogo agora vou me virar
@@ -9076,7 +9236,7 @@ Boa sorte, v\xE1 embora
 
 A fila andouEu te falei N\xE3o deu valor
 Como eu te amei Agora chora
-Voc\xEA j\xE1 me perdeu, t\xF4 fora!!`},{id:"doce-desejo",t:"Doce Desejo",artist:"Bruno & Marrone",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0hC84ElGTO9Z18vQajuUOT",sps:"https://open.spotify.com/search/Doce%20Desejo%20Bruno%20%26%20Marrone",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/doce-desejo.pdf",letra:`T\xE1 no jeito de olhar,
+Voc\xEA j\xE1 me perdeu, t\xF4 fora!!`},{id:"doce-desejo",t:"Doce Desejo",artist:"Bruno & Marrone",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0hC84ElGTO9Z18vQajuUOT",sps:"https://open.spotify.com/search/Doce%20Desejo%20Bruno%20%26%20Marrone",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/doce-desejo.pdf",letra:`T\xE1 no jeito de olhar,
 T\xE1 no gosto do beijo,
 Na express\xE3o do sorriso,
 T\xE1 no meu para\xEDso
@@ -9093,7 +9253,7 @@ Meu amor \xE9 s\xF3 seu,
 Seu amor \xE9 s\xF3 meu,
 Nosso amor \xE9 assim,
 Eu s\xF3 sei te querer,
-Tamb\xE9m sei que voc\xEA s\xF3 tem olhos pra mim...`},{id:"meu-cabelo-duro-e-assim",t:"Meu Cabelo Duro \xC9 Assim",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1VVB48NrVd73BmxNVw3GxT",sps:"https://open.spotify.com/search/Meu%20Cabelo%20Duro%20%C3%89%20Assim%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/meu-cabelo-duro-e-assim.pdf",letra:`Ah eu tou maluco!...
+Tamb\xE9m sei que voc\xEA s\xF3 tem olhos pra mim...`},{id:"meu-cabelo-duro-e-assim",t:"Meu Cabelo Duro \xC9 Assim",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1VVB48NrVd73BmxNVw3GxT",sps:"https://open.spotify.com/search/Meu%20Cabelo%20Duro%20%C3%89%20Assim%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/meu-cabelo-duro-e-assim.pdf",letra:`Ah eu tou maluco!...
 Meu cabelo duro \xE9 assim, cabelo duro, de pixaim (bis)
 
 Nega n\xE3o precisa nem falar, \u2028nega n\xE3o precisa nem dizer
@@ -9112,7 +9272,7 @@ Eu tou ligado ligado no meu cabelo duro, que \xE9 de pixaim
 \xC9 de pixaim, \xE9 de pixaim
 Oi oi
 - E a m\xE3o pra cima batendo palma, ah eu tou maluco
-(Refr\xE3o)`},{id:"vou-voar",t:"Vou Voar",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1cfIZz2c1IdRvylisp4oOv",sps:"https://open.spotify.com/search/Vou%20Voar%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/vou-voar.pdf",letra:`Eu preciso encontrar um amor
+(Refr\xE3o)`},{id:"vou-voar",t:"Vou Voar",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/1cfIZz2c1IdRvylisp4oOv",sps:"https://open.spotify.com/search/Vou%20Voar%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/vou-voar.pdf",letra:`Eu preciso encontrar um amor
 Que me deixe arrasado na cama
 Um amor que desperte desejo
 Um amor que me cale com um beijo
@@ -9134,7 +9294,7 @@ Que sufoque e n\xE3o deixe saida
 Ou ent\xE3o que acalme o meu cora\xE7\xE3o
 N\xE3o me importa
 Eu quero encontrar um amor
-\xC9 melhor do que a solid\xE3o`},{id:"paz-carnaval-futebol",t:"Paz, Carnaval, Futebol",artist:"Ax\xE9 Mondo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Paz%2C%20Carnaval%2C%20Futebol%20Ax%C3%A9%20Mondo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/paz-carnaval-futebol.pdf",letra:`Paz, carnaval, futebol,
+\xC9 melhor do que a solid\xE3o`},{id:"paz-carnaval-futebol",t:"Paz, Carnaval, Futebol",artist:"Ax\xE9 Mondo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Paz%2C%20Carnaval%2C%20Futebol%20Ax%C3%A9%20Mondo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/paz-carnaval-futebol.pdf",letra:`Paz, carnaval, futebol,
 n\xE3o mata, n\xE3o engorda e n\xE3o faz mal.
 Carnaval,fultebol, se joga para cima e vira sol.
 
@@ -9149,7 +9309,7 @@ No polo sul, tem vento frio,
 para namorar vem todo mundo atr\xE1s do trio.
 
 Beija docinho, que estou doidinho, para te molhar \xE0 boca.
-Insola\xE7\xE3o, febre, paix\xE3o, dei f\xE9rias ao meu cora\xE7\xE3o`},{id:"vamo-pula",t:"Vamo Pul\xE1!",artist:"Sandy & Junior",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Vamo%20Pul%C3%A1%21%20Sandy%20%26%20Junior",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/vamo-pula.pdf",letra:`Estou sentindo solta pelo ar
+Insola\xE7\xE3o, febre, paix\xE3o, dei f\xE9rias ao meu cora\xE7\xE3o`},{id:"vamo-pula",t:"Vamo Pul\xE1!",artist:"Sandy & Junior",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Vamo%20Pul%C3%A1%21%20Sandy%20%26%20Junior",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/vamo-pula.pdf",letra:`Estou sentindo solta pelo ar
 Uma energia que quer me dominar
 \xC9 uma coisa boa que vem na minha dire\xE7\xE3o
 Que me contagia e at\xE9 dispara o cora\xE7\xE3o
@@ -9172,7 +9332,7 @@ E n\xE3o se cansa
 S\xF3 quem consegue sentir essa magia
 Consegue entrar na mesma sintonia
 E quando voc\xEA pular, pular at\xE9 suar
-E n\xE3o se cansa \xE9 pura adrenalina no ar.`},{id:"famo-a-billionaire",t:"Famo$a (Billionaire)",artist:"Claudia Leitte",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0dCxyzQPnIQO7vPpIBxv98",sps:"https://open.spotify.com/search/Famo%24a%20%28Billionaire%29%20Claudia%20Leitte",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/famo-a-billionaire.pdf",letra:`Eu quero ser muito famosa
+E n\xE3o se cansa \xE9 pura adrenalina no ar.`},{id:"famo-a-billionaire",t:"Famo$a (Billionaire)",artist:"Claudia Leitte",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/0dCxyzQPnIQO7vPpIBxv98",sps:"https://open.spotify.com/search/Famo%24a%20%28Billionaire%29%20Claudia%20Leitte",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/famo-a-billionaire.pdf",letra:`Eu quero ser muito famosa
 E ter o seu amor
 Mas quero sentar no sof\xE1 do J\xF4
 
@@ -9238,7 +9398,7 @@ E o que eu vou fazer, se eu quero muito mais?
 O, o, o, o, o, o, eu quero muito mais
 
 Eu quero ser muito famosa
-E ter o seu amor`},{id:"acelera-ae-noite-do-bem",t:"Acelera A\xEA (Noite do Bem)",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Acelera%20A%C3%AA%20%28Noite%20do%20Bem%29%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/acelera-ae-noite-do-bem.pdf",letra:`Nesse lance, vou nesse ritmo, tudo pode rolar
+E ter o seu amor`},{id:"acelera-ae-noite-do-bem",t:"Acelera A\xEA (Noite do Bem)",artist:"Ivete Sangalo",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"",sps:"https://open.spotify.com/search/Acelera%20A%C3%AA%20%28Noite%20do%20Bem%29%20Ivete%20Sangalo",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/acelera-ae-noite-do-bem.pdf",letra:`Nesse lance, vou nesse ritmo, tudo pode rolar
 J\xE1 sei onde vou nessa onda, t\xF4 doido afim de dan\xE7ar
 Solta o som pra animar a noite DJ
 Todo mundo ligado na noite do bem
@@ -9261,7 +9421,7 @@ Acelera\xEA, o cora\xE7\xE3o
 Que hoje \xE9 dia de Ivete
 Acelera\xEA, o cora\xE7\xE3o
 Que hoje \xE9 dia de Ivete
-Aaaah`},{id:"ta-lisinho",t:"T\xE1 Lisinho",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/09VwhhDg6vyPFP7mGyZKtD",sps:"https://open.spotify.com/search/T%C3%A1%20Lisinho%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v2/ta-lisinho.pdf",letra:`Eu ganhei o meu dia
+Aaaah`},{id:"ta-lisinho",t:"T\xE1 Lisinho",artist:"Chiclete com Banana",pri:"Ax\xE9",tags:["Ax\xE9"],sp:"https://open.spotify.com/track/09VwhhDg6vyPFP7mGyZKtD",sps:"https://open.spotify.com/search/T%C3%A1%20Lisinho%20Chiclete%20com%20Banana",u:"https://zkqzkazxeiouwxxohfzo.supabase.co/storage/v1/object/public/letras/v3/ta-lisinho.pdf",letra:`Eu ganhei o meu dia
 Quando te encontrei
 Aqui no meio da folia
 
@@ -9277,8 +9437,7 @@ Espera que j\xE1 tenho a solu\xE7\xE3o
 J\xE1 passei gilette meu rosto ta lisinho
 Agora t\xF4 de boa pra ganhar beijinho
 T\xE1 lisinho ta lisinho
-Pra ganhar beijinho`}],setlists:[{id:"set-70-light",name:"70 light",src:"70 light.txt",songs:["night-fever","celebration","give-it-up","i-say-a-little-prayer-2"]},{id:"set-ain-t-no-mountain-high-enough",name:"Ain't No Mountain High Enough",src:"Ain't No Mountain High Enough .txt",songs:["you-ll-be-in-my-heart","what-a-wonderful-world","iris","con-te-partiro","pai-nosso"]},{id:"set-anos-50",name:"Anos 50",src:"Anos 50 .txt",songs:["let-s-twist-again","tutti-frutti","rock-around-the-clock","blue-suede-shoes","jailhouse-rock"]},{id:"set-anos-50-60",name:"Anos 50 _60",src:"Anos 50 _60.txt",songs:["let-s-twist-again","tutti-frutti","rock-around-the-clock","blue-suede-shoes","jailhouse-rock","biquini-de-bolinha-amarelinha"]},{id:"set-anos-80-nacional",name:"Anos 80 nacional",src:"Anos 80 nacional.txt",songs:["meu-erro","oculos","descobridor-dos-sete-mares","nao-quero-dinheiro-so-quero-amar","musica-urbana"]},{id:"set-anos-90",name:"anos 90",src:"anos 90.txt",songs:["a-little-respect","the-rhythm-of-the-night","mr-vain","what-is-love","run-to-you-verificar"]},{id:"set-rocks",name:"ROCKS",src:"ROCKS.txt",songs:["listen-to-the-music","have-you-ever-seen-the-rain","rock-and-roll-all-nite","i-can-t-get-no-satisfaction","born-to-be-wild","suddenly-i-see","kiss-me"]},{id:"set-boleros",name:"Boleros",src:"Boleros.txt",songs:["la-puerta","historia-de-un-amor","el-dia-que-me-quieras","la-barca","el-reloj"]},{id:"set-latinas",name:"Latinas",src:"Latinas.txt",songs:["sway","can-t-take-my-eyes-off-you","la-vida-es-un-carnaval","la-camisa-negra","corazon-espinado"]},{id:"set-forro",name:"Forro",src:"Forro.txt",songs:["medo-de-chuva","esperando-na-janela","nosso-xote","voce-nao-vale-nada"]},{id:"set-standards",name:"Standards",src:"Standards.txt",songs:["i-ve-got-you-under-my-skin","cheek-to-cheek","fly-me-to-the-moon","new-york-new-york"]},{id:"set-samba",name:"samba",src:"samba.txt",songs:["verdade-chinesa","agamamou","flor-de-lis","fato-consumado","ive-brussel","eu-fui","danca-do-bole-bole"]},{id:"set-samba-enredo",name:"samba enredo",src:"samba enredo.txt",songs:["peguei-um-ita-no-norte-salgueiro","gavioes-fiel","atras-da-verde-e-rosa-so-nao-vai-quem-ja-morreu-","o-que-e-o-que-e"]},{id:"set-samaba-enrredo-navio",name:"Samaba enrredo Navio",src:"Samaba enrredo Navio.txt",songs:["samba-enredo-1986-mangueira","bum-bum-paticumbum-prugurundum-verificar","peguei-um-ita-no-norte-salgueiro"]},{id:"set-sertanejo",name:"Sertanejo",src:"Sertanejo.txt",songs:["man-i-feel-like-a-woman","meteoro","o-jeito-e-da-uma-fugidinha","ciumenta","chora-me-liga","amo-noite-e-dia","paga-pau","leilao","que-pescar-que-nada","bebo-pra-carai","o-bicho-vai-pegar-o-chao-vai-tremer","pode-chorar","bala-de-prata","mala-pronta","vendaval","vou-fazer-pirraca","have-you-ever-seen-the-rain","borboletas","fada","como-um-anjo"]},{id:"set-bahia",name:"Bahia",src:"Bahia.txt",songs:["my-girl","let-s-stay-together","sexbomb","crazy-little-thing-called-love","i-was-born-to-love-you"]},{id:"set-dance",name:"Dance",src:"Dance.txt",songs:["i-gotta-feeling","stereo-love","rise-up","bad-romance-poker-face-medley-lady-gaga","loca","club-can-t-handle-me","crazy-in-love","love-is-gone","love-generation","let-me-think-about-it","i-don-t-know-why","set-me-free"]},{id:"set-show-michael",name:"Show Michael",src:"Show Michael.txt",songs:["thriller","ben","i-ll-be-there","i-want-you-back","abc","billie-jean","bad","beat-it","ain-t-no-sunshine","the-girl-is-mine","you-are-not-alone","they-don-t-care-about-us","human-nature","black-or-white","heal-the-world","smooth-criminal"]},{id:"set-lentas-dancantes",name:"Lentas dan\xE7antes",src:"Lentas dan\xE7antes.txt",songs:["do-you-wanna-dance","stand-by-me","rock-and-roll-lullaby","put-your-records-on","how-deep-is-your-love","cruisin","i-ll-be-over-you","fallen","everything"]},{id:"set-lentas-e-baladas",name:"Lentas e Baladas",src:"Lentas e Baladas .txt",songs:["easy","dona","eu-te-devoro","final-feliz","don-t-know-why","how-deep-is-your-love","my-girl","new-york-new-york","besame-mucho","i-ve-had-the-time-of-my-life","corazon-espinado"]},{id:"set-fox-lento",name:"Fox Lento",src:"Fox Lento.txt",songs:["unforgettable","the-way-you-look-tonight","close-to-you","can-t-smile-without-you"]},{id:"set-fox-linha",name:"Fox linha",src:"Fox linha.txt",songs:["i-left-my-heart-in-san-francisco","new-york-new-york","i-ve-got-you-under-my-skin","hello-detroit","just-a-gigolo","cheek-to-cheek","fly-me-to-the-moon"]},{id:"set-rmaonticas-linha",name:"Rmaonticas Linha",src:"Rmaonticas Linha.txt",songs:["easy","beauty-and-the-beast","endless-love","hero","after-the-love-has-gone","i-just-wanna-stop"]},{id:"set-standards-new-times",name:"Standards NEW TIMES",src:"Standards NEW TIMES.txt",songs:["emocoes","new-york-new-york","they-can-t-take-that-away-from-me","for-once-in-my-life","fly-me-to-the-moon","i-ve-got-you-under-my-skin","beyond-the-sea","hello-detroit","all-of-me","cheek-to-cheek"]},{id:"set-apos-jantar-new-times",name:"ap\xF3s jantar NEW TIMES",src:"ap\xF3s jantar NEW TIMES.txt",songs:["have-you-ever-seen-the-rain","proud-mary","i-can-t-get-no-satisfaction","twist-and-shout","a-hard-day-s-night","i-wanna-hold-your-hand","stayin-alive","summer-nights","you-re-the-one-that-i-want","johnny-b-goode","blue-suede-shoes","pode-vir-quente-que-eu-estou-fervendo","menina-linda","festa-de-arromba","o-bom","rua-augusta","listen-to-the-music","rock-and-roll-all-nite","born-to-be-wild","suddenly-i-see","kiss-me"]},{id:"set-show-du-rio-a-pari",name:"Show Du rio a Pari",src:"Show Du rio a Pari.txt",songs:["on-the-floor","chorando-se-foi-llorando-se-fue-lambada","c-est-une-bossa-nova","for-me-formidable","la-vie-en-rose","non-je-ne-regrette-rien","padam-padam","et-si-tu-n-existais-pas","besame-mucho-versao-francesa","bye-bye"]},{id:"set-sunset-2012",name:"sunset 2012",src:"sunset 2012.txt",songs:["new-york-new-york","hello-detroit","just-a-gigolo","can-t-take-my-eyes-off-you"]},{id:"set-dance-1-atmosfera",name:"Dance 1 Atmosfera",src:"Dance 1 Atmosfera.txt",songs:["hello","sexy-and-i-know-it","party-rock-anthem","take-over-control","getting-over-you","where-them-girls-at","the-time-dirty-bit"]},{id:"set-dance-2-atmosfera",name:"Dance 2 Atmosfera",src:"Dance 2 Atmosfera.txt",songs:["loca","dynamite","last-friday-night-t-g-i-f","only-girl-in-the-world","moves-like-jagger","give-me-everything","i-wanna-go","till-the-world-ends","rabiosa"]},{id:"set-grease-megamix",name:"Grease Megamix",src:"Grease Megamix.txt",songs:["greased-lightnin-you-re-the-one-that-i-want","summer-nights"]},{id:"set-marchinhas-de-carnaval-1",name:"Marchinhas de carnaval 1",src:"Marchinhas de carnaval 1.txt",songs:["o-teu-cabelo-nao-nega","a-cabeleira-do-zeze","me-da-um-dinheiro-ai","colombina-ie-ie-ie","maria-sapatao","bota-camisinha","tai-pra-voce-gostar-de-mim","mulata-ie-ie-ie","me-da-um-gelinho","coracao-corinthiano","saca-rolha"]},{id:"set-bela-e-a-fera-e-over-the-rainbow",name:"bela e a fera e over the rainbow",src:"bela e a fera e over the rainbow.txt",songs:["beauty-and-the-beast","somewhere-over-the-rainbow-what-a-wonderful-worl"]},{id:"set-casa-sao-roque",name:"Casa Sao roque",src:"Casa Sao roque.txt",songs:["em-nome-do-nosso-amor","ceu-de-santo-amaro-verificar","she"]},{id:"set-pai-nosso-e-conte",name:"pai nosso e conte",src:"pai nosso e conte.txt",songs:["con-te-partiro","pai-nosso","como-e-grande-o-meu-amor-por-voce"]},{id:"set-medley-bon-voyage-2012",name:"Medley Bon Voyage 2012",src:"Medley Bon Voyage 2012 .txt",songs:["je-t-aime-moi-non-plus","c-est-si-bon","l-amerique","i-love-america"]},{id:"set-medley-boney-m-bon-voyage",name:"Medley Boney M (Bon Voyage)",src:"Medley Boney M (Bon Voyage).txt",songs:["rivers-of-babylon","daddy-cool","sunny","ma-baker"]},{id:"set-medley-rock-and-roll-french",name:"Medley Rock And Roll French",src:"Medley Rock And Roll French.txt",songs:["rock-and-roll-mops","t-as-l-bonjour-d-alfred","ca-rock-ca-va-verificar"]},{id:"set-cerimonia",name:"Cerimonia",src:"Cerimonia.txt",songs:["one","the-prayer","can-you-feel-the-love-tonight","can-t-help-falling-in-love","perhaps-love","she","somewhere-over-the-rainbow","tudo-que-se-quer","all-i-ask-of-you","you-ll-be-in-my-heart","what-a-wonderful-world","iris","con-te-partiro","pai-nosso"]},{id:"set-axe-mid",name:"axe mid",src:"axe mid.txt",songs:["we-are-the-world-of-carnaval","beijar-na-boca","erva-venenosa","empurra-empurra","bomba","eva","o-neguinha-vixe-mainha","amor-perfeito","100-voce","o-araketu-e-bom-demais","abalou","praieiro","extravasa","sorte-grande-poeira","rebolation","pancadao","ela-e-toda-boa","brincadeira-da-tomada","danca-da-maozinha","caranguejo","agua-mineral","joga-agua","beber-cair-e-levantar","xo-satanas","minha-mulher-nao-deixa-nao","saia-e-bicicletinha","piriri-pom-pom","na-base-do-beijo","ceu-da-boca","a-galera","berimbau-metalizado","coracao","bola-de-sabao","lirirrixa","flor-do-reggae","quero-chiclete","simbora","pais-tropical-arere-taj-mahal","bota-pra-ferver","lobo-mau","tchubirabiron","explosao","olha-a-onda","danca-do-vampiro","danca-da-manivela","tchau-i-have-to-go-now","festa","canibal","bate-lata","safado-cachorro-sem-vergonha","carro-velho","milla","pipoca","a-fila-andou","doce-desejo","meu-cabelo-duro-e-assim","vou-voar","paz-carnaval-futebol","vamo-pula","famo-a-billionaire","acelera-ae-noite-do-bem","ta-lisinho"]}],estilos:["Ax\xE9","Rock","Dance","Balada","Sertanejo","Pop","Francesa","Casamento","Samba","Marchinha","Jazz/Standard","Diversos","Baile","Latina","Bolero","Anos 50","Anos 80","Anos 90","Anos 70","Forr\xF3","Internacional","Anos 50/60","Trilha","Soul"]},SEED_SONGS=SEED.songs||[],SEED_SETLISTS=SEED.setlists||[],ESTILOS=SEED.estilos||[],ALL_TAGS=(()=>{const e={};return SEED_SONGS.forEach(a=>(a.tags||[]).forEach(o=>e[o]=(e[o]||0)+1)),Object.keys(e).sort((a,o)=>e[o]-e[a])})(),ESTILO_COR={};(()=>{const e=[C.green,C.gold,C.rose,C.violet,C.blue,"#ff9d5c","#6ee7b7","#f0abfc"];ESTILOS.forEach((a,o)=>ESTILO_COR[a]=e[o%e.length])})();const SEED_VERSION=1,S={async get(e){try{const{data:a}=await SB.from("cantor_kv").select("value").eq("key",e).maybeSingle();return a?a.value:null}catch(a){return console.error(a),null}},async set(e,a){try{return await SB.from("cantor_kv").upsert({key:e,value:a,updated_at:new Date().toISOString()}),!0}catch(o){return console.error(o),!1}}},uid=e=>(e||"u")+Date.now().toString(36)+Math.random().toString(36).slice(2,6),norm=e=>(e||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""),nt=e=>norm(e).replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim(),driveEmbed=e=>{const a=(e||"").match(/\/d\/([A-Za-z0-9_-]+)/);return a?`https://drive.google.com/file/d/${a[1]}/preview`:e},SH=["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"],ENH={Db:"C#",Eb:"D#",Gb:"F#",Ab:"G#",Bb:"A#",Cb:"B",Fb:"E","E#":"F","B#":"C"};function shiftRoot(e,a){let o=ENH[e]||e,i=SH.indexOf(o);return i<0?e:SH[((i+a)%12+12)%12]}const CH_RE=/^([A-G](?:#|b)?)((?:maj|min|sus|add|dim|aug|m|M|°|º|\+|\d|\(|\)|b|#|\.)*)(?:\/([A-G](?:#|b)?))?$/;function isChordToken(e){return e?!!e.match(CH_RE):!1}function transposeToken(e,a){const o=e.match(CH_RE);if(!o)return e;let i=shiftRoot(o[1],a)+(o[2]||"");return o[3]&&(i+="/"+shiftRoot(o[3],a)),i}function isChordLine(e){const a=e.trim().split(/\s+/).filter(Boolean);return a.length?a.filter(isChordToken).length/a.length>=.6:!1}function transposeText(e,a){return!a||!e?e:e.split(`
-`).map(o=>isChordLine(o)?o.replace(/\S+/g,i=>isChordToken(i)?transposeToken(i,a):i):o).join(`
-`)}function App(){const[e,a]=useState(!0),[o,i]=useState("musicas"),[y,s]=useState({}),[g,d]=useState([]),[r,h]=useState([]),[m,u]=useState({font:19}),[n,c]=useState(null),[b,k]=useState(null),[z,l]=useState(null),[v,w]=useState(null),[f,q]=useState(null),[N,B]=useState(null),[A,L]=useState(()=>{try{return localStorage.getItem("ct_editor")==="1"}catch(t){return!1}}),[J,O]=useState(!1),D=useRef({}),R=useCallback(async()=>{const[t,p,x,Z,_,$]=await Promise.all([S.get("ct_over"),S.get("ct_added"),S.get("ct_setlists"),S.get("ct_settings"),S.get("ct_seedV"),S.get("ct_pin")]);_!==SEED_VERSION&&await S.set("ct_seedV",SEED_VERSION),s(t||{}),d(p||[]),h(x&&x.length?x:SEED_SETLISTS),x&&x.length||S.set("ct_setlists",SEED_SETLISTS),u(I({font:19},Z||{})),B($||null),a(!1)},[]);useEffect(()=>{R();const t=SB.channel("cantor_kv_rt").on("postgres_changes",{event:"*",schema:"public",table:"cantor_kv"},()=>R()).subscribe();return()=>{try{SB.removeChannel(t)}catch(p){}}},[R]);const j=(t,p,x)=>{x(p),D.current[t]&&clearTimeout(D.current[t]),D.current[t]=setTimeout(()=>S.set(t,p),600)},Q=t=>j("ct_over",t,s),Y=t=>j("ct_added",t,d),W=t=>j("ct_setlists",t,h),P=t=>j("ct_settings",t,u),T=useMemo(()=>SEED_SONGS.filter(p=>!(y[p.id]&&y[p.id].hidden)).map(p=>I(I({},p),y[p.id]||{})).concat(g),[y,g]),M=useMemo(()=>{const t={};return T.forEach(p=>t[p.id]=p),t},[T]),H=(t,p)=>{t.startsWith("u")?Y(g.map(x=>x.id===t?I(I({},x),p):x)):Q(E(I({},y),{[t]:I(I({},y[t]||{}),p)}))},F=t=>{const p=I({id:uid("u")},t);return Y([...g,p]),p.id},K=t=>{const p=(t||"").trim();if(!N){if(p.length<4)return"Defina uma senha com ao menos 4 d\xEDgitos.";S.set("ct_pin",p),B(p),L(!0);try{localStorage.setItem("ct_editor","1")}catch(x){}return""}if(p===N){L(!0);try{localStorage.setItem("ct_editor","1")}catch(x){}return""}return"Senha incorreta."},V=()=>{L(!1);try{localStorage.removeItem("ct_editor")}catch(t){}};if(e)return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"min-h-screen flex items-center justify-center p-6"},React.createElement("div",{className:"text-center"},React.createElement("div",{style:{width:64,height:64,borderRadius:18,background:`linear-gradient(135deg, ${C.violet}, ${C.green})`},className:"mx-auto mb-4 flex items-center justify-center"},React.createElement(Music,{size:30,style:{color:"#0c1622"}})),React.createElement("h1",{style:{fontSize:26,fontWeight:800,letterSpacing:.5}},"Thiago D'Angelo"),React.createElement("p",{style:{color:C.gold,letterSpacing:4,textTransform:"uppercase",fontSize:11,marginBottom:14}},"Repert\xF3rio"),React.createElement("p",{style:{color:C.mut},className:"flex items-center justify-center gap-2"},React.createElement(Music,{size:18,style:{color:C.gold},className:"animate-pulse"})," Carregando\u2026")));const se=t=>r.find(p=>p.id===t);return React.createElement("div",{style:{background:C.bg,color:C.txt,minHeight:"100vh",fontFamily:"system-ui, sans-serif"}},React.createElement("div",{style:{background:`linear-gradient(135deg, ${C.card2}, ${C.card})`,borderBottom:`1px solid ${C.line}`},className:"px-4 pt-4 pb-3 sticky top-0 z-20"},React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{style:{width:34,height:34,borderRadius:10,background:`linear-gradient(135deg, ${C.violet}, ${C.green})`},className:"flex items-center justify-center shrink-0"},React.createElement(Music,{size:18,style:{color:"#0c1622"}})),React.createElement("div",{className:"leading-tight"},React.createElement("h1",{className:"font-bold",style:{fontSize:17,letterSpacing:.3}},"Thiago D'Angelo"),React.createElement("p",{style:{color:C.gold,letterSpacing:2,textTransform:"uppercase",fontSize:9.5}},"Repert\xF3rio \xB7 ",T.length," m\xFAsicas")),React.createElement("button",{onClick:()=>A?V():O(!0),title:A?"Sair do modo edi\xE7\xE3o":"Entrar no modo edi\xE7\xE3o",style:{background:C.card2,color:A?C.gold:C.mut,marginLeft:"auto"},className:"px-2.5 py-2 rounded-lg flex items-center gap-1 text-xs shrink-0"},A?React.createElement(Unlock,{size:15}):React.createElement(Lock,{size:15}),A?React.createElement("span",null,"edi\xE7\xE3o"):null))),React.createElement("div",{className:"p-3 pb-24 max-w-2xl mx-auto"},o==="musicas"&&React.createElement(Repertorio,{songs:T,onPlay:t=>c(t),onAdd:F,onEdit:t=>l(t),editor:A}),o==="setlists"&&React.createElement(Setlists,{setlists:r,songById:M,onOpen:t=>w(t),saveSetlists:W,editor:A,onOpenLock:()=>O(!0)}),o==="ajustes"&&React.createElement(Ajustes,{settings:m,saveSettings:P,songs:T,setlists:r,editor:A,hasPin:!!N,pin:N,onLock:V,onOpenLock:()=>O(!0),savePin:t=>{S.set("ct_pin",t),B(t)}})),React.createElement("nav",{style:{background:C.card,borderTop:`1px solid ${C.line}`},className:"fixed bottom-0 left-0 right-0 z-20"},React.createElement("div",{className:"max-w-2xl mx-auto grid grid-cols-3"},[{k:"musicas",ic:Music,lb:"M\xFAsicas"},{k:"setlists",ic:ListMusic,lb:"Shows"},{k:"ajustes",ic:Settings,lb:"Ajustes"}].map(({k:t,ic:p,lb:x})=>React.createElement("button",{key:t,onClick:()=>i(t),className:"py-2.5 flex flex-col items-center gap-0.5",style:{color:o===t?C.gold:C.mut}},React.createElement(p,{size:20}),React.createElement("span",{style:{fontSize:10.5}},x))))),n&&React.createElement(Player,{song:M[n],settings:m,saveSettings:P,updateSong:H,editor:A,onEdit:t=>{c(null),l(t)},openViewer:(t,p)=>k({url:t,title:p}),onClose:()=>c(null)}),b&&React.createElement(PdfViewer,{url:b.url,title:b.title,onClose:()=>k(null)}),z&&React.createElement(AddSong,{initial:z,estilos:ESTILOS,onClose:()=>l(null),onSave:t=>{z.id?H(z.id,t):F(t),l(null)}}),J&&React.createElement(LockModal,{hasPin:!!N,onClose:()=>O(!1),onSubmit:t=>K(t)}),v&&React.createElement(SetlistEditor,{sid:v,setlists:r,saveSetlists:W,songs:T,songById:M,editor:A,onPlay:t=>c(t),onShow:t=>{w(null),q(t)},onClose:()=>w(null)}),f&&React.createElement(ShowView,{setlist:r.find(t=>t.id===f),songById:M,settings:m,saveSettings:P,onClose:()=>q(null)}))}function Repertorio({songs:e,onPlay:a,onAdd:o,onEdit:i,editor:y}){const[s,g]=useState(""),[d,r]=useState("Todos"),[h,m]=useState("Todas"),[u,n]=useState(!1),c=useMemo(()=>{const b=nt(s),k=b.split(" ").filter(Boolean);let z=e.filter(l=>{if(d!=="Todos"&&l.pri!==d||h!=="Todas"&&!(l.tags||[]).includes(h))return!1;if(!k.length)return!0;const v=nt((l.t||"")+" "+(l.artist||""));return k.every(w=>v.includes(w))});if(k.length){const l=v=>{const w=nt(v.t);return w===b?0:w.startsWith(b)?1:k[0]&&w.startsWith(k[0])?2:w.includes(b)?3:4};z=z.slice().sort((v,w)=>l(v)-l(w)||v.t.localeCompare(w.t,"pt"))}else z=z.slice().sort((l,v)=>l.t.localeCompare(v.t,"pt"));return z.slice(0,400)},[e,s,d,h]);return React.createElement("div",null,React.createElement("div",{className:"relative mb-2"},React.createElement(Search,{size:16,style:{color:C.mut},className:"absolute left-3 top-1/2 -translate-y-1/2"}),React.createElement("input",{value:s,onChange:b=>g(b.target.value),placeholder:"Buscar por t\xEDtulo ou artista\u2026",style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"w-full pl-9 pr-3 py-2.5 rounded-xl outline-none"})),React.createElement("div",{className:"flex gap-2 overflow-x-auto pb-2"},React.createElement(Sel,{value:d,onChange:r,options:["Todos",...ESTILOS]}),React.createElement(Sel,{value:h,onChange:m,options:["Todas",...ALL_TAGS]}),y&&React.createElement("button",{onClick:()=>n(!0),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap flex items-center gap-1"},React.createElement(Plus,{size:14})," Nova")),React.createElement("p",{className:"text-xs mb-2",style:{color:C.mut}},c.length," m\xFAsica(s)"),React.createElement("div",{className:"space-y-2"},c.map(b=>React.createElement(SongRow,{key:b.id,s:b,onPlay:a,onEdit:i,editor:y}))),u&&React.createElement(AddSong,{estilos:ESTILOS,onClose:()=>n(!1),onSave:b=>{o(b),n(!1)}}))}function spLink(e){return e&&(e.sp||e.sps)||""}function SongRow({s:e,onPlay:a,onEdit:o,editor:i}){return React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full p-3 rounded-xl flex items-center gap-2"},React.createElement("button",{onClick:()=>a(e.id),className:"flex items-center gap-3 min-w-0 flex-1 text-left active:opacity-70"},React.createElement("div",{style:{background:C.card2,color:ESTILO_COR[e.pri]||C.gold,minWidth:40},className:"px-2 py-2 rounded-lg flex items-center justify-center"},React.createElement(Music,{size:16})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},e.t),React.createElement("div",{className:"flex items-center gap-2 text-xs mt-0.5",style:{color:C.mut}},e.artist?React.createElement("span",{className:"truncate"},e.artist):null,React.createElement("span",{style:{color:ESTILO_COR[e.pri]||C.mut}},"\xB7 ",e.pri)))),spLink(e)?React.createElement("a",{href:spLink(e),target:"_blank",rel:"noreferrer",title:"Ouvir no Spotify",style:{background:C.card2,color:C.green},className:"p-2 rounded-lg shrink-0"},React.createElement(Spotify,{size:18})):null,i?React.createElement("button",{onClick:()=>o(e),title:"Editar",style:{background:C.card2,color:C.gold},className:"p-2 rounded-lg shrink-0"},React.createElement(Pencil,{size:16})):null,React.createElement("button",{onClick:()=>a(e.id),title:"Abrir letra",style:{color:C.gold},className:"p-1.5 shrink-0"},React.createElement(Play,{size:18})))}function Sel({value:e,onChange:a,options:o}){return React.createElement("select",{value:e,onChange:i=>a(i.target.value),style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"px-3 py-1.5 rounded-full text-xs outline-none max-w-[46%]"},o.map(i=>React.createElement("option",{key:i,value:i},i)))}function Player({song:e,settings:a,saveSettings:o,updateSong:i,editor:y,onEdit:s,openViewer:g,onClose:d}){const[r,h]=useState(0),[m,u]=useState(!1),[n,c]=useState(0),b=useRef(null),k=a.font||19;if(useEffect(()=>{h(0),u(!1),c(0)},[e&&e.id]),useEffect(()=>{if(!r||!b.current)return;const f=b.current,q=setInterval(()=>{f.scrollTop+=r},60);return()=>clearInterval(q)},[r]),!e)return null;const z=spLink(e),l=m&&e.cifra?transposeText(e.cifra,n):e.letra||"",v=l.split(`
-`),w=m&&e.cifra;return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-[60] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:d,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-bold truncate"},e.t),React.createElement("p",{className:"text-xs truncate",style:{color:C.mut}},e.artist?e.artist+" \xB7 ":"",e.pri)),y?React.createElement("button",{onClick:()=>s(e),title:"Editar",style:{background:C.card2,color:C.gold},className:"p-2 rounded-lg"},React.createElement(Pencil,{size:16})):null),React.createElement("div",{style:{background:C.card2,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 flex-wrap text-xs"},React.createElement("div",{className:"flex items-center gap-1"},React.createElement(Type,{size:13,style:{color:C.mut}}),React.createElement("button",{onClick:()=>o(E(I({},a),{font:Math.max(13,k-1)})),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{minWidth:22},className:"text-center"},k),React.createElement("button",{onClick:()=>o(E(I({},a),{font:Math.min(34,k+1)})),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14}))),React.createElement("div",{className:"flex items-center gap-1"},React.createElement("button",{onClick:()=>h(f=>f>0?0:1),style:{background:r?C.gold:C.card,color:r?"#2b2100":C.txt},className:"p-1.5 rounded-lg flex items-center gap-1"},r?React.createElement(Pause,{size:14}):React.createElement(Play,{size:14}),React.createElement("span",null,"rolar")),r>0&&React.createElement("input",{type:"range",min:"1",max:"5",value:r,onChange:f=>h(Number(f.target.value)),className:"w-16"})),w?React.createElement("div",{className:"flex items-center gap-1"},React.createElement("span",{style:{color:C.mut}},"Tom"),React.createElement("button",{onClick:()=>c(f=>f-1),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{color:C.gold,minWidth:26},className:"text-center font-bold"},n>0?"+"+n:n),React.createElement("button",{onClick:()=>c(f=>f+1),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14}))):null,e.cifra?React.createElement("button",{onClick:()=>u(f=>!f),style:{background:m?C.gold:C.card,color:m?"#2b2100":C.txt},className:"px-2.5 py-1.5 rounded-lg font-semibold"},m?"Ver letra":"Ver cifra"):null,e.u?React.createElement("button",{onClick:()=>g(e.u,e.t),style:{background:C.blue,color:"#04203f"},className:"px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1"},React.createElement(FileText,{size:13})," PDF"):null,z?React.createElement("a",{href:z,target:"_blank",rel:"noreferrer",style:{background:C.green,color:"#04261b"},className:"ml-auto px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1"},React.createElement(Spotify,{size:14})," Spotify"):null),React.createElement("div",{ref:b,className:"flex-1 px-4 py-4",style:{overflow:"auto",scrollBehavior:"smooth",WebkitOverflowScrolling:"touch"}},l.trim()?w?React.createElement("pre",{style:{fontFamily:"ui-monospace, Menlo, monospace",fontSize:k,lineHeight:1.5,whiteSpace:"pre",display:"inline-block",minWidth:"100%"}},v.map((f,q)=>isChordLine(f)?React.createElement("div",{key:q,style:{color:C.gold,fontWeight:700}},f||"\xA0"):React.createElement("div",{key:q},f||"\xA0"))):React.createElement("div",{style:{fontSize:k,lineHeight:1.55,whiteSpace:"pre-wrap",wordBreak:"break-word",maxWidth:640,margin:"0 auto"}},v.map((f,q)=>React.createElement("div",{key:q,style:f.trim()?null:{height:k*.7}},f))):React.createElement("div",{className:"text-center py-10",style:{color:C.mut}},React.createElement(Music,{size:40,className:"mx-auto mb-3"}),React.createElement("p",null,"Sem letra cadastrada ainda."))))}function ShowView({setlist:e,songById:a,settings:o,saveSettings:i,onClose:y}){const[s,g]=useState(0),d=useRef(null),r=o&&o.font||19,h=(e&&e.songs||[]).map(u=>a[u]).filter(Boolean);useEffect(()=>{if(!s||!d.current)return;const u=d.current,n=setInterval(()=>{u.scrollTop+=s},60);return()=>clearInterval(n)},[s]);const m=u=>{const n=document.getElementById("showsong-"+u);n&&d.current&&d.current.scrollTo({top:n.offsetTop-6,behavior:"smooth"})};return e?React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-[68] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:y,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-bold truncate"},e.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Modo show \xB7 ",h.length," m\xFAsica(s)")),React.createElement(Type,{size:13,style:{color:C.mut}}),React.createElement("button",{onClick:()=>i(E(I({},o),{font:Math.max(13,r-1)})),style:{background:C.card2},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{minWidth:20},className:"text-center text-xs"},r),React.createElement("button",{onClick:()=>i(E(I({},o),{font:Math.min(40,r+1)})),style:{background:C.card2},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14})),React.createElement("button",{onClick:()=>g(u=>u>0?0:1),style:{background:s?C.gold:C.card2,color:s?"#2b2100":C.txt},className:"p-1.5 rounded-lg ml-1 flex items-center gap-1"},s?React.createElement(Pause,{size:14}):React.createElement(Play,{size:14})),s>0&&React.createElement("input",{type:"range",min:"1",max:"6",value:s,onChange:u=>g(Number(u.target.value)),className:"w-14"})),React.createElement("div",{style:{background:C.card2,borderBottom:`1px solid ${C.line}`},className:"px-3 py-1.5 flex gap-1 overflow-x-auto"},h.map((u,n)=>React.createElement("button",{key:n,onClick:()=>m(n),style:{background:C.card,color:C.mut},className:"px-2 py-1 rounded-lg text-xs whitespace-nowrap shrink-0"},n+1,". ",u.t))),React.createElement("div",{ref:d,className:"flex-1 px-4 py-4",style:{overflow:"auto",scrollBehavior:"smooth",WebkitOverflowScrolling:"touch"}},h.length===0?React.createElement("p",{className:"text-center py-10",style:{color:C.mut}},"Show vazio. Adicione m\xFAsicas a este setlist."):h.map((u,n)=>React.createElement("div",{key:u.id+n,id:"showsong-"+n,style:{maxWidth:680,margin:"0 auto"},className:"mb-10"},React.createElement("div",{className:"flex items-baseline gap-2 mb-2 pb-1",style:{borderBottom:`1px solid ${C.line}`}},React.createElement("span",{style:{color:C.gold},className:"font-bold"},n+1,"."),React.createElement("span",{className:"font-bold",style:{fontSize:r+2}},u.t),u.artist?React.createElement("span",{className:"text-xs",style:{color:C.mut}},u.artist):null,u.sp||u.sps?React.createElement("a",{href:u.sp||u.sps,target:"_blank",rel:"noreferrer",style:{color:C.green,marginLeft:"auto"},className:"shrink-0"},React.createElement(Spotify,{size:16})):null),React.createElement("div",{style:{fontSize:r,lineHeight:1.5,whiteSpace:"pre-wrap",wordBreak:"break-word"}},(u.letra||"(sem letra)").split(`
-`).map((c,b)=>React.createElement("div",{key:b,style:c.trim()?null:{height:r*.6}},c))))),React.createElement("div",{style:{height:90}}))):null}function Setlists({setlists:e,songById:a,onOpen:o,saveSetlists:i,editor:y,onOpenLock:s}){const[g,d]=useState(""),r=useMemo(()=>{const m=nt(g);return e.filter(u=>!m||nt(u.name).includes(m)).slice().sort((u,n)=>u.name.localeCompare(n.name,"pt"))},[e,g]),h=()=>{const m=(prompt("Nome do novo setlist:")||"").trim();m&&i([...e,{id:uid("set"),name:m,style:"",songs:[]}])};return React.createElement("div",null,React.createElement("div",{className:"flex items-center gap-2 mb-3"},React.createElement("div",{className:"relative flex-1"},React.createElement(Search,{size:16,style:{color:C.mut},className:"absolute left-3 top-1/2 -translate-y-1/2"}),React.createElement("input",{value:g,onChange:m=>d(m.target.value),placeholder:"Buscar setlist\u2026",style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"w-full pl-9 pr-3 py-2.5 rounded-xl outline-none"})),y?React.createElement("button",{onClick:h,style:{background:C.gold,color:"#2b2100"},className:"px-3 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-1 shrink-0"},React.createElement(Plus,{size:15})," Novo"):React.createElement("button",{onClick:s,style:{background:C.card2,color:C.mut},className:"px-3 py-2.5 rounded-xl text-sm flex items-center gap-1 shrink-0"},React.createElement(Lock,{size:14}))),React.createElement("p",{className:"text-xs mb-2",style:{color:C.mut}},r.length," show(s) \u2014 abra um para ver todas as letras em sequ\xEAncia"),React.createElement("div",{className:"space-y-2"},r.map(m=>React.createElement("button",{key:m.id,onClick:()=>o(m.id),style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full text-left p-3 rounded-xl flex items-center gap-3 active:opacity-70"},React.createElement("div",{style:{background:C.card2,color:C.violet,minWidth:40},className:"p-2 rounded-lg flex items-center justify-center"},React.createElement(ListMusic,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},m.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},(m.songs||[]).length," m\xFAsica(s)")),React.createElement(ChevronRight,{size:18,style:{color:C.mut}})))))}function SetlistEditor({sid:e,setlists:a,saveSetlists:o,songs:i,songById:y,editor:s,onPlay:g,onShow:d,onClose:r}){const h=a.find(l=>l.id===e)||{name:"",songs:[]},[m,u]=useState(!1),n=l=>o(a.map(v=>v.id===e?I(I({},v),l):v)),c=(h.songs||[]).map(l=>y[l]).filter(Boolean),b=(l,v)=>{const w=[...h.songs],f=l+v;f<0||f>=w.length||([w[l],w[f]]=[w[f],w[l]],n({songs:w}))},k=l=>n({songs:h.songs.filter((v,w)=>w!==l)}),z=()=>{confirm("Excluir este setlist? (as m\xFAsicas continuam no repert\xF3rio)")&&(o(a.filter(l=>l.id!==e)),r())};return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-40 flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:r,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},s?React.createElement("input",{value:h.name,onChange:l=>n({name:l.target.value}),style:{background:"transparent",color:C.txt},className:"font-bold w-full outline-none"}):React.createElement("p",{className:"font-bold truncate"},h.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},c.length," m\xFAsica(s)")),s?React.createElement("button",{onClick:z,style:{color:C.danger},className:"p-2"},React.createElement(Trash2,{size:18})):null),React.createElement("div",{className:"overflow-y-auto flex-1 p-3 space-y-3"},c.length>0&&React.createElement("button",{onClick:()=>d(e),style:{background:C.green,color:"#04261b"},className:"w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 active:opacity-80"},React.createElement(Play,{size:18})," Abrir em sequ\xEAncia (Modo Show)"),s&&React.createElement("button",{onClick:()=>u(!0),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1"},React.createElement(Plus,{size:14})," Adicionar m\xFAsica"),c.length===0&&React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Setlist vazio."),React.createElement("div",{className:"space-y-2"},c.map((l,v)=>React.createElement("div",{key:l.id+v,style:{background:C.card,border:`1px solid ${C.line}`},className:"p-2.5 rounded-xl flex items-center gap-2"},React.createElement("span",{style:{color:C.mut,minWidth:20},className:"text-xs text-center"},v+1),s?React.createElement("div",{className:"flex flex-col"},React.createElement("button",{onClick:()=>b(v,-1),style:{color:C.mut},className:"p-0.5"},React.createElement(ArrowUp,{size:14})),React.createElement("button",{onClick:()=>b(v,1),style:{color:C.mut},className:"p-0.5"},React.createElement(ArrowDown,{size:14}))):null,React.createElement("button",{onClick:()=>g(l.id),className:"min-w-0 flex-1 text-left"},React.createElement("p",{className:"font-medium truncate text-sm"},l.t),React.createElement("p",{className:"text-xs",style:{color:C.mut}},l.artist?l.artist+" \xB7 ":"",React.createElement("span",{style:{color:ESTILO_COR[l.pri]}},l.pri))),spLink(l)?React.createElement("a",{href:spLink(l),target:"_blank",rel:"noreferrer",style:{color:C.green},className:"p-1.5"},React.createElement(Spotify,{size:16})):null,s?React.createElement("button",{onClick:()=>k(v),style:{color:C.danger},className:"p-1.5"},React.createElement(Trash2,{size:15})):null)))),m&&React.createElement(SongPicker,{songs:i,onClose:()=>u(!1),onPick:l=>n({songs:[...h.songs||[],l]})}))}function SongPicker({songs:e,onClose:a,onPick:o}){const[i,y]=useState(""),[s,g]=useState("Todos"),d=useMemo(()=>{const h=nt(i).split(" ").filter(Boolean);return e.filter(u=>{if(s!=="Todos"&&u.pri!==s)return!1;if(!h.length)return!0;const n=nt((u.t||"")+" "+(u.artist||""));return h.every(c=>n.includes(c))}).slice().sort((u,n)=>u.t.localeCompare(n.t,"pt")).slice(0,300)},[e,i,s]);return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-50 flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[85vh] flex flex-col"},React.createElement("div",{className:"p-3 border-b",style:{borderColor:C.line}},React.createElement("div",{className:"flex items-center justify-between mb-2"},React.createElement("p",{className:"font-semibold"},"Adicionar m\xFAsica"),React.createElement("button",{onClick:a},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("input",{value:i,onChange:r=>y(r.target.value),placeholder:"Buscar\u2026",style:inp,autoFocus:!0}),React.createElement("div",{className:"mt-2"},React.createElement(Sel,{value:s,onChange:g,options:["Todos",...ESTILOS]}))),React.createElement("div",{className:"overflow-y-auto p-2 space-y-1"},d.map(r=>React.createElement("button",{key:r.id,onClick:()=>{o(r.id),a()},style:{background:C.card2},className:"w-full text-left p-2.5 rounded-lg flex items-center gap-2 active:opacity-70"},React.createElement("span",{className:"min-w-0 flex-1 truncate text-sm"},r.t,React.createElement("span",{style:{color:C.mut}}," \xB7 ",r.artist)),React.createElement("span",{className:"text-xs shrink-0",style:{color:ESTILO_COR[r.pri]}},r.pri))))))}function Ajustes({settings:e,saveSettings:a,songs:o,setlists:i,editor:y,hasPin:s,pin:g,onLock:d,onOpenLock:r,savePin:h}){const m=o.filter(n=>(n.letra||"").length>10).length,u=o.filter(n=>n.sp).length;return React.createElement("div",{className:"space-y-4"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4 space-y-2"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},"Senha de edi\xE7\xE3o"),y?React.createElement(React.Fragment,null,React.createElement("p",{className:"text-sm",style:{color:C.green}},"\u2713 Modo edi\xE7\xE3o ativo neste aparelho."),React.createElement(PinChange,{hasPin:s,pin:g,savePin:h}),React.createElement("button",{onClick:d,style:{background:C.card2,color:C.txt},className:"px-3 py-2 rounded-lg text-sm flex items-center gap-1"},React.createElement(Lock,{size:14})," Sair do modo edi\xE7\xE3o")):React.createElement(React.Fragment,null,React.createElement("p",{className:"text-sm",style:{color:C.mut}},s?"S\xF3 quem tem a senha edita m\xFAsicas e setlists.":"Defina uma senha para liberar a edi\xE7\xE3o."),React.createElement("button",{onClick:r,style:{background:C.gold,color:"#2b2100"},className:"px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1"},React.createElement(Unlock,{size:14})," ",s?"Entrar no modo edi\xE7\xE3o":"Criar senha de edi\xE7\xE3o"))),React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4"},React.createElement("p",{className:"font-semibold mb-1",style:{color:C.gold}},"Sobre o repert\xF3rio"),React.createElement("p",{className:"text-sm",style:{color:C.mut}},o.length," m\xFAsicas \xB7 ",i.length," setlists \xB7 ",m," com letra \xB7 ",u," com link exato do Spotify."),React.createElement("p",{className:"text-xs mt-2",style:{color:C.mut}},"Filtre por estilo ou marcador na aba M\xFAsicas. Toque numa m\xFAsica para abrir a letra (fonte ajust\xE1vel e rolagem autom\xE1tica) e o Spotify.")),React.createElement(Field,{label:`Tamanho padr\xE3o da letra: ${e.font||19}px`},React.createElement("input",{type:"range",min:"13",max:"34",value:e.font||19,onChange:n=>a(E(I({},e),{font:Number(n.target.value)})),className:"w-full"})),React.createElement("p",{className:"text-xs text-center",style:{color:C.mut}},"Tudo o que voc\xEA edita \xE9 compartilhado em tempo real."))}function PinChange({hasPin:e,pin:a,savePin:o}){const[i,y]=useState(!1),[s,g]=useState(""),[d,r]=useState(""),[h,m]=useState("");if(!i)return React.createElement("button",{onClick:()=>y(!0),style:{color:C.blue},className:"text-sm underline block"},"Alterar senha");const u=()=>{if(e&&s.trim()!==a){m("Senha atual incorreta.");return}if(d.trim().length<4){m("M\xEDnimo 4 d\xEDgitos.");return}o(d.trim()),m("Senha atualizada \u2713"),g(""),r(""),setTimeout(()=>y(!1),1e3)};return React.createElement("div",{className:"space-y-2"},e?React.createElement("input",{value:s,onChange:n=>g(n.target.value),type:"password",inputMode:"numeric",placeholder:"Senha atual",style:inp}):null,React.createElement("input",{value:d,onChange:n=>r(n.target.value),type:"password",inputMode:"numeric",placeholder:"Nova senha (m\xEDn. 4 d\xEDgitos)",style:inp}),h?React.createElement("p",{className:"text-xs",style:{color:h.indexOf("\u2713")>=0?C.green:C.danger}},h):null,React.createElement("div",{className:"flex gap-2"},React.createElement("button",{onClick:u,style:{background:C.green,color:"#04261b"},className:"px-3 py-1.5 rounded-lg text-sm font-semibold"},"Salvar senha"),React.createElement("button",{onClick:()=>{y(!1),m("")},style:{background:C.card2,color:C.mut},className:"px-3 py-1.5 rounded-lg text-sm"},"Cancelar")))}const inp={background:C.bg,border:`1px solid ${C.line}`,color:C.txt,borderRadius:12,padding:"10px 12px",outline:"none",width:"100%"};function Field({label:e,children:a}){return React.createElement("label",{className:"block"},React.createElement("span",{className:"text-xs block mb-1",style:{color:C.mut}},e),a)}function AddSong({onClose:e,onSave:a,initial:o,estilos:i}){const y=!!(o&&o.id),[s,g]=useState(o?{t:o.t||"",artist:o.artist||"",pri:o.pri||"Diversos",tags:(o.tags||[]).join(", "),sp:o.sp||"",letra:o.letra||"",cifra:o.cifra||"",u:o.u||""}:{t:"",artist:"",pri:i&&i[0]||"Diversos",tags:"",sp:"",letra:"",cifra:"",u:""}),[d,r]=useState(""),h=(n,c)=>g(b=>E(I({},b),{[n]:c})),m=async n=>{const c=n.target.files&&n.target.files[0];if(c){if(c.type&&c.type.indexOf("pdf")<0){r("Selecione um PDF.");return}r("Enviando\u2026");try{const b=(c.name||"letra.pdf").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^A-Za-z0-9._-]+/g,"_"),k="up-"+Date.now().toString(36)+"-"+b,{error:z}=await SB.storage.from("letras").upload(k,c,{upsert:!0,contentType:"application/pdf"});if(z){r("Falha: "+z.message);return}const{data:l}=SB.storage.from("letras").getPublicUrl(k);h("u",l.publicUrl),r("PDF enviado \u2713")}catch(b){r("Falha no upload.")}}},u=()=>{if(!s.t.trim())return;const n={t:s.t.trim(),artist:s.artist.trim(),pri:s.pri,tags:s.tags.split(",").map(c=>c.trim()).filter(Boolean),sp:s.sp.trim(),letra:s.letra,cifra:s.cifra,u:s.u.trim()};a(n)};return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[65] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[90vh] overflow-y-auto p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},y?"Editar m\xFAsica":"Nova m\xFAsica"),React.createElement("button",{onClick:e},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement(Field,{label:"T\xEDtulo *"},React.createElement("input",{value:s.t,onChange:n=>h("t",n.target.value),style:inp,autoFocus:!0})),React.createElement(Field,{label:"Artista"},React.createElement("input",{value:s.artist,onChange:n=>h("artist",n.target.value),style:inp})),React.createElement("div",{className:"flex gap-2"},React.createElement(Field,{label:"Estilo principal"},React.createElement("select",{value:s.pri,onChange:n=>h("pri",n.target.value),style:inp},(i||[]).concat(i&&i.indexOf(s.pri)<0?[s.pri]:[]).map(n=>React.createElement("option",{key:n},n)))),React.createElement(Field,{label:"Marcadores (v\xEDrgula)"},React.createElement("input",{value:s.tags,onChange:n=>h("tags",n.target.value),placeholder:"Anos 80, Pop",style:inp}))),React.createElement(Field,{label:"Link do Spotify"},React.createElement("input",{value:s.sp,onChange:n=>h("sp",n.target.value),placeholder:"https://open.spotify.com/track/\u2026",style:inp})),React.createElement(Field,{label:"Letra"},React.createElement("textarea",{value:s.letra,onChange:n=>h("letra",n.target.value),rows:7,style:E(I({},inp),{whiteSpace:"pre-wrap"})})),React.createElement("div",null,React.createElement("label",{style:{background:C.card2,color:C.txt,border:"1px dashed "+C.line},className:"flex items-center justify-center gap-2 py-2.5 rounded-xl cursor-pointer text-sm font-medium"},React.createElement(Upload,{size:16})," Enviar PDF da letra",React.createElement("input",{type:"file",accept:"application/pdf",onChange:m,className:"hidden"})),d?React.createElement("p",{className:"text-xs mt-1",style:{color:d.indexOf("\u2713")>=0?C.green:d.indexOf("Enviando")>=0?C.mut:C.danger}},d):null),React.createElement(Field,{label:"Cifra em texto (opcional \u2014 habilita transpor)"},React.createElement("textarea",{value:s.cifra,onChange:n=>h("cifra",n.target.value),rows:4,wrap:"off",style:E(I({},inp),{fontFamily:"ui-monospace, monospace",whiteSpace:"pre",overflowX:"auto"})})),React.createElement("button",{onClick:u,style:{background:C.green,color:"#04261b"},className:"w-full py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Check,{size:16})," ",y?"Salvar altera\xE7\xF5es":"Salvar m\xFAsica")))}function PdfViewer({url:e,title:a,onClose:o}){const i=driveEmbed(e);return React.createElement("div",{style:{background:"rgba(0,0,0,0.92)"},className:"fixed inset-0 z-[70] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:"1px solid "+C.line},className:"px-3 py-2 flex items-center gap-2"},React.createElement("button",{onClick:o,style:{background:C.card2,color:C.txt},className:"px-3 py-2 rounded-lg flex items-center gap-1 font-semibold shrink-0"},React.createElement(ChevronLeft,{size:18})," Voltar"),React.createElement("p",{className:"font-semibold truncate flex-1"},a),React.createElement("a",{href:e,target:"_blank",rel:"noreferrer",style:{color:C.blue},className:"text-xs flex items-center gap-1 shrink-0"},React.createElement(ExternalLink,{size:13})," nova aba")),React.createElement("iframe",{title:a,src:i,className:"flex-1 w-full",style:{border:0,background:"#fff"}}))}function LockModal({hasPin:e,onClose:a,onSubmit:o}){const[i,y]=useState(""),[s,g]=useState(""),d=()=>{const r=o(i);r?g(r):a()};return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[75] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:"1px solid "+C.line},className:"w-full max-w-sm rounded-t-2xl sm:rounded-2xl p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},e?"Modo edi\xE7\xE3o":"Criar senha de edi\xE7\xE3o"),React.createElement("button",{onClick:a},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("p",{className:"text-xs",style:{color:C.mut}},e?"Digite a senha para editar neste aparelho.":"Defina uma senha (m\xEDn. 4 d\xEDgitos)."),React.createElement("input",{value:i,onChange:r=>{y(r.target.value),g("")},onKeyDown:r=>r.key==="Enter"&&d(),type:"password",inputMode:"numeric",placeholder:e?"Senha":"Nova senha",style:inp,autoFocus:!0}),s?React.createElement("p",{className:"text-xs",style:{color:C.danger}},s):null,React.createElement("button",{onClick:d,style:{background:C.gold,color:"#2b2100"},className:"w-full py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Unlock,{size:16})," ",e?"Entrar":"Criar e entrar")))}const _root=ReactDOM.createRoot(document.getElementById("root"));_root.render(React.createElement(App,null));try{window.__booted=!0}catch(e){}
+Pra ganhar beijinho`}],setlists:[{id:"set-70-light",name:"70 light",src:"70 light.txt",songs:["night-fever","celebration","give-it-up","i-say-a-little-prayer-2"]},{id:"set-ain-t-no-mountain-high-enough",name:"Ain't No Mountain High Enough",src:"Ain't No Mountain High Enough .txt",songs:["you-ll-be-in-my-heart","what-a-wonderful-world","iris","con-te-partiro","pai-nosso"]},{id:"set-anos-50",name:"Anos 50",src:"Anos 50 .txt",songs:["let-s-twist-again","tutti-frutti","rock-around-the-clock","blue-suede-shoes","jailhouse-rock"]},{id:"set-anos-50-60",name:"Anos 50 _60",src:"Anos 50 _60.txt",songs:["let-s-twist-again","tutti-frutti","rock-around-the-clock","blue-suede-shoes","jailhouse-rock","biquini-de-bolinha-amarelinha"]},{id:"set-anos-80-nacional",name:"Anos 80 nacional",src:"Anos 80 nacional.txt",songs:["meu-erro","oculos","descobridor-dos-sete-mares","nao-quero-dinheiro-so-quero-amar","musica-urbana"]},{id:"set-anos-90",name:"anos 90",src:"anos 90.txt",songs:["a-little-respect","the-rhythm-of-the-night","mr-vain","what-is-love","run-to-you-verificar"]},{id:"set-rocks",name:"ROCKS",src:"ROCKS.txt",songs:["listen-to-the-music","have-you-ever-seen-the-rain","rock-and-roll-all-nite","i-can-t-get-no-satisfaction","born-to-be-wild","suddenly-i-see","kiss-me"]},{id:"set-boleros",name:"Boleros",src:"Boleros.txt",songs:["la-puerta","historia-de-un-amor","el-dia-que-me-quieras","la-barca","el-reloj"]},{id:"set-latinas",name:"Latinas",src:"Latinas.txt",songs:["sway","can-t-take-my-eyes-off-you","la-vida-es-un-carnaval","la-camisa-negra","corazon-espinado"]},{id:"set-forro",name:"Forro",src:"Forro.txt",songs:["medo-de-chuva","esperando-na-janela","nosso-xote","voce-nao-vale-nada"]},{id:"set-standards",name:"Standards",src:"Standards.txt",songs:["i-ve-got-you-under-my-skin","cheek-to-cheek","fly-me-to-the-moon","new-york-new-york"]},{id:"set-samba",name:"samba",src:"samba.txt",songs:["verdade-chinesa","agamamou","flor-de-lis","fato-consumado","ive-brussel","eu-fui","danca-do-bole-bole"]},{id:"set-samba-enredo",name:"samba enredo",src:"samba enredo.txt",songs:["peguei-um-ita-no-norte-salgueiro","gavioes-fiel","atras-da-verde-e-rosa-so-nao-vai-quem-ja-morreu-","o-que-e-o-que-e"]},{id:"set-samaba-enrredo-navio",name:"Samaba enrredo Navio",src:"Samaba enrredo Navio.txt",songs:["samba-enredo-1986-mangueira","bum-bum-paticumbum-prugurundum-verificar","peguei-um-ita-no-norte-salgueiro"]},{id:"set-sertanejo",name:"Sertanejo",src:"Sertanejo.txt",songs:["man-i-feel-like-a-woman","meteoro","o-jeito-e-da-uma-fugidinha","ciumenta","chora-me-liga","amo-noite-e-dia","paga-pau","leilao","que-pescar-que-nada","bebo-pra-carai","o-bicho-vai-pegar-o-chao-vai-tremer","pode-chorar","bala-de-prata","mala-pronta","vendaval","vou-fazer-pirraca","have-you-ever-seen-the-rain","borboletas","fada","como-um-anjo"]},{id:"set-bahia",name:"Bahia",src:"Bahia.txt",songs:["my-girl","let-s-stay-together","sexbomb","crazy-little-thing-called-love","i-was-born-to-love-you"]},{id:"set-dance",name:"Dance",src:"Dance.txt",songs:["i-gotta-feeling","stereo-love","rise-up","bad-romance-poker-face-medley-lady-gaga","loca","club-can-t-handle-me","crazy-in-love","love-is-gone","love-generation","let-me-think-about-it","i-don-t-know-why","set-me-free"]},{id:"set-show-michael",name:"Show Michael",src:"Show Michael.txt",songs:["thriller","ben","i-ll-be-there","i-want-you-back","abc","billie-jean","bad","beat-it","ain-t-no-sunshine","the-girl-is-mine","you-are-not-alone","they-don-t-care-about-us","human-nature","black-or-white","heal-the-world","smooth-criminal"]},{id:"set-lentas-dancantes",name:"Lentas dan\xE7antes",src:"Lentas dan\xE7antes.txt",songs:["do-you-wanna-dance","stand-by-me","rock-and-roll-lullaby","put-your-records-on","how-deep-is-your-love","cruisin","i-ll-be-over-you","fallen","everything"]},{id:"set-lentas-e-baladas",name:"Lentas e Baladas",src:"Lentas e Baladas .txt",songs:["easy","dona","eu-te-devoro","final-feliz","don-t-know-why","how-deep-is-your-love","my-girl","new-york-new-york","besame-mucho","i-ve-had-the-time-of-my-life","corazon-espinado"]},{id:"set-fox-lento",name:"Fox Lento",src:"Fox Lento.txt",songs:["unforgettable","the-way-you-look-tonight","close-to-you","can-t-smile-without-you"]},{id:"set-fox-linha",name:"Fox linha",src:"Fox linha.txt",songs:["i-left-my-heart-in-san-francisco","new-york-new-york","i-ve-got-you-under-my-skin","hello-detroit","just-a-gigolo","cheek-to-cheek","fly-me-to-the-moon"]},{id:"set-rmaonticas-linha",name:"Rmaonticas Linha",src:"Rmaonticas Linha.txt",songs:["easy","beauty-and-the-beast","endless-love","hero","after-the-love-has-gone","i-just-wanna-stop"]},{id:"set-standards-new-times",name:"Standards NEW TIMES",src:"Standards NEW TIMES.txt",songs:["emocoes","new-york-new-york","they-can-t-take-that-away-from-me","for-once-in-my-life","fly-me-to-the-moon","i-ve-got-you-under-my-skin","beyond-the-sea","hello-detroit","all-of-me","cheek-to-cheek"]},{id:"set-apos-jantar-new-times",name:"ap\xF3s jantar NEW TIMES",src:"ap\xF3s jantar NEW TIMES.txt",songs:["have-you-ever-seen-the-rain","proud-mary","i-can-t-get-no-satisfaction","twist-and-shout","a-hard-day-s-night","i-wanna-hold-your-hand","stayin-alive","summer-nights","you-re-the-one-that-i-want","johnny-b-goode","blue-suede-shoes","pode-vir-quente-que-eu-estou-fervendo","menina-linda","festa-de-arromba","o-bom","rua-augusta","listen-to-the-music","rock-and-roll-all-nite","born-to-be-wild","suddenly-i-see","kiss-me"]},{id:"set-show-du-rio-a-pari",name:"Show Du rio a Pari",src:"Show Du rio a Pari.txt",songs:["on-the-floor","chorando-se-foi-llorando-se-fue-lambada","c-est-une-bossa-nova","for-me-formidable","la-vie-en-rose","non-je-ne-regrette-rien","padam-padam","et-si-tu-n-existais-pas","besame-mucho-versao-francesa","bye-bye"]},{id:"set-sunset-2012",name:"sunset 2012",src:"sunset 2012.txt",songs:["new-york-new-york","hello-detroit","just-a-gigolo","can-t-take-my-eyes-off-you"]},{id:"set-dance-1-atmosfera",name:"Dance 1 Atmosfera",src:"Dance 1 Atmosfera.txt",songs:["hello","sexy-and-i-know-it","party-rock-anthem","take-over-control","getting-over-you","where-them-girls-at","the-time-dirty-bit"]},{id:"set-dance-2-atmosfera",name:"Dance 2 Atmosfera",src:"Dance 2 Atmosfera.txt",songs:["loca","dynamite","last-friday-night-t-g-i-f","only-girl-in-the-world","moves-like-jagger","give-me-everything","i-wanna-go","till-the-world-ends","rabiosa"]},{id:"set-grease-megamix",name:"Grease Megamix",src:"Grease Megamix.txt",songs:["greased-lightnin-you-re-the-one-that-i-want","summer-nights"]},{id:"set-marchinhas-de-carnaval-1",name:"Marchinhas de carnaval 1",src:"Marchinhas de carnaval 1.txt",songs:["o-teu-cabelo-nao-nega","a-cabeleira-do-zeze","me-da-um-dinheiro-ai","colombina-ie-ie-ie","maria-sapatao","bota-camisinha","tai-pra-voce-gostar-de-mim","mulata-ie-ie-ie","me-da-um-gelinho","coracao-corinthiano","saca-rolha"]},{id:"set-bela-e-a-fera-e-over-the-rainbow",name:"bela e a fera e over the rainbow",src:"bela e a fera e over the rainbow.txt",songs:["beauty-and-the-beast","somewhere-over-the-rainbow-what-a-wonderful-worl"]},{id:"set-casa-sao-roque",name:"Casa Sao roque",src:"Casa Sao roque.txt",songs:["em-nome-do-nosso-amor","ceu-de-santo-amaro-verificar","she"]},{id:"set-pai-nosso-e-conte",name:"pai nosso e conte",src:"pai nosso e conte.txt",songs:["con-te-partiro","pai-nosso","como-e-grande-o-meu-amor-por-voce"]},{id:"set-medley-bon-voyage-2012",name:"Medley Bon Voyage 2012",src:"Medley Bon Voyage 2012 .txt",songs:["je-t-aime-moi-non-plus","c-est-si-bon","l-amerique","i-love-america"]},{id:"set-medley-boney-m-bon-voyage",name:"Medley Boney M (Bon Voyage)",src:"Medley Boney M (Bon Voyage).txt",songs:["rivers-of-babylon","daddy-cool","sunny","ma-baker"]},{id:"set-medley-rock-and-roll-french",name:"Medley Rock And Roll French",src:"Medley Rock And Roll French.txt",songs:["rock-and-roll-mops","t-as-l-bonjour-d-alfred","ca-rock-ca-va-verificar"]},{id:"set-cerimonia",name:"Cerimonia",src:"Cerimonia.txt",songs:["one","the-prayer","can-you-feel-the-love-tonight","can-t-help-falling-in-love","perhaps-love","she","somewhere-over-the-rainbow","tudo-que-se-quer","all-i-ask-of-you","you-ll-be-in-my-heart","what-a-wonderful-world","iris","con-te-partiro","pai-nosso"]},{id:"set-axe-mid",name:"axe mid",src:"axe mid.txt",songs:["we-are-the-world-of-carnaval","beijar-na-boca","erva-venenosa","empurra-empurra","bomba","eva","o-neguinha-vixe-mainha","amor-perfeito","100-voce","o-araketu-e-bom-demais","abalou","praieiro","extravasa","sorte-grande-poeira","rebolation","pancadao","ela-e-toda-boa","brincadeira-da-tomada","danca-da-maozinha","caranguejo","agua-mineral","joga-agua","beber-cair-e-levantar","xo-satanas","minha-mulher-nao-deixa-nao","saia-e-bicicletinha","piriri-pom-pom","na-base-do-beijo","ceu-da-boca","a-galera","berimbau-metalizado","coracao","bola-de-sabao","lirirrixa","flor-do-reggae","quero-chiclete","simbora","pais-tropical-arere-taj-mahal","bota-pra-ferver","lobo-mau","tchubirabiron","explosao","olha-a-onda","danca-do-vampiro","danca-da-manivela","tchau-i-have-to-go-now","festa","canibal","bate-lata","safado-cachorro-sem-vergonha","carro-velho","milla","pipoca","a-fila-andou","doce-desejo","meu-cabelo-duro-e-assim","vou-voar","paz-carnaval-futebol","vamo-pula","famo-a-billionaire","acelera-ae-noite-do-bem","ta-lisinho"]}],estilos:["Ax\xE9","Rock","Dance","Balada","Sertanejo","Pop","Francesa","Casamento","Samba","Marchinha","Jazz/Standard","Diversos","Baile","Latina","Bolero","Anos 50","Anos 80","Anos 90","Anos 70","Forr\xF3","Internacional","Anos 50/60","Trilha","Soul"]},SEED_SONGS=SEED.songs||[],SEED_SETLISTS=SEED.setlists||[],ESTILOS=SEED.estilos||[],ALL_TAGS=(()=>{const e={};return SEED_SONGS.forEach(a=>(a.tags||[]).forEach(o=>e[o]=(e[o]||0)+1)),Object.keys(e).sort((a,o)=>e[o]-e[a])})(),ESTILO_COR={};(()=>{const e=[C.green,C.gold,C.rose,C.violet,C.blue,"#ff9d5c","#6ee7b7","#f0abfc"];ESTILOS.forEach((a,o)=>ESTILO_COR[a]=e[o%e.length])})();const SEED_VERSION=1,S={async get(e){try{const{data:a}=await SB.from("cantor_kv").select("value").eq("key",e).maybeSingle();return a?a.value:null}catch(a){return console.error(a),null}},async set(e,a){try{return await SB.from("cantor_kv").upsert({key:e,value:a,updated_at:new Date().toISOString()}),!0}catch(o){return console.error(o),!1}}},uid=e=>(e||"u")+Date.now().toString(36)+Math.random().toString(36).slice(2,6),norm=e=>(e||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""),nt=e=>norm(e).replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim(),driveEmbed=e=>{const a=(e||"").match(/\/d\/([A-Za-z0-9_-]+)/);return a?`https://drive.google.com/file/d/${a[1]}/preview`:e},SH=["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"],ENH={Db:"C#",Eb:"D#",Gb:"F#",Ab:"G#",Bb:"A#",Cb:"B",Fb:"E","E#":"F","B#":"C"};function shiftRoot(e,a){let o=ENH[e]||e,u=SH.indexOf(o);return u<0?e:SH[((u+a)%12+12)%12]}const CH_RE=/^([A-G](?:#|b)?)((?:maj|min|sus|add|dim|aug|m|M|°|º|\+|\d|\(|\)|b|#|\.)*)(?:\/([A-G](?:#|b)?))?$/;function isChordToken(e){return e?!!e.match(CH_RE):!1}function transposeToken(e,a){const o=e.match(CH_RE);if(!o)return e;let u=shiftRoot(o[1],a)+(o[2]||"");return o[3]&&(u+="/"+shiftRoot(o[3],a)),u}function isChordLine(e){const a=e.trim().split(/\s+/).filter(Boolean);return a.length?a.filter(isChordToken).length/a.length>=.6:!1}function transposeText(e,a){return!a||!e?e:e.split(`
+`).map(o=>isChordLine(o)?o.replace(/\S+/g,u=>isChordToken(u)?transposeToken(u,a):u):o).join(`
+`)}function App(){const[e,a]=useState(!0),[o,u]=useState("musicas"),[d,s]=useState({}),[b,c]=useState([]),[r,l]=useState([]),[h,i]=useState({font:19}),[n,p]=useState(null),[I,A]=useState(null),[z,m]=useState(null),[w,g]=useState(null),[v,q]=useState(null),[x,T]=useState(null),[k,D]=useState(()=>{try{return localStorage.getItem("ct_editor")==="1"}catch(t){return!1}}),[K,M]=useState(!1),[B,W]=useState([]),R=useRef({}),P=useCallback(async()=>{const[t,y,E,ae,oe,ne,te]=await Promise.all([S.get("ct_over"),S.get("ct_added"),S.get("ct_setlists"),S.get("ct_settings"),S.get("ct_seedV"),S.get("ct_pin"),S.get("ct_favs")]);oe!==SEED_VERSION&&await S.set("ct_seedV",SEED_VERSION),s(t||{}),c(y||[]),W(te||[]),l(E&&E.length?E:SEED_SETLISTS),E&&E.length||S.set("ct_setlists",SEED_SETLISTS),i(f({font:19},ae||{})),T(ne||null),a(!1)},[]);useEffect(()=>{P();const t=SB.channel("cantor_kv_rt").on("postgres_changes",{event:"*",schema:"public",table:"cantor_kv"},()=>P()).subscribe();return()=>{try{SB.removeChannel(t)}catch(y){}}},[P]);const j=(t,y,E)=>{E(y),R.current[t]&&clearTimeout(R.current[t]),R.current[t]=setTimeout(()=>S.set(t,y),600)},Z=t=>j("ct_over",t,s),H=t=>j("ct_added",t,c),F=t=>j("ct_setlists",t,l),Y=t=>j("ct_settings",t,i),_=t=>j("ct_favs",t,W),$=t=>{_(B.includes(t)?B.filter(y=>y!==t):[...B,t])},O=useMemo(()=>SEED_SONGS.filter(y=>!(d[y.id]&&d[y.id].hidden)).map(y=>f(f({},y),d[y.id]||{})).concat(b),[d,b]),L=useMemo(()=>{const t={};return O.forEach(y=>t[y.id]=y),t},[O]),V=(t,y)=>{t.startsWith("u")?H(b.map(E=>E.id===t?f(f({},E),y):E)):Z(N(f({},d),{[t]:f(f({},d[t]||{}),y)}))},G=t=>{const y=f({id:uid("u")},t);return H([...b,y]),y.id},ee=t=>{const y=(t||"").trim();if(!x){if(y.length<4)return"Defina uma senha com ao menos 4 d\xEDgitos.";S.set("ct_pin",y),T(y),D(!0);try{localStorage.setItem("ct_editor","1")}catch(E){}return""}if(y===x){D(!0);try{localStorage.setItem("ct_editor","1")}catch(E){}return""}return"Senha incorreta."},U=()=>{D(!1);try{localStorage.removeItem("ct_editor")}catch(t){}};if(e)return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"min-h-screen flex items-center justify-center p-6"},React.createElement("div",{className:"text-center"},React.createElement("div",{style:{width:64,height:64,borderRadius:18,background:`linear-gradient(135deg, ${C.violet}, ${C.green})`},className:"mx-auto mb-4 flex items-center justify-center"},React.createElement(Music,{size:30,style:{color:"#0c1622"}})),React.createElement("h1",{style:{fontSize:26,fontWeight:800,letterSpacing:.5}},"Thiago D'Angelo"),React.createElement("p",{style:{color:C.gold,letterSpacing:4,textTransform:"uppercase",fontSize:11,marginBottom:14}},"Repert\xF3rio"),React.createElement("p",{style:{color:C.mut},className:"flex items-center justify-center gap-2"},React.createElement(Music,{size:18,style:{color:C.gold},className:"animate-pulse"})," Carregando\u2026")));const he=t=>r.find(y=>y.id===t);return React.createElement("div",{style:{background:C.bg,color:C.txt,minHeight:"100vh",fontFamily:"system-ui, sans-serif"}},React.createElement("div",{style:{background:`linear-gradient(135deg, ${C.card2}, ${C.card})`,borderBottom:`1px solid ${C.line}`},className:"px-4 pt-4 pb-3 sticky top-0 z-20"},React.createElement("div",{className:"flex items-center gap-2"},React.createElement("div",{style:{width:34,height:34,borderRadius:10,background:`linear-gradient(135deg, ${C.violet}, ${C.green})`},className:"flex items-center justify-center shrink-0"},React.createElement(Music,{size:18,style:{color:"#0c1622"}})),React.createElement("div",{className:"leading-tight"},React.createElement("h1",{className:"font-bold",style:{fontSize:17,letterSpacing:.3}},"Thiago D'Angelo"),React.createElement("p",{style:{color:C.gold,letterSpacing:2,textTransform:"uppercase",fontSize:9.5}},"Repert\xF3rio \xB7 ",O.length," m\xFAsicas")),React.createElement("button",{onClick:()=>k?U():M(!0),title:k?"Sair do modo edi\xE7\xE3o":"Entrar no modo edi\xE7\xE3o",style:{background:C.card2,color:k?C.gold:C.mut,marginLeft:"auto"},className:"px-2.5 py-2 rounded-lg flex items-center gap-1 text-xs shrink-0"},k?React.createElement(Unlock,{size:15}):React.createElement(Lock,{size:15}),k?React.createElement("span",null,"edi\xE7\xE3o"):null))),React.createElement("div",{className:"p-3 pb-24 max-w-2xl mx-auto"},o==="musicas"&&React.createElement(Repertorio,{songs:O,onPlay:t=>p(t),onAdd:G,onEdit:t=>m(t),editor:k,favs:B,onFav:$}),o==="setlists"&&React.createElement(Setlists,{setlists:r,songById:L,onOpen:t=>g(t),saveSetlists:F,editor:k,onOpenLock:()=>M(!0)}),o==="ajustes"&&React.createElement(Ajustes,{settings:h,saveSettings:Y,songs:O,setlists:r,editor:k,hasPin:!!x,pin:x,onLock:U,onOpenLock:()=>M(!0),savePin:t=>{S.set("ct_pin",t),T(t)}})),React.createElement("nav",{style:{background:C.card,borderTop:`1px solid ${C.line}`},className:"fixed bottom-0 left-0 right-0 z-20"},React.createElement("div",{className:"max-w-2xl mx-auto grid grid-cols-3"},[{k:"musicas",ic:Music,lb:"M\xFAsicas"},{k:"setlists",ic:ListMusic,lb:"Shows"},{k:"ajustes",ic:Settings,lb:"Ajustes"}].map(({k:t,ic:y,lb:E})=>React.createElement("button",{key:t,onClick:()=>u(t),className:"py-2.5 flex flex-col items-center gap-0.5",style:{color:o===t?C.gold:C.mut}},React.createElement(y,{size:20}),React.createElement("span",{style:{fontSize:10.5}},E))))),n&&React.createElement(Player,{song:L[n],settings:h,saveSettings:Y,updateSong:V,editor:k,onEdit:t=>{p(null),m(t)},openViewer:(t,y)=>A({url:t,title:y}),onClose:()=>p(null)}),I&&React.createElement(PdfViewer,{url:I.url,title:I.title,onClose:()=>A(null)}),z&&React.createElement(AddSong,{initial:z,estilos:ESTILOS,onClose:()=>m(null),onSave:t=>{z.id?V(z.id,t):G(t),m(null)}}),K&&React.createElement(LockModal,{hasPin:!!x,onClose:()=>M(!1),onSubmit:t=>ee(t)}),w&&React.createElement(SetlistEditor,{sid:w,setlists:r,saveSetlists:F,songs:O,songById:L,editor:k,onPlay:t=>p(t),onShow:t=>{g(null),q(t)},onClose:()=>g(null)}),v&&React.createElement(ShowView,{setlist:r.find(t=>t.id===v),songById:L,settings:h,saveSettings:Y,onClose:()=>q(null)}))}function Repertorio({songs:e,onPlay:a,onAdd:o,onEdit:u,editor:d,favs:s,onFav:b}){const[c,r]=useState(""),[l,h]=useState("Todos"),[i,n]=useState("Todas"),[p,I]=useState(!1),[A,z]=useState(!1),m=s||[],w=useMemo(()=>{const g=nt(c),v=g.split(" ").filter(Boolean);let q=e.filter(x=>{if(p&&!m.includes(x.id)||l!=="Todos"&&x.pri!==l||i!=="Todas"&&!(x.tags||[]).includes(i))return!1;if(!v.length)return!0;const T=nt((x.t||"")+" "+(x.artist||""));return v.every(k=>T.includes(k))});if(v.length){const x=T=>{const k=nt(T.t);return k===g?0:k.startsWith(g)?1:v[0]&&k.startsWith(v[0])?2:k.includes(g)?3:4};q=q.slice().sort((T,k)=>x(T)-x(k)||T.t.localeCompare(k.t,"pt"))}else q=q.slice().sort((x,T)=>x.t.localeCompare(T.t,"pt"));return q.slice(0,400)},[e,c,l,i,p,s]);return React.createElement("div",null,React.createElement("div",{className:"relative mb-2"},React.createElement(Search,{size:16,style:{color:C.mut},className:"absolute left-3 top-1/2 -translate-y-1/2"}),React.createElement("input",{value:c,onChange:g=>r(g.target.value),placeholder:"Buscar por t\xEDtulo ou artista\u2026",style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"w-full pl-9 pr-3 py-2.5 rounded-xl outline-none"})),React.createElement("div",{className:"flex gap-2 overflow-x-auto pb-2"},React.createElement(Sel,{value:l,onChange:h,options:["Todos",...ESTILOS]}),React.createElement(Sel,{value:i,onChange:n,options:["Todas",...ALL_TAGS]}),React.createElement("button",{onClick:()=>I(g=>!g),style:{background:p?C.gold:C.card,color:p?"#2b2100":C.mut,border:`1px solid ${C.line}`},className:"px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap shrink-0"},"\u2605 Favoritas"),d&&React.createElement("button",{onClick:()=>z(!0),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap flex items-center gap-1"},React.createElement(Plus,{size:14})," Nova")),React.createElement("p",{className:"text-xs mb-2",style:{color:C.mut}},w.length," m\xFAsica(s)"),React.createElement("div",{className:"space-y-2"},w.map(g=>React.createElement(SongRow,{key:g.id,s:g,onPlay:a,onEdit:u,editor:d,fav:m.includes(g.id),onFav:b}))),A&&React.createElement(AddSong,{estilos:ESTILOS,onClose:()=>z(!1),onSave:g=>{o(g),z(!1)}}))}function spLink(e){return e&&(e.sp||e.sps)||""}function SongRow({s:e,onPlay:a,onEdit:o,editor:u,fav:d,onFav:s}){return React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full p-3 rounded-xl flex items-center gap-2"},React.createElement("button",{onClick:()=>a(e.id),className:"flex items-center gap-3 min-w-0 flex-1 text-left active:opacity-70"},React.createElement("div",{style:{background:C.card2,color:ESTILO_COR[e.pri]||C.gold,minWidth:40},className:"px-2 py-2 rounded-lg flex items-center justify-center"},React.createElement(Music,{size:16})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},e.t),React.createElement("div",{className:"flex items-center gap-2 text-xs mt-0.5",style:{color:C.mut}},e.artist?React.createElement("span",{className:"truncate"},e.artist):null,React.createElement("span",{style:{color:ESTILO_COR[e.pri]||C.mut}},"\xB7 ",e.pri)))),s?React.createElement("button",{onClick:()=>s(e.id),title:d?"Remover dos favoritos":"Favoritar",style:{color:d?C.gold:C.mut,fontSize:19,lineHeight:1},className:"px-1 shrink-0"},d?"\u2605":"\u2606"):null,spLink(e)?React.createElement("a",{href:spLink(e),target:"_blank",rel:"noreferrer",title:"Ouvir no Spotify",style:{background:C.card2,color:C.green},className:"p-2 rounded-lg shrink-0"},React.createElement(Spotify,{size:18})):null,u?React.createElement("button",{onClick:()=>o(e),title:"Editar",style:{background:C.card2,color:C.gold},className:"p-2 rounded-lg shrink-0"},React.createElement(Pencil,{size:16})):null,React.createElement("button",{onClick:()=>a(e.id),title:"Abrir letra",style:{color:C.gold},className:"p-1.5 shrink-0"},React.createElement(Play,{size:18})))}function Sel({value:e,onChange:a,options:o}){return React.createElement("select",{value:e,onChange:u=>a(u.target.value),style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"px-3 py-1.5 rounded-full text-xs outline-none max-w-[46%]"},o.map(u=>React.createElement("option",{key:u,value:u},u)))}function Player({song:e,settings:a,saveSettings:o,updateSong:u,editor:d,onEdit:s,openViewer:b,onClose:c}){const[r,l]=useState(0),[h,i]=useState(!1),[n,p]=useState(0),I=useRef(null),A=a.font||19;if(useEffect(()=>{l(0),i(!1),p(0)},[e&&e.id]),useEffect(()=>{if(!r||!I.current)return;const v=I.current,q=setInterval(()=>{v.scrollTop+=r},60);return()=>clearInterval(q)},[r]),!e)return null;const z=spLink(e),m=h&&e.cifra?transposeText(e.cifra,n):e.letra||"",w=m.split(`
+`),g=h&&e.cifra;return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-[60] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:c,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-bold truncate"},e.t),React.createElement("p",{className:"text-xs truncate",style:{color:C.mut}},e.artist?e.artist+" \xB7 ":"",e.pri)),d?React.createElement("button",{onClick:()=>s(e),title:"Editar",style:{background:C.card2,color:C.gold},className:"p-2 rounded-lg"},React.createElement(Pencil,{size:16})):null),React.createElement("div",{style:{background:C.card2,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 flex-wrap text-xs"},React.createElement("div",{className:"flex items-center gap-1"},React.createElement(Type,{size:13,style:{color:C.mut}}),React.createElement("button",{onClick:()=>o(N(f({},a),{font:Math.max(13,A-1)})),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{minWidth:22},className:"text-center"},A),React.createElement("button",{onClick:()=>o(N(f({},a),{font:Math.min(34,A+1)})),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14}))),React.createElement("div",{className:"flex items-center gap-1"},React.createElement("button",{onClick:()=>l(v=>v>0?0:1),style:{background:r?C.gold:C.card,color:r?"#2b2100":C.txt},className:"p-1.5 rounded-lg flex items-center gap-1"},r?React.createElement(Pause,{size:14}):React.createElement(Play,{size:14}),React.createElement("span",null,"rolar")),r>0&&React.createElement("input",{type:"range",min:"1",max:"5",value:r,onChange:v=>l(Number(v.target.value)),className:"w-16"})),g?React.createElement("div",{className:"flex items-center gap-1"},React.createElement("span",{style:{color:C.mut}},"Tom"),React.createElement("button",{onClick:()=>p(v=>v-1),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{color:C.gold,minWidth:26},className:"text-center font-bold"},n>0?"+"+n:n),React.createElement("button",{onClick:()=>p(v=>v+1),style:{background:C.card},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14}))):null,e.cifra?React.createElement("button",{onClick:()=>i(v=>!v),style:{background:h?C.gold:C.card,color:h?"#2b2100":C.txt},className:"px-2.5 py-1.5 rounded-lg font-semibold"},h?"Ver letra":"Ver cifra"):null,e.u?React.createElement("button",{onClick:()=>b(e.u,e.t),style:{background:C.blue,color:"#04203f"},className:"px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1"},React.createElement(FileText,{size:13})," PDF"):null,z?React.createElement("a",{href:z,target:"_blank",rel:"noreferrer",style:{background:C.green,color:"#04261b"},className:"ml-auto px-2.5 py-1.5 rounded-lg font-semibold flex items-center gap-1"},React.createElement(Spotify,{size:14})," Spotify"):null),React.createElement("div",{ref:I,className:"flex-1 px-4 py-4",style:{overflow:"auto",scrollBehavior:"smooth",WebkitOverflowScrolling:"touch"}},m.trim()?g?React.createElement("pre",{style:{fontFamily:"ui-monospace, Menlo, monospace",fontSize:A,lineHeight:1.5,whiteSpace:"pre",display:"inline-block",minWidth:"100%"}},w.map((v,q)=>isChordLine(v)?React.createElement("div",{key:q,style:{color:C.gold,fontWeight:700}},v||"\xA0"):React.createElement("div",{key:q},v||"\xA0"))):React.createElement("div",{style:{fontSize:A,lineHeight:1.65,whiteSpace:"pre-wrap",wordBreak:"break-word",maxWidth:680,margin:"0 auto"}},m):React.createElement("div",{className:"text-center py-10",style:{color:C.mut}},React.createElement(Music,{size:40,className:"mx-auto mb-3"}),React.createElement("p",null,"Sem letra cadastrada ainda."))))}function ShowView({setlist:e,songById:a,settings:o,saveSettings:u,onClose:d}){const[s,b]=useState(0),c=useRef(null),r=o&&o.font||19,l=(e&&e.songs||[]).map(i=>a[i]).filter(Boolean);useEffect(()=>{if(!s||!c.current)return;const i=c.current,n=setInterval(()=>{i.scrollTop+=s},60);return()=>clearInterval(n)},[s]),useEffect(()=>{let i=null;const n=async()=>{try{navigator.wakeLock&&(i=await navigator.wakeLock.request("screen"))}catch(I){}};n();const p=()=>{document.visibilityState==="visible"&&n()};return document.addEventListener("visibilitychange",p),()=>{document.removeEventListener("visibilitychange",p);try{i&&i.release()}catch(I){}}},[]);const h=i=>{const n=document.getElementById("showsong-"+i);n&&c.current&&c.current.scrollTo({top:n.offsetTop-6,behavior:"smooth"})};return e?React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-[68] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:d,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-bold truncate"},e.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Modo show \xB7 ",l.length," m\xFAsica(s)")),React.createElement(Type,{size:13,style:{color:C.mut}}),React.createElement("button",{onClick:()=>u(N(f({},o),{font:Math.max(13,r-1)})),style:{background:C.card2},className:"p-1.5 rounded-lg"},React.createElement(Minus,{size:14})),React.createElement("span",{style:{minWidth:20},className:"text-center text-xs"},r),React.createElement("button",{onClick:()=>u(N(f({},o),{font:Math.min(40,r+1)})),style:{background:C.card2},className:"p-1.5 rounded-lg"},React.createElement(Plus,{size:14})),React.createElement("button",{onClick:()=>b(i=>i>0?0:1),style:{background:s?C.gold:C.card2,color:s?"#2b2100":C.txt},className:"p-1.5 rounded-lg ml-1 flex items-center gap-1"},s?React.createElement(Pause,{size:14}):React.createElement(Play,{size:14})),s>0&&React.createElement("input",{type:"range",min:"1",max:"6",value:s,onChange:i=>b(Number(i.target.value)),className:"w-14"})),React.createElement("div",{style:{background:C.card2,borderBottom:`1px solid ${C.line}`},className:"px-3 py-1.5 flex gap-1 overflow-x-auto"},l.map((i,n)=>React.createElement("button",{key:n,onClick:()=>h(n),style:{background:C.card,color:C.mut},className:"px-2 py-1 rounded-lg text-xs whitespace-nowrap shrink-0"},n+1,". ",i.t))),React.createElement("div",{ref:c,className:"flex-1 px-4 py-4",style:{overflow:"auto",scrollBehavior:"smooth",WebkitOverflowScrolling:"touch"}},l.length===0?React.createElement("p",{className:"text-center py-10",style:{color:C.mut}},"Show vazio. Adicione m\xFAsicas a este setlist."):l.map((i,n)=>React.createElement("div",{key:i.id+n,id:"showsong-"+n,style:{maxWidth:680,margin:"0 auto"},className:"mb-10"},React.createElement("div",{className:"flex items-baseline gap-2 mb-2 pb-1",style:{borderBottom:`1px solid ${C.line}`}},React.createElement("span",{style:{color:C.gold},className:"font-bold"},n+1,"."),React.createElement("span",{className:"font-bold",style:{fontSize:r+2}},i.t),i.artist?React.createElement("span",{className:"text-xs",style:{color:C.mut}},i.artist):null,i.sp||i.sps?React.createElement("a",{href:i.sp||i.sps,target:"_blank",rel:"noreferrer",style:{color:C.green,marginLeft:"auto"},className:"shrink-0"},React.createElement(Spotify,{size:16})):null),React.createElement("div",{style:{fontSize:r,lineHeight:1.6,whiteSpace:"pre-wrap",wordBreak:"break-word"}},i.letra||"(sem letra)"))),React.createElement("div",{style:{height:90}}))):null}function Setlists({setlists:e,songById:a,onOpen:o,saveSetlists:u,editor:d,onOpenLock:s}){const[b,c]=useState(""),r=useMemo(()=>{const h=nt(b);return e.filter(i=>!h||nt(i.name).includes(h)).slice().sort((i,n)=>i.name.localeCompare(n.name,"pt"))},[e,b]),l=()=>{const h=(prompt("Nome do novo setlist:")||"").trim();h&&u([...e,{id:uid("set"),name:h,style:"",songs:[]}])};return React.createElement("div",null,React.createElement("div",{className:"flex items-center gap-2 mb-3"},React.createElement("div",{className:"relative flex-1"},React.createElement(Search,{size:16,style:{color:C.mut},className:"absolute left-3 top-1/2 -translate-y-1/2"}),React.createElement("input",{value:b,onChange:h=>c(h.target.value),placeholder:"Buscar setlist\u2026",style:{background:C.card,border:`1px solid ${C.line}`,color:C.txt},className:"w-full pl-9 pr-3 py-2.5 rounded-xl outline-none"})),d?React.createElement("button",{onClick:l,style:{background:C.gold,color:"#2b2100"},className:"px-3 py-2.5 rounded-xl text-sm font-semibold flex items-center gap-1 shrink-0"},React.createElement(Plus,{size:15})," Novo"):React.createElement("button",{onClick:s,style:{background:C.card2,color:C.mut},className:"px-3 py-2.5 rounded-xl text-sm flex items-center gap-1 shrink-0"},React.createElement(Lock,{size:14}))),React.createElement("p",{className:"text-xs mb-2",style:{color:C.mut}},r.length," show(s) \u2014 abra um para ver todas as letras em sequ\xEAncia"),React.createElement("div",{className:"space-y-2"},r.map(h=>React.createElement("div",{key:h.id,style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full p-3 rounded-xl flex items-center gap-3"},React.createElement("button",{onClick:()=>o(h.id),className:"flex items-center gap-3 min-w-0 flex-1 text-left active:opacity-70"},React.createElement("div",{style:{background:C.card2,color:C.violet,minWidth:40},className:"p-2 rounded-lg flex items-center justify-center"},React.createElement(ListMusic,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},React.createElement("p",{className:"font-semibold truncate"},h.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},(h.songs||[]).length," m\xFAsica(s)"))),d?React.createElement("button",{onClick:()=>u([...e,N(f({},h),{id:uid("set"),name:h.name+" (c\xF3pia)"})]),title:"Duplicar show",style:{background:C.card2,color:C.mut},className:"p-2 rounded-lg shrink-0"},React.createElement(Plus,{size:15})):null,React.createElement("button",{onClick:()=>o(h.id),className:"shrink-0"},React.createElement(ChevronRight,{size:18,style:{color:C.mut}}))))))}function SetlistEditor({sid:e,setlists:a,saveSetlists:o,songs:u,songById:d,editor:s,onPlay:b,onShow:c,onClose:r}){const l=a.find(m=>m.id===e)||{name:"",songs:[]},[h,i]=useState(!1),n=m=>o(a.map(w=>w.id===e?f(f({},w),m):w)),p=(l.songs||[]).map(m=>d[m]).filter(Boolean),I=(m,w)=>{const g=[...l.songs],v=m+w;v<0||v>=g.length||([g[m],g[v]]=[g[v],g[m]],n({songs:g}))},A=m=>n({songs:l.songs.filter((w,g)=>g!==m)}),z=()=>{confirm("Excluir este setlist? (as m\xFAsicas continuam no repert\xF3rio)")&&(o(a.filter(m=>m.id!==e)),r())};return React.createElement("div",{style:{background:C.bg,color:C.txt},className:"fixed inset-0 z-40 flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:`1px solid ${C.line}`},className:"px-3 py-2 flex items-center gap-2 sticky top-0"},React.createElement("button",{onClick:r,style:{background:C.card2},className:"p-2 rounded-lg"},React.createElement(X,{size:18})),React.createElement("div",{className:"min-w-0 flex-1"},s?React.createElement("input",{value:l.name,onChange:m=>n({name:m.target.value}),style:{background:"transparent",color:C.txt},className:"font-bold w-full outline-none"}):React.createElement("p",{className:"font-bold truncate"},l.name),React.createElement("p",{className:"text-xs",style:{color:C.mut}},p.length," m\xFAsica(s)")),s?React.createElement("button",{onClick:z,style:{color:C.danger},className:"p-2"},React.createElement(Trash2,{size:18})):null),React.createElement("div",{className:"overflow-y-auto flex-1 p-3 space-y-3"},p.length>0&&React.createElement("button",{onClick:()=>c(e),style:{background:C.green,color:"#04261b"},className:"w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 active:opacity-80"},React.createElement(Play,{size:18})," Abrir em sequ\xEAncia (Modo Show)"),s&&React.createElement("button",{onClick:()=>i(!0),style:{background:C.gold,color:"#2b2100"},className:"px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1"},React.createElement(Plus,{size:14})," Adicionar m\xFAsica"),p.length===0&&React.createElement("p",{className:"text-xs",style:{color:C.mut}},"Setlist vazio."),React.createElement("div",{className:"space-y-2"},p.map((m,w)=>React.createElement("div",{key:m.id+w,style:{background:C.card,border:`1px solid ${C.line}`},className:"p-2.5 rounded-xl flex items-center gap-2"},React.createElement("span",{style:{color:C.mut,minWidth:20},className:"text-xs text-center"},w+1),s?React.createElement("div",{className:"flex flex-col"},React.createElement("button",{onClick:()=>I(w,-1),style:{color:C.mut},className:"p-0.5"},React.createElement(ArrowUp,{size:14})),React.createElement("button",{onClick:()=>I(w,1),style:{color:C.mut},className:"p-0.5"},React.createElement(ArrowDown,{size:14}))):null,React.createElement("button",{onClick:()=>b(m.id),className:"min-w-0 flex-1 text-left"},React.createElement("p",{className:"font-medium truncate text-sm"},m.t),React.createElement("p",{className:"text-xs",style:{color:C.mut}},m.artist?m.artist+" \xB7 ":"",React.createElement("span",{style:{color:ESTILO_COR[m.pri]}},m.pri))),spLink(m)?React.createElement("a",{href:spLink(m),target:"_blank",rel:"noreferrer",style:{color:C.green},className:"p-1.5"},React.createElement(Spotify,{size:16})):null,s?React.createElement("button",{onClick:()=>A(w),style:{color:C.danger},className:"p-1.5"},React.createElement(Trash2,{size:15})):null)))),h&&React.createElement(SongPicker,{songs:u,onClose:()=>i(!1),onPick:m=>n({songs:[...l.songs||[],m]})}))}function SongPicker({songs:e,onClose:a,onPick:o}){const[u,d]=useState(""),[s,b]=useState("Todos"),c=useMemo(()=>{const l=nt(u).split(" ").filter(Boolean);return e.filter(i=>{if(s!=="Todos"&&i.pri!==s)return!1;if(!l.length)return!0;const n=nt((i.t||"")+" "+(i.artist||""));return l.every(p=>n.includes(p))}).slice().sort((i,n)=>i.t.localeCompare(n.t,"pt")).slice(0,300)},[e,u,s]);return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-50 flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[85vh] flex flex-col"},React.createElement("div",{className:"p-3 border-b",style:{borderColor:C.line}},React.createElement("div",{className:"flex items-center justify-between mb-2"},React.createElement("p",{className:"font-semibold"},"Adicionar m\xFAsica"),React.createElement("button",{onClick:a},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("input",{value:u,onChange:r=>d(r.target.value),placeholder:"Buscar\u2026",style:inp,autoFocus:!0}),React.createElement("div",{className:"mt-2"},React.createElement(Sel,{value:s,onChange:b,options:["Todos",...ESTILOS]}))),React.createElement("div",{className:"overflow-y-auto p-2 space-y-1"},c.map(r=>React.createElement("button",{key:r.id,onClick:()=>{o(r.id),a()},style:{background:C.card2},className:"w-full text-left p-2.5 rounded-lg flex items-center gap-2 active:opacity-70"},React.createElement("span",{className:"min-w-0 flex-1 truncate text-sm"},r.t,React.createElement("span",{style:{color:C.mut}}," \xB7 ",r.artist)),React.createElement("span",{className:"text-xs shrink-0",style:{color:ESTILO_COR[r.pri]}},r.pri))))))}function Ajustes({settings:e,saveSettings:a,songs:o,setlists:u,editor:d,hasPin:s,pin:b,onLock:c,onOpenLock:r,savePin:l}){const h=o.filter(n=>(n.letra||"").length>10).length,i=o.filter(n=>n.sp).length;return React.createElement("div",{className:"space-y-4"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4 space-y-2"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},"Senha de edi\xE7\xE3o"),d?React.createElement(React.Fragment,null,React.createElement("p",{className:"text-sm",style:{color:C.green}},"\u2713 Modo edi\xE7\xE3o ativo neste aparelho."),React.createElement(PinChange,{hasPin:s,pin:b,savePin:l}),React.createElement("button",{onClick:c,style:{background:C.card2,color:C.txt},className:"px-3 py-2 rounded-lg text-sm flex items-center gap-1"},React.createElement(Lock,{size:14})," Sair do modo edi\xE7\xE3o")):React.createElement(React.Fragment,null,React.createElement("p",{className:"text-sm",style:{color:C.mut}},s?"S\xF3 quem tem a senha edita m\xFAsicas e setlists.":"Defina uma senha para liberar a edi\xE7\xE3o."),React.createElement("button",{onClick:r,style:{background:C.gold,color:"#2b2100"},className:"px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1"},React.createElement(Unlock,{size:14})," ",s?"Entrar no modo edi\xE7\xE3o":"Criar senha de edi\xE7\xE3o"))),React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"rounded-xl p-4"},React.createElement("p",{className:"font-semibold mb-1",style:{color:C.gold}},"Sobre o repert\xF3rio"),React.createElement("p",{className:"text-sm",style:{color:C.mut}},o.length," m\xFAsicas \xB7 ",u.length," setlists \xB7 ",h," com letra \xB7 ",i," com link exato do Spotify."),React.createElement("p",{className:"text-xs mt-2",style:{color:C.mut}},"Filtre por estilo ou marcador na aba M\xFAsicas. Toque numa m\xFAsica para abrir a letra (fonte ajust\xE1vel e rolagem autom\xE1tica) e o Spotify.")),React.createElement(Field,{label:`Tamanho padr\xE3o da letra: ${e.font||19}px`},React.createElement("input",{type:"range",min:"13",max:"34",value:e.font||19,onChange:n=>a(N(f({},e),{font:Number(n.target.value)})),className:"w-full"})),React.createElement("p",{className:"text-xs text-center",style:{color:C.mut}},"Tudo o que voc\xEA edita \xE9 compartilhado em tempo real."))}function PinChange({hasPin:e,pin:a,savePin:o}){const[u,d]=useState(!1),[s,b]=useState(""),[c,r]=useState(""),[l,h]=useState("");if(!u)return React.createElement("button",{onClick:()=>d(!0),style:{color:C.blue},className:"text-sm underline block"},"Alterar senha");const i=()=>{if(e&&s.trim()!==a){h("Senha atual incorreta.");return}if(c.trim().length<4){h("M\xEDnimo 4 d\xEDgitos.");return}o(c.trim()),h("Senha atualizada \u2713"),b(""),r(""),setTimeout(()=>d(!1),1e3)};return React.createElement("div",{className:"space-y-2"},e?React.createElement("input",{value:s,onChange:n=>b(n.target.value),type:"password",inputMode:"numeric",placeholder:"Senha atual",style:inp}):null,React.createElement("input",{value:c,onChange:n=>r(n.target.value),type:"password",inputMode:"numeric",placeholder:"Nova senha (m\xEDn. 4 d\xEDgitos)",style:inp}),l?React.createElement("p",{className:"text-xs",style:{color:l.indexOf("\u2713")>=0?C.green:C.danger}},l):null,React.createElement("div",{className:"flex gap-2"},React.createElement("button",{onClick:i,style:{background:C.green,color:"#04261b"},className:"px-3 py-1.5 rounded-lg text-sm font-semibold"},"Salvar senha"),React.createElement("button",{onClick:()=>{d(!1),h("")},style:{background:C.card2,color:C.mut},className:"px-3 py-1.5 rounded-lg text-sm"},"Cancelar")))}const inp={background:C.bg,border:`1px solid ${C.line}`,color:C.txt,borderRadius:12,padding:"10px 12px",outline:"none",width:"100%"};function Field({label:e,children:a}){return React.createElement("label",{className:"block"},React.createElement("span",{className:"text-xs block mb-1",style:{color:C.mut}},e),a)}function AddSong({onClose:e,onSave:a,initial:o,estilos:u}){const d=!!(o&&o.id),[s,b]=useState(o?{t:o.t||"",artist:o.artist||"",pri:o.pri||"Diversos",tags:(o.tags||[]).join(", "),sp:o.sp||"",letra:o.letra||"",cifra:o.cifra||"",u:o.u||""}:{t:"",artist:"",pri:u&&u[0]||"Diversos",tags:"",sp:"",letra:"",cifra:"",u:""}),[c,r]=useState(""),l=(n,p)=>b(I=>N(f({},I),{[n]:p})),h=async n=>{const p=n.target.files&&n.target.files[0];if(p){if(p.type&&p.type.indexOf("pdf")<0){r("Selecione um PDF.");return}r("Enviando\u2026");try{const I=(p.name||"letra.pdf").normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^A-Za-z0-9._-]+/g,"_"),A="up-"+Date.now().toString(36)+"-"+I,{error:z}=await SB.storage.from("letras").upload(A,p,{upsert:!0,contentType:"application/pdf"});if(z){r("Falha: "+z.message);return}const{data:m}=SB.storage.from("letras").getPublicUrl(A);l("u",m.publicUrl),r("PDF enviado \u2713")}catch(I){r("Falha no upload.")}}},i=()=>{if(!s.t.trim())return;const n={t:s.t.trim(),artist:s.artist.trim(),pri:s.pri,tags:s.tags.split(",").map(p=>p.trim()).filter(Boolean),sp:s.sp.trim(),letra:s.letra,cifra:s.cifra,u:s.u.trim()};a(n)};return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[65] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:`1px solid ${C.line}`},className:"w-full max-w-lg rounded-t-2xl sm:rounded-2xl max-h-[90vh] overflow-y-auto p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},d?"Editar m\xFAsica":"Nova m\xFAsica"),React.createElement("button",{onClick:e},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement(Field,{label:"T\xEDtulo *"},React.createElement("input",{value:s.t,onChange:n=>l("t",n.target.value),style:inp,autoFocus:!0})),React.createElement(Field,{label:"Artista"},React.createElement("input",{value:s.artist,onChange:n=>l("artist",n.target.value),style:inp})),React.createElement("div",{className:"flex gap-2"},React.createElement(Field,{label:"Estilo principal"},React.createElement("select",{value:s.pri,onChange:n=>l("pri",n.target.value),style:inp},(u||[]).concat(u&&u.indexOf(s.pri)<0?[s.pri]:[]).map(n=>React.createElement("option",{key:n},n)))),React.createElement(Field,{label:"Marcadores (v\xEDrgula)"},React.createElement("input",{value:s.tags,onChange:n=>l("tags",n.target.value),placeholder:"Anos 80, Pop",style:inp}))),React.createElement(Field,{label:"Link do Spotify"},React.createElement("input",{value:s.sp,onChange:n=>l("sp",n.target.value),placeholder:"https://open.spotify.com/track/\u2026",style:inp})),React.createElement(Field,{label:"Letra"},React.createElement("textarea",{value:s.letra,onChange:n=>l("letra",n.target.value),rows:7,style:N(f({},inp),{whiteSpace:"pre-wrap"})})),React.createElement("div",null,React.createElement("label",{style:{background:C.card2,color:C.txt,border:"1px dashed "+C.line},className:"flex items-center justify-center gap-2 py-2.5 rounded-xl cursor-pointer text-sm font-medium"},React.createElement(Upload,{size:16})," Enviar PDF da letra",React.createElement("input",{type:"file",accept:"application/pdf",onChange:h,className:"hidden"})),c?React.createElement("p",{className:"text-xs mt-1",style:{color:c.indexOf("\u2713")>=0?C.green:c.indexOf("Enviando")>=0?C.mut:C.danger}},c):null),React.createElement(Field,{label:"Cifra em texto (opcional \u2014 habilita transpor)"},React.createElement("textarea",{value:s.cifra,onChange:n=>l("cifra",n.target.value),rows:4,wrap:"off",style:N(f({},inp),{fontFamily:"ui-monospace, monospace",whiteSpace:"pre",overflowX:"auto"})})),React.createElement("button",{onClick:i,style:{background:C.green,color:"#04261b"},className:"w-full py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Check,{size:16})," ",d?"Salvar altera\xE7\xF5es":"Salvar m\xFAsica")))}function PdfViewer({url:e,title:a,onClose:o}){const u=driveEmbed(e);return React.createElement("div",{style:{background:"rgba(0,0,0,0.92)"},className:"fixed inset-0 z-[70] flex flex-col"},React.createElement("div",{style:{background:C.card,borderBottom:"1px solid "+C.line},className:"px-3 py-2 flex items-center gap-2"},React.createElement("button",{onClick:o,style:{background:C.card2,color:C.txt},className:"px-3 py-2 rounded-lg flex items-center gap-1 font-semibold shrink-0"},React.createElement(ChevronLeft,{size:18})," Voltar"),React.createElement("p",{className:"font-semibold truncate flex-1"},a),React.createElement("a",{href:e,target:"_blank",rel:"noreferrer",style:{color:C.blue},className:"text-xs flex items-center gap-1 shrink-0"},React.createElement(ExternalLink,{size:13})," nova aba")),React.createElement("iframe",{title:a,src:u,className:"flex-1 w-full",style:{border:0,background:"#fff"}}))}function LockModal({hasPin:e,onClose:a,onSubmit:o}){const[u,d]=useState(""),[s,b]=useState(""),c=()=>{const r=o(u);r?b(r):a()};return React.createElement("div",{style:{background:"rgba(0,0,0,0.6)"},className:"fixed inset-0 z-[75] flex items-end sm:items-center justify-center"},React.createElement("div",{style:{background:C.card,border:"1px solid "+C.line},className:"w-full max-w-sm rounded-t-2xl sm:rounded-2xl p-4 space-y-3"},React.createElement("div",{className:"flex items-center justify-between"},React.createElement("p",{className:"font-semibold",style:{color:C.gold}},e?"Modo edi\xE7\xE3o":"Criar senha de edi\xE7\xE3o"),React.createElement("button",{onClick:a},React.createElement(X,{size:18,style:{color:C.mut}}))),React.createElement("p",{className:"text-xs",style:{color:C.mut}},e?"Digite a senha para editar neste aparelho.":"Defina uma senha (m\xEDn. 4 d\xEDgitos)."),React.createElement("input",{value:u,onChange:r=>{d(r.target.value),b("")},onKeyDown:r=>r.key==="Enter"&&c(),type:"password",inputMode:"numeric",placeholder:e?"Senha":"Nova senha",style:inp,autoFocus:!0}),s?React.createElement("p",{className:"text-xs",style:{color:C.danger}},s):null,React.createElement("button",{onClick:c,style:{background:C.gold,color:"#2b2100"},className:"w-full py-2.5 rounded-xl font-semibold flex items-center justify-center gap-1"},React.createElement(Unlock,{size:16})," ",e?"Entrar":"Criar e entrar")))}const _root=ReactDOM.createRoot(document.getElementById("root"));_root.render(React.createElement(App,null));try{window.__booted=!0}catch(e){}
