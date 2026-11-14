@@ -10,7 +10,7 @@ function cols(line, spec, n) {
   for (const item of spec.trim().split(/\s+/)) {
     const k = item.indexOf("@"), ch = item.slice(0, k); let an = item.slice(k + 1), occ = 1, col;
     const m = an.match(/^(.*)#(\d+)$/); if (m) { an = m[1]; occ = +m[2]; }
-    if (an === "$") col = line.length + 1; else if (an === "^") col = 0;
+    if (an === "$") col = Math.max(line.length + 1, res.length ? res[res.length - 1][0] + res[res.length - 1][1].length + 1 : 0); else if (an === "^") col = 0;
     else { col = -1; for (let i = 0; i < occ; i++) col = line.indexOf(an, col + 1); if (col < 0) { err(`linha ${n}: âncora "${an}" não achada em "${line}"`); continue; } }
     res.push([col, ch]);
   }

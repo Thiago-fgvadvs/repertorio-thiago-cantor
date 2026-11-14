@@ -13,7 +13,7 @@
 10: C@Nothing Cmaj7@or F@for
 11: C@And Cmaj7@religion F@too
 13=5
-14: G@Living C/G@in G7@peace
+14: G@Living C/G@life G7@peace
 16: F@You G@say C@dreamer E7@$
 17: F@But G@not C@one E7@$
 18: F@I G@day C@join E7@$
@@ -191,3 +191,647 @@
 20: D@Rolling
 21: D@Rolling
 22: D@Rolling
+## hotel-california
+0: Bm@DARK F#7@COOL
+1: A@WARM E@RISING
+2: G@UP D@SAW
+3: Em@HEAD
+4: F#7@STOP
+6: Bm@THERE F#7@HEARD
+7: A@THINKING E@HEAVEN
+8: G@LIT D@SHOWED
+9: Em@VOICES
+10: F#7@THOUGHT
+12: G@WELCOME D@CALIFORNIA
+13: F#7@SUCH
+14: Bm@SUCH
+15: G@PLENTY D@CALIFORNIA
+16: Em@ANY F#7@YOU
+18: Bm@MIND F#7@SHE
+19: A@LOT E@BOYS
+20: G@DANCE D@SWEET
+21: Em@SOME F#7@SOME#2
+23: Bm@CALLED F#7@PLEASE
+24: A@HAVEN'T E@NINETEEN G@STILL D@CALLING
+25: Em@WAKE
+26: F#7@JUST
+27=12
+28=13
+29=14
+30: G@LIVIN' D@CALIFORNIA
+31: Em@WHAT
+32: F#7@BRING
+34: Bm@MIRRORS F#7@PINK
+35: A@SAID E@OF
+37: G@MASTER'S
+38: D@GATHERED
+39: Em@STAB F#7@CAN'T
+42: Bm@LAST
+43: F#7@RUNNING
+44: A@HAD
+45: E@PLACE
+46: G@RELAX D@WE
+47: Em@CHECK-OUT
+48: F#7@NEVER
+## ain-t-no-sunshine
+16: Am@sunshine Em@$ G@$ Am@$
+17: Am@warm Em@$ G@$ Am@$
+18: Am@sunshine Em@gone
+19: Dm@always
+20: Am@away Em@$ G@$ Am@$
+## twist-and-shout
+0: D@shake G@baby A@now
+1: D@Twist G@shout A@$
+2: D@Come G@baby A@now
+3: D@work G@out A@$
+4: D@work G@honey A@$
+5: D@look G@good A@$
+6: D@got G@goin' A@now#2
+7: D@knew G@would A@$
+9=0
+10=1
+11=2
+12=3
+13: D@twist G@girl A@$
+14: D@twist G@fine A@$
+15: D@twist G@closer A@now
+16: D@know G@mine A@woo
+18: A@Ah A7@ah#3
+19: D@shake G@baby A@now
+20=1
+21=2
+22=3
+23=13
+24=14
+25=15
+26: D@know G@mine A@$
+27: D@shake G@baby A@now
+## oh-pretty-woman
+0: A@woman F#m@street
+1: A@The F#m@meet
+2: D@I
+3: E@No
+5: A@woman F#m@pardon
+6: A@couldn't F#m@see D@look
+7: E@lonely
+10: Dm@Pretty G@stop
+11: C@Pretty Am@talk
+12: Dm@Pretty G@give C@me
+13: Dm@Pretty G@yeah
+14: C@Pretty Am@look
+15: Dm@Pretty G@say C@stay A@me
+17: F#m@need Dm@treat E@right
+18: A@Come F#m@baby Dm@mine E@tonight
+19: A@woman F#m@walk
+20: A@woman F#m@make
+21: D@woman E@Hey
+22: E@If
+27: A@woman
+## lg253
+0: C@heard Am@secret
+1: C@David Am@pleased
+2: F@you G@care C@do#2 G@$
+3: C@goes
+4: F@fourth G@fifth
+5: Am@minor F@major
+6: G@baffled E7@composing Am@Hallelujah
+8: F@Hallelujah
+9: Am@Hallelujah
+10: F@Hallelujah
+11: C@Hallelujah G@lujah C@$
+13: C@faith Am@needed
+14: C@saw Am@on
+15: F@beauty G@moonlight C@overthrew G@$
+16: C@tied F@kitchen G@chair
+17: Am@broke F@cut
+18: G@from E7@drew Am@Hallelujah
+20=8
+21=9
+22=10
+23=11
+25: C@Maybe Am@here
+26: C@know Am@walked
+27: F@used G@alone C@knew G@$
+28: C@seen F@marble G@arch
+29: Am@Love F@victory
+30: G@cold E7@broken Am@Hallelujah
+32=8
+33=9
+34=10
+35=11
+37: C@was Am@let
+38: C@real Am@on
+39: F@now G@show C@do G@$
+40: C@remember F@moved G@you
+41: Am@holy F@moving
+42: G@every E7@drew Am@Hallelujah
+44=8
+45=9
+46=10
+47=11
+49: C@Maybe Am@God
+50: C@all Am@learned
+51: F@how G@someone C@outdrew G@$
+52: C@not F@hear G@night
+53: Am@not F@seen
+54=30
+56: F@Hallelujah Am@Hallelujah#2
+57: F@Hallelujah C@Hallelujah#2 G@$
+58=56
+59: F@Hallelujah C@Hallelujah#2 G@$ C@$
+## kiss-me
+0: Eb@Kiss Ebmaj7@bearded
+1: Eb7@Nightly Ebmaj7@green
+2: Eb@Swing Ebmaj7@spinning
+3: Eb7@wear Ab@dress
+5: Fm@kiss Bb@milky Eb@twilight Cm@$
+6: Fm@Lead Bb@moonlit Eb@floor Eb7@$
+7: Fm@Lift Bb@hand
+8: Eb@band Eb/D@make Cm@fireflies Cm/Bb@dance
+9: Ab@Silver Bb@sparkling
+10: Eb@kiss
+12: Eb@Kiss Ebmaj7@broken
+13: Eb7@Swing Ebmaj7@hanging
+14: Eb@Bring Ebmaj7@flowered
+15: Eb7@take Ab@map
+17=5
+18=6
+19=7
+20=8
+21: Ab@Silver Bb@sparkling Eb@kiss
+23=5
+24=6
+25=7
+26=8
+27=21
+28: Eb@kiss
+## sway
+0: A7@marimba
+1: Dm@sway
+2: A7@lazy
+3: Dm@more
+5: A7@flower
+6: Dm@ease
+7: A7@dance
+8: Dm@me#2
+10: C7@dancers
+11: F@only
+12: A7@you
+13: Dm@weak Bb7@$ A7@$
+15: A7@hear
+16: Dm@begins
+17: A7@thrill
+18: Dm@now
+22=10
+23=11
+24=12
+25=13
+27=15
+28=16
+29=17
+30=18
+32=0
+33=1
+34=2
+35=3
+37=5
+38=6
+39=7
+40=8
+42: A7@marimba
+43: Dm@sway
+44=7
+45=8
+## shallow
+0: Em7@TELL D/F#@SOMETHIN' G@GIRL C@HAPPY G@MODERN D@WORLD
+1: Em7@OR D/F#@NEED G@MORE C@SOMETHIN' G@SEARCHIN' D@FOR
+2: Em7@FALLIN' C@GOOD G@LONGIN' D@CHANGE
+3: C@BAD G@FEAR D@$
+5: Em7@TELL D/F#@SOMETHING G@BOY C@TIRED G@FILL D@VOID
+6: Em7@OR D/F#@NEED G@MORE C@HARD G@SO D@HARDCORE
+7: Em7@FALLING C@GOOD G@LONGING D@CHANGE C@BAD G@FEAR D@$
+9: Am@OFF D/F#@WATCH G@NEVER D@MEET Em@GROUND
+10: Am@CRASH D/F#@WHERE
+11: G@FAR D@SHALLOW Em@NOW
+12: Am@IN D/F#@LLOW G@IN#2 D@LA-LA Em@LLOW#2
+13: Am@IN D/F#@LLOW G@FAR D@SHALLOW Em@NOW
+15: Em@OH Bm@AH D@OH#2 A@$
+16: Am@OFF D/F#@WATCH
+17: G@NEVER D@MEET Em@GROUND
+18=10
+19: G@FAR D@SHALLOW Em@NOW Am@IN D/F#@LLOW#2
+20: G@IN D@LA-LA Em@LLOW Am@IN#2 D/F#@LLOW#2
+21=11
+## i-wanna-hold-your-hand
+0: G@yeah D@something
+1: Em@think Bm@understand
+2: G@say D@something
+3: Em@wanna B7@hand
+5: C@wanna D@hold G@hand Em@$
+6: C@wanna D@hold G@hand
+8: G@please D@me
+9: Em@let Bm@man
+10: G@please D@me
+11: Em@let B7@hand
+13: C@let D@hold G@hand Em@$
+14=6
+16: Dm7@touch G@happy C@inside Am@$
+17: Dm7@such G@feeling C@love
+18: C@can't D@hide C@can't#2 D@hide#2 C@can't#3 D@hide#3
+20: G@you D@something
+21=1
+22=2
+23=3
+25=5
+26=6
+28=16
+29=17
+30=18
+32=20
+33=1
+34: G@feel D@something
+35=3
+37=5
+38: C@wanna D@hold B7@hand
+39: C@wanna D@hold C@hand G@$
+## tutti-frutti
+1: F@tutti
+3: Bb@Au F@au
+4: C7@Au F@wop
+6: F@Got
+8: Bb@rocks
+9: F@rocks
+10: C7@gal Bb@love F@best
+12: F@got
+14: Bb@knows
+15: F@indeed
+16: C7@What F@me
+## blue-suede-shoes
+0: A@one
+3: A7@go
+5: D@step A@blue
+6: E7@do D@lay
+7: A@shoes
+9: A@knock
+14: A@Do
+15: A7@lay
+16: D@step A@Blue
+17: E7@do D@lay
+18: A@shoes
+20: A@burn
+24=14
+25=15
+26: D@step A@blue
+27=17
+28=18
+## summer-of-69
+0: D@GOT
+1: A@BOUGHT
+2: D@PLAYED
+3: A@SUMMER
+5: D@ME
+6: A@HAD
+7: D@JIMMY
+8: A@SHOULD'VE
+10: Bm@WHEN A@BACK
+11: D@SUMMER G@LAST
+12: Bm@IF A@CHOICE
+13: D@ALWAYS G@THERE
+14: Bm@THOSE A@BEST D@LIFE
+16: D@AIN'T
+17: A@WHEN
+18: D@SPENT
+19: A@THAT'S
+20: Bm@STANDIN' A@MAMA'S
+21: D@TOLD G@WAIT
+22: Bm@WHEN A@HAND
+23: D@KNEW G@NOW
+24=14
+26: D@OH A@YEAH
+27: D@BACK A@SIXTY-NINE
+29: F@MAN Bb@KILLIN' C@YOUNG
+30: Bb@UNWIND
+31: F@GUESS Bb@LAST C@FOREVER#2
+34: D@AND
+35: A@LOOK
+36: D@SOMETIMES
+37: A@THINK
+39=20
+40: D@TOLD G@LAST
+41=22
+42=23
+43=14
+44: D@OH A@YEAH
+46=27
+47: D@SUMMER A@SIXTY-NINE
+48: D@ME A@SIXTY-NINE
+49: D@IT A@SIXTY-NINE
+## crazy-little-thing-called-love
+0: D@thing G@just C@handle G@it
+1: D@thing G@must C@round G@it
+2: D@ready
+3: Bb@Crazy C@thing D@love
+5: D@This
+6: G@cries
+7: C@cradle G@night
+8: D@swings
+10: G@shakes C@jelly G@fish
+11: D@like
+12=3
+14: G@goes
+15: C@knows G@Roll
+16: Bb@drives
+17: E@hot A@fever
+20: D@cool G@get
+21: C@on G@track's
+22: D@back
+24: G@long C@motor G@bike
+25: D@ready
+26=3
+28=20
+29=21
+30=22
+32=24
+33: D@ready
+34=3
+36=0
+37=1
+38=2
+39: Bb@Crazy C@thing D@love
+## happy-together
+1: F#m@Imagine
+2: E@think
+4: D@think
+6: C#7@happy
+8: F#m@If
+10: E@you
+12: D@Imagine
+14: C#7@happy
+16: F#@can't C#m@nobody
+17: F#@For A@life
+18: F#@When
+19: C#m@Baby
+20: F#@For A@life
+22: F#m@Me
+24: E@matter
+26: D@only
+27: C#7@happy
+31: F#m@Me
+33: E@matter
+35: D@only
+37: C#7@happy
+38: F#m@happy
+39: C#7@weather
+40: F#m@happy
+41: C#7@happy
+42: F#m@happy
+## iris
+0: D@I'D Em@FOREVER G@TOUCH
+1: Bm@KNOW A@FEEL G@SOMEHOW
+2: D@CLOSEST Em@HEAVEN
+3: G@EVER
+4: Bm@DON'T A@GO G@NOW
+6: D@ALL Em@TASTE G@MOMENT
+7: Bm@ALL A@BREATHE G@LIFE
+8: D@SOONER Em@LATER G@OVER
+9: Bm@JUST A@MISS G@TONIGHT
+11: Bm@DON'T A@WORLD G@SEE
+12: Bm@DON'T A@THEY'D G@UNDERSTAND
+13: Bm@EVERYTHING'S A@MADE G@BROKEN
+14: Bm@JUST A@KNOW G@AM
+16: D@CAN'T Em@TEARS G@COMING
+17: Bm@MOMENT A@TRUTH G@LIES
+18: D@EVERYTHING Em@FEELS G@MOVIES
+19: Bm@BLEED A@KNOW G@ALIVE
+21=11
+22=12
+23=13
+24=14
+25: Bm@DON'T A@WORLD G@SEE
+26=12
+27=13
+28=14
+## one
+0: Am@getting
+1: D@feel
+2: Fmaj7@make
+3: G@someone
+6: C@love Am@life
+7: Fmaj7@need
+8: C@night
+9: C@love
+10: Am@share
+11: Fmaj7@leaves
+12: C@care
+14: Am@disappoint
+15: D@bad
+16: Fmaj7@act
+17: G@want
+19: C@late
+20: Am@Tonight
+21: Fmaj7@drag
+22: C@light
+24: C@one
+25: Am@same
+26: Fmaj7@carry
+27: C@Carry
+30: Am@come
+31: D@come
+32: Fmaj7@come
+33: G@lepers
+35: C@ask
+36: Am@lot
+37: Fmaj7@nothing
+38: C@got
+40: C@one
+41: Am@same
+42: Fmaj7@hurt
+43: C@again
+45: C@say
+46: C@Love
+47: Am@Love
+48: C@Love
+49: Am@Love
+50: C@ask
+51: G@make
+52: G@holding
+53: Fmaj7@what
+56: C@love
+57: Am@blood
+58: Fmaj7@life C@should
+59: C@life
+60: Am@each
+61: Fmaj7@Sisters C@brothers
+63: C@life Am@same
+64: Fmaj7@carry
+65: C@Carry
+## lg17
+0: D@See A@eyes
+1: Bm@See G@side
+2: D@wait A@you
+4: D@Sleight A@fate
+5: Bm@bed G@wait
+6: D@wait A@you
+8: D@With A@you
+9: Bm@With G@you
+11: D@Through A@shore
+12: Bm@gave G@more
+13: D@waiting A@you
+15: D@With A@you
+16: Bm@With G@you
+17: D@can't A@live
+18: Bm@With G@you
+20: D@give A@away
+21: Bm@give G@away
+22: D@give
+23: A@give
+24: Bm@give G@away
+26: D@hands A@bruised
+27: Bm@got
+28: G@win
+29: D@left A@lose
+31=20
+32=21
+33=22
+34=23
+35=24
+37=15
+38=16
+39=17
+40=18
+42: D@Oh A@oh Bm@oh#2 G@$
+44=15
+45=16
+46=17
+47=18
+48: D@With A@you
+53=20
+54=21
+55=22
+56=23
+57=24
+59=15
+60=16
+61=17
+62=18
+63: D@With A@you
+## take-on-me
+0: Bm@TALKING E@AWAY A@KNOW D@SAY
+1: Bm@SAY E@ANYWAY
+2: A@ANOTHER D@FIND
+3: Bm@SHYING E@AWAY
+4: F#m@COMING D@OKAY
+6: A@TAKE E/G#@ON F#m@ME D@(TAKE
+7: A@TAKE E/G#@ME F#m@ON D@(TAKE
+8: A@I'LL E/G#@GONE
+9: F#m@IN D@DAY E@TWO
+11: Bm@NEEDLESS E@SAY A@ODDS D@BUT
+12: Bm@STUMBLING E@AWAY
+13: A@LEARNING D@OKAY
+14: Bm@SAY E@ME
+15: F#m@BETTER D@SORRY
+17=6
+18=7
+19: A@I'LL E/G#@GONE
+20=9
+22: Bm@THINGS E@SAY
+23: A@IS D@LIFE
+24: Bm@PLAY
+25: E@AWAY
+26: A@ALL D@REMEMBER
+27: Bm@SHYING E@AWAY
+28: F#m@COMING D@ANYWAY
+30: A@TAKE E/G#@ON F#m@ME D@(TAKE A@TAKE#3 E/G#@ME#3 F#m@ON#3 D@(TAKE#2
+31: A@I'LL E/G#@GONE
+32: F#m@IN D@DAY
+33=6
+34=7
+35: A@I'LL E/G#@GONE
+36: F#m@IN D@DAY
+38=6
+39=7
+40: A@TAKE E/G#@ON F#m@ME
+## johnny-b-goode
+0: Bb@Deep
+2: Eb@There
+3: Bb@Where
+4: F@Who
+5: Bb@But
+7: Bb@Go
+9: F@Johnny Bb@Goode
+11: Bb@He
+13: Eb@Oh
+14: Bb@Strummin
+15: F@People
+16: Bb@Oh
+20: Bb@His
+22: Eb@Many
+23: Bb@To
+24: F@Maybe
+25: Bb@tonight
+## rock-around-the-clock
+0: A@One
+3: E7@rock
+5: A@Put
+6: A7@one
+8: D@rock
+9: A@rock
+10: E7@rock A@tonight
+12: A@When
+13: A7@more
+15=8
+16=9
+17=10
+19: A@When
+20: A7@heaven
+22=8
+23=9
+24=10
+26: A@When
+27: A7@you
+29=8
+30=9
+31=10
+33: A@When
+34: A7@again
+36=8
+37=9
+38: E7@rock A@tonight
+## livin-on-a-prayer
+0: Em@Tommy
+2: C@down D@tough Em@tough#2
+4: Em@Gina
+5: C@brings D@love Em@love#2
+7: C@hold D@what Em@got#2
+8: C@doesn't D@difference
+9: Em@not
+10: C@each D@that's Em@lot
+11: C@love D@shot
+13: Em@Oh C@half D@there
+14: G@Whoah C@livin' D@prayer
+15: Em@Take C@make D@swear
+16=14
+18: Em@Tommy
+20: C@talk D@tough Em@tough#2
+21: Em@Gina
+23: C@whispers D@okay Em@someday
+25: C@hold D@what Em@got#2
+26=8
+27=9
+28=10
+29=11
+31: Em@Oh C@half D@there
+32: G@Whoah C@Livin' D@Prayer
+33=15
+34=32
+35: C@Livin' D@prayer
+37: C@hold D@ready Em@not
+38: C@live D@got
+40: Gm@Oh Eb@half F@there
+41: Bb@Whoah Eb@livin' F@prayer
+42: Gm@Take Eb@make F@swear
+43=41
+45=40
+46=41
+47=42
+48=41
