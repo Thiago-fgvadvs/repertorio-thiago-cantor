@@ -1,0 +1,193 @@
+# Posição dos acordes sobre a letra já cadastrada no app.
+# "linha: Acorde@âncora ..."  âncora = trecho da linha (1ª ocorrência; "#2" = 2ª); "$" = fim da linha.
+# "28=16" copia a marcação de outra linha idêntica. Gerar: node tools/montar-cifras.js
+## imagine
+0: C@Imagine Cmaj7@no F@heaven
+1: C@It's Cmaj7@if F@try
+2: C@No Cmaj7@below F@us
+3: C@Above Cmaj7@only F@sky
+5: F@Imagine Am/E@all Dm7@people
+6: G@Living C/G@for G7@day
+8: C@Imagine Cmaj7@no F@countries
+9: C@It Cmaj7@hard F@do
+10: C@Nothing Cmaj7@or F@for
+11: C@And Cmaj7@religion F@too
+13=5
+14: G@Living C/G@in G7@peace
+16: F@You G@say C@dreamer E7@$
+17: F@But G@not C@one E7@$
+18: F@I G@day C@join E7@$
+19: F@And G@world C@one
+21: C@Imagine Cmaj7@no F@possessions
+22: C@I Cmaj7@if F@can
+23: C@No Cmaj7@greed F@hunger
+24: C@A Cmaj7@Brotherhood F@man
+26: F@Imagine Am/E@all Dm7@people G@Sharing C/G@all#2 G7@world
+28=16
+29=17
+30=18
+31: F@And G@world C@one
+## stand-by-me
+0: A@When
+1: F#m@land
+2: D@moon E@light A@see
+4: A@won't F#m@won't#2
+5: D@long E@stand A@me
+7: A@darling F#m@oh D@Stand E@stand#3 A@$
+9: A@If
+10: F#m@tumble
+11: D@mountains E@crumble A@sea
+13: A@cry F#m@no
+14=5
+16: A@darling F#m@oh D@oh#2
+17: E@Stand A@me#2
+## can-t-help-falling-in-love
+0: D@Wise F#m@men Bm@say G@only D@fools A@in
+1: G@But A@I Bm@can't G@help D@falling A@love D@you
+2: D@Shall F#m@I Bm@stay G@Would D@be A@sin
+3: G@If A@I#2 Bm@can't G@help D@falling A@love D@you
+5: F#m@Like C#7@flows F#m@surely C#7@sea
+6: F#m@Darling C#7@goes F#m@somethings B7@meant Em7@be A7@$
+7: D@Take F#m@my Bm@hand G@take D@whole A@too
+8: G@For A@I Bm@can't G@help D@Falling A@love D@you
+10=5
+11=6
+12=7
+13: G@For A@I Bm@can't G@help D@falling A@love D@you
+15=13
+## what-a-wonderful-world
+0: F@SEE Am@TREES Bb@GREEN Am@RED Gm7@TOO
+1: F@BLOOM A7@ME Dm@YOU
+2: Db@THINK
+3: Gm7@WHAT C7@WONDERFUL F@WORLD
+5: F@SEE Am@SKIES Bb@BLUE Am@CLOUDS Gm7@WHITE
+6: F@DAY A7@DARK Dm@NIGHT
+7=2
+8=3
+10: C7@RAINBOW F@SKY
+11: C7@FACES F@BY
+12: Dm@FRIENDS Am/C@HANDS Dm@SAYING Am/C@DO
+13: Dm@REALLY F#dim7@SAYING Gm7@LOVE C7@YOU
+15: F@HEAR Am@BABIES Bb@CRY Am@WATCH Gm7@GROW
+16: F@MORE A7@NEVER Dm@KNOW
+17=2
+18=3
+20: Db@THINK
+21=3
+## fly-me-to-the-moon
+0: Am7@FLY Dm7@MOON
+1: G7@PLAY Cmaj7@STARS
+2: Fmaj7@SEE
+3: Bm7(b5)@ON E7@JUPITER Am7@MARS A7@$
+4: Dm7@OTHER G7@HOLD Cmaj7@HAND A7@$
+5: Dm7@OTHER G7@BABY Cmaj7@KISS E7@$
+7: Am7@FILL Dm7@SONG
+8: G7@SING Cmaj7@MORE
+9: Fmaj7@YOU
+10: Bm7(b5)@ALL E7@WORSHIP Am7@ADORE A7@$
+11: Dm7@OTHER G7@PLEASE Em7@TRUE A7@$
+12: Dm7@OTHER G7@LOVE C6@YOU
+14=7
+15=8
+16=9
+17=10
+18=11
+19: Dm7@OTHER
+20: Dm7@OTHER G7@LOVE C6@YOU
+## all-of-me
+0: C@Why E7@me
+1: A7@see
+3: Dm@you
+5: E7@lips
+6: Am@lose
+7: D7@arms
+8: Dm7@never G7@them
+10: C@goodbyes E7@eyes
+11: A7@How Dm@you
+12: F@You Fm@once C@heart A7@$
+13: Dm7@why
+14: G7@all C@me
+16: C@All
+17: E7@all
+18: A7@see
+19: Dm@you
+20=5
+21=6
+22: D7@arms Dm7@never G7@them
+24: C@goodbye E7@eyes
+25: A7@Now Dm@you
+26: F@you
+27: Fm@used C@heart A7@$
+29: F@You Fm@used C@heart A7@$
+30: Dm7@why G7@all C@me
+## have-you-ever-seen-the-rain
+0: C@Someone
+2: G@know
+3: C@time
+4: C@When
+6: G@know C@water
+8: F@I G@know C@ever C/B@seen Am@rain Am/G@$
+9=8
+10: F@Comin' G@sunny C@day
+12: C@Yesterday
+13: G@know
+14: C@time
+15: C@'Til
+17: G@know C@wonder
+19=8
+20=8
+21=10
+23=8
+24=8
+25=10
+## besame-mucho
+0: Dm@Bésame Gm@mucho
+2: A7@última Dm@vez
+3: D7@bésame Gm@mucho
+4: Dm@miedo
+5: E7@perderte A7@después Dm@$
+7=0
+9=2
+10=3
+11=4
+12=5
+14: Gm@Quiero Dm@cerca
+15: A7@tenerte
+16: Dm@mi
+17: Gm@piensa Dm@mañana
+18: E7@lejos
+19: A7@ti
+## wonderful-tonight
+0: G@late D/F#@evening
+1: C@wonderin' D@wear
+2: G@puts D/F#@make-up
+3: C@brushes D@hair
+5: C@then D@asks G@Do D/F#@look Em@right
+6: C@yes D@look G@tonight
+8: G@go D/F#@party
+9: C@everyone D@see
+10: G@beautiful D/F#@lady
+11: C@walkin D@me
+13: C@then D@asks G@Do D/F#@feel Em@right
+14: C@yes D@feel G@tonight
+16: C@feel D@because G@love D/F#@in Em@eyes
+17: C@wonder D@just
+18: C@much D@love G@$
+20: G@time D/F#@home
+21: C@I've D@head
+22: G@give D/F#@keys
+23: C@she D@bed
+25: C@then D@tell G@As D/F#@turn Em@light
+26: C@say D@were G@tonight
+27: C@Oh D@were G@tonight
+## proud-mary
+0: D@Left
+5: A@Big
+6: Bm@Proud
+7: D@Rolling
+9: D@Cleaned
+14: D@Rolling
+15: D@If
+20: D@Rolling
+21: D@Rolling
+22: D@Rolling

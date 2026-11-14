@@ -143,6 +143,28 @@
     return "";
   }
 
+  /* ---------- cifra-base: grade de harmonia + acordes sobre a letra cadastrada ---------- */
+  function hashStr(t) { var x = 5381; for (var i = 0; i < t.length; i++) x = ((x << 5) + x + t.charCodeAt(i)) >>> 0; return x; }
+  function alignedText(song) {
+    var a = (window.CIFRAS_ALIGN || {})[song.id], letra = song.letra || "";
+    if (!a || !letra || hashStr(letra) !== a.h) return ""; // letra foi alterada: não arrisca desalinhar
+    return letra.split("\n").map(function (line, i) {
+      var cs = a.l[i];
+      if (!cs) return line;
+      var row = "";
+      cs.forEach(function (c) {
+        var col = Math.max(c[0], row.length ? row.length + 1 : 0);
+        while (row.length < col) row += " ";
+        row += c[1];
+      });
+      return row + "\n" + line;
+    }).join("\n");
+  }
+  function seedText(song) {
+    var grid = (window.CIFRAS_SEED || {})[song.id] || "", al = alignedText(song);
+    return al ? (grid ? grid + "\n\n" : "") + al : grid;
+  }
+
   /* ---------- som ---------- */
   var actx = null;
   function play(ps, bassPc) {
@@ -269,7 +291,7 @@
 
   /* ---------- leitura da cifra ---------- */
   function CifraView(props) {
-    var song = props.song, seed = (window.CIFRAS_SEED || {})[song.id] || "";
+    var song = props.song, seed = seedText(song), aligned = hasLyrics(seed);
     var base = song.cifra || seed, isSeed = !song.cifra && !!seed;
     var sTr = useState(0), tr = sTr[0], setTr = sTr[1];
     var sFont = useState(function () { try { return Number(localStorage.getItem("cf_font")) || 17; } catch (e) { return 17; } }), font = sFont[0], setFontRaw = sFont[1];
@@ -312,7 +334,7 @@
         h("button", { onClick: function () { setCh(tom || "C"); }, style: Object.assign({}, btn(false), { marginLeft: "auto" }) }, "🎹 Acordes")),
       h("div", { ref: box, style: { flex: 1, overflow: "auto", WebkitOverflowScrolling: "touch", padding: "14px 16px 40px" } },
         isSeed ? h("p", { style: { fontSize: 12, color: C.mut, background: C.card, border: "1px solid " + C.line, borderRadius: 10, padding: "8px 10px", margin: "0 0 12px", lineHeight: 1.45 } },
-          "Harmonia-base sugerida (sem a letra alinhada). Confira de ouvido e ajuste em “Editar”. Toque em qualquer acorde para ver no piano.") : null,
+          (aligned ? "Cifra-base sugerida, com os acordes sobre a letra." : "Harmonia-base sugerida (sem a letra alinhada).") + " Confira de ouvido e ajuste em “Editar”. Toque em qualquer acorde para ver no piano.") : null,
         base ? h(CifraText, { text: text, font: font, onChord: setCh })
           : h("div", { style: { textAlign: "center", color: C.mut, padding: "36px 10px" } },
             h("p", { style: { fontSize: 15, margin: "0 0 12px" } }, "Esta música ainda não tem cifra."),
@@ -359,13 +381,13 @@
         props.editor && props.onNew ? h("button", { onClick: props.onNew, style: { background: C.gold, color: "#2b2100", border: 0, borderRadius: 999, padding: "6px 12px", fontSize: 12, fontWeight: 700, whiteSpace: "nowrap" } }, "+ Nova música") : null),
       h("p", { style: { fontSize: 12, color: C.mut, margin: "0 0 8px" } }, list.length + " música(s)"),
       h("div", { style: { display: "flex", flexDirection: "column", gap: 8 } }, list.slice(0, 400).map(function (s) {
-        var mine = !!s.cifra, sd = !mine && !!seeds[s.id], tom = firstChord(s.cifra || seeds[s.id] || "");
+        var mine = !!s.cifra, sd = !mine && !!seeds[s.id], al = sd && !!(window.CIFRAS_ALIGN || {})[s.id], tom = firstChord(s.cifra || seeds[s.id] || "");
         return h("button", { key: s.id, onClick: function () { setOpen(s.id); }, style: { background: C.card, border: "1px solid " + C.line, color: C.txt, borderRadius: 12, padding: 12, display: "flex", alignItems: "center", gap: 12, textAlign: "left", width: "100%" } },
           h("div", { style: { background: C.card2, color: tom ? C.gold : C.mut, minWidth: 44, textAlign: "center", borderRadius: 9, padding: "9px 4px", fontWeight: 800, fontSize: 13, fontFamily: "ui-monospace, Menlo, monospace" } }, tom || "+"),
           h("div", { style: { flex: 1, minWidth: 0 } },
             h("p", { style: { fontWeight: 600, margin: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" } }, s.t),
             h("p", { style: { fontSize: 12, color: C.mut, margin: "2px 0 0", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" } },
-              (s.artist ? s.artist + " · " : "") + (mine ? "cifra" : sd ? "harmonia-base" : "sem cifra — toque para adicionar"))),
+              (s.artist ? s.artist + " · " : "") + (mine ? "cifra" : al ? "cifra-base sobre a letra" : sd ? "harmonia-base" : "sem cifra — toque para adicionar"))),
           h("span", { style: { color: C.gold, fontSize: 18 } }, "›"));
       })),
       list.length > 400 ? h("p", { style: { fontSize: 12, color: C.mut, textAlign: "center", marginTop: 10 } }, "Mostrando 400 — use a busca para achar as demais.") : null,
@@ -386,5 +408,5 @@
 
   window.CifrasTab = CifrasTab;
   window.CifrasIcon = CifrasIcon;
-  window.__cifras = { chordNotes: chordNotes, voicing: voicing, transpose: transpose, parseLine: parseLine };
+  window.__cifras = { seedText: seedText, chordNotes: chordNotes, voicing: voicing, transpose: transpose, parseLine: parseLine };
 })();
